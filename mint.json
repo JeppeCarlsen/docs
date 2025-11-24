@@ -82,7 +82,8 @@
       "pages": [
         "platform/team-management",
         "platform/organization-settings",
-        "platform/audit-log"
+        "platform/audit-log",
+        "platform/plugins"
       ]
     }
   ],
