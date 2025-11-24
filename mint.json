@@ -79,7 +79,10 @@
     {
       "group": "Platform",
       "icon": "desktop",
-      "pages": []
+      "pages": [
+        "platform/organization-settings",
+        "platform/audit-log"
+      ]
     }
   ],
   "footerSocials": {

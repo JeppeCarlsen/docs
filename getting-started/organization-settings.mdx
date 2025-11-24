@@ -1,24 +1,21 @@
 ---
 title: 'Organization Settings'
-description: 'Configure your organization profile, currency, brand values, and advanced features'
+description: 'Quick setup guide for organization logo and base currency'
 ---
 
-Manage your organization settings, including master data, logo, currency, and brand value indicators.
+Get started quickly by uploading your organization logo and selecting your base currency for valuations.
 
 ## Accessing Settings
 
-Navigate to **Settings** from your dashboard sidebar to access organization configuration.
+Navigate to **Platform** → **Settings** from the sidebar to access full organization settings.
 
-The Settings page has three tabs:
-- **General** - Organization details, logo, currency, and brand values
-- **SSO** - Enterprise Single Sign-On configuration
-- **Advanced** - Audit log and danger zone (delete organization)
+<Info>
+This is a quick setup guide. For complete organization settings documentation including address details, brand values, SSO, audit log, and advanced features, see [Platform → Organization Settings](/platform/organization-settings).
+</Info>
 
-## General Settings
+## Upload Organization Logo
 
-### Upload Organization Logo
-
-Your logo appears throughout the platform and in reports.
+Your logo appears throughout the platform, in reports, and on proposals.
 
 1. Click the **avatar circle** at the top of the Settings page
 2. Select an image file (max 2MB)
@@ -38,25 +35,7 @@ To **remove your logo**:
 2. Click "Delete" in the crop modal
 3. Confirm removal
 
-### Organization Details
-
-Update your organization's master data:
-
-- **Organization Name** - Your company or club name
-- **Street** - Street address
-- **House Number** - Building number
-- **Postal Code** - ZIP/postal code
-- **City** - City name
-- **Country** - Select from EU countries list
-- **CVR/VAT Number** - Tax identification number (with country selector)
-
-Click **"Save Club Settings"** to apply changes.
-
-<Warning>
-**Permission Required**: You need the "Settings" permission to edit organization details.
-</Warning>
-
-### Base Currency
+## Base Currency
 
 Select your preferred currency for all valuations and financial calculations.
 
@@ -73,131 +52,32 @@ The currency will be used as the default for:
 **Currency Symbol**: The selected currency's symbol (€, $, £, etc.) will appear throughout the platform.
 </Info>
 
-### Default Brand Value Indicators
+## Additional Settings
+
+The Settings page has three tabs with additional configuration options:
+
+### General Tab
+- Organization details (name, address, VAT/CVR number)
+- Logo upload
+- Base currency selection
+- Default brand value indicators (Professional/Enterprise)
+
+### SSO Tab (Enterprise only)
+- SAML 2.0 configuration
+- OAuth 2.0 setup
+- OpenID Connect integration
+
+### Advanced Tab
+- Audit log (Enterprise only)
+- Danger zone: Delete organization
 
 <Note>
-**Available for**: Professional and Enterprise plans only
+**Full Documentation**: For detailed information about all settings, see [Platform → Organization Settings](/platform/organization-settings).
 </Note>
 
-Set default values for brand indicators used in new valuations:
+## Next Steps
 
-- **Popularity** (1-10) - Brand awareness and recognition
-- **CSR** (1-10) - Corporate Social Responsibility perception
-- **Culture** (1-10) - Brand culture and identity strength
-- **Loyalty** (1-10) - Fan and stakeholder loyalty
-
-These defaults are applied when creating new valuations, saving time and ensuring consistency.
-
-**Industry Typical Ranges** (reference guide):
-
-| Sport/Sector | Popularity | CSR | Culture | Loyalty |
-|--------------|------------|-----|---------|---------|
-| **Premier League Football** | 8-10 | 6-8 | 8-10 | 8-10 |
-| **Championship Football** | 6-8 | 5-7 | 7-9 | 7-9 |
-| **Basketball (Top League)** | 6-8 | 6-8 | 6-8 | 6-8 |
-| **Tennis (Professional)** | 5-7 | 7-9 | 6-8 | 5-7 |
-| **Motor Racing** | 7-9 | 5-7 | 7-9 | 8-10 |
-| **Olympic Sports** | 4-6 | 8-10 | 8-10 | 6-8 |
-| **Esports** | 6-8 | 4-6 | 7-9 | 8-10 |
-
-Click **"Save Brand Values"** to apply changes.
-
-## SSO Settings (Enterprise)
-
-<Note>
-**Available for**: Enterprise plan only
-</Note>
-
-Configure Enterprise Single Sign-On (SSO) for your organization:
-
-- **SAML 2.0** - Industry-standard authentication
-- **OAuth 2.0** - Modern authorization protocol
-- **OpenID Connect** - Identity layer on OAuth 2.0
-
-SSO allows your team members to log in using your organization's identity provider (Okta, Azure AD, Google Workspace, etc.).
-
-<Info>
-**Permission Required**: Admin or SSO management permission required to configure SSO.
-</Info>
-
-## Advanced Settings
-
-### Audit Log (Enterprise)
-
-<Note>
-**Available for**: Enterprise plan + Admin permission only
-</Note>
-
-View a comprehensive record of all data changes in your organization:
-
-- **Who** made changes (user name and email)
-- **What** was changed (before/after values)
-- **When** changes occurred (precise timestamp)
-- **Where** in the system (table and record ID)
-
-The audit log tracks changes to:
-- Valuations
-- Organization settings
-- User permissions
-- Player transfers
-- All other critical data
-
-Click **"View Audit Log"** to access the full history.
-
-**Use cases:**
-- Compliance audits (GDPR, financial regulations)
-- Security investigations
-- Team activity monitoring
-- Data forensics
-
-### Danger Zone: Delete Organization
-
-<Warning>
-**Owner Only**: Only the organization owner can delete the organization.
-</Warning>
-
-Deleting your organization will:
-
-**Immediately:**
-- Cancel your Stripe subscription (at end of billing period)
-- Hide the organization from all members
-- Send you an offboarding email with reactivation link
-
-**After 30 days (permanent deletion):**
-- All valuations and player transfers
-- All organization members and invitations
-- All settings, SSO providers, and entitlements
-
-<Info>
-**30-Day Grace Period**: You can reactivate your organization within 30 days using the link in the offboarding email.
-</Info>
-
-**To delete your organization:**
-
-1. Click **"Delete Organisation"** in the Danger Zone
-2. Read the warnings carefully
-3. Type your **exact organization name** to confirm
-4. Click "Delete Organisation"
-5. Check your email for the reactivation link (save it!)
-
-<Tip>
-**Reactivation**: If you change your mind, simply click the reactivation link in your offboarding email within 30 days.
-</Tip>
-
-## Permissions
-
-Different settings require different permission levels:
-
-| Setting | Required Permission |
-|---------|-------------------|
-| **Organization Details** | Settings permission |
-| **Upload Logo** | Settings permission |
-| **Base Currency** | Settings permission |
-| **Brand Value Indicators** | Settings permission + Professional/Enterprise plan |
-| **SSO Configuration** | Admin or SSO permission + Enterprise plan |
-| **Audit Log** | Admin permission + Enterprise plan |
-| **Delete Organization** | Owner only |
-
-<Info>
-If you don't see certain features, check your plan tier and permissions with your organization owner or admin.
-</Info>
+- **Complete Setup**: Fill in organization details, address, and VAT number
+- **Invite Team**: Add team members with [Invite Team Members](/getting-started/invite-team-members)
+- **Configure Brand Values**: Set default brand indicators for valuations (Professional/Enterprise)
+- **Enable SSO**: Configure single sign-on for your team (Enterprise only)
