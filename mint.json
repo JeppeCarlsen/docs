@@ -72,8 +72,14 @@
         "sponsorships/sponsors",
         "sponsorships/library",
         "sponsorships/packages",
-        "sponsorships/proposals"
+        "sponsorships/proposals",
+        "sponsorships/analytics"
       ]
+    },
+    {
+      "group": "Platform",
+      "icon": "desktop",
+      "pages": []
     }
   ],
   "footerSocials": {
