@@ -44,7 +44,7 @@
   "navigation": [
     {
       "group": "Getting Started",
-      "icon": "rocket",
+      "icon": "book-open",
       "pages": [
         "introduction",
         "getting-started/quick-start"
@@ -52,7 +52,7 @@
     },
     {
       "group": "Valuations",
-      "icon": "chart-line",
+      "icon": "rocket",
       "pages": [
         "guides/valuations/overview",
         "guides/valuations/create",
@@ -64,7 +64,7 @@
     },
     {
       "group": "Sponsorships",
-      "icon": "handshake",
+      "icon": "sun",
       "pages": [
         "guides/sponsorships/overview",
         "guides/sponsorships/sponsors",
@@ -87,7 +87,7 @@
     },
     {
       "group": "Platform Features",
-      "icon": "sliders",
+      "icon": "computer-desktop",
       "pages": [
         "guides/platform/users",
         "guides/platform/permissions",
