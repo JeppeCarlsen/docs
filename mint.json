@@ -36,8 +36,8 @@
       "icon": "zap",
       "pages": [
         "introduction",
-        "getting-started/onboarding",
         "getting-started/quick-start",
+        "getting-started/onboarding",
         "getting-started/your-profile",
         "getting-started/organization-settings",
         "getting-started/invite-team-members"
