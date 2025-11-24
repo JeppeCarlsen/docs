@@ -87,7 +87,7 @@
     },
     {
       "group": "Platform Features",
-      "icon": "computer-desktop",
+      "icon": "desktop",
       "pages": [
         "guides/platform/users",
         "guides/platform/permissions",
