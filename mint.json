@@ -47,7 +47,8 @@
       "icon": "book-open",
       "pages": [
         "introduction",
-        "getting-started/quick-start"
+        "getting-started/quick-start",
+        "getting-started/invite-team-members"
       ]
     }
   ],
