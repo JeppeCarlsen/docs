@@ -1,119 +1,94 @@
 ---
 title: 'Invite Team Members'
-description: 'Add team members to your organization and manage permissions'
+description: 'Quick guide to inviting team members to your organization'
 ---
 
-Learn how to invite colleagues to your Valiyou organization and assign roles.
+Learn how to quickly invite colleagues to your Valiyou organization.
 
-## Inviting Team Members
+<Info>
+This is a quick start guide for invitations. For comprehensive team management including permission control, removing users, and troubleshooting, see [Platform → Team Management](/platform/team-management).
+</Info>
 
-Valiyou uses a secure invitation system to add team members to your organization. Here's how it works:
+## Sending an Invitation
 
-### Step 1: Send an Invitation
+1. Navigate to **Platform** → **Users**
+2. Click **"Invite User"** button (top right)
+3. Enter team member's **email address**
+4. Select **roles and permissions** in the tree:
+   - **Admin**: Full access to everything
+   - **Reports**: Access analytics and reports
+   - **Sales**: Manage sales values
+   - **Transfer**: Manage transfers
+   - **Marketing**: Manage marketing values
+   - **Brand**: Manage brand indicators
+   - **Users**: Invite and manage team members
+   - **Billing**: Access billing and subscription
+   - **Settings**: Modify organization settings
+   - **Plugins**: Manage integrations
+   - **Audit Log**: View activity logs (Enterprise)
+   - **API**: Manage API keys
+   - **Approver**: Approve valuations (independent role)
+5. Click **"Send Invitation"**
 
-1. Navigate to your organization settings or user management page
-2. Click "Invite Member" or similar option
-3. Enter the team member's **email address**
-4. Select their **roles and permissions**:
-   - **Admin** - Full access to all features and settings
-   - **Valuations** - Access valuation management module:
-     - **Dashboard** - View dashboard overview
-     - **Valuations** - Create and manage valuations
-       - **Edit Sales Value** - Modify sales value calculations (Enterprise only)
-       - **Edit Transfer Value** - Modify transfer value calculations (Enterprise only)
-       - **Edit Marketing Value** - Modify marketing value calculations (Enterprise only)
-       - **Edit Brand Value** - Modify brand value calculations (Enterprise only)
-     - **Reports** - Access valuation reports and analytics
-     - **Methods** - Configure valuation methods and settings
-   - **Sponsorships** - Access sponsorship management module:
-     - **Sponsors** - Manage sponsor relationships and contracts
-     - **Packages** - Create and manage sponsorship packages
-     - **Library** - Access sponsorship item library
-     - **Proposals** - Create and send sponsorship proposals
-     - **Analytics** - View sponsorship analytics and reports
-   - **Platform** - Access platform management features:
-     - **Users** - Manage team members and invitations
-     - **Settings** - Modify organization settings
-     - **Billing** - Access billing and subscription management
-     - **Plugins** - Manage integrations and plugins
-     - **API** - Access API management and keys
-   - **Approver** - Approve valuations and reports
-   - **Audit Log** - View activity logs (Enterprise only)
+<Tip>
+**Admin Auto-Grant**: Checking "Admin" automatically grants all sub-permissions for full access.
+</Tip>
 
-<Note>
-**Granular Permissions**: Enterprise plans unlock granular valuation permissions, allowing you to control which team members can edit specific value components (Sales, Transfer, Marketing, Brand).
-</Note>
+## Team Member Receives Invitation
 
-5. Click "Send Invitation"
-
-### Step 2: Team Member Receives Invitation
-
-Your team member will receive an invitation link via email. The invitation contains:
-
+Your team member receives an email containing:
 - Organization name
 - Inviter's name
-- Assigned roles
+- Assigned roles/permissions
+- Invitation link
 - Expiration date
 
-### Step 3: Accept Invitation
+## Accepting the Invitation
 
-The invited team member can accept by:
+### If They Have an Account
 
-1. **If they have an account**:
-   - Click the invitation link
-   - Log in with the **same email address** that received the invitation
-   - Click "Accept Invitation"
-   - Automatically redirected to the organization dashboard
+1. Click the invitation link
+2. Log in with the **same email address** that received the invitation
+3. Click "Accept Invitation"
+4. Automatically redirected to the organization dashboard
 
-2. **If they're new to Valiyou**:
-   - Click the invitation link
-   - Click "Sign Up"
-   - Create an account using the **invited email address**
-   - Verify their email
-   - Return to the invitation link
-   - Click "Accept Invitation"
+### If They're New to Valiyou
 
-## Important Notes
+1. Click the invitation link
+2. Click "Sign Up"
+3. Create an account using the **invited email address**
+4. Verify their email
+5. Return to the invitation link
+6. Click "Accept Invitation"
 
 <Warning>
 **Email Matching Required**: The team member must log in or sign up with the exact email address that received the invitation. Invitations cannot be transferred to different email addresses.
 </Warning>
 
-<Info>
-**Invitation Expiration**: Invitation links expire after a set period. If an invitation expires, you'll need to send a new one.
-</Info>
-
-<Tip>
-**Multiple Roles**: You can assign multiple roles to a team member, giving them granular access to different features.
-</Tip>
-
-## Managing Team Members
-
-Once team members have joined your organization, you can:
-
-- **Update Roles**: Change their permissions at any time
-- **Remove Members**: Remove team members from the organization
-- **View Activity**: Track team member actions in the audit log
-
-## Common Scenarios
+## Common Issues
 
 ### Wrong Email Address
 
-If a team member clicks an invitation link but is logged in with a different email:
-
-1. They'll see a "Wrong Account" message
-2. They need to **log out**
-3. Log in or sign up with the correct email address
-4. Click the invitation link again
-
-### Invitation Already Accepted
-
-If someone tries to use an invitation link that's already been accepted, they'll see an error message. This is a security feature to prevent unauthorized access.
+If logged in with a different email:
+1. See "Wrong Account" message
+2. Log out
+3. Log in with correct email
+4. Click invitation link again
 
 ### Invitation Expired
 
-If an invitation has expired:
+If invitation has expired:
+1. Contact organization admin
+2. Request new invitation
+3. Accept promptly
 
-1. Contact the organization admin
-2. Request a new invitation be sent
-3. Accept the new invitation promptly
+### Invitation Already Accepted
+
+Link shows error message - this is a security feature. User should log in normally.
+
+## Next Steps
+
+- **Manage Team**: Go to [Platform → Team Management](/platform/team-management) for full documentation
+- **Assign Permissions**: Edit roles and permissions after acceptance
+- **Remove Users**: Revoke access when team members leave
+- **Seat Limits**: Check plan limits and upgrade if needed
