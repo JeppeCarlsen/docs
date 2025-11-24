@@ -48,6 +48,7 @@
       "pages": [
         "introduction",
         "getting-started/quick-start",
+        "getting-started/organization-settings",
         "getting-started/invite-team-members"
       ]
     }
