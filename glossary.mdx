@@ -1,0 +1,382 @@
+---
+title: 'Glossary'
+description: 'Key terms and definitions for sponsorship valuation and management'
+---
+
+Understanding the terminology used in sports sponsorship and valuation helps you get the most out of Valiyou. This glossary defines key concepts used throughout the platform and documentation.
+
+<Info>
+**Quick Navigation**: Use Cmd+F (Mac) or Ctrl+F (Windows) to search for specific terms.
+</Info>
+
+---
+
+## Sponsorship & Valuation Terms
+
+### Brand Exposure
+
+The visibility and attention a brand receives through sponsorship assets like logo placements, mentions, and activations. Measured in impressions, reach, and engagement across various channels (TV, digital, social media, physical presence).
+
+**Example**: A shirt sponsor's logo appearing on screen during a televised match generates brand exposure measured in viewer impressions.
+
+**Related**: [Valuation Methods](/valuations/methods), [Create Valuation](/valuations/create-valuation)
+
+---
+
+### Brand Indicators
+
+Multipliers that adjust sponsorship value based on the strength and relevance of your brand. Common indicators include:
+
+- **Brand Strength**: Recognition and reputation in the market
+- **Brand Relevance**: Alignment with sponsor's target audience
+- **Fan Engagement**: Quality and activity level of your fanbase
+- **Digital Presence**: Online reach and social media following
+- **Competitive Position**: Standing relative to peers
+
+**Range**: Typically 0.6x to 1.4x (60% to 140% of base value)
+
+**Related**: [Brand Value Indicators](/platform/organization-settings#brand-value-indicators)
+
+---
+
+### CPM (Cost Per Mille)
+
+Cost per thousand impressions. The standard advertising metric used to value media exposure. "Mille" is Latin for thousand.
+
+**Formula**: `Total Cost = (Impressions ÷ 1,000) × CPM`
+
+**Example**: 1 million TV viewers at €5 CPM = (1,000,000 ÷ 1,000) × €5 = €5,000 in media value
+
+**Typical CPM Rates**:
+- TV broadcast: €3-15 (varies by region and time slot)
+- Digital display: €2-10
+- Social media: €5-20
+- Print media: €10-30
+
+**Related**: [Valuation Methods](/valuations/methods#media-value-calculation)
+
+---
+
+### Engagement Rate
+
+The percentage of your audience that actively interacts with your content (likes, comments, shares, clicks) rather than passively viewing it.
+
+**Formula**: `(Total Interactions ÷ Total Reach) × 100%`
+
+**Benchmarks**:
+- Instagram: 1-3% is average, 3-6% is good, 6%+ is excellent
+- Facebook: 0.5-1% is average
+- LinkedIn: 2-3% is average
+- Twitter/X: 0.5-1% is average
+
+**Related**: [Create Valuation](/valuations/create-valuation#social-media-value)
+
+---
+
+### Media Reach
+
+The total number of unique people who potentially saw your content or sponsorship activation. Different from impressions, which counts total views (including repeat views by the same person).
+
+**Example**: A TV broadcast with 500,000 viewers = 500,000 reach. If shown twice, that's 1 million impressions but still 500,000 reach (assuming same audience).
+
+**Related**: [Valuation Methods](/valuations/methods)
+
+---
+
+### Sponsorship Lifecycle
+
+The complete journey of a sponsor relationship from initial contact to renewal or termination:
+
+1. **Prospecting**: Identifying potential sponsors
+2. **Proposal**: Presenting package and value proposition
+3. **Negotiation**: Discussing terms and pricing
+4. **Activation**: Delivering sponsorship assets
+5. **Fulfillment**: Providing contracted deliverables
+6. **Reporting**: Demonstrating value delivered
+7. **Renewal**: Extending or renegotiating contract
+
+**Related**: [Sponsorships Module](/sponsorships/sponsors)
+
+---
+
+### Valuation
+
+The calculated monetary value of sponsorship assets based on objective metrics like sales revenue, media exposure (CPM), and brand strength. Valiyou uses transparent formulas to quantify what sponsors would pay for equivalent advertising exposure.
+
+**Components**:
+- Sales Value (merchandise, tickets, transfers)
+- Media Value (TV, radio, print, digital)
+- Brand Multiplier (strength, relevance, engagement)
+
+**Related**: [Create Valuation](/valuations/create-valuation), [Valuation Methods](/valuations/methods)
+
+---
+
+## Platform Features
+
+### API Key
+
+A secure authentication token that allows external applications (Power BI, Excel, custom integrations) to access your Valiyou data programmatically via REST API.
+
+**Security**: API keys should be treated like passwords — never share publicly or commit to version control.
+
+**Related**: [API Management](/platform/api)
+
+---
+
+### Audit Log
+
+A chronological record of all significant actions in your organization (user changes, data modifications, permission updates). Available on Enterprise plans for compliance and security monitoring.
+
+**Retention**: Logs are retained indefinitely and cannot be edited or deleted (immutable).
+
+**Related**: [Audit Log](/platform/audit-log)
+
+---
+
+### Organization
+
+Your company, club, or team account in Valiyou. An organization can have multiple users with different roles and permissions. All data (valuations, sponsors, packages) belongs to the organization, not individual users.
+
+**Related**: [Organization Settings](/platform/organization-settings)
+
+---
+
+### Package
+
+A bundled offering of sponsorship assets (logo placements, social media posts, VIP tickets, etc.) with assigned pricing. Packages are built from your asset library and sent to sponsors as proposals.
+
+**Related**: [Packages](/sponsorships/packages), [Library](/sponsorships/library)
+
+---
+
+### Permissions
+
+Granular access controls that determine what users can view and edit. Examples: View Sales, Edit Marketing, Admin, Reports, API, Billing.
+
+**Principle of Least Privilege**: Grant only the minimum permissions needed for each role.
+
+**Related**: [Team Management](/platform/team-management#roles-and-permissions)
+
+---
+
+### Plugin
+
+An optional add-on that extends Valiyou's functionality. Examples:
+
+- **AI Insights**: AI-generated analysis of valuation trends
+- **Cash Flow Visualization**: Sankey charts showing value flows
+- **SocialDeepDive**: Social media metrics integration
+
+**Related**: [Plugins](/platform/plugins)
+
+---
+
+### Proposal
+
+A formal sponsorship offer sent to a sponsor, containing package details, pricing, inclusions, and terms. Proposals can be approved, rejected, or modified by the sponsor.
+
+**Related**: [Proposals](/sponsorships/proposals)
+
+---
+
+### RLS (Row-Level Security)
+
+Database security that ensures users only see data they have permission to access. Valiyou uses RLS to isolate organization data and enforce permissions.
+
+**Related**: [Security Best Practices](/trust-center)
+
+---
+
+### SSO (Single Sign-On)
+
+Enterprise authentication that allows users to log in with their company credentials (Azure AD, Okta, Google Workspace) instead of separate Valiyou passwords.
+
+**Availability**: Enterprise plan only
+
+**Related**: [Organization Settings](/platform/organization-settings#sso-tab)
+
+---
+
+## Metrics & Analytics
+
+### Approval Rate
+
+The percentage of proposals that sponsors accept.
+
+**Formula**: `(Approved Proposals ÷ Total Proposals Sent) × 100%`
+
+**Benchmark**: 20-30% is typical for cold outreach, 50-70% for warm leads
+
+**Related**: [Analytics](/sponsorships/analytics)
+
+---
+
+### Coverage Percentage
+
+How much of a package's sales price is covered by the actual cost of included items.
+
+**Formula**: `(Total Item Cost ÷ Sales Price) × 100%`
+
+**Example**: Package sold for €10,000 with €7,000 in item costs = 70% coverage
+
+**Typical Range**: 60-80% (allows margin for overhead and profit)
+
+**Related**: [Packages](/sponsorships/packages)
+
+---
+
+### Impressions
+
+The total number of times content or brand exposure was displayed, regardless of whether it was clicked or engaged with. Includes repeat views by the same person.
+
+**Example**: 1 person viewing a social media post 3 times = 3 impressions, 1 reach
+
+**Related**: [Valuation Methods](/valuations/methods)
+
+---
+
+### Response Rate
+
+The percentage of proposals that receive any response (approval, rejection, or request for more info) from sponsors.
+
+**Formula**: `(Proposals with Response ÷ Total Proposals Sent) × 100%`
+
+**Benchmark**: 40-60% is typical
+
+**Related**: [Proposals](/sponsorships/proposals)
+
+---
+
+### Seat
+
+A user license in your organization's subscription plan. Each active user (except pending invitations) consumes one seat.
+
+**Related**: [Billing](/platform/billing#user-seats), [Team Management](/platform/team-management)
+
+---
+
+### Trend Indicator
+
+The percentage change in valuation compared to the previous approved valuation. Shows if sponsorship value is growing, declining, or stable.
+
+**Example**: Current valuation €100,000, previous €90,000 = +11% trend ↗
+
+**Related**: [Dashboard](/valuations/dashboard)
+
+---
+
+## Business & Sales Terms
+
+### Activation
+
+The execution of sponsorship deliverables — physically displaying logos, creating content, hosting events, etc. The "doing" part of sponsorship after contracts are signed.
+
+**Example**: Installing sponsor banners at the stadium, posting sponsored content on social media
+
+---
+
+### B2B (Business-to-Business)
+
+Commercial relationships between businesses (e.g., club selling sponsorships to companies) rather than to individual consumers.
+
+---
+
+### Fulfillment
+
+Delivering all promised sponsorship assets and services per the contract. Includes tracking completion and providing proof of delivery.
+
+**Related**: [Proposals](/sponsorships/proposals)
+
+---
+
+### Pipeline
+
+The collection of prospective sponsors at various stages of the sales process. Managed in the Sponsorships module.
+
+**Related**: [Sponsors](/sponsorships/sponsors)
+
+---
+
+### Renewal Rate
+
+The percentage of sponsors that renew their contracts for another term.
+
+**Formula**: `(Renewed Sponsors ÷ Total Expiring Contracts) × 100%`
+
+**Benchmark**: 70-80% is healthy, 85%+ is excellent
+
+---
+
+### ROI (Return on Investment)
+
+For sponsors: the value received compared to money invested.
+For clubs: the efficiency of sponsor acquisition and management efforts.
+
+**Sponsor ROI Formula**: `(Value Delivered ÷ Sponsorship Cost) × 100%`
+
+**Related**: [Valuation Methods](/valuations/methods)
+
+---
+
+## Technical Terms
+
+### CSV (Comma-Separated Values)
+
+A plain-text file format for exporting data that can be opened in Excel, Google Sheets, or other spreadsheet applications.
+
+**Related**: [Reports](/valuations/reports#export-options)
+
+---
+
+### REST API
+
+A web-based interface that allows external applications to read and write data programmatically using HTTP requests (GET, POST, PUT, DELETE).
+
+**Related**: [API Management](/platform/api)
+
+---
+
+### Webhook
+
+An automated notification sent when specific events occur (e.g., proposal approved, user added). Future feature for advanced integrations.
+
+---
+
+## Need More Help?
+
+Can't find the term you're looking for?
+
+<CardGroup cols={2}>
+  <Card
+    title="Search Documentation"
+    icon="magnifying-glass"
+    href="/introduction"
+  >
+    Use the search bar to find specific topics
+  </Card>
+
+  <Card
+    title="Contact Support"
+    icon="envelope"
+    href="mailto:support@valiyou.com"
+  >
+    Email us at support@valiyou.com
+  </Card>
+
+  <Card
+    title="Quick Start Guide"
+    icon="rocket"
+    href="/getting-started/quick-start"
+  >
+    Get up and running in 5 minutes
+  </Card>
+
+  <Card
+    title="Valuation Methods"
+    icon="calculator"
+    href="/valuations/methods"
+  >
+    Learn how valuations are calculated
+  </Card>
+</CardGroup>
