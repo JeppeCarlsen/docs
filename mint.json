@@ -78,7 +78,7 @@
     },
     {
       "group": "Platform",
-      "icon": "desktop",
+      "icon": "monitor",
       "pages": [
         "platform/billing",
         "platform/team-management",
