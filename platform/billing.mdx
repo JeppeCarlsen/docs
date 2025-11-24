@@ -1,0 +1,648 @@
+---
+title: 'Billing & Subscription'
+description: 'Manage your subscription, usage limits, payment methods, invoices, and billing details'
+---
+
+Comprehensive billing management including subscription details, usage monitoring, seat management, extra valuations, payment methods, and invoice history.
+
+## Accessing Billing
+
+Navigate to **Platform** → **Billing** from the sidebar to access billing management.
+
+<Note>
+**Permission Required**: Billing permission or Admin access required to view and manage billing.
+</Note>
+
+## Page Layout
+
+The Billing page has five tabs for comprehensive subscription management:
+
+### Tab Navigation
+
+- **Subscription** - Plan details, add-ons, renewal date
+- **Usage** - Seats and valuations usage limits
+- **Payment Methods** - Saved credit cards
+- **Invoices** - Invoice history and downloads
+- **Billing Details** - Company billing information
+
+<Tip>
+**Direct Tab Access**: Use URL hash navigation (e.g., `/billing#usage`) to jump directly to a specific tab.
+</Tip>
+
+---
+
+## Subscription Tab
+
+Manage your plan details, add-ons, and subscription renewal.
+
+### Subscription Details Card
+
+**Displays:**
+- **Plan Name**: Starter, Professional, or Enterprise
+- **Billing Period**: Monthly or Annually
+- **Upgrade Button**: Appears for Starter/Professional plans
+
+<Info>
+**Upgrade Available**: Starter and Professional plans show an "Upgrade Plan" button to access higher tiers.
+</Info>
+
+**Upgrade Process:**
+1. Click "Upgrade Plan" button
+2. Upgrade Plan modal opens
+3. Select new plan tier
+4. Confirm upgrade
+5. Subscription updated immediately
+
+### Manage Add-ons Card
+
+<Note>
+**Feature Availability**: Add-ons available for Professional and Enterprise plans. Starter plans must upgrade to access add-ons.
+</Note>
+
+**Available Add-ons:**
+- **AI Insights for Reports** - AI-powered insights using LLMs (Groq, Gemini, OpenAI, Anthropic)
+  - Requires Professional or Enterprise plan
+  - Price: Varies by currency (e.g., 99 DKK/month)
+  - See [Platform → Plugins](/platform/plugins#ai-insights-for-reports) for configuration
+- **Cash Flow Visualization (Sankey)** - Interactive flow charts for valuations
+  - Available on all plans (Professional/Enterprise)
+  - Price: Varies by currency (e.g., 49 DKK/month)
+  - See [Platform → Plugins](/platform/plugins#cash-flow-visualization-sankey) for configuration
+
+**Add-on Management:**
+1. Click add-on card to select/deselect
+2. Selected add-ons show blue ring border
+3. Cost info appears showing price breakdown
+4. Click "Update Add-ons" to apply changes
+5. Pro-rated charges/credits applied immediately
+
+**Visual Indicators:**
+- **Ring Border**: Blue ring = selected, gray ring = not selected
+- **"Included" Badge**: Enterprise plans show green "Included" badge (add-ons included in plan)
+- **Cost Info Box**: Blue info box shows payment details when changes are made
+
+<Tip>
+**Enterprise Benefits**: Enterprise plans include all add-ons at no extra cost. The add-ons are automatically enabled.
+</Tip>
+
+**Cost Calculation:**
+- **Adding add-ons**: Shows new monthly total + immediate pro-rated charge
+- **Removing add-ons**: Shows credit for unused time + new monthly total
+- **Mixed changes**: Credits and charges both apply
+
+**Example Cost Info:**
+```
+Your next payment will be 148 DKK per month for add-ons.
+You will be charged immediately for the pro-rated amount.
+```
+
+<Warning>
+**Immediate Charges**: Add-on changes are charged/credited immediately on a pro-rated basis. Next billing cycle reflects the full monthly amount.
+</Warning>
+
+### Subscription Renewal Card
+
+Shows next renewal/payment date.
+
+**Displays:**
+- **Status**: Active (auto-renews) or Trial
+- **Renewal Date**: Next payment date in format "dd. month yyyy"
+- **Empty State**: "No active subscription found" if no payment method
+
+**Status Meanings:**
+- **Active**: Subscription auto-renews on renewal date
+- **Trialing**: Free trial period (auto-converts to paid)
+- **No Payment Method**: Entitlements active but no Stripe subscription
+
+---
+
+## Usage Tab
+
+Monitor team seats and valuation usage limits.
+
+### Plan Usage Limits Card
+
+Visual progress bars showing current usage.
+
+**Team Seats:**
+- **Display**: "X / Y" (e.g., "3 / 5")
+- **Progress Bar**: Green (<80% used), Blue (≥80% used)
+- **Percentage**: "X% used"
+- **Calculation**: Active users + pending invitations
+
+**Valuations (this year):**
+- **Display**: "X / Y" (e.g., "12 / 24")
+- **Progress Bar**: Green (<80% used), Blue (≥80% used)
+- **Percentage**: "X% used • Resets [Date]"
+- **Reset Date**: One year from entitlements creation (usually subscription start)
+
+<Info>
+**Annual Reset**: Valuation limits reset annually based on subscription start date, not calendar year. Purchased extra valuations carry forward.
+</Info>
+
+**What Counts Toward Limits:**
+- **Seats**: All active users + pending invitations
+- **Valuations**: All valuations created this year (Draft + Approved)
+
+**Plan-Specific Limits:**
+- **Starter**: 3 seats, 12 valuations/year
+- **Professional**: 5 seats, 24 valuations/year
+- **Enterprise**: 10 seats, Unlimited valuations
+
+See [Platform → Team Management](/platform/team-management) for user management.
+
+### Manage Seats Card
+
+Adjust team seat count with real-time cost preview.
+
+**Current Plan Info:**
+- **Included Seats**: Base seats in plan (e.g., "5 included in Professional Plan")
+- **Additional Seats**: Extra purchased seats (e.g., "• 2 additional")
+- **Seat Price**: Cost per additional seat per month
+
+**Team Seats Stepper:**
+- **Minus Button**: Decrease seats (disabled if 0 additional seats)
+- **Count Display**: Total seats (included + additional)
+- **Plus Button**: Increase seats
+
+**Cost Info** (appears when changes made):
+- **Upgrade**: Shows new monthly cost + immediate pro-rated charge
+- **Downgrade**: Shows credit for unused time + new monthly cost
+
+**Example Cost Info:**
+```
+Your next payment will be 398 DKK per month for additional seats.
+You will be charged immediately for the pro-rated amount.
+```
+
+**Action Buttons:**
+- **Cancel**: Reset to current seat count
+- **Upgrade/Downgrade Button**: Apply changes (e.g., "Upgrade to 7 seats")
+
+<Tip>
+**Flexible Scaling**: Add or remove seats anytime. Pro-rated charges/credits apply immediately, and the new monthly cost takes effect on next billing cycle.
+</Tip>
+
+<Warning>
+**Removing Seats**: You can only decrease additional seats, not included seats. Ensure you have fewer active users than new seat limit before downgrading.
+</Warning>
+
+See [Platform → Team Management](/platform/team-management#seat-limits) for seat management details.
+
+### Purchase Extra Valuations Card
+
+Buy additional one-time valuations beyond annual limit.
+
+<Note>
+**One-Time Purchase**: Extra valuations are purchased individually, not on subscription. They never expire and do not reset annually.
+</Note>
+
+**Current Plan Info:**
+- **Included Valuations**: Base valuations in plan (e.g., "24 included in Professional Plan")
+- **Additional Valuations**: Extra purchased valuations (e.g., "• 5 additional")
+- **Valuation Price**: Cost per extra valuation (varies by currency)
+- **Reset Date**: When next annual allocation becomes available
+
+**Extra Valuations Stepper:**
+- **Minus Button**: Decrease extra valuations (disabled if no unused extra valuations)
+- **Count Display**: Total valuations (included + additional)
+- **Plus Button**: Increase extra valuations
+
+**Decrease Logic:**
+- Can only decrease unused extra valuations
+- If you've used extra valuations this year, minus button is disabled
+- Example: Purchased 5 extra, used 3 → Can only decrease by 2 max
+
+**Cost Info** (appears when changes made):
+- **Purchase**: One-time payment amount, charged immediately
+- **Credit**: Account credit for unused valuations, usable for future purchases
+
+**Example Cost Info (Purchase):**
+```
+One-time payment of 1,990 DKK for 2 extra valuations.
+Payment will be charged immediately.
+```
+
+**Example Cost Info (Credit):**
+```
+You will receive account credit for the unused valuation.
+Credit amount: 995 DKK. This credit can be used for future purchases.
+```
+
+**Action Buttons:**
+- **Cancel**: Reset to current extra valuation count
+- **Purchase/Credit Button**: Apply changes (e.g., "Purchase 2 valuations" or "Get Credit for 1 valuation")
+
+<Tip>
+**No Expiration**: Extra valuations never expire. Purchase when needed, use whenever convenient. They don't reset annually like included valuations.
+</Tip>
+
+<Info>
+**Account Credit**: When you return unused extra valuations, you receive account credit that can be used for future purchases (seats, add-ons, extra valuations).
+</Info>
+
+**When to Purchase Extra Valuations:**
+- Exceeded annual limit (e.g., 24/24 used)
+- Planning major campaign requiring multiple valuations
+- Prefer one-time purchase over upgrading plan
+- Need flexibility without long-term commitment
+
+See [Valuations → Create Valuation](/valuations/create-valuation) for valuation creation.
+
+---
+
+## Payment Methods Tab
+
+View and manage saved payment methods.
+
+### Payment Methods Card
+
+**Displays for each payment method:**
+- **Card Brand Icon**: Visa, Mastercard, Amex, etc.
+- **Card Brand Name**: "Visa", "Mastercard", etc.
+- **Last 4 Digits**: "•••• 1234"
+- **Expiration Date**: "Expires 12/2025"
+- **Default Badge**: Blue "Default" badge if primary payment method
+
+**Actions:**
+- **Manage Payment Methods Button**: Opens Stripe Customer Portal
+  - Add new payment method
+  - Remove old payment method
+  - Set default payment method
+  - Update card details
+
+**Empty State:**
+- Message: "No payment methods found"
+- Action: "Add Payment Method" button → Opens Stripe Customer Portal
+
+<Info>
+**Stripe Customer Portal**: All payment method management happens via Stripe's secure portal. No card details are stored or handled by Valiyou.
+</Info>
+
+**Security Features:**
+- Card numbers never fully displayed (only last 4 digits)
+- No card details stored in Valiyou database
+- PCI DSS compliant via Stripe
+- Secure Stripe Customer Portal for all changes
+
+---
+
+## Invoices Tab
+
+View invoice history and download PDF invoices.
+
+### Invoices Card
+
+**Invoice Table** (desktop):
+
+**Columns:**
+- **Invoice**: Invoice number or ID
+- **Date**: Invoice date in dd/MM/yyyy format
+- **Amount**: Total amount with currency (e.g., "1,295.00 DKK")
+- **Status**: Badge showing paid status
+  - Green "Paid" badge
+  - Yellow badge for "Open" invoices
+  - Red badge for failed payments
+- **Actions**: "Download PDF" link (if available)
+
+**Invoice Types:**
+- **Subscription Invoices**: Monthly/annual plan charges
+- **Add-on Invoices**: Add-on subscription changes
+- **One-time Invoices**: Extra valuation purchases, seat upgrades
+- **Credit Notes**: Refunds and credits
+
+**Actions:**
+- **Download PDF**: Click link to download invoice PDF
+  - Opens in new tab
+  - Suitable for accounting/bookkeeping
+  - Contains full invoice details
+
+**Empty State:**
+- Message: "No invoices found"
+- Displays when no invoices exist yet
+
+<Tip>
+**Accounting Integration**: Download PDF invoices for your accounting software or bookkeeping records. All invoices are immediately available after payment.
+</Tip>
+
+**Invoice Details** (in PDF):
+- Invoice number
+- Invoice date
+- Billing details (company name, address, VAT)
+- Line items with descriptions
+- Subtotal, tax, total
+- Payment status
+
+---
+
+## Billing Details Tab
+
+Manage company billing information and tax details.
+
+### Billing Details Card
+
+**Company Information:**
+- **Name**: Company or organization name
+- **Address**: Full billing address
+  - Line 1 (street address)
+  - Line 2 (apartment/suite, optional)
+  - Postal Code + City
+  - Country
+- **Email**: Billing contact email
+- **VAT Country**: Country for VAT purposes
+- **Tax ID**: VAT number or tax identification
+
+**Actions:**
+- **Update Billing Details Button**: Opens Stripe Customer Portal
+  - Update company name
+  - Change billing address
+  - Update email address
+  - Add/update VAT number
+  - Change tax country
+
+**Empty State:**
+- Message: "No billing details found"
+- Action: "Add Billing Details" button → Opens Stripe Customer Portal
+
+<Info>
+**VAT & Tax**: Billing details are used for invoices and tax calculations. Ensure VAT number is correct for EU businesses to avoid incorrect charges.
+</Info>
+
+**Why Update Billing Details:**
+- Company name changed
+- Moved to new office/address
+- Need VAT number on invoices
+- Change billing contact email
+- Update tax country for compliance
+
+<Warning>
+**Invoice Accuracy**: Billing details appear on all invoices. Ensure information is accurate before making purchases to avoid invoice corrections.
+</Warning>
+
+---
+
+## Permissions
+
+Access to billing features requires specific permissions:
+
+| Permission | Can View Subscription | Can Manage Add-ons | Can Manage Seats | Can Purchase Valuations | Can View Invoices | Can Update Billing Details |
+|------------|----------------------|-------------------|-----------------|----------------------|------------------|---------------------------|
+| **Admin** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Billing** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Other Roles** | ❌ No | ❌ No | ❌ No | ❌ No | ❌ No | ❌ No |
+
+<Note>
+**Billing-Only Access**: You can grant team members Billing permission without other roles. They can manage subscription but not access valuations/reports.
+</Note>
+
+---
+
+## Common Use Cases
+
+### Adding Team Members (Purchase Seats)
+
+1. Navigate to **Platform** → **Billing** → **Usage** tab
+2. Find **Manage Seats** card
+3. Click **Plus Button** to increase seat count
+4. Review cost info (pro-rated charge + new monthly cost)
+5. Click **"Upgrade to X seats"** button
+6. Success modal confirms seat addition
+7. Go to **Platform** → **Users** to invite new members
+
+See [Platform → Team Management](/platform/team-management#inviting-users) for invitation process.
+
+### Purchasing Extra Valuations
+
+1. Check current usage: **Billing** → **Usage** tab → **Plan Usage Limits**
+2. If at/near limit, go to **Purchase Extra Valuations** card
+3. Click **Plus Button** to add extra valuations
+4. Review cost info (one-time payment)
+5. Click **"Purchase X valuations"** button
+6. Payment processed immediately
+7. Success modal confirms purchase
+8. Create new valuations: **Valuations** → **New Valuation**
+
+See [Valuations → Create Valuation](/valuations/create-valuation) for valuation creation.
+
+### Enabling AI Insights Plugin
+
+1. Navigate to **Platform** → **Billing** → **Subscription** tab
+2. Find **Manage Add-ons** card
+3. Click **AI Insights for Reports** card to select
+4. Review cost info (monthly charge + pro-rated amount)
+5. Click **"Update Add-ons"** button
+6. Success modal confirms add-on enabled
+7. Go to **Platform** → **Plugins** to configure AI provider
+8. Use AI Insights in **Valuations** → **Reports**
+
+See [Platform → Plugins](/platform/plugins#ai-insights-for-reports) for AI Insights configuration.
+
+### Upgrading Plan Tier
+
+1. Navigate to **Platform** → **Billing** → **Subscription** tab
+2. Click **"Upgrade Plan"** button (Subscription Details card)
+3. Upgrade Plan modal opens
+4. Select new plan tier (Professional or Enterprise)
+5. Review features and pricing
+6. Click **"Upgrade to [Plan]"** button
+7. Subscription upgraded immediately
+8. New entitlements active (seats, valuations, features)
+
+<Info>
+**Pro-rated Charges**: Plan upgrades are pro-rated. You're only charged for the remaining days in your billing cycle at the new plan rate.
+</Info>
+
+### Updating Payment Method
+
+1. Navigate to **Platform** → **Billing** → **Payment Methods** tab
+2. Click **"Manage Payment Methods"** button
+3. Stripe Customer Portal opens in new window
+4. Add new card or update existing card
+5. Set new card as default (if desired)
+6. Return to Valiyou (portal auto-redirects)
+7. New payment method appears in list
+
+### Downloading Invoices for Accounting
+
+1. Navigate to **Platform** → **Billing** → **Invoices** tab
+2. Find invoice in table (sorted by date, newest first)
+3. Click **"Download PDF"** link in Actions column
+4. PDF opens in new tab or downloads
+5. Save PDF to accounting folder
+6. Import to accounting software (if applicable)
+
+<Tip>
+**Bulk Download**: For multiple invoices, open each PDF in new tabs, then save all at once using browser's save multiple tabs feature.
+</Tip>
+
+---
+
+## Troubleshooting
+
+### Can't Access Billing Page
+
+**Reasons:**
+- No Billing permission
+- Not an Admin
+- Redirected to Access Denied
+
+**Fix:**
+- Request Billing permission from Admin
+- Request Admin role from owner
+- Contact organization owner for access
+
+### Add-on Not Available
+
+**Reasons:**
+- On Starter plan (AI Insights requires Professional/Enterprise)
+- Add-on already included in plan (Enterprise)
+- Demo mode active
+
+**Fix:**
+- Upgrade to Professional/Enterprise plan
+- Check if add-on is already enabled (Enterprise plans include all add-ons)
+- Upgrade from demo mode to paid plan
+
+### Can't Decrease Seats
+
+**Reasons:**
+- No additional seats to remove (only included seats)
+- More active users than new seat limit
+- Pending invitations count toward limit
+
+**Fix:**
+- Remove users first: [Platform → Team Management](/platform/team-management#removing-users)
+- Cancel pending invitations
+- Then decrease seats
+
+### Can't Decrease Extra Valuations
+
+**Reasons:**
+- No extra valuations purchased
+- All extra valuations used this year
+- Minus button disabled
+
+**Fix:**
+- Can only return unused extra valuations
+- Wait until next annual reset
+- Purchase more instead of decreasing (if needed)
+
+### Payment Failed
+
+**Reasons:**
+- Card expired
+- Insufficient funds
+- Card blocked by bank
+- Incorrect billing details
+
+**Fix:**
+- Update payment method: **Payment Methods** tab → **Manage Payment Methods**
+- Contact your bank to authorize payment
+- Verify billing details: **Billing Details** tab → **Update Billing Details**
+- Try again after fixing issue
+
+### Invoices Not Showing
+
+**Reasons:**
+- No invoices generated yet
+- First subscription just started
+- Payment method not added
+
+**Fix:**
+- Wait for first billing cycle to complete
+- Add payment method: **Payment Methods** tab
+- Refresh page after adding payment method
+
+### Cost Info Shows Wrong Currency
+
+**Reasons:**
+- Billing currency set in Stripe
+- Currency changed after subscription started
+- Multiple currencies in account
+
+**Fix:**
+- Currency is set by Stripe based on payment method
+- Contact support to change billing currency
+- New subscription required to change currency
+
+---
+
+## Subscription Lifecycle
+
+### Subscription Start
+
+**Initial Setup:**
+1. Sign up on pricing page
+2. Select plan and billing period
+3. Enter payment method
+4. Billing details collected
+5. Subscription activated
+6. Entitlements granted immediately
+
+### Active Subscription
+
+**Ongoing Management:**
+- Monthly/annual automatic payments
+- Add-on changes pro-rated
+- Seat adjustments pro-rated
+- Extra valuations purchased as needed
+- Invoices generated automatically
+- Limits reset annually (valuations)
+
+### Subscription Changes
+
+**Upgrade Plan:**
+- Pro-rated charge for remaining period
+- New entitlements active immediately
+- Next billing cycle reflects new plan price
+
+**Add/Remove Add-ons:**
+- Pro-rated charge/credit applied
+- Add-ons active/inactive immediately
+- Next billing cycle reflects changes
+
+**Manage Seats:**
+- Pro-rated charge/credit applied
+- New seat limit active immediately
+- Invite users to fill seats
+
+### Subscription Renewal
+
+**Automatic Renewal:**
+- Payment processed on renewal date
+- Invoice generated automatically
+- Subscription continues uninterrupted
+- New billing period starts
+
+**Failed Payment:**
+- Payment retry attempted
+- Email notification sent
+- Subscription may be suspended
+- Update payment method to restore
+
+### Subscription Cancellation
+
+**Cancellation Process:**
+- Open Stripe Customer Portal (via Manage Payment Methods)
+- Cancel subscription
+- Access continues until period end
+- Entitlements removed after period ends
+- Data preserved (can reactivate later)
+
+<Warning>
+**Data Preservation**: Canceling subscription does not delete your data. Your valuations, reports, and settings are preserved for 30 days. Reactivate anytime to restore full access.
+</Warning>
+
+---
+
+## Next Steps
+
+- **Invite Team**: Add users via [Platform → Team Management](/platform/team-management)
+- **Enable Plugins**: Configure add-ons via [Platform → Plugins](/platform/plugins)
+- **Create Valuations**: Start using your allocation via [Valuations → Create Valuation](/valuations/create-valuation)
+- **View Reports**: Analyze trends via [Valuations → Reports](/valuations/reports)
+- **Review Usage**: Monitor limits regularly via **Usage** tab
+
+<Tip>
+**Proactive Monitoring**: Check the Usage tab regularly to avoid hitting limits. Purchase extra valuations or seats before running out to prevent workflow interruptions.
+</Tip>

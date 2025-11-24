@@ -80,6 +80,7 @@
       "group": "Platform",
       "icon": "desktop",
       "pages": [
+        "platform/billing",
         "platform/team-management",
         "platform/organization-settings",
         "platform/audit-log",
