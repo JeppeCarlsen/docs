@@ -59,7 +59,8 @@
       "pages": [
         "valuations/create-valuation",
         "valuations/dashboard",
-        "valuations/valuations-list"
+        "valuations/valuations-list",
+        "valuations/valuation-details"
       ]
     }
   ],
