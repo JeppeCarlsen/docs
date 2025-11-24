@@ -82,6 +82,7 @@
       "pages": [
         "platform/billing",
         "platform/team-management",
+        "platform/user-profile",
         "platform/organization-settings",
         "platform/audit-log",
         "platform/plugins",
