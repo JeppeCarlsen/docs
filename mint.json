@@ -29,16 +29,6 @@
     "name": "Get Started",
     "url": "https://valiyou.com/auth/signup"
   },
-  "tabs": [
-    {
-      "name": "User Guide",
-      "url": "guides"
-    },
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "anchors": [
     {
       "name": "Trust Center",
