@@ -58,7 +58,8 @@
       "icon": "rocket",
       "pages": [
         "valuations/create-valuation",
-        "valuations/dashboard"
+        "valuations/dashboard",
+        "valuations/valuations-list"
       ]
     }
   ],
