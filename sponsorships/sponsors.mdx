@@ -1,0 +1,519 @@
+---
+title: 'Sponsors'
+description: 'Manage sponsor relationships, contacts, and track sponsorship values'
+---
+
+Organize and manage all sponsor relationships in one place with contact information, sponsorship values, and proposal tracking.
+
+## Accessing Sponsors
+
+Navigate to **Sponsorships** → **Sponsors** from the sidebar to access your sponsor list.
+
+<Note>
+**Plan Required**: Sponsors feature requires Professional or Enterprise plan.
+**Permission Required**: You need Sponsors role or Admin access.
+</Note>
+
+## Page Layout
+
+The Sponsors page has two tabs:
+
+### Sponsors Tab
+
+Masonry grid layout showing all sponsor cards with:
+- Logo and company name
+- Sponsorship value
+- Status (Active, Inactive, Archived)
+- Contact count
+- Pending proposals (if Packages access enabled)
+- Website link
+- Edit and delete actions
+
+### Contacts Tab
+
+Directory-style list showing all contacts grouped by sponsor with:
+- Contact name and position
+- Email and phone
+- Primary contact indicator
+- Quick edit and delete actions
+- Add contact buttons per sponsor
+
+## Empty State
+
+If you don't have any sponsors yet, you'll see:
+
+- **Icon**: Building graphic
+- **Title**: "No sponsors yet"
+- **Message**: "Get started by adding your first sponsor."
+- **Action**: "Add First Sponsor" button
+
+## Sponsors Tab
+
+### Masonry Grid Layout
+
+**Responsive Columns:**
+- **Desktop (>1280px)**: 3 columns
+- **Tablet (1024-1280px)**: 2 columns
+- **Mobile (<1024px)**: 1 column
+
+**Sorting:**
+1. **By Status**: Active → Inactive → Archived
+2. **Within Status**: Highest sponsorship value first
+
+<Tip>
+The masonry layout automatically adjusts card heights based on content, creating a visually balanced grid.
+</Tip>
+
+### Sponsor Card
+
+Each sponsor card displays comprehensive information:
+
+#### Card Header
+
+- **Logo**: 48×48px square (or building icon placeholder)
+- **Company Name**: Bold, primary text
+- **Menu Button**: Three-dot menu (Edit, Delete)
+- **Background**: Light gray header bar
+
+<Info>
+**Logo Upload**: Logos can be uploaded as JPG, PNG, GIF, or WebP files (max 2MB). They're automatically cropped to square format.
+</Info>
+
+#### Card Body
+
+**Sponsorship Value**:
+- Label: "Sponsorship value" or "Linked value" (if linked to packages)
+- Amount: Formatted currency (e.g., "€500,000")
+- Icon: Cube icon (if value is linked to packages)
+
+<Note>
+**Linked Value**: When enabled, sponsorship value automatically syncs with approved package totals. The cube icon indicates linked status.
+</Note>
+
+**Pending Proposals** (if Packages access enabled):
+- Shows count and total value of pending proposals
+- Example: "2 pending proposals (€250,000)"
+- Only visible if you have Packages feature access
+
+**Status Badge**:
+- **Active**: Green badge
+- **Inactive**: Gray badge
+- **Archived**: Gray badge (card has 50% opacity)
+
+**Contact Count**:
+- Shows number of contacts
+- Example: "3 contacts"
+- Includes primary contact indicator
+
+**Website Link** (if provided):
+- Globe icon + link
+- Opens in new tab
+- Blue text color
+
+**Address** (if provided):
+- Building icon + full address
+- Format: Street HouseNumber, PostalCode City, Country
+
+### Add Sponsor Button
+
+**Location**: Top right of Sponsors tab
+**Button**: Blue primary button "Add Sponsor"
+
+**Action**: Opens Add Sponsor modal
+
+## Add/Edit Sponsor Modal
+
+Comprehensive modal for adding or editing sponsors.
+
+### Modal Tabs
+
+Three tabs for different information types:
+
+#### 1. Details Tab
+
+**Company Information:**
+- **Name** (required) - Company/organization name
+- **Sponsorship Value** - Annual sponsorship value in base currency
+- **Linked Value Toggle** - Automatically sync value with approved packages
+- **Status** - Active, Inactive, or Archived
+- **Notes** - Internal notes about the sponsor
+
+<Tip>
+**Linked Value**: Enable this to automatically calculate sponsorship value from approved package totals. Saves time and ensures accuracy!
+</Tip>
+
+**Logo Upload:**
+- Click to upload or drag-and-drop
+- Crop modal with zoom and pan controls
+- Preview before saving
+- Delete button to remove existing logo
+
+**Alternative - Logo URL:**
+- If you don't upload a file, you can provide a URL
+- URL takes effect only if no file is uploaded
+- Useful for external image sources
+
+**Website:**
+- Company website URL
+- Displayed as clickable link on card
+
+#### 2. Address Tab
+
+Complete address information:
+
+- **Street** - Street name
+- **House Number** - Building number
+- **Postal Code** - ZIP/postal code
+- **City** - City name
+- **Country** - Select from dropdown (EU countries)
+
+<Info>
+Address is optional but recommended for contract documentation and official communication.
+</Info>
+
+#### 3. Contacts Tab
+
+Manage sponsor contacts directly in the modal.
+
+**Add Contact Button**: "+ Add Contact" (top of tab)
+
+**Contact List:**
+- Shows all contacts for this sponsor
+- Edit button per contact
+- Delete button per contact
+- Primary contact star indicator
+
+**Add/Edit Contact Form:**
+- **Name** (required)
+- **Position** (optional) - Job title
+- **Email** (required)
+- **Phone** (optional)
+- **Primary Contact Toggle** - Mark as main point of contact
+
+<Note>
+**Primary Contact**: Only one contact can be primary. Setting a new primary automatically unsets the previous one.
+</Note>
+
+### Modal Actions
+
+**When Adding:**
+- **Cancel** - Close without saving
+- **Add Sponsor** - Create sponsor (blue button)
+
+**When Editing:**
+- **Cancel** - Close without saving
+- **Delete Sponsor** - Delete sponsor (red button)
+- **Save Changes** - Update sponsor (blue button)
+
+## Contacts Tab
+
+Comprehensive directory of all sponsor contacts grouped by company.
+
+### Directory Layout
+
+**Sticky Headers:**
+- Sponsor name as section header
+- "+ Add contact" button per sponsor
+- Stays visible when scrolling
+
+**Contact List Items:**
+
+Each contact displays:
+
+**Avatar Circle:**
+- Shows first letter of name
+- Gray background
+- Star icon indicator (solid = primary, outline = non-primary)
+- Click to toggle primary status
+
+**Contact Info:**
+- **Name** - Bold, prominent
+- **Position** - Smaller text below name (if provided)
+- **Email** - Blue, clickable mailto: link
+- **Phone** - Gray text (if provided)
+
+**Actions:**
+- **Edit button** - Pencil icon
+- **Delete button** - Trash icon
+
+<Tip>
+**Quick Primary Toggle**: Click the avatar circle to instantly toggle primary contact status. No need to open edit modal!
+</Tip>
+
+### Add Contact
+
+**Button Location**: In sponsor section header (sticky)
+
+**Action**: Opens Add Contact modal with:
+- Empty form
+- Sponsor already selected (not editable)
+- Same fields as edit mode
+
+### Edit Contact Modal
+
+**Fields:**
+- Name (required)
+- Position (optional)
+- Email (required)
+- Phone (optional)
+- Primary Contact toggle
+
+**Actions:**
+- **Cancel** - Close without saving
+- **Save** - Update contact
+
+### Delete Contact Confirmation
+
+**Modal Type**: Destructive confirmation
+
+**Content:**
+- Title: "Delete Contact"
+- Message: "Are you sure you want to delete '[Name]'?"
+- Confirm: "Delete" (red button)
+- Cancel: "Cancel" (gray button)
+
+<Warning>
+Deleting a contact is permanent and cannot be undone.
+</Warning>
+
+## Delete Sponsor
+
+### Delete Confirmation Modal
+
+**Triggered by:**
+- Clicking "Delete" in sponsor card menu
+- Clicking "Delete Sponsor" button in edit modal
+
+**Modal Content:**
+- Title: "Delete Sponsor"
+- Message: "Are you sure you want to delete '[Name]'? This will also delete all associated contacts and packages."
+- **Affected Packages List**: Shows which packages use this sponsor
+- Confirm: "Delete" (red button)
+- Cancel: "Cancel" (gray button)
+
+<Warning>
+**Cascading Delete**: Deleting a sponsor also deletes:
+- All contacts for that sponsor
+- All packages linked to that sponsor
+- All proposals for those packages
+
+This action is permanent and cannot be undone.
+</Warning>
+
+### Affected Packages
+
+If the sponsor has packages, the modal displays:
+
+**Section**: "Packages using this sponsor"
+**List**: All package names that will be deleted
+**Example**:
+- Gold Partner Package
+- Stadium Naming Rights
+- Digital Advertising Bundle
+
+<Info>
+If no packages are linked, this section is hidden.
+</Info>
+
+## Sponsor Status
+
+Three status types to organize sponsors:
+
+### Active
+
+- **Meaning**: Current, active sponsor relationship
+- **Badge**: Green "Active"
+- **Display**: Normal opacity, sorted first
+- **Use Case**: All current sponsors
+
+### Inactive
+
+- **Meaning**: Temporarily inactive or between contracts
+- **Badge**: Gray "Inactive"
+- **Display**: Normal opacity, sorted after Active
+- **Use Case**: Past sponsors you may work with again
+
+### Archived
+
+- **Meaning**: Permanently archived relationships
+- **Badge**: Gray "Archived"
+- **Display**: 50% opacity, sorted last
+- **Use Case**: Historical records, no longer relevant
+
+<Tip>
+Use "Inactive" for sponsors between contracts, "Archived" for permanently closed relationships. This helps keep your active sponsor list clean while maintaining history.
+</Tip>
+
+## Linked Value Feature
+
+Automatically sync sponsorship value with approved packages.
+
+### How It Works
+
+**When Enabled:**
+1. Sponsor's "Sponsorship Value" field becomes read-only
+2. Value automatically calculates from approved packages
+3. Card shows cube icon to indicate linked status
+4. Real-time updates when packages change
+
+**Calculation:**
+```
+Sponsorship Value = Sum of all approved package sales prices
+```
+
+**Example:**
+- Package A (approved): €100,000
+- Package B (approved): €150,000
+- Package C (pending): €50,000
+- **Sponsorship Value**: €250,000 (only approved packages)
+
+<Info>
+**Packages Feature Required**: Linked value only works if you have access to the Packages feature (Professional/Enterprise plans).
+</Info>
+
+### When to Use Linked Value
+
+**✅ Use When:**
+- Sponsor has multiple packages
+- Package values change frequently
+- You want automatic synchronization
+- Accuracy is critical
+
+**❌ Don't Use When:**
+- Single flat sponsorship fee
+- Value includes non-package components
+- Manual control preferred
+
+## Pending Proposals
+
+Shows proposals waiting for approval (if Packages feature enabled).
+
+**Display:**
+- Count: Number of pending proposals
+- Value: Total sales price of pending proposals
+- Example: "2 pending proposals (€250,000)"
+
+**Calculation:**
+```
+Count = Number of packages with status "pending_approval"
+Value = Sum of sales_price for pending packages
+```
+
+<Note>
+**Professional/Enterprise Only**: Proposal tracking requires Packages feature access. If you don't have access, this section is hidden.
+</Note>
+
+## Responsive Design
+
+### Desktop (>1280px)
+
+- 3-column masonry grid
+- Full cards with all details
+- Side-by-side layout
+
+### Tablet (1024-1280px)
+
+- 2-column masonry grid
+- Full cards
+- Optimized spacing
+
+### Mobile (<1024px)
+
+- 1-column masonry grid
+- Stacked cards
+- Full-width layout
+- Touch-optimized buttons
+
+## Permissions
+
+Different permissions show different content:
+
+| Permission | Can View | Can Add | Can Edit | Can Delete |
+|------------|----------|---------|----------|-----------|
+| **Sponsors Role** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Admin** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Other Roles** | ❌ No | ❌ No | ❌ No | ❌ No |
+
+<Info>
+**Granular Permissions**: Enterprise plans can create custom roles with specific sponsor permissions.
+</Info>
+
+## Common Use Cases
+
+### Adding First Sponsor
+
+1. Click "Add First Sponsor" button
+2. Fill in Details tab (name, value, status)
+3. Upload logo or provide URL
+4. Add website (optional)
+5. Go to Address tab, fill in company address
+6. Go to Contacts tab, add primary contact
+7. Click "Add Sponsor"
+
+### Managing Active Relationships
+
+1. Keep status as "Active" for all current sponsors
+2. Use linked value for multi-package sponsors
+3. Add all relevant contacts with positions
+4. Mark primary contact with star
+5. Track pending proposals value
+
+### Archiving Old Sponsors
+
+1. Click three-dot menu on sponsor card
+2. Select "Edit"
+3. Change status to "Archived"
+4. Add closure notes
+5. Click "Save Changes"
+6. Card moves to bottom with reduced opacity
+
+### Bulk Contact Updates
+
+1. Switch to "Contacts" tab
+2. Scroll through grouped directory
+3. Edit contacts inline using pencil icons
+4. Toggle primary contacts with avatar clicks
+5. Add new contacts with section buttons
+
+## Troubleshooting
+
+### Linked Value Not Updating
+
+**Check:**
+1. Linked value toggle is ON in sponsor details
+2. You have Packages feature access
+3. Packages have "approved" status (pending don't count)
+4. Refresh page to see latest changes
+
+### Logo Upload Failed
+
+**Try:**
+1. Check file size (<2MB)
+2. Use JPG, PNG, GIF, or WebP format
+3. Try different file
+4. Use logo URL as alternative
+
+### Contact Deleted But Still Shows
+
+**Fix:**
+- Refresh page to clear cache
+- Check if contact was in multiple sponsors
+- Verify deletion confirmation appeared
+
+### Can't Delete Sponsor
+
+**Reasons:**
+- Sponsor has packages (check affected packages list)
+- Network error - try again
+- Permission denied - contact admin
+
+**Solution:**
+- Delete or reassign packages first
+- Then delete sponsor
+
+## Next Steps
+
+- **Add packages** - Go to Packages page to create sponsorship packages
+- **Create proposals** - Use Proposals to send offers to sponsors
+- **Track analytics** - View Analytics for sponsor performance insights
+- **Build packages** - Use Package Builder for custom sponsor offerings

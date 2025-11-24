@@ -64,6 +64,13 @@
         "valuations/reports",
         "valuations/methods"
       ]
+    },
+    {
+      "group": "Sponsorships",
+      "icon": "handshake",
+      "pages": [
+        "sponsorships/sponsors"
+      ]
     }
   ],
   "footerSocials": {
