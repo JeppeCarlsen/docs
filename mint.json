@@ -69,7 +69,8 @@
       "group": "Sponsorships",
       "icon": "star",
       "pages": [
-        "sponsorships/sponsors"
+        "sponsorships/sponsors",
+        "sponsorships/library"
       ]
     }
   ],

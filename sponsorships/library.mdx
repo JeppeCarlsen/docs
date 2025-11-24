@@ -1,0 +1,654 @@
+---
+title: 'Library'
+description: 'Build and manage your sponsorship item library with categories, tiers, and event-specific offerings'
+---
+
+Create a reusable library of sponsorship items that can be mixed and matched to build custom packages for sponsors.
+
+## Accessing Library
+
+Navigate to **Sponsorships** → **Library** from the sidebar to access the item library.
+
+<Note>
+**Plan Required**: Library feature requires Professional or Enterprise plan.
+**Permission Required**: You need Library role or Admin access.
+</Note>
+
+## Page Layout
+
+The Library page has three tabs:
+
+### Library Tab
+
+Sortable table showing all sponsorship items with:
+- Drag-and-drop reordering
+- Item name and description
+- Category, tier, and event assignments
+- Unit cost and max quantity
+- Inline editing capabilities
+- Quick edit and delete actions
+
+### Settings Tab
+
+Configuration for:
+- **Categories** - Item type classification (Designation, Hospitality, etc.)
+- **Tiers** - Sponsorship tier levels (Gold, Silver, Bronze, etc.)
+- **Events** - Event definitions with location and date ranges
+
+### Negotiator Tab
+
+Configuration for contribution margin ratio labels used in Package Builder negotiator mode.
+
+## Empty State
+
+If you don't have any items yet, you'll see:
+
+- **Icon**: Document graphic
+- **Title**: "No items yet"
+- **Message**: "Add your first sponsorship item to the library."
+- **Action**: "Add First Item" button
+
+## Library Tab
+
+### Item Library Table
+
+Comprehensive table with all sponsorship items.
+
+#### Table Columns
+
+**Drag Handle** (leftmost):
+- Six-dot icon for drag-and-drop
+- Click and drag to reorder items
+- New order saves automatically
+
+**Item Name**:
+- Primary identifier
+- Bold text
+- Click row to edit
+
+**Category**:
+- Inline dropdown
+- Select from configured categories
+- Quick-change without opening modal
+
+**Event**:
+- Inline dropdown
+- "All events" or specific event
+- Quick-change assignment
+
+**Required** (Tier):
+- Inline dropdown
+- "All Tiers" or specific tier requirement
+- Restricts item availability per tier
+
+**Quantity**:
+- Inline number input
+- Max quantity available
+- Empty = unlimited
+- Changes save automatically
+
+**Unit Cost**:
+- Currency formatted (e.g., "€5,000")
+- Right-aligned
+- Hidden in Negotiator Mode
+
+**Actions**:
+- **Edit button** - Opens edit modal
+- **Delete button** - Opens delete confirmation
+
+<Tip>
+**Drag to Reorder**: The display order in this table determines the order items appear in Package Builder. Organize strategically!
+</Tip>
+
+#### Inline Editing
+
+Most fields can be edited directly in the table without opening the modal:
+
+**Editable Inline:**
+- Category dropdown
+- Event dropdown
+- Required tier dropdown
+- Max quantity input
+
+**Not Editable Inline:**
+- Item name (use Edit button)
+- Description (use Edit button)
+- Unit cost (use Edit button)
+- Boolean toggle (use Edit button)
+
+<Info>
+**Auto-Save**: Inline edits save automatically when you change the value. No need to click "Save"!
+</Info>
+
+### Add Item Button
+
+**Location**: Top right of Library tab
+**Button**: Blue primary button "Add Item"
+
+**Action**: Opens Add Item modal
+
+## Add/Edit Item Modal
+
+Comprehensive modal for creating or editing library items.
+
+### Modal Fields
+
+**Item Name** (required):
+- Clear, descriptive name
+- Appears in packages and proposals
+- Example: "Stadium Naming Rights", "VIP Season Tickets"
+
+**Description** (optional):
+- Detailed explanation of the item
+- Visible to sponsors in proposals
+- Supports multi-line text
+
+**Category** (required):
+- Select from dropdown
+- **Built-in Categories**: Designation, Hospitality
+- **Custom Categories**: Add your own in Settings tab
+- **Quick Add**: Click "+ Add category" to create new one instantly
+
+<Info>
+**System Categories**: "Designation" and "Hospitality" are built-in and cannot be deleted. Custom categories can be managed in Settings.
+</Info>
+
+**Event Assignment**:
+- **"All events"** (default) - Item applies to all events
+- **Specific Event** - Item only for one event
+- **Quick Add**: Click "+ Add event" to create new event
+- **Event Details**: Click pencil icon to view/edit event info
+
+<Tip>
+**Event-Specific Items**: Use this for special offerings like "Championship Game VIP Tickets" or "Opening Ceremony Banner Placement".
+</Tip>
+
+**Required Tier**:
+- **"All Tiers"** (default) - Available to all sponsors regardless of tier
+- **Specific Tier** - Only available to sponsors at this tier level
+- **Quick Add**: Click "+ Add tier" to create new tier level
+- **Tier Management**: Click pencil icon to edit tiers
+
+<Info>
+**Tier Restrictions**: Use this to create exclusive items for premium sponsors (e.g., "Platinum Lounge Access" only for Gold tier).
+</Info>
+
+**Unit Cost** (required):
+- Cost per unit in base currency
+- Example: €5,000 for one VIP ticket
+- Used in package pricing calculations
+- Hidden in Negotiator Mode (proposal-based pricing)
+
+**Max Quantity** (optional):
+- Maximum available quantity
+- Empty = unlimited
+- Example: 100 VIP seats, 1 stadium naming right
+- Enforced in Package Builder
+
+**Boolean Toggle**:
+- **OFF** (default) - Quantity-based item
+- **ON** - Yes/No checkbox item
+- Boolean items ignore Max Quantity field
+- Example: "Logo on Website" (either included or not)
+
+<Warning>
+**Boolean Items**: When enabled, this item becomes a simple checkbox in Package Builder (no quantity field). Use for all-or-nothing offerings.
+</Warning>
+
+### Quick Add Features
+
+The modal includes quick-add buttons to create categories, tiers, and events without leaving the modal:
+
+#### Quick Add Category
+
+**Button**: "+ Add category" (in Category dropdown)
+
+**Action**: Opens mini-modal with:
+- Category name input
+- Color picker (optional)
+- Save button
+
+**Result**: New category immediately available in dropdown
+
+#### Quick Add Tier
+
+**Button**: "+ Add tier" (in Required Tier dropdown)
+
+**Action**: Opens Tier Management modal with:
+- List of existing tiers
+- Add new tier button
+- Edit/delete existing tiers
+- Drag-and-drop reordering
+
+**Result**: New tier immediately available in dropdown
+
+#### Quick Add Event
+
+**Button**: "+ Add event" (in Event dropdown)
+
+**Action**: Opens Add Event modal with:
+- Event name (required)
+- Location details (name, address, city, postal code, country)
+- Period (start date, end date)
+- Description
+- Save button
+
+**Result**: New event immediately available in dropdown
+
+<Tip>
+**Streamlined Workflow**: Quick-add features let you build your entire library structure without closing the Add Item modal. Create categories, tiers, and events on-the-fly!
+</Tip>
+
+### Edit vs View Mode
+
+**Edit Icons**:
+- **Category**: No edit icon (managed in Settings)
+- **Tier**: Pencil icon - opens Tier Management modal
+- **Event**: Pencil icon - opens event details with location/period info
+
+**Viewing Event Details**:
+When clicking event pencil icon, you see:
+- Event name
+- Location (if provided)
+- Period dates (if provided)
+- Description (if provided)
+- Edit and Delete buttons
+
+### Modal Actions
+
+**When Adding:**
+- **Cancel** - Close without saving
+- **Add Item** - Create item (blue button)
+
+**When Editing:**
+- **Cancel** - Close without saving
+- **Delete Item** - Delete item (red button)
+- **Save Changes** - Update item (blue button)
+
+## Settings Tab
+
+Configure categories, tiers, and events used throughout the sponsorship module.
+
+### Categories Settings
+
+**Card Title**: "Categories"
+
+**Features:**
+- Add new category button
+- List of existing categories
+- Edit/delete buttons per category
+- Color indicators (visual organization)
+
+**Built-in Categories:**
+- Designation (cannot be deleted)
+- Hospitality (cannot be deleted)
+
+**Custom Categories:**
+- Add unlimited custom categories
+- Edit name and color
+- Delete when no longer needed
+
+<Warning>
+**Cannot Delete**: Categories with items assigned cannot be deleted. Reassign or delete items first.
+</Warning>
+
+### Tiers Settings
+
+**Card Title**: "Tiers"
+
+**Features:**
+- Add new tier button
+- Drag-and-drop reordering (priority levels)
+- Edit/delete buttons per tier
+- List shows: tier name, order
+
+**Common Tier Examples:**
+- Platinum
+- Gold
+- Silver
+- Bronze
+- Standard
+
+<Info>
+**Tier Order**: The order determines priority in Package Builder. Top = highest tier, bottom = lowest tier.
+</Info>
+
+### Events Settings
+
+**Card Title**: "Events"
+
+**Features:**
+- Add new event button
+- List of existing events
+- Edit/delete buttons per event
+- Shows: event name, location, period
+
+**Event Details:**
+- **Name** - Event identifier
+- **Location** - Venue name and full address
+- **Period** - Start and end dates
+- **Description** - Additional notes
+
+**Common Event Examples:**
+- 2024/2025 Season
+- Championship Game
+- Opening Ceremony
+- Summer Tour
+- Annual Gala
+
+<Tip>
+**Season vs Single Event**: Create events for entire seasons or individual games depending on your sponsorship structure.
+</Tip>
+
+## Negotiator Tab
+
+Configure contribution margin ratio labels for Package Builder negotiator mode.
+
+**Purpose**: Define custom labels for different coverage percentage ranges.
+
+**Default Labels:**
+- 0-25%: "Very Low Coverage"
+- 25-50%: "Low Coverage"
+- 50-75%: "Medium Coverage"
+- 75-100%: "High Coverage"
+- 100%+: "Full Coverage"
+
+**Customization:**
+- Edit label text for each range
+- Translates to your language
+- Used in Package Builder negotiator view
+
+<Info>
+**Negotiator Mode**: A special view mode in Package Builder that hides unit costs and focuses on coverage percentages. Useful for proposal-based pricing strategies.
+</Info>
+
+## Delete Item
+
+### Delete Confirmation Modal
+
+**Triggered by**:
+- Clicking trash icon in table
+- Clicking "Delete Item" button in edit modal
+
+**Modal Content:**
+- Title: "Delete Item"
+- Message: "Are you sure you want to delete '[Item Name]'?"
+- **Affected Packages List**: Shows which packages use this item
+- Confirm: "Delete" (red button)
+- Cancel: "Cancel" (gray button)
+
+<Warning>
+**Cascading Impact**: Deleting an item removes it from all packages that use it. The packages remain, but the item is removed from their item lists.
+</Warning>
+
+### Affected Packages
+
+If the item is used in packages, the modal displays:
+
+**Section**: "Packages using this item"
+**List**: All package names containing this item
+**Example**:
+- Gold Partner Package
+- Platinum Sponsor Bundle
+- VIP Experience Package
+
+<Info>
+If the item isn't used in any packages, this section is hidden and deletion is safe.
+</Info>
+
+## Reordering Items
+
+### Drag-and-Drop Functionality
+
+**How to Reorder:**
+1. Hover over item row
+2. Click and hold the six-dot drag handle (leftmost column)
+3. Drag item up or down
+4. Release to drop in new position
+5. Order saves automatically
+
+**Why Order Matters:**
+- Items appear in Package Builder in this order
+- Organize by importance, category, or alphabetically
+- Strategic ordering improves package building UX
+
+<Tip>
+**Best Practice**: Group similar items together (e.g., all VIP hospitality items, then all signage items, then all digital items).
+</Tip>
+
+## Boolean vs Quantity Items
+
+Two types of items serve different purposes:
+
+### Quantity-Based Items (Default)
+
+**Characteristics:**
+- Has Max Quantity field
+- Shown with quantity selector in Package Builder
+- Example: "VIP Tickets" (max 100)
+
+**Use Cases:**
+- Physical items with limited availability
+- Tickets, seats, parking spaces
+- Merchandise quantities
+- Advertising impressions with caps
+
+### Boolean Items (Checkbox)
+
+**Characteristics:**
+- Boolean toggle ON
+- No quantity field (always 1 or 0)
+- Shown as checkbox in Package Builder
+- Example: "Logo on Website" (yes/no)
+
+**Use Cases:**
+- All-or-nothing offerings
+- Digital placements (logo on website, social media mention)
+- Rights and naming (stadium naming, jersey sponsor)
+- Exclusive benefits (backstage access, meet-and-greet)
+
+<Info>
+**When to Use Boolean**: If the item can't have a quantity (it's either included or not), use boolean mode. If sponsors can have multiple (1, 2, 5 units), use quantity mode.
+</Info>
+
+## Item Categories
+
+### Built-in Categories
+
+**Designation**:
+- Brand placement and recognition items
+- Examples: Logo on jersey, stadium naming rights, banner placement
+- Cannot be deleted (system category)
+
+**Hospitality**:
+- Guest experiences and VIP access
+- Examples: VIP tickets, lounge access, meet-and-greet, parking
+- Cannot be deleted (system category)
+
+### Custom Categories
+
+Create unlimited custom categories for your specific needs:
+
+**Common Custom Categories:**
+- **Digital** - Social media, website, email campaigns
+- **Print** - Programs, posters, flyers
+- **Events** - Special event access, activation opportunities
+- **Merchandise** - Branded merchandise, giveaways
+- **Media** - TV commercials, radio spots, press releases
+- **Experiences** - Behind-the-scenes tours, player appearances
+
+<Tip>
+**Strategic Categorization**: Well-organized categories help sponsors quickly find relevant items and create themed packages.
+</Tip>
+
+## Tier Requirements
+
+Restrict item availability by sponsorship tier level.
+
+### All Tiers (Default)
+
+**Setting**: Required Tier = "All Tiers"
+**Availability**: All sponsors regardless of tier
+**Use Cases**: Standard items available to everyone
+
+### Tier-Restricted Items
+
+**Setting**: Required Tier = Specific tier (e.g., "Gold")
+**Availability**: Only sponsors at this tier or higher
+**Use Cases**: Exclusive premium offerings
+
+**Example Tier Structure:**
+- **Platinum Tier**: All items (including Platinum-exclusive)
+- **Gold Tier**: Gold + Silver + Bronze items (no Platinum-exclusive)
+- **Silver Tier**: Silver + Bronze items (no Gold/Platinum-exclusive)
+- **Bronze Tier**: Bronze items only (no premium items)
+
+<Info>
+**Tier Hierarchy**: When using tier restrictions, ensure your tier order in Settings reflects the hierarchy (Platinum > Gold > Silver > Bronze).
+</Info>
+
+## Event Assignments
+
+Control which events items apply to.
+
+### All Events (Default)
+
+**Setting**: Event = "All events"
+**Availability**: Item available for all events
+**Use Cases**: Year-round offerings, season-long benefits
+
+### Event-Specific Items
+
+**Setting**: Event = Specific event (e.g., "Championship Game")
+**Availability**: Item only for this event
+**Use Cases**: Special event exclusives, limited-time offers
+
+**Example Event Items:**
+- "Championship Game VIP Box" - only for championship event
+- "Season Opener Banner" - only for opening game
+- "Annual Gala Table" - only for yearly gala event
+
+<Tip>
+**Seasonal Strategy**: Create "2024/2025 Season" event for season-long items, plus individual events for special games/occasions.
+</Tip>
+
+## Responsive Design
+
+### Desktop
+
+- Full table with all columns visible
+- Drag-and-drop reordering
+- Inline editing
+- Side-by-side settings cards
+
+### Tablet
+
+- Horizontal scroll for table
+- All columns preserved
+- Touch-friendly drag handles
+
+### Mobile
+
+- Horizontal scroll
+- Condensed columns
+- Touch-optimized interactions
+- Responsive settings cards
+
+## Permissions
+
+Different permissions show different content:
+
+| Permission | Can View | Can Add | Can Edit | Can Delete | Can Configure Settings |
+|------------|----------|---------|----------|-----------|----------------------|
+| **Library Role** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Admin** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Other Roles** | ❌ No | ❌ No | ❌ No | ❌ No | ❌ No |
+
+<Info>
+**Enterprise Only**: Library feature requires Professional or Enterprise plan. Starter plans cannot access this module.
+</Info>
+
+## Common Use Cases
+
+### Building Initial Library
+
+1. Go to Settings tab
+2. Create categories (Digital, Hospitality, Events, etc.)
+3. Create tier levels (Platinum, Gold, Silver, Bronze)
+4. Create events (2024/2025 Season, Championship Game, etc.)
+5. Go to Library tab
+6. Add items with appropriate categories, tiers, events
+7. Set unit costs and max quantities
+8. Reorder items for logical Package Builder flow
+
+### Creating Tier-Exclusive Offers
+
+1. Create premium tier in Settings (e.g., "Platinum")
+2. Add exclusive items (e.g., "CEO Meet-and-Greet")
+3. Set Required Tier = "Platinum"
+4. Set high unit costs
+5. Use in premium packages
+
+### Managing Event-Specific Items
+
+1. Create event in Settings (e.g., "Annual Gala 2025")
+2. Add event-specific items (e.g., "Gala VIP Table")
+3. Set Event = "Annual Gala 2025"
+4. Set Max Quantity = limited availability
+5. Package and sell for that event only
+
+### Updating Library Mid-Season
+
+1. Edit existing items inline (change quantities, tiers, events)
+2. Add new items as opportunities arise
+3. Archive outdated items (delete if no packages use them)
+4. Reorder items for better Package Builder UX
+5. Update unit costs if pricing changes
+
+## Troubleshooting
+
+### Can't Delete Category
+
+**Reason**: Category has items assigned
+**Fix**: Reassign or delete all items using this category first
+
+### Can't Delete Tier
+
+**Reason**: Tier has items with tier requirement
+**Fix**: Change tier requirement to "All Tiers" or different tier for all items
+
+### Can't Delete Event
+
+**Reason**: Event has items assigned
+**Fix**: Change event assignment to "All events" or different event for all items
+
+### Inline Edit Not Saving
+
+**Try:**
+- Check network connection
+- Refresh page and try again
+- Use Edit button modal as alternative
+- Check browser console for errors
+
+### Drag-and-Drop Not Working
+
+**Try:**
+- Use mouse (not touch) on desktop
+- Check if table is scrollable (scroll into view first)
+- Refresh page
+- Use keyboard sensors (Tab + Space + Arrow keys)
+
+### Item Not Appearing in Package Builder
+
+**Check:**
+- Item has correct tier requirement for sponsor
+- Item has correct event assignment
+- Item isn't archived/deleted
+- Package Builder is filtered correctly
+
+## Next Steps
+
+- **Build packages** - Go to Packages page to create sponsorship bundles
+- **Create proposals** - Use Proposals to send offers with library items
+- **Configure settings** - Refine categories, tiers, and events as needed
+- **Add sponsors** - Assign sponsors to tiers for proper item availability
