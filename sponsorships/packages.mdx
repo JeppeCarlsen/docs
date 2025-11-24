@@ -1,0 +1,656 @@
+---
+title: 'Packages'
+description: 'Create, manage, and build custom sponsorship packages for your sponsors with the Package Builder'
+---
+
+Create sponsorship packages, add library items, configure quantities, preview proposals, and send offers to sponsors.
+
+## Accessing Packages
+
+Navigate to **Sponsorships** → **Packages** from the sidebar to access package management.
+
+<Note>
+**Plan Required**: Packages feature requires Professional or Enterprise plan.
+**Permission Required**: You need Packages role or Admin access.
+</Note>
+
+## Package Workflow
+
+The sponsorship package workflow consists of three main stages:
+
+1. **Create Package** - Define sponsor, tier, pricing, events
+2. **Build Inclusions** - Add library items, set quantities
+3. **Send Proposal** - Preview PDF, send to sponsor contacts
+
+## Packages List Page
+
+### Empty State
+
+If you don't have any packages yet, you'll see:
+
+- **Icon**: Cube graphic
+- **Title**: "No pending packages"
+- **Message**: "Create sponsorship package to get started."
+- **Action**: "Create Sponsorship Package" button
+
+### Package Grid
+
+**Layout**: Card grid (1-3 columns based on screen size)
+- **Desktop (>1024px)**: 3 columns
+- **Tablet (640-1024px)**: 2 columns
+- **Mobile (<640px)**: 1 column
+
+<Info>
+**Draft Packages Only**: The packages list shows only draft packages. Approved packages appear in Proposals page.
+</Info>
+
+### Package Card
+
+Each card displays:
+
+**Sponsor Logo** (top):
+- 128×128px circular image
+- Falls back to cube icon if no logo
+- Pulled from sponsor profile
+
+**Package Name**:
+- Bold, medium text
+- Primary identifier
+
+**Sponsor Name**:
+- Below package name
+- Gray text
+
+**Sales Price**:
+- Large, prominent currency value
+- Example: "500,000 kr"
+- Hidden in Negotiator Mode
+
+**Tier Badge**:
+- Gray rounded badge
+- Shows tier level (e.g., "Gold")
+- Neutral color scheme
+
+**Action Buttons** (bottom):
+- **Package** - Edit package details
+- **Inclusions** - Open Package Builder
+
+<Tip>
+**Quick Access**: Click "Inclusions" to jump straight to building the package with library items.
+</Tip>
+
+### New Package Button
+
+**Location**: Top right (when packages exist)
+**Button**: "New Package" (rounded, primary blue)
+
+**Action**: Opens Create Package modal
+
+## Create Package Modal
+
+Modal for creating or editing package metadata.
+
+### Modal Fields
+
+**Package Name** (required):
+- Clear, descriptive name
+- Example: "Gold Partner Package", "VIP Experience Bundle"
+- Appears on proposals and in lists
+
+**Sponsor** (required):
+- Dropdown of all sponsors
+- Filtered by status (Active and Inactive only, no Archived)
+- Shows sponsor name
+- **Quick Add**: Link to create new sponsor
+
+<Warning>
+**Sponsor Required**: You must have at least one sponsor before creating a package. If no sponsors exist, you'll see a prompt to create one first.
+</Warning>
+
+**Package Tier** (required):
+- Dropdown of configured tiers
+- Example: Platinum, Gold, Silver, Bronze
+- Determines which library items are available
+- Affects item tier restrictions
+
+**Sales Price** (required):
+- Package selling price in base currency
+- Used for coverage percentage calculation
+- Example: 500,000 for €500,000
+- Hidden in Negotiator Mode (proposal-based pricing)
+
+**Events** (optional):
+- Multi-select dropdown
+- Choose one or more events this package applies to
+- Empty = package not event-specific
+- **Quick Add**: "Add event" button to create new event
+- **Edit Event**: Pencil icon to view/edit event details
+
+<Info>
+**Event Filtering**: Items with event assignments will only appear in Package Builder if their event is selected here or they apply to "All events".
+</Info>
+
+**Notes** (optional):
+- Internal notes about the package
+- Not visible to sponsors
+- Helps track context and special arrangements
+
+### Event Management
+
+**Add Event Button**: Opens Add Event modal with:
+- Event name (required)
+- Location (name, address, city, postal code, country)
+- Period (start date, end date)
+- Description
+- Save button
+
+**Edit Event Icon** (pencil): Opens event details modal with:
+- All event information
+- Edit capability
+- Delete button (with affected items warning)
+
+**Event Dropdown Features**:
+- Multi-select (select multiple events)
+- Checkmark indicators for selected events
+- Scrollable list
+- "Add event" link at bottom
+
+### Modal Actions
+
+**When Creating:**
+- **Cancel** - Close without saving
+- **Create Package** - Create package (blue button)
+
+**When Editing:**
+- **Cancel** - Close without saving
+- **Delete Package** - Delete package (red button)
+- **Save Changes** - Update package (blue button)
+
+<Warning>
+**Delete Package**: Deleting a package also deletes all items in that package. This action cannot be undone.
+</Warning>
+
+## Package Builder (Inclusions Page)
+
+Comprehensive interface for adding library items to packages.
+
+### Accessing Builder
+
+**From Packages List**: Click "Inclusions" button on package card
+**Direct URL**: `/products/sponsorships/packages/[id]/builder`
+
+### Page Header
+
+**Left Side**:
+- Package name as title
+- Back button (returns to Packages list)
+
+**Right Side (Action Buttons)**:
+- **Edit Package** - Pencil icon, opens package metadata modal
+- **Preview PDF** - Document icon, opens PDF preview
+- **Send Proposal** - Envelope icon, opens send proposal modal
+
+<Info>
+**Save Status**: Changes save automatically as you work. No manual save button needed.
+</Info>
+
+### Summary Stats (Top Cards)
+
+Four summary cards showing package metrics:
+
+#### Total Cost
+
+**Label**: "Total Cost"
+**Value**: Sum of all included items × quantities
+**Format**: Currency (e.g., "€450,000")
+**Hidden**: In Negotiator Mode
+
+#### Sales Price
+
+**Label**: "Sales Price"
+**Value**: Package sales price from metadata
+**Format**: Currency
+**Hidden**: In Negotiator Mode
+
+#### Coverage Percentage
+
+**Label**: "Coverage"
+**Value**: (Total Cost ÷ Sales Price) × 100
+**Format**: Percentage (e.g., "90%")
+**Color**:
+- Green: 75-100%+
+- Yellow: 50-75%
+- Orange: 25-50%
+- Red: 0-25%
+
+**Negotiator Mode**: Shows label instead of percentage (e.g., "High Coverage")
+
+<Tip>
+**Healthy Coverage**: Aim for 75-100% coverage. This means item costs closely match sales price, making the package realistic and balanced.
+</Tip>
+
+#### Contribution Margin
+
+**Label**: "Contribution Margin"
+**Value**: Sales Price - Total Cost
+**Format**: Currency
+**Hidden**: In Negotiator Mode
+
+### Event Filter (if applicable)
+
+**Displays when**: Package has events assigned
+
+**Dropdown**: "All Events" or specific event selection
+**Purpose**: Filter library items by event assignment
+**Behavior**:
+- "All Events" - Show all items
+- Specific Event - Show only items for that event + "All events" items
+
+<Info>
+**Smart Filtering**: Items assigned to different events than selected are automatically hidden to prevent confusion.
+</Info>
+
+### Inclusions Table
+
+Sortable table with all available library items.
+
+#### Table Columns
+
+**Drag Handle** (leftmost):
+- Six-dot icon
+- Click and drag to reorder included items
+- Only works for included items (checked)
+- Changes sort_order in database
+
+**Checkbox**:
+- Toggle item inclusion
+- Checked = included in package
+- Unchecked = not included
+- Disabled for tier-restricted items
+
+**Item Name**:
+- Bold, prominent
+- Shows description below (if exists)
+- Gray text for description
+
+**Required Tier**:
+- Gray badge showing tier requirement
+- Only shown for tier-restricted items
+- Empty if "All Tiers"
+
+**Quantity**:
+- **Boolean Items**: Shows "YES" badge when included
+- **Quantity Items**: Plus/minus buttons with number
+  - Minus button: Decrease quantity
+  - Number: Current quantity
+  - Plus button: Increase quantity
+- **Not Included**: Shows "-"
+- **Max Quantity**: Enforced automatically (can't exceed limit)
+
+**Unit Cost**:
+- Currency formatted
+- Right-aligned
+- Grayed out for disabled items
+- Hidden in Negotiator Mode
+
+**Total**:
+- Quantity × Unit Cost
+- Currency formatted
+- Right-aligned
+- Bold for emphasis
+- Hidden in Negotiator Mode
+
+<Warning>
+**Tier Restrictions**: Items with tier requirements higher than package tier are disabled and grayed out. Upgrade package tier to access them.
+</Warning>
+
+### Sorting and Reordering
+
+**Library Order**: Items appear in same order as Library page by default
+**Drag to Reorder**:
+- Only included items can be reordered
+- Drag handle on left side
+- New order saves automatically
+- Affects proposal PDF display order
+
+<Tip>
+**Strategic Ordering**: Reorder items to group similar offerings or prioritize high-value items in proposals.
+</Tip>
+
+### Item States
+
+**Normal (Available)**:
+- White/gray background
+- All controls enabled
+- Can check/uncheck, adjust quantity
+
+**Included**:
+- Light blue/indigo background
+- Checkmark visible
+- Can adjust quantity or uncheck
+
+**Tier-Restricted (Disabled)**:
+- Grayed out appearance
+- Checkbox disabled
+- Shows tier requirement badge
+- Hover shows reason: "Requires [Tier Name]"
+
+**Event-Restricted (Hidden)**:
+- Not shown in table
+- Filtered out by event selection
+- Only appears when correct event selected
+
+### Boolean vs Quantity Items
+
+**Boolean Items**:
+- Show "YES" badge when included (no quantity input)
+- Always count as 1 unit for cost calculation
+- Example: "Logo on Website" (either included or not)
+
+**Quantity Items**:
+- Show plus/minus controls when included
+- Start at quantity 1 when first checked
+- Can increase/decrease as needed
+- Max quantity enforced from library settings
+
+<Info>
+**Auto-Quantity**: Checking an item automatically sets quantity to 1 for quantity-based items. Unchecking resets to 0.
+</Info>
+
+## Preview PDF
+
+Modal showing proposal PDF preview before sending.
+
+### Accessing Preview
+
+**Button**: Document icon (top right of Builder page)
+**Action**: Opens full-screen PDF preview modal
+
+### PDF Content
+
+**Header Section**:
+- Your organization logo (if uploaded)
+- Organization name
+- "Sponsorship Proposal" title
+- Package name as subtitle
+
+**Sponsor Section**:
+- "Prepared for: [Sponsor Name]"
+- Sponsor logo (if exists)
+- Date prepared
+
+**Package Overview**:
+- Package tier badge
+- Sales price (if not Negotiator Mode)
+- Event assignments (if any)
+- Notes (if any)
+
+**Inclusions Section**:
+- Table of all included items
+- Columns: Item Name, Quantity, Unit Cost, Total
+- Subtotal per category
+- Grand total at bottom
+
+**Signature Section** (if enabled):
+- Signature line
+- Date line
+- Terms and conditions
+
+<Tip>
+**Review Before Sending**: Always preview the PDF to ensure all items, quantities, and pricing are correct before sending to sponsors.
+</Tip>
+
+### Preview Modal Actions
+
+**Buttons**:
+- **Close** - Exit preview without action
+- **Download PDF** - Download to computer
+- **Send Proposal** - Opens send proposal modal
+
+## Send Proposal Modal
+
+Modal for sending proposals to sponsor contacts via email.
+
+### Accessing Modal
+
+**Button**: Envelope icon (top right of Builder page)
+**Action**: Opens send proposal modal
+
+### Proposal Status
+
+**Draft Packages**: Can send proposals
+**Pending Approval**: Already sent, shows status
+**Approved**: Shows approval info, can resend
+
+### Modal Sections
+
+#### Recipient Selection
+
+**Primary Contact** (auto-selected):
+- Pre-checked if sponsor has primary contact
+- Shows name, email, position
+
+**Additional Contacts**:
+- List of all other sponsor contacts
+- Checkboxes to select recipients
+- Shows name, email, position
+
+<Info>
+**No Contacts Warning**: If sponsor has no contacts, you'll see a prompt to add contacts before sending.
+</Info>
+
+#### Email Template
+
+**Subject Line**:
+- Editable text field
+- Default: "Sponsorship Proposal - [Package Name]"
+
+**Message Body**:
+- Multi-line textarea
+- Supports line breaks
+- Default template provided
+- Personalize as needed
+
+**Attachment**:
+- PDF proposal automatically attached
+- Shows file icon and name
+- Generated on-the-fly when sending
+
+#### Send Options
+
+**Test Email** (optional):
+- Checkbox: "Send test email to yourself"
+- Useful for previewing before sending to sponsor
+- Sends to your account email
+
+**Track Opens** (optional):
+- Checkbox: "Track when proposal is opened"
+- Adds tracking pixel to email
+- Shows open timestamps in proposal history
+
+### Modal Actions
+
+**Buttons**:
+- **Cancel** - Close without sending
+- **Send Proposal** - Send email(s) (blue button)
+
+<Warning>
+**Status Change**: Sending a proposal changes package status from "draft" to "pending_approval". It moves from Packages page to Proposals page.
+</Warning>
+
+### After Sending
+
+**Success Message**: Confirmation that emails were sent
+**Package Status**: Changed to "pending_approval"
+**Proposal Token**: Unique link generated for sponsor to view/accept
+**Redirect**: Package moves to Proposals page
+
+## Negotiator Mode
+
+Special view mode that hides unit costs and emphasizes coverage percentages.
+
+### Enabling Negotiator Mode
+
+**Location**: Settings menu (global toggle)
+**Effect**: Applied across entire Sponsorships module
+
+### Changes in Negotiator Mode
+
+**Summary Cards**:
+- ❌ Total Cost - Hidden
+- ❌ Sales Price - Hidden
+- ✅ Coverage - Shows label instead of percentage
+- ❌ Contribution Margin - Hidden
+
+**Inclusions Table**:
+- ❌ Unit Cost column - Hidden
+- ❌ Total column - Hidden
+- ✅ Quantity column - Still visible
+- ✅ All other columns - Unchanged
+
+**Coverage Labels** (configured in Library → Negotiator tab):
+- 0-25%: "Very Low Coverage"
+- 25-50%: "Low Coverage"
+- 50-75%: "Medium Coverage"
+- 75-100%: "High Coverage"
+- 100%+: "Full Coverage"
+
+<Info>
+**Use Case**: Negotiator Mode is useful for proposal-based pricing strategies where you want to focus on value delivery rather than explicit costs.
+</Info>
+
+## Responsive Design
+
+### Desktop (>1024px)
+
+- 3-column package grid
+- Full table with all columns
+- Side-by-side summary cards
+- Spacious layout
+
+### Tablet (640-1024px)
+
+- 2-column package grid
+- Horizontal scroll for table
+- Responsive summary cards
+- Touch-friendly controls
+
+### Mobile (<640px)
+
+- 1-column package grid
+- Horizontal scroll required for table
+- Stacked summary cards
+- Large touch targets
+
+## Permissions
+
+Different permissions show different content:
+
+| Permission | Can View | Can Create | Can Edit | Can Delete | Can Send Proposals |
+|------------|----------|-----------|----------|-----------|-------------------|
+| **Packages Role** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Admin** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Other Roles** | ❌ No | ❌ No | ❌ No | ❌ No | ❌ No |
+
+<Info>
+**Professional/Enterprise Only**: Packages feature requires Professional or Enterprise plan. Starter plans cannot access this module.
+</Info>
+
+## Common Use Cases
+
+### Creating First Package
+
+1. Click "Create Sponsorship Package"
+2. Fill in package name, sponsor, tier, sales price
+3. Select events (if applicable)
+4. Add notes (optional)
+5. Click "Create Package"
+6. Click "Inclusions" on package card
+7. Check items to include
+8. Adjust quantities as needed
+9. Preview PDF
+10. Send proposal to sponsor contacts
+
+### Building Multi-Tier Packages
+
+1. Create packages for each tier (Gold, Silver, Bronze)
+2. Use same sponsor or different sponsors
+3. Assign correct tier to each package
+4. Include tier-appropriate items (exclusive items for higher tiers)
+5. Adjust pricing based on value
+6. Send different proposals to different sponsors
+
+### Event-Specific Packages
+
+1. Create event in Library → Settings
+2. Create package with event selected
+3. Only event-specific items appear in Builder
+4. Build package for that event only
+5. Send proposal highlighting event exclusivity
+
+### Updating Package After Creation
+
+1. Open package from list
+2. Click "Edit Package" (pencil icon)
+3. Update metadata (name, sponsor, tier, price, events)
+4. Save changes
+5. Return to Inclusions
+6. Adjust items/quantities as needed
+7. Preview updated PDF
+8. Resend if already sent to sponsor
+
+## Troubleshooting
+
+### Can't Check Item (Grayed Out)
+
+**Reason**: Tier restriction - item requires higher tier
+**Fix**: Edit package and upgrade tier, or assign item to "All Tiers" in Library
+
+### Item Not Appearing in Builder
+
+**Check**:
+- Item event assignment matches package events
+- Item tier requirement ≤ package tier
+- Item is active (not deleted)
+- Library → Settings has item configured
+
+### Can't Increase Quantity
+
+**Reason**: Hit max quantity limit
+**Fix**: Go to Library, edit item, increase Max Quantity field
+
+### PDF Preview Shows Wrong Data
+
+**Try**:
+- Refresh browser
+- Clear cache
+- Save Builder changes
+- Re-open preview
+
+### Send Proposal Button Disabled
+
+**Reasons**:
+- No sponsor contacts (add contacts first)
+- No items included (check at least one item)
+- Package already approved
+- Demo mode restrictions
+
+### Coverage Percentage Wrong
+
+**Check**:
+- Total Cost = sum of all included items × quantities
+- Sales Price set correctly in package metadata
+- Formula: (Total Cost ÷ Sales Price) × 100%
+- Verify all item unit costs in Library
+
+## Next Steps
+
+- **Send proposals** - Use Send Proposal feature to email sponsors
+- **View proposals** - Go to Proposals page to track sent offers
+- **Analyze performance** - Use Analytics to review package metrics
+- **Update library** - Add more items for future packages
+- **Create templates** - Build standard packages for quick reuse
+
+<Tip>
+**Template Strategy**: Create "template" packages with common item configurations, duplicate them, and customize for new sponsors. Saves time!
+</Tip>

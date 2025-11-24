@@ -70,7 +70,8 @@
       "icon": "star",
       "pages": [
         "sponsorships/sponsors",
-        "sponsorships/library"
+        "sponsorships/library",
+        "sponsorships/packages"
       ]
     }
   ],
