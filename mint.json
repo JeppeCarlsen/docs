@@ -52,9 +52,9 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/valiyou",
-    "linkedin": "https://linkedin.com/company/valiyou",
-    "github": "https://github.com/valiyou"
+    "website": "https://valiyou.com",
+    "linkedin": "https://www.linkedin.com/company/valiyou",
+    "facebook": "https://www.facebook.com/valiyou.io"
   },
   "analytics": {
     "posthog": {
@@ -66,5 +66,6 @@
     "thumbsRating": true,
     "suggestEdit": true,
     "raiseIssue": true
-  }
+  },
+  "footerText": "© 2025 Valiyou. All rights reserved."
 }
