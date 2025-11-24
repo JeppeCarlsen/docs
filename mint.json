@@ -52,6 +52,13 @@
         "getting-started/organization-settings",
         "getting-started/invite-team-members"
       ]
+    },
+    {
+      "group": "Valuations",
+      "icon": "rocket",
+      "pages": [
+        "valuations/create-valuation"
+      ]
     }
   ],
   "footerSocials": {

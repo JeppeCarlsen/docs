@@ -1,0 +1,298 @@
+---
+title: 'Create a Valuation'
+description: 'Step-by-step guide to creating your first sponsorship valuation'
+---
+
+Create comprehensive sponsorship valuations by combining sales data, media metrics, and brand value indicators.
+
+## Getting Started
+
+To create a new valuation:
+
+1. Navigate to **Valuations** → **Valuations** in the sidebar
+2. Click **"New Valuation"** button
+3. Fill in the form sections below
+4. Save as draft or approve immediately
+
+<Info>
+**Permissions Required**: You need at least one of these permissions: Edit Sales Value, Edit Transfer Value, Edit Marketing Value, or Edit Brand Value.
+</Info>
+
+## Valuation Form Sections
+
+The valuation form is divided into multiple sections, each capturing different value components.
+
+### 1. Valuation Date
+
+Select the date for this valuation. This helps track valuations over time and compare historical data.
+
+**Field:**
+- **Date** - The date this valuation represents (defaults to today)
+
+<Tip>
+Use consistent dates (e.g., end of each quarter) for easier time-series analysis in reports.
+</Tip>
+
+### 2. Sales Value
+
+Capture revenue from merchandise and matchday ticket sales.
+
+**Fields:**
+- **Merchandise Revenue** - Total revenue from club merchandise sales
+- **Matchday Revenue** - Revenue from ticket sales and matchday events
+
+**Permission:** Edit Sales Value (Enterprise)
+
+<Info>
+**Currency**: All monetary values use your organization's base currency (set in Settings).
+</Info>
+
+### 3. Player Sales (Optional)
+
+<Note>
+**Feature Availability**: Player sales tracking requires Professional or Enterprise plan.
+</Note>
+
+Track individual player transfers and their financial impact.
+
+**For each player sale:**
+- **Player Name** - Name of the sold player
+- **Sale Value** - Transfer fee received
+
+Click **"Add Player Sale"** to add multiple transfers. The total is automatically calculated.
+
+**Permission:** Edit Transfer Value (Enterprise)
+
+### 4. Media Value
+
+Media value is calculated across multiple channels. Each channel has its own section with specific metrics.
+
+#### TV Broadcasting
+
+Television broadcast exposure value.
+
+**Fields:**
+- **Duration (minutes)** - Total minutes of TV exposure
+- **Size Category** - Screen size: Small (S), Medium (M), Large (L)
+- **CPM** - Cost per thousand viewers
+- **Viewers** - Total number of TV viewers
+
+**Permission:** Edit Marketing Value (Enterprise)
+
+<Info>
+**CPM (Cost Per Mille)**: CPM represents the cost per 1,000 impressions. Typical values range from €5-€50 depending on audience quality.
+</Info>
+
+#### Web TV
+
+Online streaming and web TV exposure.
+
+**Fields:**
+- **Views** - Total number of web TV views
+- **CPM** - Cost per thousand views
+
+**Permission:** Edit Marketing Value (Enterprise)
+
+#### PR & Press
+
+Traditional media and press reach.
+
+**Fields:**
+- **Reach** - Total audience reached through PR
+- **CPM** - Cost per thousand reach
+
+**Permission:** Edit Marketing Value (Enterprise)
+
+#### Digital Advertising
+
+Digital banner ads and online advertising impressions.
+
+**Fields:**
+- **Impressions** - Total digital ad impressions
+- **CPM** - Cost per thousand impressions
+
+**Permission:** Edit Marketing Value (Enterprise)
+
+#### Social Media
+
+Social media presence and engagement value.
+
+**Follower-based metrics:**
+- **Followers** - Total social media followers
+- **Followers CPM** - Cost per thousand followers
+
+**Impression-based metrics:**
+- **Impressions** - Total social media impressions
+- **Impressions CPM** - Cost per thousand impressions
+
+**Engagement-based metrics:**
+- **Engagements** - Total likes, comments, shares
+- **Engagements CPM** - Cost per thousand engagements
+
+<Tip>
+**Social DeepDive Plugin**: Enable the Social DeepDive plugin to automatically fetch social media metrics from your connected accounts (Facebook, Instagram, TikTok, YouTube).
+</Tip>
+
+**Permission:** Edit Marketing Value (Enterprise)
+
+#### Match & Hospitality
+
+Physical attendance and hospitality value.
+
+**Attendance:**
+- **Attendance** - Total match attendance
+- **Attendance CPM** - Cost per thousand attendees
+
+**Hospitality:**
+- **Hospitality Guests** - Number of VIP/hospitality guests
+- **Value per Guest** - Average value per hospitality guest
+
+**Permission:** Edit Marketing Value (Enterprise)
+
+### 5. Brand Value
+
+Qualitative brand strength indicators that multiply the total calculated value.
+
+**Brand Indicators (1-10 scale):**
+- **Popularity** - Brand awareness and recognition
+- **CSR** - Corporate Social Responsibility perception
+- **Culture** - Brand culture and identity strength
+- **Loyalty** - Fan and stakeholder loyalty
+
+Each indicator impacts the final valuation through a qualitative multiplier.
+
+**Permission:** Edit Brand Value (Enterprise)
+
+<Note>
+**Default Values**: Your organization's default brand values (set in Settings) are pre-filled for new valuations.
+</Note>
+
+**Industry Typical Ranges** (reference guide):
+
+| Sport/Sector | Popularity | CSR | Culture | Loyalty |
+|--------------|------------|-----|---------|---------|
+| **Premier League Football** | 8-10 | 6-8 | 8-10 | 8-10 |
+| **Championship Football** | 6-8 | 5-7 | 7-9 | 7-9 |
+| **Basketball (Top League)** | 6-8 | 6-8 | 6-8 | 6-8 |
+| **Tennis (Professional)** | 5-7 | 7-9 | 6-8 | 5-7 |
+| **Motor Racing** | 7-9 | 5-7 | 7-9 | 8-10 |
+| **Olympic Sports** | 4-6 | 8-10 | 8-10 | 6-8 |
+| **Esports** | 6-8 | 4-6 | 7-9 | 8-10 |
+
+## Calculation Summary
+
+Click the **calculator icon** in the bottom right to open the calculation drawer.
+
+The drawer shows:
+- **Sales Value** - Total from merch + matchday + player sales
+- **Media Value** - Total from all media channels (TV, web TV, PR, digital, social, match & hospitality)
+- **Qualitative Multiplier** - Brand value impact (0.6x - 1.4x)
+- **Final Total Value** - Complete valuation with all components
+
+<Tip>
+**Live Calculation**: Values update in real-time as you fill in the form. Use the calculator drawer to see how each change affects the total.
+</Tip>
+
+## Saving Your Valuation
+
+### Save as Draft
+
+Click **"Save as Draft"** to save your work without approval.
+
+**Drafts allow you to:**
+- Continue editing later
+- Share with colleagues for review
+- Complete data collection over time
+
+Drafts appear in the Valuations list with a "Draft" badge.
+
+### Approve Immediately
+
+Click **"Approve"** to finalize and approve the valuation.
+
+**Approved valuations:**
+- Are locked from editing (create a new version to make changes)
+- Appear in reports and analytics
+- Can be used for sponsor proposals
+- Show an "Approved" badge
+
+<Warning>
+**Approval is Final**: Once approved, valuations cannot be edited. You'll need to create a new valuation to make changes.
+</Warning>
+
+## Tips for Accurate Valuations
+
+### Data Collection
+
+1. **Gather all data first** - Collect metrics from all channels before starting
+2. **Use consistent periods** - Match all metrics to the same time period
+3. **Verify CPM rates** - Check industry standards for your market
+4. **Document sources** - Keep notes on where metrics came from
+
+### CPM Guidelines
+
+Typical CPM values by channel:
+- **TV**: €20-€50 (varies by time slot and audience)
+- **Web TV**: €5-€15
+- **PR**: €3-€10
+- **Digital**: €2-€8
+- **Social**: €5-€15 (higher for engagement)
+- **Attendance**: €10-€20
+
+<Info>
+Adjust CPM rates based on your specific market, sport category, and audience demographics.
+</Info>
+
+### Brand Value Scoring
+
+- **Be realistic** - Overinflated scores reduce credibility
+- **Use comparisons** - Score relative to competitors in your market
+- **Consider trends** - Factor in recent changes (scandals, successes)
+- **Get multiple opinions** - Brand perception varies by stakeholder
+
+## Test Data
+
+<Note>
+**Development Only**: Test data examples are available on localhost for testing purposes.
+</Note>
+
+Use pre-filled examples to explore the valuation form:
+- **High-Profile Football Club** - Large club with extensive media presence
+- **Regional Basketball Team** - Medium-sized team with local following
+
+## Common Issues
+
+### Missing Permissions
+
+If you see "Access Denied" or greyed-out fields:
+- Check your permissions with your organization admin
+- Enterprise plans unlock granular field permissions
+- At minimum, you need one of: Sales, Transfer, Marketing, or Brand editing rights
+
+### Calculation Seems Wrong
+
+If the final value looks incorrect:
+- Check CPM values (common mistake: entering as € instead of per-thousand)
+- Verify all fields use the same currency
+- Ensure attendance/impressions are in correct units
+- Review brand indicators (they multiply the total by 0.6x - 1.4x)
+
+### Social DeepDive Not Working
+
+If automatic social metrics aren't loading:
+- Verify the Social DeepDive plugin is enabled (Settings → Plugins)
+- Check that social accounts are connected
+- Ensure you have the required plan tier (Professional/Enterprise)
+- Manual entry is always available as fallback
+
+## Next Steps
+
+After creating a valuation:
+- View it in **Dashboard** for overview
+- Analyze trends in **Reports**
+- Use data in **Sponsorships** → **Proposals**
+- Compare with historical valuations
+
+<Tip>
+Create valuations regularly (monthly or quarterly) to track value trends over time and demonstrate growth to sponsors.
+</Tip>
