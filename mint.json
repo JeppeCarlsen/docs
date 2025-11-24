@@ -67,7 +67,7 @@
     },
     {
       "group": "Sponsorships",
-      "icon": "star",
+      "icon": "sun",
       "pages": [
         "sponsorships/sponsors",
         "sponsorships/library",
