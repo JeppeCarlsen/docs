@@ -49,53 +49,6 @@
         "introduction",
         "getting-started/quick-start"
       ]
-    },
-    {
-      "group": "Valuations",
-      "icon": "rocket",
-      "pages": [
-        "guides/valuations/overview",
-        "guides/valuations/create",
-        "guides/valuations/metrics",
-        "guides/valuations/player-sales",
-        "guides/valuations/reports",
-        "guides/valuations/ai-insights"
-      ]
-    },
-    {
-      "group": "Sponsorships",
-      "icon": "sun",
-      "pages": [
-        "guides/sponsorships/overview",
-        "guides/sponsorships/sponsors",
-        "guides/sponsorships/packages",
-        "guides/sponsorships/item-library",
-        "guides/sponsorships/proposals",
-        "guides/sponsorships/contacts",
-        "guides/sponsorships/analytics"
-      ]
-    },
-    {
-      "group": "Billing & Plans",
-      "icon": "credit-card",
-      "pages": [
-        "guides/billing/plans",
-        "guides/billing/upgrade",
-        "guides/billing/payment-methods",
-        "guides/billing/invoices"
-      ]
-    },
-    {
-      "group": "Platform Features",
-      "icon": "desktop",
-      "pages": [
-        "guides/platform/users",
-        "guides/platform/permissions",
-        "guides/platform/settings",
-        "guides/platform/sso",
-        "guides/platform/audit-log",
-        "guides/platform/api"
-      ]
     }
   ],
   "footerSocials": {
