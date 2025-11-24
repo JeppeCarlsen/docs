@@ -44,6 +44,7 @@
   "navigation": [
     {
       "group": "Getting Started",
+      "icon": "rocket",
       "pages": [
         "introduction",
         "getting-started/quick-start"
@@ -51,6 +52,7 @@
     },
     {
       "group": "Valuations",
+      "icon": "chart-line",
       "pages": [
         "guides/valuations/overview",
         "guides/valuations/create",
@@ -62,6 +64,7 @@
     },
     {
       "group": "Sponsorships",
+      "icon": "handshake",
       "pages": [
         "guides/sponsorships/overview",
         "guides/sponsorships/sponsors",
@@ -74,6 +77,7 @@
     },
     {
       "group": "Billing & Plans",
+      "icon": "credit-card",
       "pages": [
         "guides/billing/plans",
         "guides/billing/upgrade",
@@ -83,6 +87,7 @@
     },
     {
       "group": "Platform Features",
+      "icon": "sliders",
       "pages": [
         "guides/platform/users",
         "guides/platform/permissions",
