@@ -104,15 +104,16 @@ Mintlify provides beautiful components:
 </Steps>
 
 <CodeGroup>
-```bash cURL
-curl https://api.valiyou.com
-```
+  ```bash Example Code
+  # Example code block
+  echo "Hello World"
+  ```
 
-```javascript JavaScript
-fetch('https://api.valiyou.com')
-```
+  ```javascript JavaScript Example
+  // Example JavaScript code
+  console.log("Hello World");
+  ```
 </CodeGroup>
-```
 
 See [Mintlify Components](https://mintlify.com/docs/content/components/accordions) for full reference.
 
