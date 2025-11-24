@@ -318,61 +318,310 @@ draft → pending_approval → approved
 **Real-Time Updates**: Refresh the page to see latest status changes from sponsor actions.
 </Info>
 
-## Sponsor View (External)
+## Sponsor Approval via Email
 
-### Proposal Link
+### How Sponsors Receive Proposals
 
-When you send a proposal, sponsors receive a unique proposal link:
+When you send a proposal, sponsors receive an email containing:
 
-**Format**: `https://yourorg.valiyou.com/proposals/[token]`
-**Token**: Unique identifier (secure, non-guessable)
-**Access**: No login required (public link)
+**Email Contents**:
+- Subject line with your organization name and package name
+- Personalized greeting with sponsor contact name
+- Brief introduction to the sponsorship package
+- Package tier and sales price (if not Negotiator Mode)
+- Unique proposal link button
+- Expiration date reminder
+- Contact information for questions
 
-### What Sponsors See
-
-**Proposal Page**:
-- Your organization logo and name
-- Sponsor name and logo
-- Package name and tier
-- Sales price (if not Negotiator Mode)
-- Inclusions table with all items
-- Terms and conditions
-- Accept/Decline buttons
-
-**Interactive Elements**:
-- Quantity review
-- Total cost calculation
-- Signature field (if enabled)
-- Comments field
-- Accept button (green)
-- Decline button (red)
-
-**After Response**:
-- Confirmation message
-- Thank you note
-- Next steps
-- Contact information
+**Proposal Link**:
+- Format: `https://yourorg.valiyou.com/proposal/[token]`
+- Token: Unique, secure, non-guessable identifier
+- Access: No login required (public link)
+- Expires: After the expiration date set in package
 
 <Warning>
-**Security**: Proposal links are public but unguessable. Don't share the link publicly. Only send to intended recipients via email.
+**Security**: Proposal links are public but unguessable tokens. Don't share links publicly. Only send to intended sponsor contacts via the Send Proposal feature.
 </Warning>
 
-### Digital Signatures
+### External Approval Page
 
-If signature feature is enabled:
+Split-screen interface designed for sponsor decision-making:
 
-**Sponsor Provides**:
-- Full name
-- Job title
-- Company name
-- Electronic signature (typed name)
-- Date (auto-filled)
+**Layout**:
+- **Left Side (75%)**: Full PDF preview of proposal
+- **Right Side (25%)**: Signing panel with approval form
 
-**Audit Trail Includes**:
-- Signature data
-- IP address
-- Timestamp
-- Browser/device info (optional)
+**Mobile Layout**:
+- PDF preview on top (full width)
+- Signing panel below (full width)
+- Scrollable content
+
+### Signing Panel (Right Side)
+
+Fixed panel with all approval controls.
+
+#### Header Section
+
+**Organization Branding**:
+- Organization logo (48×48px)
+- "Sponsorship Proposal" title
+- "From [Organization Name]" subtitle
+- White background
+
+#### Signer Information Form
+
+**Section Title**: "Entitled to draw"
+
+**Required Fields**:
+1. **Full Name** - Text input for signer's full name
+2. **Job Title** - Text input for position/role
+3. **Company** - Pre-filled with sponsor name (editable)
+
+**Validation**:
+- All fields required before approval
+- Empty fields prevent submission
+- Error message shown if incomplete
+
+<Tip>
+**Pre-filled Company**: The company field is automatically filled with the sponsor name but can be edited if needed.
+</Tip>
+
+#### Approval Consent Checkbox
+
+**Section Title**: "Approval Consent"
+
+**Checkbox Text**:
+"I confirm that I am authorized to approve this sponsorship on behalf of [Company Name], that I have reviewed the complete package, and that I accept the terms and agree to pay [Sales Price] for this package."
+
+**Features**:
+- Single comprehensive consent checkbox
+- Dynamic company name (from Company field)
+- Dynamic sales price display
+- Must be checked to approve
+- Unchecked by default
+
+**Legal Compliance**:
+- Records consent timestamp
+- Captures IP address
+- Stores user agent (browser/device info)
+- Creates SHA-256 hash of package snapshot for integrity
+
+#### Download PDF Link
+
+**Location**: Below consent checkbox, above action buttons
+
+**Link Text**: "Download proposal as PDF" with download icon
+
+**Action**:
+- Fetches PDF from API via proposal token
+- Creates blob and triggers browser download
+- Filename: `[Package_Name]_Proposal.pdf`
+- Allows sponsor to save proposal before deciding
+
+<Info>
+**Download First**: Sponsors can download the proposal PDF to share internally or review offline before making a decision.
+</Info>
+
+#### Action Buttons
+
+Fixed at bottom of signing panel.
+
+**Approve Package Button**:
+- **Style**: Primary blue button, full width
+- **Text**: "Approve Package" with check icon
+- **State**: Disabled until form is valid (all fields filled + consent checked)
+- **Loading**: Shows spinner when submitting
+- **Action**: Submits approval with signature data
+
+**Decline Proposal Button**:
+- **Style**: Secondary gray button, full width
+- **Text**: "Decline Proposal"
+- **State**: Always enabled (no form validation required)
+- **Loading**: Shows spinner when submitting
+- **Action**: Submits rejection (optional signer info if provided)
+
+**Validation Message**:
+- Shows below buttons if submission attempted with incomplete form
+- Text: "Please complete all required fields and checkboxes"
+- Red text, center-aligned
+
+### PDF Preview (Left Side)
+
+Embedded PDF viewer showing exact proposal sent via email.
+
+**Features**:
+- Full-page PDF display
+- Scroll to view all pages
+- Zoom controls (browser-native)
+- Same PDF as downloaded version
+
+**Content**:
+- Organization header and logo
+- Sponsor name and logo
+- Package tier and pricing
+- Inclusions table with quantities and costs
+- Terms and conditions
+- Total package value
+
+### Approval Flow
+
+Step-by-step process when sponsor approves:
+
+**1. Sponsor Clicks Approve Button**:
+- Form validation runs
+- Check all required fields
+- Check consent checkbox
+- Show error if incomplete
+
+**2. Submit Approval to API**:
+- POST request to `/api/products/sponsorships/proposal/[token]`
+- Body includes:
+  - `action: 'approve'`
+  - `signature.signer`: Name, title, company
+  - `signature.consent`: All consent data with timestamp
+
+**3. Server Validation**:
+- Verify proposal token exists
+- Check proposal hasn't expired
+- Confirm status is "pending_approval" (not already responded)
+- Validate signature data provided
+
+**4. Capture Audit Trail**:
+- IP address from request headers
+- User agent (browser/device info)
+- Timestamp of signature
+- SHA-256 hash of package snapshot for data integrity
+
+**5. Update Package Status**:
+- Change status from "pending_approval" to "approved"
+- Store signature data (signer info + consent + audit trail)
+- Clear expiration date (no longer relevant)
+- Keep proposal token active (for confirmation page)
+
+**6. Show Success Modal**:
+- Green checkmark icon
+- "Proposal Approved" title
+- Thank you message
+- "Your digital signature has been recorded..." note
+- Download proposal link
+- Modal overlays entire page
+
+**Signature Data Stored**:
+```json
+{
+  "signer": {
+    "name": "John Doe",
+    "title": "Marketing Director",
+    "company": "Sponsor Corp"
+  },
+  "consent": {
+    "reviewed_package": true,
+    "authorized_to_sign": true,
+    "accept_terms": true,
+    "acceptance_timestamp": "2025-01-15T14:30:00.000Z"
+  },
+  "audit_trail": {
+    "ip_address": "192.168.1.1",
+    "user_agent": "Mozilla/5.0...",
+    "signed_at": "2025-01-15T14:30:00.000Z",
+    "package_snapshot_hash": "sha256:abc123..."
+  }
+}
+```
+
+### Rejection Flow
+
+Simplified process when sponsor declines:
+
+**1. Sponsor Clicks Decline Button**:
+- No form validation required
+- Can decline even without filling form
+- Confirmation immediate (no additional modal)
+
+**2. Submit Rejection to API**:
+- POST request to `/api/products/sponsorships/proposal/[token]`
+- Body includes:
+  - `action: 'reject'`
+  - `signature.signer`: Optional (if name provided, includes it)
+
+**3. Server Processing**:
+- Verify proposal token and expiration
+- Confirm status is "pending_approval"
+- No signature data validation required
+
+**4. Update Package Status**:
+- Change status from "pending_approval" to "rejected"
+- Store minimal signer info (if provided)
+- Clear expiration date
+- Keep proposal token active
+
+**5. Show Declined Modal**:
+- Red X icon
+- "Proposal Declined" title
+- "You have declined the sponsorship package..." message
+- "The organization has been notified" confirmation
+- Modal overlays entire page
+
+<Info>
+**No Form Required**: Sponsors can decline without filling any fields. Signer information is optional for rejections.
+</Info>
+
+### Post-Response States
+
+What happens after sponsor responds:
+
+**Proposal Already Approved**:
+- Shows success modal immediately on page load
+- Green checkmark with "Proposal Approved" message
+- Download PDF link available
+- Prevents duplicate submissions
+
+**Proposal Already Rejected**:
+- Shows declined modal immediately on page load
+- Red X with "Proposal Declined" message
+- Organization notified text
+- Prevents duplicate submissions
+
+**Proposal Expired**:
+- Yellow clock icon
+- "Proposal Expired" title
+- Message: "This proposal link has expired. Please contact the organization for a new proposal."
+- No form or buttons shown
+
+**Proposal Not Found**:
+- Red error icon
+- "Error Loading Proposal" title
+- Generic error message
+- No form or buttons shown
+
+### Security and Compliance
+
+**Data Integrity**:
+- Package snapshot hash (SHA-256) ensures proposal wasn't modified after signing
+- Hash includes: package ID, name, sales price, cost price, items
+- Prevents tampering and provides legal proof
+
+**Audit Trail**:
+- IP address capture (x-forwarded-for header)
+- User agent capture (browser/device info)
+- Timestamp in ISO 8601 format
+- All data stored in `signature_data` JSONB column
+
+**Legal Compliance**:
+- Digital signature with explicit consent
+- Timestamp and IP for non-repudiation
+- Package snapshot hash for integrity
+- Audit trail for legal documentation
+
+**Privacy**:
+- No user account required (public link)
+- Minimal data collection (only what's needed for signature)
+- Secure token prevents unauthorized access
+- Expiration date limits exposure window
+
+<Warning>
+**Legal Weight**: The digital signature with consent, timestamp, IP, and package hash provides legally binding documentation of approval. Treat approval seriously.
+</Warning>
 
 ## Responsive Design
 
