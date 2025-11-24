@@ -67,7 +67,7 @@
     },
     {
       "group": "Platform",
-      "icon": "monitor",
+      "icon": "desktop",
       "pages": [
         "platform/user-profile",
         "platform/billing",
