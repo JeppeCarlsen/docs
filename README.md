@@ -76,7 +76,7 @@ Your content here...
   "group": "Valuations",
   "pages": [
     "guides/valuations/overview",
-    "guides/valuations/new-article"  // ← Add here
+    "guides/valuations/new-article"
   ]
 }
 ```
@@ -163,7 +163,7 @@ Brand colors and logos are configured in `mint.json`:
 ```json
 {
   "colors": {
-    "primary": "#2997ff",    // Valiyou blue
+    "primary": "#2997ff",
     "light": "#4da6ff",
     "dark": "#1976d2"
   },
