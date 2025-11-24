@@ -60,7 +60,8 @@
         "valuations/create-valuation",
         "valuations/dashboard",
         "valuations/valuations-list",
-        "valuations/valuation-details"
+        "valuations/valuation-details",
+        "valuations/reports"
       ]
     }
   ],
