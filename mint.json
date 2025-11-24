@@ -1,0 +1,141 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Valiyou Knowledge Center",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg",
+    "href": "https://valiyou.com"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#2997ff",
+    "light": "#4da6ff",
+    "dark": "#1976d2",
+    "background": {
+      "dark": "#111827",
+      "light": "#ffffff"
+    }
+  },
+  "topbar": {
+    "style": "default"
+  },
+  "topbarLinks": [
+    {
+      "name": "Sign In",
+      "url": "https://valiyou.com/auth/login"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://valiyou.com/auth/signup"
+  },
+  "tabs": [
+    {
+      "name": "User Guide",
+      "url": "guides"
+    },
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Trust Center",
+      "icon": "shield-check",
+      "url": "https://valiyou.com/trust-center"
+    },
+    {
+      "name": "Contact Support",
+      "icon": "envelope",
+      "url": "mailto:support@valiyou.com"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "introduction",
+        "getting-started/quick-start",
+        "getting-started/authentication",
+        "getting-started/first-valuation"
+      ]
+    },
+    {
+      "group": "Valuations",
+      "pages": [
+        "guides/valuations/overview",
+        "guides/valuations/create",
+        "guides/valuations/metrics",
+        "guides/valuations/player-sales",
+        "guides/valuations/reports",
+        "guides/valuations/ai-insights"
+      ]
+    },
+    {
+      "group": "Sponsorships",
+      "pages": [
+        "guides/sponsorships/overview",
+        "guides/sponsorships/sponsors",
+        "guides/sponsorships/packages",
+        "guides/sponsorships/item-library",
+        "guides/sponsorships/proposals",
+        "guides/sponsorships/contacts",
+        "guides/sponsorships/analytics"
+      ]
+    },
+    {
+      "group": "Billing & Plans",
+      "pages": [
+        "guides/billing/plans",
+        "guides/billing/upgrade",
+        "guides/billing/payment-methods",
+        "guides/billing/invoices"
+      ]
+    },
+    {
+      "group": "Platform Features",
+      "pages": [
+        "guides/platform/users",
+        "guides/platform/permissions",
+        "guides/platform/settings",
+        "guides/platform/sso",
+        "guides/platform/audit-log"
+      ]
+    },
+    {
+      "group": "API Overview",
+      "pages": [
+        "api-reference/introduction",
+        "api-reference/authentication",
+        "api-reference/rate-limits",
+        "api-reference/errors"
+      ]
+    },
+    {
+      "group": "API Endpoints",
+      "pages": [
+        "api-reference/endpoints/valuations",
+        "api-reference/endpoints/sponsors",
+        "api-reference/endpoints/packages",
+        "api-reference/endpoints/organizations"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/valiyou",
+    "linkedin": "https://linkedin.com/company/valiyou",
+    "github": "https://github.com/valiyou"
+  },
+  "analytics": {
+    "posthog": {
+      "apiKey": "phc_your_key_here",
+      "apiHost": "https://eu.i.posthog.com"
+    }
+  },
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true,
+    "raiseIssue": true
+  }
+}
