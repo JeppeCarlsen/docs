@@ -31,11 +31,6 @@
   },
   "anchors": [
     {
-      "name": "Getting Started",
-      "icon": "rocket",
-      "url": "introduction"
-    },
-    {
       "name": "Trust Center",
       "icon": "shield-check",
       "url": "https://valiyou.com/trust-center"
