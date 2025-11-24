@@ -29,18 +29,7 @@
     "name": "Get Started",
     "url": "https://valiyou.com/auth/signup"
   },
-  "anchors": [
-    {
-      "name": "Trust Center",
-      "icon": "shield-check",
-      "url": "https://valiyou.com/trust-center"
-    },
-    {
-      "name": "Contact Support",
-      "icon": "envelope",
-      "url": "mailto:support@valiyou.com"
-    }
-  ],
+  "anchors": [],
   "navigation": [
     {
       "group": "Getting Started",
@@ -87,6 +76,13 @@
         "platform/audit-log",
         "platform/plugins",
         "platform/api"
+      ]
+    },
+    {
+      "group": "Trust & Security",
+      "icon": "shield-check",
+      "pages": [
+        "trust-center"
       ]
     }
   ],
