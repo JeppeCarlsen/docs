@@ -67,7 +67,7 @@
     },
     {
       "group": "Sponsorships",
-      "icon": "handshake",
+      "icon": "star",
       "pages": [
         "sponsorships/sponsors"
       ]
