@@ -44,7 +44,7 @@
   "navigation": [
     {
       "group": "Getting Started",
-      "icon": "book-open",
+      "icon": "zap",
       "pages": [
         "introduction",
         "getting-started/quick-start",
