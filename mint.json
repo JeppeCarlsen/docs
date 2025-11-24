@@ -31,6 +31,11 @@
   },
   "anchors": [
     {
+      "name": "Getting Started",
+      "icon": "rocket",
+      "url": "introduction"
+    },
+    {
       "name": "Trust Center",
       "icon": "shield-check",
       "url": "https://valiyou.com/trust-center"
@@ -43,12 +48,10 @@
   ],
   "navigation": [
     {
-      "group": "Getting Started",
+      "group": "Documentation",
       "pages": [
         "introduction",
-        "getting-started/quick-start",
-        "getting-started/authentication",
-        "getting-started/first-valuation"
+        "getting-started/quick-start"
       ]
     },
     {
