@@ -84,7 +84,8 @@
         "platform/team-management",
         "platform/organization-settings",
         "platform/audit-log",
-        "platform/plugins"
+        "platform/plugins",
+        "platform/api"
       ]
     }
   ],
