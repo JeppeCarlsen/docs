@@ -57,7 +57,8 @@
       "group": "Valuations",
       "icon": "rocket",
       "pages": [
-        "valuations/create-valuation"
+        "valuations/create-valuation",
+        "valuations/dashboard"
       ]
     }
   ],
