@@ -61,7 +61,8 @@
         "valuations/dashboard",
         "valuations/valuations-list",
         "valuations/valuation-details",
-        "valuations/reports"
+        "valuations/reports",
+        "valuations/methods"
       ]
     }
   ],
