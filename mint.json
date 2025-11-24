@@ -71,7 +71,8 @@
       "pages": [
         "sponsorships/sponsors",
         "sponsorships/library",
-        "sponsorships/packages"
+        "sponsorships/packages",
+        "sponsorships/proposals"
       ]
     }
   ],

@@ -1,0 +1,524 @@
+---
+title: 'Proposals'
+description: 'Track sent proposals, view status, monitor approval progress, and manage sponsor responses'
+---
+
+View all sent sponsorship proposals, track their status, review audit trails, and monitor sponsor decisions in real-time.
+
+## Accessing Proposals
+
+Navigate to **Sponsorships** → **Proposals** from the sidebar to access sent proposals.
+
+<Note>
+**Plan Required**: Proposals feature requires Professional or Enterprise plan.
+**Permission Required**: You need Proposals role or Admin access.
+</Note>
+
+## What Are Proposals?
+
+Proposals are packages that have been sent to sponsors for review and approval. When you send a package from Package Builder, it moves from the Packages page to the Proposals page.
+
+**Proposal Lifecycle:**
+1. **Draft** - Package created but not sent (shows in Packages page)
+2. **Pending Approval** - Sent to sponsor, awaiting response (shows in Proposals page)
+3. **Approved** - Sponsor accepted the proposal (shows in Proposals page)
+4. **Rejected** - Sponsor declined the proposal (shows in Proposals page)
+5. **Expired** - Proposal deadline passed without response (shows in Proposals page)
+
+## Proposals List Page
+
+### Empty State
+
+If you haven't sent any proposals yet, you'll see:
+
+- **Icon**: Document graphic
+- **Title**: "No pending packages"
+- **Message**: "Generate proposals from your packages to send to sponsors for approval."
+- **Action**: "Go to Packages" button
+
+<Tip>
+**Getting Started**: Create a package in Packages page, build inclusions, then use "Send Proposal" to generate your first proposal.
+</Tip>
+
+### Proposals List
+
+Vertical list of all sent proposals sorted by sent date (newest first).
+
+#### List Item Layout
+
+Each proposal displays:
+
+**Left Side:**
+- **Sponsor Logo**: 48×48px square (or document icon fallback)
+- **Sponsor Name**: Bold, clickable
+- **Package Tier**: Below name (e.g., "Gold", "Platinum")
+- **Sales Price**: Currency formatted (hidden in Negotiator Mode)
+
+**Right Side (Desktop):**
+- **Package Name**: Bold
+- **Sent Date**: "Sent [date]" (e.g., "Sent Jan 15, 2025")
+- **Expires Date**: "Expires [date]"
+- **Status Badge**: Visual indicator with color dot
+
+**Chevron**: Right-facing arrow indicating clickable item
+
+<Info>
+**Click Anywhere**: The entire row is clickable and opens the proposal preview page.
+</Info>
+
+### Status Badges
+
+Four status types with colored indicators:
+
+#### Pending
+
+**Color**: Amber/Yellow
+**Dot**: Amber circle
+**Label**: "Pending"
+**Meaning**: Sent to sponsor, waiting for response
+**Shows**: Before expiration date
+
+#### Approved
+
+**Color**: Green
+**Dot**: Green circle
+**Label**: "Approved"
+**Meaning**: Sponsor accepted the proposal
+**Shows**: After sponsor approval
+
+#### Rejected
+
+**Color**: Red
+**Dot**: Red circle
+**Label**: "Rejected"
+**Meaning**: Sponsor declined the proposal
+**Shows**: After sponsor rejection
+
+#### Expired
+
+**Color**: Gray
+**Dot**: Gray circle
+**Label**: "Expired"
+**Meaning**: Deadline passed without response
+**Shows**: After expiration date (still pending)
+
+<Warning>
+**Expiration**: Expired proposals remain in "pending" status but are marked as expired. Sponsors can no longer accept expired proposals via the proposal link.
+</Warning>
+
+### Sorting
+
+**Order**: Newest first (by sent date)
+**Logic**: Most recently sent proposals appear at the top
+**Fixed**: No manual sorting or filtering options
+
+## Proposal Preview Page
+
+Detailed view of a single proposal with PDF preview and audit trail.
+
+### Accessing Preview
+
+**From List**: Click on any proposal in the list
+**Direct URL**: `/products/sponsorships/packages/[id]/preview`
+
+### Page Layout
+
+Split-screen layout:
+
+**Left Side (Main):**
+- Full PDF preview
+- Download button
+
+**Right Side (Sidebar):**
+- Proposal Preview header
+- Status badge
+- Audit trail
+- Action buttons
+
+<Info>
+**Responsive**: On mobile, sidebar appears above PDF for better UX.
+</Info>
+
+### PDF Preview
+
+**Display**: Embedded PDF viewer
+**Content**: Exact proposal PDF sent to sponsor
+**Features**:
+- Scroll to view all pages
+- Zoom controls
+- Fullscreen option (browser-dependent)
+
+**Loading States**:
+- Shows spinner while PDF loads
+- Error message if PDF fails to load
+- Retry option on error
+
+<Tip>
+**Same as Sent**: This is the exact PDF the sponsor received via email. Use it to verify proposal contents after sending.
+</Tip>
+
+### Status Badge (Detailed)
+
+Expanded status information:
+
+**Pending Approval:**
+- Icon: Clock
+- Color: Amber
+- Label: "Pending Approval"
+- Sub-text: "Awaiting sponsor response"
+
+**Approved:**
+- Icon: Check Circle
+- Color: Green
+- Label: "Approved"
+- Sub-text: "Accepted on [date]"
+
+**Rejected:**
+- Icon: X Circle
+- Color: Red
+- Label: "Rejected"
+- Sub-text: "Declined on [date]"
+
+**Expired:**
+- Icon: Clock
+- Color: Gray
+- Label: "Expired"
+- Sub-text: "Expired on [date]"
+
+### Audit Trail
+
+Chronological timeline of proposal events.
+
+#### Timeline Events
+
+**1. Proposal Sent**:
+- Icon: Envelope
+- Label: "Proposal Sent"
+- Date: Sent date and time
+- Details: Sent to [contact emails]
+- Shows: Always (first event)
+
+**2. Proposal Opened** (if tracking enabled):
+- Icon: Eye
+- Label: "Proposal Opened"
+- Date: First open timestamp
+- Details: Opened by [IP address]
+- Shows: If sponsor opened email
+
+**3. Sponsor Response**:
+- **Approved**:
+  - Icon: Check Circle (green)
+  - Label: "Proposal Approved"
+  - Date: Approval date and time
+  - Details: Approved by [contact name]
+  - Value: Package value shown
+- **Rejected**:
+  - Icon: X Circle (red)
+  - Label: "Proposal Rejected"
+  - Date: Rejection date and time
+  - Details: Rejected by [contact name]
+
+**4. Signature Data** (if signed):
+- Icon: Pen
+- Label: "Digitally Signed"
+- Details:
+  - Signer name, title, company
+  - Signed date and time
+  - IP address
+- Shows: If sponsor signed electronically
+
+**5. Expiration**:
+- Icon: Clock (gray)
+- Label: "Proposal Expired"
+- Date: Expiration date
+- Details: "No response received"
+- Shows: If expired without response
+
+<Info>
+**Chronological Order**: Events appear in timeline order from top (most recent) to bottom (oldest).
+</Info>
+
+### Action Buttons
+
+Located in sidebar panel.
+
+#### Edit Package (Pending/Draft only)
+
+**Button**: "Edit Package" with pencil icon
+**Visibility**: Shows only for pending or draft proposals
+**Action**: Navigates to Package Builder
+**Use Case**: Make changes before sponsor responds
+
+<Warning>
+**After Approval**: Edit button is hidden for approved proposals. You cannot edit an approved package.
+</Warning>
+
+#### Download PDF
+
+**Button**: "Download PDF" with download icon
+**Visibility**: Always visible
+**Action**: Downloads proposal PDF to computer
+**Filename**: `proposal-[package-name].pdf`
+**Use Case**: Save for records, print, or share internally
+
+#### Resend Proposal (Coming Soon)
+
+**Button**: "Resend" with envelope icon
+**Visibility**: Shows for expired or pending proposals
+**Action**: Re-sends proposal email to contacts
+**Use Case**: Remind sponsor, send to additional contacts
+
+### Proposal Information Panel
+
+Additional details shown in sidebar:
+
+**Sent To:**
+- List of recipient email addresses
+- Primary contact highlighted
+- Shows all recipients from original send
+
+**Package Details:**
+- Package name
+- Package tier badge
+- Sales price (if not Negotiator Mode)
+- Event assignments (if any)
+
+**Expiration Info:**
+- "Expires on [date]" (if pending)
+- "Expired on [date]" (if expired)
+- Countdown timer (optional, if pending)
+
+<Tip>
+**Track Progress**: Check audit trail regularly to see if sponsors opened the proposal. This helps with follow-up timing.
+</Tip>
+
+## Proposal Status Management
+
+### Status Transitions
+
+Valid status flows:
+
+```
+draft → pending_approval → approved
+                        → rejected
+                        → expired (after deadline)
+```
+
+**Cannot Go Backward**: Once approved/rejected, status is final
+**Expired Can't Approve**: Expired proposals can't be accepted by sponsor
+
+### Automatic Status Updates
+
+**Sent**: Status changes to "pending_approval" when email is sent
+**Approved**: Status changes to "approved" when sponsor clicks "Accept"
+**Rejected**: Status changes to "rejected" when sponsor clicks "Decline"
+**Expired**: Status remains "pending_approval" but badge shows "Expired"
+
+<Info>
+**Real-Time Updates**: Refresh the page to see latest status changes from sponsor actions.
+</Info>
+
+## Sponsor View (External)
+
+### Proposal Link
+
+When you send a proposal, sponsors receive a unique proposal link:
+
+**Format**: `https://yourorg.valiyou.com/proposals/[token]`
+**Token**: Unique identifier (secure, non-guessable)
+**Access**: No login required (public link)
+
+### What Sponsors See
+
+**Proposal Page**:
+- Your organization logo and name
+- Sponsor name and logo
+- Package name and tier
+- Sales price (if not Negotiator Mode)
+- Inclusions table with all items
+- Terms and conditions
+- Accept/Decline buttons
+
+**Interactive Elements**:
+- Quantity review
+- Total cost calculation
+- Signature field (if enabled)
+- Comments field
+- Accept button (green)
+- Decline button (red)
+
+**After Response**:
+- Confirmation message
+- Thank you note
+- Next steps
+- Contact information
+
+<Warning>
+**Security**: Proposal links are public but unguessable. Don't share the link publicly. Only send to intended recipients via email.
+</Warning>
+
+### Digital Signatures
+
+If signature feature is enabled:
+
+**Sponsor Provides**:
+- Full name
+- Job title
+- Company name
+- Electronic signature (typed name)
+- Date (auto-filled)
+
+**Audit Trail Includes**:
+- Signature data
+- IP address
+- Timestamp
+- Browser/device info (optional)
+
+## Responsive Design
+
+### Desktop (>1024px)
+
+- Split-screen layout (PDF + sidebar)
+- Full-width PDF preview
+- Fixed-width sidebar (260px)
+- All details visible
+
+### Tablet (640-1024px)
+
+- Vertical stacking (sidebar, then PDF)
+- Horizontal scroll for PDF if needed
+- Responsive columns
+
+### Mobile (<640px)
+
+- Vertical stacking (sidebar first, then PDF)
+- Full-width components
+- Touch-optimized buttons
+- Scrollable content
+
+## Permissions
+
+Different permissions show different content:
+
+| Permission | Can View List | Can View Preview | Can Edit | Can Resend |
+|------------|--------------|-----------------|----------|-----------|
+| **Proposals Role** | ✅ Yes | ✅ Yes | ✅ Yes (pending only) | ✅ Yes |
+| **Admin** | ✅ Yes | ✅ Yes | ✅ Yes (pending only) | ✅ Yes |
+| **Other Roles** | ❌ No | ❌ No | ❌ No | ❌ No |
+
+<Info>
+**Professional/Enterprise Only**: Proposals feature requires Professional or Enterprise plan. Starter plans cannot access this module.
+</Info>
+
+## Common Use Cases
+
+### Monitoring Sent Proposals
+
+1. Open Proposals page
+2. Review list for pending proposals
+3. Click on specific proposal
+4. Check audit trail for opens/actions
+5. Follow up if no response after several days
+
+### Verifying Proposal Contents
+
+1. Click on proposal from list
+2. Review PDF preview
+3. Verify all items, quantities, pricing
+4. Check terms and conditions
+5. Confirm correct sponsor information
+
+### Following Up on Pending
+
+1. Check sent date in list
+2. Review audit trail for opens
+3. Wait appropriate time (3-7 days)
+4. Use audit trail to time follow-up
+5. Resend or contact sponsor directly
+
+### Handling Approvals
+
+1. See "Approved" badge in list
+2. Open proposal preview
+3. Review approval timestamp
+4. Check signature data (if provided)
+5. Download PDF for records
+6. Proceed with contract finalization
+
+### Managing Rejections
+
+1. See "Rejected" badge in list
+2. Open proposal preview
+3. Review rejection timestamp
+4. Check audit trail for context
+5. Follow up with sponsor for feedback
+6. Create revised package if needed
+
+### Dealing with Expirations
+
+1. See "Expired" badge in list
+2. Open proposal preview
+3. Check if sponsor opened (audit trail)
+4. Resend with extended deadline
+5. Or contact sponsor directly
+
+## Troubleshooting
+
+### Proposal Not Showing in List
+
+**Check**:
+- Proposal was sent (not still draft)
+- You have Proposals permission
+- Refresh page to update list
+- Check Packages page (might be draft)
+
+### PDF Preview Won't Load
+
+**Try**:
+- Refresh page
+- Clear browser cache
+- Check network connection
+- Try different browser
+- Contact support if persists
+
+### Status Not Updating
+
+**Fix**:
+- Refresh page manually (status updates on refresh)
+- Check sponsor received link
+- Verify link wasn't expired when sponsor clicked
+- Check spam folder for bounce emails
+
+### Can't Edit Proposal
+
+**Reasons**:
+- Proposal is approved (can't edit)
+- Proposal is rejected (can't edit)
+- Don't have edit permissions
+- Network error
+
+**Solution**:
+- Create new package for approved/rejected
+- Request permissions from admin
+- Check browser console for errors
+
+### Download PDF Fails
+
+**Try**:
+- Disable popup blocker
+- Allow file downloads in browser
+- Check disk space
+- Try different browser
+- Use "Print to PDF" as alternative
+
+## Next Steps
+
+- **Monitor responses** - Check Proposals daily for sponsor decisions
+- **Follow up** - Contact sponsors after 3-7 days if no response
+- **Analyze performance** - Go to Analytics to review proposal success rates
+- **Refine packages** - Use approval data to optimize future packages
+- **Close deals** - Move approved proposals to contract finalization
+
+<Tip>
+**Best Practice**: Set up email notifications (if available) to get instant alerts when sponsors approve or reject proposals. This enables immediate follow-up.
+</Tip>
