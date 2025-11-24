@@ -80,9 +80,9 @@
       "group": "Platform",
       "icon": "monitor",
       "pages": [
+        "platform/user-profile",
         "platform/billing",
         "platform/team-management",
-        "platform/user-profile",
         "platform/organization-settings",
         "platform/audit-log",
         "platform/plugins",
