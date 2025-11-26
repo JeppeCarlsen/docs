@@ -340,6 +340,120 @@ Create valuations monthly or quarterly to build a meaningful trend history. The 
 **Pro Tip**: If you see a sudden spike or drop, hover over that point to see the exact valuation details and identify what changed.
 </Info>
 
+## Cash Flow Visualization
+
+**Plugin Required**: This chart requires the Cash Flow Visualization (Sankey) plugin (Professional/Enterprise plans). See [Platform → Plugins](/platform/plugins#cash-flow-visualization) for setup details.
+
+**Displays when**: Cash Flow Visualization plugin is enabled in Platform → Plugins
+
+<Frame>
+  <img src="/images/valuations/dashboard/cash-flow-visualization.png" alt="Cash Flow Visualization" />
+</Frame>
+
+An interactive Sankey chart showing value flow from individual components to final total.
+
+**Title**: "Cash Flow Visualization" (configurable in plugin settings)
+
+### What It Shows
+
+A Sankey (alluvial flow) diagram that visualizes how individual value components flow together to create your total valuation.
+
+**Flow Direction**: Left to right
+- **Left side**: Individual value components (merchandise, TV, social media, etc.)
+- **Middle**: Category groupings (Sales, Media, Brand)
+- **Right side**: Total Attention Valuation
+
+### Visual Features
+
+**Flow Bands**:
+- Width represents the value amount
+- Color matches the component category:
+  - **Blue shades** - Sales components
+  - **Green shades** - Media components
+  - **Purple shades** - Brand components
+
+**Interactive Elements**:
+- **Hover over flows** - See exact value and percentage
+- **Hover over nodes** - See total for that category
+- **Smooth animations** - Flows animate on page load (configurable)
+
+### Configuration Options
+
+Customize the chart appearance in **Platform → Plugins → Cash Flow Visualization** settings:
+
+**Chart Type**:
+- Sankey (Alluvial Flow) - Recommended
+- Waterfall
+- Custom
+
+**Appearance**:
+- **Chart Height** - Pixels (default: 600px)
+- **Color Scheme** - Default (multi-color), Blue, Green, Purple, Custom
+- **Chart Position** - Before Sales, After Sales, Top of Page, Bottom of Page
+
+**Display Options**:
+- Show Legend (toggle)
+- Show Tooltips (toggle)
+- Show Labels (toggle)
+- Enable Interactivity (toggle)
+- Animation Duration (milliseconds)
+
+<Tip>
+Use the Sankey chart to show sponsors exactly where their sponsorship value comes from and how it flows into your total brand value.
+</Tip>
+
+### How to Read It
+
+**Flow Width = Value Amount**:
+- Wider flows = Higher value components
+- Narrow flows = Lower value components
+
+**Convergence Points**:
+- Multiple flows merge into category totals (Sales, Media, Brand)
+- All categories converge into final Total Attention Valuation
+
+**Color Coding**:
+- Quick visual identification of value types
+- Easy to spot which categories dominate your valuation
+
+### Enabling the Chart
+
+<Note>
+**Professional/Enterprise Required**: This chart requires the Cash Flow Visualization plugin, available on Professional and Enterprise plans.
+</Note>
+
+**Setup Steps**:
+1. Navigate to **Platform → Plugins**
+2. Find "Cash Flow Visualization (Sankey)" card
+3. Click **"Enable"** button
+4. (Optional) Click **gear icon** to configure appearance
+5. Return to Dashboard to see the chart
+
+<Info>
+The chart appears on both the **Dashboard** and individual **Valuation Details** pages once enabled.
+</Info>
+
+### Use Cases
+
+**Sponsor Presentations**:
+- Visually demonstrate value composition
+- Show how sponsor touchpoints contribute to total value
+- Highlight diversified value streams
+
+**Executive Reporting**:
+- Modern, professional visualization
+- Easy to understand at a glance
+- Impressive visual impact
+
+**Strategic Analysis**:
+- Identify dominant value sources
+- Spot under-utilized components
+- Balance value portfolio
+
+<Warning>
+If you disable the Cash Flow Visualization plugin in **Platform → Plugins**, this chart will be removed from the Dashboard and Valuation Details pages.
+</Warning>
+
 ## Using Dashboard Data
 
 ### For Sponsor Proposals
