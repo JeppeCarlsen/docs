@@ -80,7 +80,7 @@
         {
           "group": "Billing",
           "pages": [
-            "platform/billing/subscription",
+            "platform/billing/billing",
             "platform/billing/usage",
             "platform/billing/payment-methods",
             "platform/billing/invoices",
