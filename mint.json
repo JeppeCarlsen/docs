@@ -35,7 +35,7 @@
       "group": "Getting Started",
       "icon": "zap",
       "pages": [
-        "introduction",
+        "getting-started/introduction",
         "getting-started/quick-start",
         "getting-started/your-profile",
         "getting-started/organization-settings",
@@ -93,14 +93,14 @@
       "group": "Trust & Security",
       "icon": "shield-check",
       "pages": [
-        "trust-center"
+        "trust-security/trust-center"
       ]
     },
     {
       "group": "Resources",
       "icon": "book",
       "pages": [
-        "glossary"
+        "resources/glossary"
       ]
     }
   ],
