@@ -62,7 +62,7 @@
         {
           "group": "Library",
           "pages": [
-            "sponsorships/library/library",
+            "sponsorships/library/item-library",
             "sponsorships/library/settings",
             "sponsorships/library/negotiator"
           ]
