@@ -86,19 +86,31 @@ Each user card displays:
 **Permissions Tree Structure**:
 ```
 ☑ Admin
-  ├☑ Dashboard
-  ├☑ Reports
-  ├☑ Sales
-  ├☑ Transfer
-  ├☑ Marketing
-  ├☑ Brand
-  ├☑ Users
-  ├☑ Billing
-  ├☑ Settings
-  ├☑ Plugins
-  ├☑ Audit Log
-  └☑ API
-☐ Approver (independent, not under Admin)
+  ├─ Valuations
+  │  ├☑ Dashboard
+  │  ├─ Valuations
+  │  │  ├☑ Edit Sales Value
+  │  │  ├☑ Edit Transfer Value
+  │  │  ├☑ Edit Marketing Value
+  │  │  └☑ Edit Brand Value
+  │  ├☑ Reports
+  │  └☑ Methods
+  ├─ Sponsorships
+  │  ├☑ Sponsors
+  │  ├☑ Packages
+  │  ├☑ Library
+  │  ├☑ Proposals
+  │  └☑ Analytics
+  └─ Platform
+     ├☑ Users
+     ├☑ Settings
+     ├☑ Billing
+     ├☑ Plugins
+     ├☑ API
+     ├☑ SSO
+     └☑ Audit Log
+
+☐ Approver (independent permission, not under Admin)
 ```
 
 <Info>
