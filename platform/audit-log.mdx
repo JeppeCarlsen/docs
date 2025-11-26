@@ -369,13 +369,16 @@ Access to audit log requires specific permissions:
 | Permission | Can View Audit Log | Can Export CSV | Can Restore Versions |
 |------------|-------------------|----------------|---------------------|
 | **Admin** | ✅ Yes | ✅ Yes | ✅ Yes |
-| **Log Role** | ✅ Yes | ✅ Yes | ❌ No |
-| **Settings Role** | ✅ Yes | ✅ Yes | ❌ No |
+| **Audit Log** | ✅ Yes | ✅ Yes | ❌ No |
 | **Other Roles** | ❌ No | ❌ No | ❌ No |
 
 <Note>
 **Plan Requirement**: All audit log features require Enterprise plan. Professional and Starter plans cannot access audit log.
 </Note>
+
+<Warning>
+**Restore Versions**: Only users with **Admin** role can restore previous versions. Users with Audit Log permission can view and export logs, but cannot restore data to prevent accidental data changes.
+</Warning>
 
 ## Common Use Cases
 
