@@ -1,0 +1,188 @@
+---
+title: 'Usage'
+description: 'Monitor team seats and valuation usage limits'
+---
+
+Monitor team seats and valuation usage limits.
+
+## Plan Usage Limits Card
+
+Visual progress bars showing current usage.
+
+**Team Seats:**
+- **Display**: "X / Y" (e.g., "3 / 5")
+- **Progress Bar**: Green (less than 80% used), Blue (80% or more used)
+- **Percentage**: "X% used"
+- **Calculation**: Active users + pending invitations
+
+**Valuations (this year):**
+- **Display**: "X / Y" (e.g., "12 / 24")
+- **Progress Bar**: Green (less than 80% used), Blue (80% or more used)
+- **Percentage**: "X% used • Resets [Date]"
+- **Reset Date**: One year from entitlements creation (usually subscription start)
+
+<Info>
+**Annual Reset**: Valuation limits reset annually based on subscription start date, not calendar year. Purchased extra valuations carry forward.
+</Info>
+
+**What Counts Toward Limits:**
+- **Seats**: All active users + pending invitations
+- **Valuations**: All valuations created this year (Draft + Approved)
+
+**Plan-Specific Limits:**
+- **Starter**: 3 seats, 12 valuations/year
+- **Professional**: 5 seats, 24 valuations/year
+- **Enterprise**: 10 seats, Unlimited valuations
+
+See [Platform → Team Management](/platform/team-management) for user management.
+
+## Manage Seats Card
+
+Adjust team seat count with real-time cost preview.
+
+**Current Plan Info:**
+- **Included Seats**: Base seats in plan (e.g., "5 included in Professional Plan")
+- **Additional Seats**: Extra purchased seats (e.g., "• 2 additional")
+- **Seat Price**: Cost per additional seat per month
+
+**Team Seats Stepper:**
+- **Minus Button**: Decrease seats (disabled if 0 additional seats)
+- **Count Display**: Total seats (included + additional)
+- **Plus Button**: Increase seats
+
+**Cost Info** (appears when changes made):
+- **Upgrade**: Shows new monthly cost + immediate pro-rated charge
+- **Downgrade**: Shows credit for unused time + new monthly cost
+
+**Example Cost Info:**
+```
+Your next payment will be 398 DKK per month for additional seats.
+You will be charged immediately for the pro-rated amount.
+```
+
+**Action Buttons:**
+- **Cancel**: Reset to current seat count
+- **Upgrade/Downgrade Button**: Apply changes (e.g., "Upgrade to 7 seats")
+
+<Tip>
+**Flexible Scaling**: Add or remove seats anytime. Pro-rated charges/credits apply immediately, and the new monthly cost takes effect on next billing cycle.
+</Tip>
+
+<Warning>
+**Removing Seats**: You can only decrease additional seats, not included seats. Ensure you have fewer active users than new seat limit before downgrading.
+</Warning>
+
+See [Platform → Team Management](/platform/team-management#seat-limits) for seat management details.
+
+## Purchase Extra Valuations Card
+
+Buy additional one-time valuations beyond annual limit.
+
+<Note>
+**One-Time Purchase**: Extra valuations are purchased individually, not on subscription. They never expire and do not reset annually.
+</Note>
+
+**Current Plan Info:**
+- **Included Valuations**: Base valuations in plan (e.g., "24 included in Professional Plan")
+- **Additional Valuations**: Extra purchased valuations (e.g., "• 5 additional")
+- **Valuation Price**: Cost per extra valuation (varies by currency)
+- **Reset Date**: When next annual allocation becomes available
+
+**Extra Valuations Stepper:**
+- **Minus Button**: Decrease extra valuations (disabled if no unused extra valuations)
+- **Count Display**: Total valuations (included + additional)
+- **Plus Button**: Increase extra valuations
+
+**Decrease Logic:**
+- Can only decrease unused extra valuations
+- If you've used extra valuations this year, minus button is disabled
+- Example: Purchased 5 extra, used 3 → Can only decrease by 2 max
+
+**Cost Info** (appears when changes made):
+- **Purchase**: One-time payment amount, charged immediately
+- **Credit**: Account credit for unused valuations, usable for future purchases
+
+**Example Cost Info (Purchase):**
+```
+One-time payment of 1,990 DKK for 2 extra valuations.
+Payment will be charged immediately.
+```
+
+**Example Cost Info (Credit):**
+```
+You will receive account credit for the unused valuation.
+Credit amount: 995 DKK. This credit can be used for future purchases.
+```
+
+**Action Buttons:**
+- **Cancel**: Reset to current extra valuation count
+- **Purchase/Credit Button**: Apply changes (e.g., "Purchase 2 valuations" or "Get Credit for 1 valuation")
+
+<Tip>
+**No Expiration**: Extra valuations never expire. Purchase when needed, use whenever convenient. They don't reset annually like included valuations.
+</Tip>
+
+<Info>
+**Account Credit**: When you return unused extra valuations, you receive account credit that can be used for future purchases (seats, add-ons, extra valuations).
+</Info>
+
+**When to Purchase Extra Valuations:**
+- Exceeded annual limit (e.g., 24/24 used)
+- Planning major campaign requiring multiple valuations
+- Prefer one-time purchase over upgrading plan
+- Need flexibility without long-term commitment
+
+See [Valuations → Create Valuation](/valuations/create-valuation) for valuation creation.
+
+## Common Use Cases
+
+### Adding Team Members (Purchase Seats)
+
+1. Navigate to **Platform** → **Billing** → **Usage** tab
+2. Find **Manage Seats** card
+3. Click **Plus Button** to increase seat count
+4. Review cost info (pro-rated charge + new monthly cost)
+5. Click **"Upgrade to X seats"** button
+6. Success modal confirms seat addition
+7. Go to **Platform** → **Users** to invite new members
+
+See [Platform → Team Management](/platform/team-management#inviting-users) for invitation process.
+
+### Purchasing Extra Valuations
+
+1. Check current usage: **Billing** → **Usage** tab → **Plan Usage Limits**
+2. If at/near limit, go to **Purchase Extra Valuations** card
+3. Click **Plus Button** to add extra valuations
+4. Review cost info (one-time payment)
+5. Click **"Purchase X valuations"** button
+6. Payment processed immediately
+7. Success modal confirms purchase
+8. Create new valuations: **Valuations** → **New Valuation**
+
+See [Valuations → Create Valuation](/valuations/create-valuation) for valuation creation.
+
+## Troubleshooting
+
+### Can't Decrease Seats
+
+**Reasons:**
+- No additional seats to remove (only included seats)
+- More active users than new seat limit
+- Pending invitations count toward limit
+
+**Fix:**
+- Remove users first: [Platform → Team Management](/platform/team-management#removing-users)
+- Cancel pending invitations
+- Then decrease seats
+
+### Can't Decrease Extra Valuations
+
+**Reasons:**
+- No extra valuations purchased
+- All extra valuations used this year
+- Minus button disabled
+
+**Fix:**
+- Can only return unused extra valuations
+- Wait until next annual reset
+- Purchase more instead of decreasing (if needed)

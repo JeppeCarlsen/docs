@@ -1,0 +1,64 @@
+---
+title: 'Payment Methods'
+description: 'View and manage saved payment methods'
+---
+
+View and manage saved payment methods.
+
+## Payment Methods Card
+
+**Displays for each payment method:**
+- **Card Brand Icon**: Visa, Mastercard, Amex, etc.
+- **Card Brand Name**: "Visa", "Mastercard", etc.
+- **Last 4 Digits**: "•••• 1234"
+- **Expiration Date**: "Expires 12/2025"
+- **Default Badge**: Blue "Default" badge if primary payment method
+
+**Actions:**
+- **Manage Payment Methods Button**: Opens Stripe Customer Portal
+  - Add new payment method
+  - Remove old payment method
+  - Set default payment method
+  - Update card details
+
+**Empty State:**
+- Message: "No payment methods found"
+- Action: "Add Payment Method" button → Opens Stripe Customer Portal
+
+<Info>
+**Stripe Customer Portal**: All payment method management happens via Stripe's secure portal. No card details are stored or handled by Valiyou.
+</Info>
+
+**Security Features:**
+- Card numbers never fully displayed (only last 4 digits)
+- No card details stored in Valiyou database
+- PCI DSS compliant via Stripe
+- Secure Stripe Customer Portal for all changes
+
+## Common Use Cases
+
+### Updating Payment Method
+
+1. Navigate to **Platform** → **Billing** → **Payment Methods** tab
+2. Click **"Manage Payment Methods"** button
+3. Stripe Customer Portal opens in new window
+4. Add new card or update existing card
+5. Set new card as default (if desired)
+6. Return to Valiyou (portal auto-redirects)
+7. New payment method appears in list
+
+## Troubleshooting
+
+### Payment Failed
+
+**Reasons:**
+- Card expired
+- Insufficient funds
+- Card blocked by bank
+- Incorrect billing details
+
+**Fix:**
+- Update payment method: **Payment Methods** tab → **Manage Payment Methods**
+- Contact your bank to authorize payment
+- Verify billing details: **Billing Details** tab → **Update Billing Details**
+- Try again after fixing issue

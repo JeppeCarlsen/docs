@@ -1,0 +1,96 @@
+---
+title: 'Negotiator'
+description: 'Configure contribution margin ratio labels for Package Builder negotiator mode'
+---
+
+Configure contribution margin ratio labels for Package Builder negotiator mode.
+
+**Purpose**: Define custom labels for different coverage percentage ranges.
+
+**Default Labels:**
+- 0-25%: "Very Low Coverage"
+- 25-50%: "Low Coverage"
+- 50-75%: "Medium Coverage"
+- 75-100%: "High Coverage"
+- 100%+: "Full Coverage"
+
+**Customization:**
+- Edit label text for each range
+- Translates to your language
+- Used in Package Builder negotiator view
+
+<Info>
+**Negotiator Mode**: A special view mode in Package Builder that hides unit costs and focuses on coverage percentages. Useful for proposal-based pricing strategies.
+</Info>
+
+## Responsive Design
+
+### Desktop
+
+- Full table with all columns visible
+- Drag-and-drop reordering
+- Inline editing
+- Side-by-side settings cards
+
+### Tablet
+
+- Horizontal scroll for table
+- All columns preserved
+- Touch-friendly drag handles
+
+### Mobile
+
+- Horizontal scroll
+- Condensed columns
+- Touch-optimized interactions
+- Responsive settings cards
+
+## Permissions
+
+Different permissions show different content:
+
+| Permission | Can View | Can Add | Can Edit | Can Delete | Can Configure Settings |
+|------------|----------|---------|----------|-----------|----------------------|
+| **Library Role** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Admin** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Other Roles** | ❌ No | ❌ No | ❌ No | ❌ No | ❌ No |
+
+<Info>
+**Enterprise Only**: Library feature requires Professional or Enterprise plan. Starter plans cannot access this module.
+</Info>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Build Packages"
+    icon="box"
+    href="/sponsorships/packages"
+  >
+    Create sponsorship bundles from library items
+  </Card>
+
+  <Card
+    title="Create Proposals"
+    icon="file-invoice"
+    href="/sponsorships/proposals"
+  >
+    Send offers to sponsors with library items
+  </Card>
+
+  <Card
+    title="Configure Settings"
+    icon="gear"
+    href="/platform/settings"
+  >
+    Refine categories, tiers, and events as needed
+  </Card>
+
+  <Card
+    title="Manage Sponsors"
+    icon="handshake"
+    href="/sponsorships/sponsors"
+  >
+    Assign sponsors to tiers for proper item availability
+  </Card>
+</CardGroup>

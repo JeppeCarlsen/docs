@@ -1,0 +1,195 @@
+---
+title: 'Subscription'
+description: 'Manage your plan details, add-ons, and subscription renewal'
+---
+
+Manage your plan details, add-ons, and subscription renewal.
+
+## Subscription Details Card
+
+**Displays:**
+- **Plan Name**: Starter, Professional, or Enterprise
+- **Billing Period**: Monthly or Annually
+- **Upgrade Button**: Appears for Starter/Professional plans
+
+<Info>
+**Upgrade Available**: Starter and Professional plans show an "Upgrade Plan" button to access higher tiers.
+</Info>
+
+**Upgrade Process:**
+1. Click "Upgrade Plan" button
+2. Upgrade Plan modal opens
+3. Select new plan tier
+4. Confirm upgrade
+5. Subscription updated immediately
+
+## Manage Add-ons Card
+
+<Note>
+**Feature Availability**: Add-ons available for Professional and Enterprise plans. Starter plans must upgrade to access add-ons.
+</Note>
+
+**Available Add-ons:**
+- **AI Insights for Reports** - AI-powered insights using LLMs (Groq, Gemini, OpenAI, Anthropic)
+  - Requires Professional or Enterprise plan
+  - Price: Varies by currency (e.g., 99 DKK/month)
+  - See [Platform → Plugins](/platform/plugins#ai-insights-for-reports) for configuration
+- **Cash Flow Visualization (Sankey)** - Interactive flow charts for valuations
+  - Available on all plans (Professional/Enterprise)
+  - Price: Varies by currency (e.g., 49 DKK/month)
+  - See [Platform → Plugins](/platform/plugins#cash-flow-visualization-sankey) for configuration
+
+**Add-on Management:**
+1. Click add-on card to select/deselect
+2. Selected add-ons show blue ring border
+3. Cost info appears showing price breakdown
+4. Click "Update Add-ons" to apply changes
+5. Pro-rated charges/credits applied immediately
+
+**Visual Indicators:**
+- **Ring Border**: Blue ring = selected, gray ring = not selected
+- **"Included" Badge**: Enterprise plans show green "Included" badge (add-ons included in plan)
+- **Cost Info Box**: Blue info box shows payment details when changes are made
+
+<Tip>
+**Enterprise Benefits**: Enterprise plans include all add-ons at no extra cost. The add-ons are automatically enabled.
+</Tip>
+
+**Cost Calculation:**
+- **Adding add-ons**: Shows new monthly total + immediate pro-rated charge
+- **Removing add-ons**: Shows credit for unused time + new monthly total
+- **Mixed changes**: Credits and charges both apply
+
+**Example Cost Info:**
+```
+Your next payment will be 148 DKK per month for add-ons.
+You will be charged immediately for the pro-rated amount.
+```
+
+<Warning>
+**Immediate Charges**: Add-on changes are charged/credited immediately on a pro-rated basis. Next billing cycle reflects the full monthly amount.
+</Warning>
+
+## Subscription Renewal Card
+
+Shows next renewal/payment date.
+
+**Displays:**
+- **Status**: Active (auto-renews) or Trial
+- **Renewal Date**: Next payment date in format "dd. month yyyy"
+- **Empty State**: "No active subscription found" if no payment method
+
+**Status Meanings:**
+- **Active**: Subscription auto-renews on renewal date
+- **Trialing**: Free trial period (auto-converts to paid)
+- **No Payment Method**: Entitlements active but no Stripe subscription
+
+## Common Use Cases
+
+### Enabling AI Insights Plugin
+
+1. Navigate to **Platform** → **Billing** → **Subscription** tab
+2. Find **Manage Add-ons** card
+3. Click **AI Insights for Reports** card to select
+4. Review cost info (monthly charge + pro-rated amount)
+5. Click **"Update Add-ons"** button
+6. Success modal confirms add-on enabled
+7. Go to **Platform** → **Plugins** to configure AI provider
+8. Use AI Insights in **Valuations** → **Reports**
+
+See [Platform → Plugins](/platform/plugins#ai-insights-for-reports) for AI Insights configuration.
+
+### Upgrading Plan Tier
+
+1. Navigate to **Platform** → **Billing** → **Subscription** tab
+2. Click **"Upgrade Plan"** button (Subscription Details card)
+3. Upgrade Plan modal opens
+4. Select new plan tier (Professional or Enterprise)
+5. Review features and pricing
+6. Click **"Upgrade to [Plan]"** button
+7. Subscription upgraded immediately
+8. New entitlements active (seats, valuations, features)
+
+<Info>
+**Pro-rated Charges**: Plan upgrades are pro-rated. You're only charged for the remaining days in your billing cycle at the new plan rate.
+</Info>
+
+## Subscription Lifecycle
+
+### Subscription Start
+
+**Initial Setup:**
+1. Sign up on pricing page
+2. Select plan and billing period
+3. Enter payment method
+4. Billing details collected
+5. Subscription activated
+6. Entitlements granted immediately
+
+### Active Subscription
+
+**Ongoing Management:**
+- Monthly/annual automatic payments
+- Add-on changes pro-rated
+- Seat adjustments pro-rated
+- Extra valuations purchased as needed
+- Invoices generated automatically
+- Limits reset annually (valuations)
+
+### Subscription Changes
+
+**Upgrade Plan:**
+- Pro-rated charge for remaining period
+- New entitlements active immediately
+- Next billing cycle reflects new plan price
+
+**Add/Remove Add-ons:**
+- Pro-rated charge/credit applied
+- Add-ons active/inactive immediately
+- Next billing cycle reflects changes
+
+**Manage Seats:**
+- Pro-rated charge/credit applied
+- New seat limit active immediately
+- Invite users to fill seats
+
+### Subscription Renewal
+
+**Automatic Renewal:**
+- Payment processed on renewal date
+- Invoice generated automatically
+- Subscription continues uninterrupted
+- New billing period starts
+
+**Failed Payment:**
+- Payment retry attempted
+- Email notification sent
+- Subscription may be suspended
+- Update payment method to restore
+
+### Subscription Cancellation
+
+**Cancellation Process:**
+- Open Stripe Customer Portal (via Manage Payment Methods)
+- Cancel subscription
+- Access continues until period end
+- Entitlements removed after period ends
+- Data preserved (can reactivate later)
+
+<Warning>
+**Data Preservation**: Canceling subscription does not delete your data. Your valuations, reports, and settings are preserved for 30 days. Reactivate anytime to restore full access.
+</Warning>
+
+## Troubleshooting
+
+### Add-on Not Available
+
+**Reasons:**
+- On Starter plan (AI Insights requires Professional/Enterprise)
+- Add-on already included in plan (Enterprise)
+- Demo mode active
+
+**Fix:**
+- Upgrade to Professional/Enterprise plan
+- Check if add-on is already enabled (Enterprise plans include all add-ons)
+- Upgrade from demo mode to paid plan

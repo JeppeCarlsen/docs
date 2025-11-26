@@ -1,0 +1,89 @@
+---
+title: 'Invoices'
+description: 'View invoice history and download PDF invoices'
+---
+
+View invoice history and download PDF invoices.
+
+## Invoices Card
+
+**Invoice Table** (desktop):
+
+**Columns:**
+- **Invoice**: Invoice number or ID
+- **Date**: Invoice date in dd/MM/yyyy format
+- **Amount**: Total amount with currency (e.g., "1,295.00 DKK")
+- **Status**: Badge showing paid status
+  - Green "Paid" badge
+  - Yellow badge for "Open" invoices
+  - Red badge for failed payments
+- **Actions**: "Download PDF" link (if available)
+
+**Invoice Types:**
+- **Subscription Invoices**: Monthly/annual plan charges
+- **Add-on Invoices**: Add-on subscription changes
+- **One-time Invoices**: Extra valuation purchases, seat upgrades
+- **Credit Notes**: Refunds and credits
+
+**Actions:**
+- **Download PDF**: Click link to download invoice PDF
+  - Opens in new tab
+  - Suitable for accounting/bookkeeping
+  - Contains full invoice details
+
+**Empty State:**
+- Message: "No invoices found"
+- Displays when no invoices exist yet
+
+<Tip>
+**Accounting Integration**: Download PDF invoices for your accounting software or bookkeeping records. All invoices are immediately available after payment.
+</Tip>
+
+**Invoice Details** (in PDF):
+- Invoice number
+- Invoice date
+- Billing details (company name, address, VAT)
+- Line items with descriptions
+- Subtotal, tax, total
+- Payment status
+
+## Common Use Cases
+
+### Downloading Invoices for Accounting
+
+1. Navigate to **Platform** → **Billing** → **Invoices** tab
+2. Find invoice in table (sorted by date, newest first)
+3. Click **"Download PDF"** link in Actions column
+4. PDF opens in new tab or downloads
+5. Save PDF to accounting folder
+6. Import to accounting software (if applicable)
+
+<Tip>
+**Bulk Download**: For multiple invoices, open each PDF in new tabs, then save all at once using browser's save multiple tabs feature.
+</Tip>
+
+## Troubleshooting
+
+### Invoices Not Showing
+
+**Reasons:**
+- No invoices generated yet
+- First subscription just started
+- Payment method not added
+
+**Fix:**
+- Wait for first billing cycle to complete
+- Add payment method: **Payment Methods** tab
+- Refresh page after adding payment method
+
+### Cost Info Shows Wrong Currency
+
+**Reasons:**
+- Billing currency set in Stripe
+- Currency changed after subscription started
+- Multiple currencies in account
+
+**Fix:**
+- Currency is set by Stripe based on payment method
+- Contact support to change billing currency
+- New subscription required to change currency

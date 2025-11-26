@@ -59,7 +59,15 @@
       "icon": "sun",
       "pages": [
         "sponsorships/sponsors",
-        "sponsorships/library",
+        {
+          "group": "Library",
+          "pages": [
+            "sponsorships/library/overview",
+            "sponsorships/library/library",
+            "sponsorships/library/settings",
+            "sponsorships/library/negotiator"
+          ]
+        },
         "sponsorships/packages",
         "sponsorships/proposals",
         "sponsorships/analytics"
@@ -70,9 +78,27 @@
       "icon": "desktop",
       "pages": [
         "platform/user-profile",
-        "platform/billing",
+        {
+          "group": "Billing",
+          "pages": [
+            "platform/billing/overview",
+            "platform/billing/subscription",
+            "platform/billing/usage",
+            "platform/billing/payment-methods",
+            "platform/billing/invoices",
+            "platform/billing/billing-details"
+          ]
+        },
         "platform/team-management",
-        "platform/organization-settings",
+        {
+          "group": "Settings",
+          "pages": [
+            "platform/settings/overview",
+            "platform/settings/general",
+            "platform/settings/sso",
+            "platform/settings/advanced"
+          ]
+        },
         "platform/audit-log",
         "platform/plugins",
         "platform/api"

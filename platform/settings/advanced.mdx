@@ -1,0 +1,157 @@
+---
+title: 'Advanced'
+description: 'Access audit log and manage organization deletion'
+---
+
+<Frame>
+  <img src="/images/platform/organization-settings/advanced-settings.png" alt="Advanced Settings" />
+</Frame>
+
+## Audit Log (Enterprise)
+
+<Note>
+**Plan Required**: Enterprise plan only
+**Permission Required**: Admin permission
+</Note>
+
+Access comprehensive audit trail of all data changes in your organization.
+
+**Button**: "View Audit Log" (opens full audit log page)
+
+**What Is Tracked**:
+- **Who**: User name and email who made the change
+- **What**: Before and after values (complete diff)
+- **When**: Precise timestamp (date and time)
+- **Where**: Table name and record ID
+- **How**: Action type (create, update, delete)
+
+**Tracked Resources**:
+- Valuations (create, update, delete, status changes)
+- Organization settings (all fields)
+- User permissions and roles
+- Player transfers and sales
+- Sponsorship packages and proposals
+- Sponsor contacts and details
+- Library items and categories
+- All other critical data
+
+**Audit Log Page Features**:
+- Searchable by user, action, resource type
+- Date range filtering
+- Sortable columns
+- Export to CSV
+- Detailed change diff viewer
+- Pagination for large datasets
+
+<Info>
+**Retention**: Audit logs are retained indefinitely for compliance purposes. Contact support for specific retention policy questions.
+</Info>
+
+**Use Cases**:
+- **Compliance Audits**: GDPR, SOX, financial regulations
+- **Security Investigations**: Track unauthorized access or suspicious activity
+- **Team Activity Monitoring**: Review team member actions
+- **Data Forensics**: Investigate data changes or errors
+- **Training**: Identify areas where team needs guidance
+- **Dispute Resolution**: Verify who made changes and when
+
+**See Also**: [Platform → Audit Log](/platform/audit-log) for detailed audit log documentation.
+
+## Danger Zone: Delete Organization
+
+<Warning>
+**Owner Only**: Only the organization owner can delete the organization. This action is permanent after 30 days.
+</Warning>
+
+Permanently delete your organization and all associated data.
+
+**What Happens Immediately**:
+- Stripe subscription cancelled (at end of current billing period)
+- Organization hidden from all members
+- Members lose access to organization
+- Offboarding email sent to owner with reactivation link
+
+**What Happens After 30 Days (Permanent Deletion)**:
+- All valuations and player transfers
+- All organization members and pending invitations
+- All sponsorship packages, proposals, and sponsors
+- All settings, SSO providers, and entitlements
+- All audit logs and historical data
+- Organization name becomes available for reuse
+
+<Info>
+**30-Day Grace Period**: You can reactivate your organization within 30 days using the link in the offboarding email. After 30 days, data is permanently deleted.
+</Info>
+
+**Deletion Process**:
+
+1. **Click "Delete Organisation"** button in Danger Zone
+2. **Read warnings carefully** in confirmation modal
+3. **Type exact organization name** to confirm (case-sensitive)
+4. **Click "Delete Organisation"** in modal
+5. **Check email** for offboarding message with reactivation link
+6. **Save reactivation link** (valid for 30 days only)
+
+**Confirmation Modal**:
+- Red border and warning colors
+- Lists all data that will be deleted
+- Requires exact organization name match
+- "Delete Organisation" button (red, disabled until valid)
+- "Cancel" button (gray)
+
+**Offboarding Email Contents**:
+- Confirmation of deletion request
+- 30-day grace period explanation
+- Reactivation link (valid for 30 days)
+- Contact support information
+- Data export instructions (if needed)
+
+<Tip>
+**Reactivation**: If you change your mind, simply click the reactivation link in your offboarding email within 30 days. Your organization and all data will be restored immediately.
+</Tip>
+
+**Alternatives to Deletion**:
+- **Downgrade plan**: Cancel subscription but keep data
+- **Export data**: Download valuations and reports first
+- **Transfer ownership**: Assign new owner instead of deleting
+- **Archive organization**: Keep data but stop using platform
+
+## Common Use Cases
+
+### Investigating Data Changes (Enterprise)
+
+1. Navigate to **Settings** → **Advanced** tab
+2. Click "View Audit Log"
+3. Filter by:
+   - Date range (when did change occur?)
+   - User (who made the change?)
+   - Resource type (what was changed?)
+4. Review change details
+5. Export audit log if needed for compliance
+
+### Offboarding Organization
+
+1. **Export all data** (valuations, reports, sponsor lists)
+2. **Notify team members** of pending deletion
+3. Navigate to **Settings** → **Advanced** tab
+4. Click "Delete Organisation" in Danger Zone
+5. Read warnings carefully
+6. Type exact organization name
+7. Confirm deletion
+8. **Save reactivation link** from email (valid 30 days)
+9. Verify Stripe subscription cancelled
+
+## Troubleshooting
+
+### Can't Delete Organization
+
+**Reasons**:
+- Not organization owner (only owner can delete)
+- Organization name typed incorrectly (case-sensitive)
+- Browser JavaScript error
+
+**Fix**:
+- Transfer ownership to yourself first
+- Type exact organization name (check capitalization)
+- Try different browser
+- Contact support if ownership transfer needed

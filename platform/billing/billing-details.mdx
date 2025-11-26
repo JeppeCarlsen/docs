@@ -1,0 +1,58 @@
+---
+title: 'Billing Details'
+description: 'Manage company billing information and tax details'
+---
+
+Manage company billing information and tax details.
+
+## Billing Details Card
+
+**Company Information:**
+- **Name**: Company or organization name
+- **Address**: Full billing address
+  - Line 1 (street address)
+  - Line 2 (apartment/suite, optional)
+  - Postal Code + City
+  - Country
+- **Email**: Billing contact email
+- **VAT Country**: Country for VAT purposes
+- **Tax ID**: VAT number or tax identification
+
+**Actions:**
+- **Update Billing Details Button**: Opens Stripe Customer Portal
+  - Update company name
+  - Change billing address
+  - Update email address
+  - Add/update VAT number
+  - Change tax country
+
+**Empty State:**
+- Message: "No billing details found"
+- Action: "Add Billing Details" button → Opens Stripe Customer Portal
+
+<Info>
+**VAT & Tax**: Billing details are used for invoices and tax calculations. Ensure VAT number is correct for EU businesses to avoid incorrect charges.
+</Info>
+
+**Why Update Billing Details:**
+- Company name changed
+- Moved to new office/address
+- Need VAT number on invoices
+- Change billing contact email
+- Update tax country for compliance
+
+<Warning>
+**Invoice Accuracy**: Billing details appear on all invoices. Ensure information is accurate before making purchases to avoid invoice corrections.
+</Warning>
+
+## Common Use Cases
+
+### Updating Billing Details
+
+1. Navigate to **Platform** → **Billing** → **Billing Details** tab
+2. Click **"Update Billing Details"** button
+3. Stripe Customer Portal opens
+4. Update company information, address, VAT number
+5. Save changes
+6. Return to Valiyou
+7. Updated details appear on future invoices
