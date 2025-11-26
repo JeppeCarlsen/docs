@@ -79,6 +79,17 @@
       ]
     },
     {
+      "group": "Authentication",
+      "icon": "key",
+      "pages": [
+        "authentication/login",
+        "authentication/signup",
+        "authentication/verify-email",
+        "authentication/forgot-password",
+        "authentication/reset-password"
+      ]
+    },
+    {
       "group": "Trust & Security",
       "icon": "shield-check",
       "pages": [

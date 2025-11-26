@@ -1,0 +1,218 @@
+---
+title: 'Login'
+description: 'Sign in to your Valiyou account'
+---
+
+<Frame>
+  <img src="/images/valiyou.com_auth_login(iPad Pro).png" alt="Login Page" />
+</Frame>
+
+Access your Valiyou account using email/password or social authentication providers.
+
+## Login Methods
+
+### Email and Password
+
+**Standard Login**:
+1. Navigate to [valiyou.com/auth/login](https://valiyou.com/auth/login)
+2. Enter your **email address**
+3. Enter your **password**
+4. Optional: Check **"Remember me"** to stay signed in (30 days)
+5. Click **"Sign in"**
+
+<Tip>
+**Remember Me**: Keeps you logged in for 30 days. Disable on shared devices for security.
+</Tip>
+
+### Social Authentication
+
+Sign in with your existing accounts for quick access:
+
+**Available Providers**:
+- **Google** - Sign in with Google account
+- **LinkedIn** - Sign in with LinkedIn account
+- **Microsoft** - Sign in with Microsoft account
+- **Salesforce** - Sign in with Salesforce account (for enterprise customers)
+
+**How to Use**:
+1. Click the provider button (e.g., "Continue with Google")
+2. Authorize Valiyou to access your profile
+3. Automatically redirected to dashboard
+
+<Info>
+**First-Time Social Login**: Creates a new Valiyou account automatically if one doesn't exist for that email.
+</Info>
+
+### Single Sign-On (SSO)
+
+<Note>
+**Enterprise Only**: SSO is available for Enterprise plan customers.
+</Note>
+
+For organizations with custom SSO configuration:
+
+1. Enter your **work email address**
+2. System detects SSO availability automatically
+3. **"Sign in with SSO"** button appears
+4. Click to authenticate via your organization's identity provider
+
+**Supported SSO Protocols**:
+- SAML 2.0
+- OpenID Connect (OIDC)
+
+## Demo Mode
+
+<Warning>
+**Public Demo**: Demo mode creates a temporary read-only account. Data is cleared periodically.
+</Warning>
+
+Try Valiyou without signing up:
+
+1. Click **"Explore the demo"**
+2. Verify you're human (reCAPTCHA)
+3. Automatically logged into demo organization
+4. Full feature access with sample data
+
+**Demo Limitations**:
+- Read-only access (cannot save changes)
+- Temporary session (expires after inactivity)
+- Shared demo environment
+- No personal data storage
+
+## Troubleshooting
+
+### Forgot Password
+
+If you can't remember your password:
+
+1. Click **"Forgot your password?"** link
+2. Enter your email address
+3. Check your inbox for reset link
+4. Follow instructions to create new password
+
+See [Forgot Password](/authentication/forgot-password) for details.
+
+### Invalid Credentials
+
+**Error**: "Invalid email or password"
+
+**Causes**:
+- Incorrect password
+- Email not registered
+- Account created with social login (use same provider)
+
+**Solutions**:
+- Check for typos in email/password
+- Try social login if you signed up that way
+- Use "Forgot password" to reset
+- Contact support if issues persist
+
+### Account Not Verified
+
+**Error**: "Please verify your email address"
+
+**Solution**:
+1. Check your inbox for verification email
+2. Click verification link
+3. Return to login page
+4. Sign in normally
+
+See [Verify Email](/authentication/verify-email) for details.
+
+### SSO Not Available
+
+**Error**: "SSO not configured for this domain"
+
+**Causes**:
+- Organization hasn't set up SSO
+- Using personal email instead of work email
+- Not on Enterprise plan
+
+**Solution**:
+- Contact your organization's admin
+- Use regular email/password login
+- Upgrade to Enterprise plan for SSO access
+
+### Session Expired
+
+**Error**: "Your session has expired"
+
+**Causes**:
+- Logged out due to inactivity
+- Session timeout (30 days without "Remember me", 7 days with)
+- Logged in on another device
+
+**Solution**: Simply log in again. Your data is preserved.
+
+## Security Features
+
+### Two-Factor Authentication (2FA)
+
+<Note>
+**Coming Soon**: 2FA support is planned for a future release.
+</Note>
+
+### Password Requirements
+
+When setting passwords:
+- Minimum 8 characters
+- No maximum length limit
+- Can include special characters
+- Case-sensitive
+
+<Tip>
+**Strong Passwords**: Use a password manager to generate and store unique passwords for each service.
+</Tip>
+
+### Session Management
+
+- **Without "Remember me"**: 7 days
+- **With "Remember me"**: 30 days
+- **Inactivity timeout**: 30 minutes (automatically logs out)
+- **Multiple devices**: Can be logged in on multiple devices simultaneously
+
+## Privacy & Security
+
+- All login attempts are logged for security
+- Failed login attempts trigger rate limiting after 5 tries
+- Passwords are hashed with bcrypt (never stored in plain text)
+- HTTPS encryption for all authentication requests
+- reCAPTCHA v3 protects against bot attacks
+
+See [Trust Center](/trust-center) for full security documentation.
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Create Account"
+    icon="user-plus"
+    href="/authentication/signup"
+  >
+    Don't have an account? Sign up for free
+  </Card>
+
+  <Card
+    title="Forgot Password"
+    icon="key"
+    href="/authentication/forgot-password"
+  >
+    Reset your password if you can't log in
+  </Card>
+
+  <Card
+    title="Dashboard"
+    icon="chart-line"
+    href="/valuations/dashboard"
+  >
+    After login, explore your dashboard
+  </Card>
+
+  <Card
+    title="Quick Start"
+    icon="zap"
+    href="/getting-started/quick-start"
+  >
+    New user? Start here
+  </Card>
+</CardGroup>
