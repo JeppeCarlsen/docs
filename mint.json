@@ -62,7 +62,6 @@
         {
           "group": "Library",
           "pages": [
-            "sponsorships/library/overview",
             "sponsorships/library/library",
             "sponsorships/library/settings",
             "sponsorships/library/negotiator"
@@ -81,7 +80,6 @@
         {
           "group": "Billing",
           "pages": [
-            "platform/billing/overview",
             "platform/billing/subscription",
             "platform/billing/usage",
             "platform/billing/payment-methods",
@@ -93,7 +91,6 @@
         {
           "group": "Settings",
           "pages": [
-            "platform/settings/overview",
             "platform/settings/general",
             "platform/settings/sso",
             "platform/settings/advanced"
