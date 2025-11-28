@@ -107,31 +107,31 @@ Salesforce exports **48 columns** for Accounts. The Universal Importer uses the 
 |-----------------|---------------|----------|-------|
 | `Name` | `name` | ✅ Yes | **Required** - Sponsor name |
 | `Website` | `website` | ✅ Yes | Company website URL |
+| `Phone` | `phone` | ✅ Yes | Organization phone number |
 | `Industry` | `industry` | ✅ Yes | Industry category |
-| `AnnualRevenue` | `sponsorship_value` | ✅ Yes | Mapped to sponsorship value |
-| `Description` | `notes` | ✅ Yes | Internal notes/description |
-| `Phone` | - | ❌ No | Not imported (use contacts instead) |
-| `BillingStreet` | - | ❌ No | Address fields not imported |
-| `BillingCity` | - | ❌ No | Address fields not imported |
-| `BillingPostalCode` | - | ❌ No | Address fields not imported |
-| `BillingCountry` | - | ❌ No | Address fields not imported |
-
-<Info>
-**Why are address fields not imported?**
-
-Valiyou focuses on sponsor relationships and contact management. Physical addresses are typically stored at the contact level in Valiyou, not at the sponsor organization level. If you need address information, include it in the contact import or add it manually to individual contacts.
-</Info>
+| `Type` | `account_type` | ✅ Yes | Account type/category |
+| `AnnualRevenue` | `annual_revenue` | ✅ Yes | Annual revenue amount |
+| `NumberOfEmployees` | `number_of_employees` | ✅ Yes | Number of employees |
+| `AccountNumber` | `account_number` | ✅ Yes | Account reference number |
+| `BillingStreet` | `street` | ✅ Yes | Street address |
+| `BillingCity` | `city` | ✅ Yes | City |
+| `BillingState` | `state` | ✅ Yes | State/Province name |
+| `BillingStateCode` | `state_code` | ✅ Yes | State/Province code |
+| `BillingPostalCode` | `postal_code` | ✅ Yes | Postal/ZIP code |
+| `BillingCountry` | `country` | ✅ Yes | Country |
+| `Id` | `external_reference_id` | ✅ Yes | Salesforce Account ID (for sync) |
+| `SystemModstamp` | `last_synced_at` | ✅ Yes | Last modified timestamp |
 
 **Not Imported (Salesforce Internal Fields)**:
-- `Id`, `IsDeleted`, `MasterRecordId` - Salesforce system IDs
+- `IsDeleted`, `MasterRecordId` - Salesforce system IDs
 - `ParentId` - Parent account relationships
-- `Type`, `AccountNumber`, `Sic`, `SicDesc` - Account classification
-- `NumberOfEmployees`, `Ownership`, `TickerSymbol` - Company details
-- `Rating`, `Site`, `AccountSource` - Account metadata
-- `OwnerId`, `CreatedDate`, `CreatedById`, `LastModifiedDate`, `LastModifiedById`, `SystemModstamp` - Salesforce audit fields
+- `Sic`, `SicDesc` - Standard Industrial Classification
+- `Ownership`, `TickerSymbol` - Company details
+- `Rating`, `Site`, `AccountSource`, `Description` - Account metadata
+- `OwnerId`, `CreatedDate`, `CreatedById`, `LastModifiedDate`, `LastModifiedById` - Salesforce audit fields
 - `LastActivityDate`, `Jigsaw`, `JigsawCompanyId` - Activity tracking
-- `ShippingStreet`, `ShippingCity`, `ShippingState`, `ShippingPostalCode`, `ShippingCountry` - Shipping address
-- `BillingState`, `BillingStateCode`, `BillingCountryCode`, `BillingLatitude`, `BillingLongitude`, `BillingGeocodeAccuracy` - Address metadata
+- `ShippingStreet`, `ShippingCity`, `ShippingState`, `ShippingPostalCode`, `ShippingCountry` - Shipping address (use billing instead)
+- `BillingCountryCode`, `BillingLatitude`, `BillingLongitude`, `BillingGeocodeAccuracy` - Geocoding metadata
 - `ShippingStateCode`, `ShippingCountryCode`, `ShippingLatitude`, `ShippingLongitude`, `ShippingGeocodeAccuracy` - Shipping metadata
 - `Fax` - Legacy contact method
 
@@ -141,15 +141,23 @@ Salesforce exports **56 columns** for Contacts. The Universal Importer uses the 
 
 | Salesforce Field | Valiyou Field | Imported | Notes |
 |-----------------|---------------|----------|-------|
+| `Salutation` | `salutation` | ✅ Yes | Name prefix (Mr., Ms., Dr., etc.) |
 | `FirstName` | `name` (combined) | ✅ Yes | Combined with LastName |
 | `LastName` | `name` (combined) | ✅ Yes | Combined with FirstName |
 | `Email` | `email` | ✅ Yes | **Required** - Contact email |
-| `Phone` | `phone` | ✅ Yes | Primary phone number |
+| `Phone` | `phone` | ✅ Yes | Office/home phone |
+| `MobilePhone` | `phone` | ✅ Yes | **Prioritized** over Phone field |
 | `Title` | `position` | ✅ Yes | Job title/position |
-| `AccountId` | `sponsor_id` | ✅ Yes | **Auto-linked** to sponsor by account name |
-| `MobilePhone` | - | ❌ No | Use primary Phone instead |
-| `Salutation` | - | ❌ No | Name prefix not imported |
-| `Department` | - | ❌ No | Department not tracked |
+| `Department` | `department` | ✅ Yes | Department name |
+| `AccountId` | `sponsor_id` | ✅ Yes | **Auto-linked** to sponsor by Salesforce Account ID |
+| `Id` | `external_reference_id` | ✅ Yes | Salesforce Contact ID (for sync) |
+| `SystemModstamp` | `last_synced_at` | ✅ Yes | Last modified timestamp |
+
+<Tip>
+**Phone Number Priority**
+
+If both `Phone` and `MobilePhone` are present, `MobilePhone` is prioritized and imported to the `phone` field (mobile is more common in 2025!).
+</Tip>
 
 <Tip>
 **Primary Contact Detection**
@@ -158,13 +166,13 @@ The importer automatically marks the first contact for each sponsor as the prima
 </Tip>
 
 **Not Imported (Salesforce Internal Fields)**:
-- `Id`, `IsDeleted`, `MasterRecordId` - Salesforce system IDs
+- `IsDeleted`, `MasterRecordId` - Salesforce system IDs
 - `ReportsToId` - Manager relationships
 - `AssistantName`, `AssistantPhone` - Assistant details
-- `HomePhone`, `OtherPhone`, `Fax` - Additional phone numbers
+- `HomePhone`, `OtherPhone`, `Fax` - Additional phone numbers (use MobilePhone/Phone instead)
 - `LeadSource`, `Birthdate` - Lead tracking
 - `Description` - Contact description (use sponsor notes instead)
-- `OwnerId`, `CreatedDate`, `CreatedById`, `LastModifiedDate`, `LastModifiedById`, `SystemModstamp` - Salesforce audit fields
+- `OwnerId`, `CreatedDate`, `CreatedById`, `LastModifiedDate`, `LastModifiedById` - Salesforce audit fields
 - `LastActivityDate`, `LastCURequestDate`, `LastCUUpdateDate` - Activity tracking
 - `HasOptedOutOfEmail`, `HasOptedOutOfFax`, `DoNotCall` - Communication preferences
 - `EmailBouncedReason`, `EmailBouncedDate` - Email validation
@@ -172,27 +180,27 @@ The importer automatically marks the first contact for each sponsor as the prima
 - `IndividualId`, `Pronouns`, `GenderIdentity`, `ContactSource` - Extended profile
 - `OtherStreet`, `OtherCity`, `OtherState`, `OtherPostalCode`, `OtherCountry` - Other address
 - `OtherStateCode`, `OtherCountryCode`, `OtherLatitude`, `OtherLongitude`, `OtherGeocodeAccuracy` - Address metadata
-- `MailingStreet`, `MailingCity`, `MailingState`, `MailingPostalCode`, `MailingCountry` - Mailing address
+- `MailingStreet`, `MailingCity`, `MailingState`, `MailingPostalCode`, `MailingCountry` - Mailing address (personal, not imported)
 - `MailingStateCode`, `MailingCountryCode`, `MailingLatitude`, `MailingLongitude`, `MailingGeocodeAccuracy` - Mailing metadata
 
 ### Example: Salesforce CSV Structure
 
 **Account.csv (Sponsors)**:
 ```csv
-"Name","Website","Industry","AnnualRevenue","Description"
-"Acme Corporation","https://acme.com","Technology","1000000","Leading tech company"
-"TechCorp","https://techcorp.com","Software","500000","Software solutions provider"
+"Id","Name","Website","Phone","Industry","Type","AnnualRevenue","NumberOfEmployees","AccountNumber","BillingStreet","BillingCity","BillingState","BillingStateCode","BillingPostalCode","BillingCountry","SystemModstamp"
+"001xx000003DH0Q","Acme Corporation","https://acme.com","+1-415-555-0100","Technology","Customer","5000000","250","ACC-001","123 Market Street","San Francisco","California","CA","94105","United States","2025-01-15T10:30:00Z"
+"001xx000003DH0R","TechCorp","https://techcorp.com","+1-408-555-0200","Software","Prospect","2500000","100","ACC-002","456 Tech Drive","San Jose","California","CA","95110","United States","2025-01-14T15:45:00Z"
 ```
 
 **Contact.csv (Contacts)**:
 ```csv
-"FirstName","LastName","Email","Phone","Title","AccountId"
-"John","Doe","john@acme.com","+1234567890","CEO","Acme Corporation"
-"Jane","Smith","jane@techcorp.com","+0987654321","CTO","TechCorp"
+"Id","Salutation","FirstName","LastName","Email","Phone","MobilePhone","Title","Department","AccountId","SystemModstamp"
+"003xx000001R0Z1","Mr.","John","Doe","john@acme.com","+1-415-555-0101","+1-415-555-9999","CEO","Executive","001xx000003DH0Q","2025-01-15T10:30:00Z"
+"003xx000001R0Z2","Ms.","Jane","Smith","jane@techcorp.com","+1-408-555-0201","+1-408-555-8888","CTO","Engineering","001xx000003DH0R","2025-01-14T15:45:00Z"
 ```
 
 <Note>
-The `AccountId` column in the Contact CSV must match the `Name` column in the Account CSV for automatic sponsor linking.
+The `AccountId` column in the Contact CSV (e.g., `001xx000003DH0Q`) matches the `Id` column in the Account CSV for automatic sponsor linking. The importer resolves these Salesforce IDs internally.
 </Note>
 
 ## Other CRM Systems
