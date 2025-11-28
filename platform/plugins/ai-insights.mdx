@@ -94,7 +94,30 @@ AI Insights adds AI-generated analysis and recommendations to multi-valuation co
 3. Click **"Enable"** button
 4. Wait for status to change to "Enabled"
 
-### Step 2: Configure Provider
+### Step 2: Get API Key
+
+Before configuring, you need an API key from your chosen LLM provider.
+
+**How to get an API Key**:
+
+1. **Log in** to the LLM provider:
+   - **OpenAI**: https://platform.openai.com/
+   - **Anthropic**: https://console.anthropic.com/
+   - **Groq**: https://console.groq.com/keys
+   - **Google Gemini**: https://aistudio.google.com/
+   - **OpenRouter**: https://openrouter.ai/
+
+2. **Navigate** to "API Keys" in the menu
+
+3. **Click** "Create Key" or "Create API Key"
+
+4. **Copy** the key (it's only shown once!)
+
+<Warning>
+**Save Your Key**: API keys are only shown once. Copy and save it immediately. If you lose it, you'll need to create a new one.
+</Warning>
+
+### Step 3: Configure Provider
 
 1. Click **gear icon** (⚙️) in plugin card header
 2. Configuration modal opens
@@ -103,7 +126,7 @@ AI Insights adds AI-generated analysis and recommendations to multi-valuation co
   <img src="/images/platform/plugins/ai-insights-config-modal.png" alt="AI Insights Configuration Modal" />
 </Frame>
 
-**Configuration Options**:
+**Configuration Modal Fields**:
 
 1. **LLM Provider** (dropdown with icons):
    - Groq (purple bolt icon, "Free" badge)
@@ -117,6 +140,7 @@ AI Insights adds AI-generated analysis and recommendations to multi-valuation co
    - Each provider has 3-5 models to choose from
 
 3. **API Key** (SecretInput with view/hide/copy):
+   - Paste your API key from Step 2
    - Changes placeholder based on provider
    - Examples: `sk-...`, `sk-ant-...`, `gsk_...`, `AIza...`, `sk-or-...`
 
@@ -126,7 +150,16 @@ AI Insights adds AI-generated analysis and recommendations to multi-valuation co
 **API Key Required**: You must enter a valid API key before saving. Warning shown if missing: "Please enter a valid [Provider] API key before saving."
 </Warning>
 
-### Getting API Keys
+**Example Configuration**:
+```
+LLM Provider: Groq (Free badge)
+Model: Llama 3.3 70B Versatile (Recommended badge)
+Groq API Key: gsk_••••••••••••••••••••••••
+```
+
+### Detailed API Key Instructions
+
+Need more detailed instructions? Expand your provider below for step-by-step guidance:
 
 <AccordionGroup>
   <Accordion title="Groq (Free)">
