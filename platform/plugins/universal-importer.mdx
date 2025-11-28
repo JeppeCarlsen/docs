@@ -1,0 +1,401 @@
+---
+title: 'Universal CSV Importer'
+description: 'Import sponsors and contacts from Salesforce, HubSpot, Pipedrive, and other CRM systems'
+---
+
+<Frame>
+  <img src="/images/platform/plugins/universal-importer.png" alt="Universal CSV Importer" />
+</Frame>
+
+The Universal CSV Importer plugin enables you to import sponsors and contacts from your existing CRM system (Salesforce, HubSpot, Pipedrive, etc.) or custom CSV files with intelligent auto-mapping.
+
+## Accessing the Importer
+
+Navigate to **Sponsorships** → **Sponsors** and click the **Import from CSV** button.
+
+<Note>
+**Plan Required**: Professional or Enterprise plan
+**Permission Required**: Sponsors permission (write access)
+</Note>
+
+## Supported Source Systems
+
+The importer automatically detects your CRM system and maps fields accordingly:
+
+- **Salesforce** - Auto-detects Salesforce CSV exports
+- **HubSpot** - Auto-detects HubSpot CSV exports
+- **Pipedrive** - Auto-detects Pipedrive CSV exports
+- **Microsoft Dynamics** - Auto-detects Dynamics CSV exports
+- **Zoho CRM** - Auto-detects Zoho CRM exports
+- **Excel/Manual CSV** - Manual CSV files with custom field mapping
+- **Other** - Generic CSV import with manual field mapping
+
+## Import Workflow
+
+### Step 1: Select Source System
+
+<Frame>
+  <img src="/images/platform/plugins/importer-source-selection.png" alt="Source System Selection" />
+</Frame>
+
+Choose your CRM system from the list. The importer will use this to automatically map fields in the next steps.
+
+### Step 2: Upload CSV Files
+
+<Frame>
+  <img src="/images/platform/plugins/importer-file-upload.png" alt="File Upload" />
+</Frame>
+
+Upload one or both CSV files:
+
+- **Sponsors CSV** (Account/Company data)
+- **Contacts CSV** (Contact Person data)
+
+<Tip>
+You can import sponsors only, contacts only, or both. If importing both, contacts will be automatically linked to sponsors by matching the account/company name.
+</Tip>
+
+### Step 3: Review Field Mapping
+
+<Frame>
+  <img src="/images/platform/plugins/importer-field-mapping.png" alt="Field Mapping" />
+</Frame>
+
+The importer automatically maps CSV columns to Valiyou fields based on your source system.
+
+**Confidence Levels**:
+- 🟢 **High** - Exact column name match
+- 🟡 **Medium** - Partial column name match
+- 🔴 **Low** - No match, please verify manually
+
+You can adjust any mapping by clicking the dropdown and selecting a different CSV column.
+
+### Step 4: Preview Data
+
+<Frame>
+  <img src="/images/platform/plugins/importer-preview.png" alt="Data Preview" />
+</Frame>
+
+Preview the first 5 rows to ensure data looks correct before importing.
+
+### Step 5: Import & Review Results
+
+<Frame>
+  <img src="/images/platform/plugins/importer-results.png" alt="Import Results" />
+</Frame>
+
+The import process shows:
+- ✅ **Created** - New sponsors/contacts successfully imported
+- ⚠️ **Skipped** - Duplicates or invalid data skipped
+- ❌ **Errors** - Failed imports with error details
+
+## Salesforce Export & Field Mapping
+
+### Exporting from Salesforce
+
+1. Navigate to **Reports** in Salesforce
+2. Create or open a report for **Accounts** (for sponsors) or **Contacts**
+3. Click **Export** and select **Export Details Only**
+4. Choose **Comma Delimited (.csv)** format
+5. Download the CSV file
+
+### Salesforce Account (Sponsors) Fields
+
+Salesforce exports **48 columns** for Accounts. The Universal Importer uses the following fields:
+
+| Salesforce Field | Valiyou Field | Imported | Notes |
+|-----------------|---------------|----------|-------|
+| `Name` | `name` | ✅ Yes | **Required** - Sponsor name |
+| `Website` | `website` | ✅ Yes | Company website URL |
+| `Industry` | `industry` | ✅ Yes | Industry category |
+| `AnnualRevenue` | `sponsorship_value` | ✅ Yes | Mapped to sponsorship value |
+| `Description` | `notes` | ✅ Yes | Internal notes/description |
+| `Phone` | - | ❌ No | Not imported (use contacts instead) |
+| `BillingStreet` | - | ❌ No | Address fields not imported |
+| `BillingCity` | - | ❌ No | Address fields not imported |
+| `BillingPostalCode` | - | ❌ No | Address fields not imported |
+| `BillingCountry` | - | ❌ No | Address fields not imported |
+
+<Info>
+**Why are address fields not imported?**
+
+Valiyou focuses on sponsor relationships and contact management. Physical addresses are typically stored at the contact level in Valiyou, not at the sponsor organization level. If you need address information, include it in the contact import or add it manually to individual contacts.
+</Info>
+
+**Not Imported (Salesforce Internal Fields)**:
+- `Id`, `IsDeleted`, `MasterRecordId` - Salesforce system IDs
+- `ParentId` - Parent account relationships
+- `Type`, `AccountNumber`, `Sic`, `SicDesc` - Account classification
+- `NumberOfEmployees`, `Ownership`, `TickerSymbol` - Company details
+- `Rating`, `Site`, `AccountSource` - Account metadata
+- `OwnerId`, `CreatedDate`, `CreatedById`, `LastModifiedDate`, `LastModifiedById`, `SystemModstamp` - Salesforce audit fields
+- `LastActivityDate`, `Jigsaw`, `JigsawCompanyId` - Activity tracking
+- `ShippingStreet`, `ShippingCity`, `ShippingState`, `ShippingPostalCode`, `ShippingCountry` - Shipping address
+- `BillingState`, `BillingStateCode`, `BillingCountryCode`, `BillingLatitude`, `BillingLongitude`, `BillingGeocodeAccuracy` - Address metadata
+- `ShippingStateCode`, `ShippingCountryCode`, `ShippingLatitude`, `ShippingLongitude`, `ShippingGeocodeAccuracy` - Shipping metadata
+- `Fax` - Legacy contact method
+
+### Salesforce Contact Fields
+
+Salesforce exports **56 columns** for Contacts. The Universal Importer uses the following fields:
+
+| Salesforce Field | Valiyou Field | Imported | Notes |
+|-----------------|---------------|----------|-------|
+| `FirstName` | `name` (combined) | ✅ Yes | Combined with LastName |
+| `LastName` | `name` (combined) | ✅ Yes | Combined with FirstName |
+| `Email` | `email` | ✅ Yes | **Required** - Contact email |
+| `Phone` | `phone` | ✅ Yes | Primary phone number |
+| `Title` | `position` | ✅ Yes | Job title/position |
+| `AccountId` | `sponsor_id` | ✅ Yes | **Auto-linked** to sponsor by account name |
+| `MobilePhone` | - | ❌ No | Use primary Phone instead |
+| `Salutation` | - | ❌ No | Name prefix not imported |
+| `Department` | - | ❌ No | Department not tracked |
+
+<Tip>
+**Primary Contact Detection**
+
+The importer automatically marks the first contact for each sponsor as the primary contact. You can change this later by editing contacts in the Sponsors page.
+</Tip>
+
+**Not Imported (Salesforce Internal Fields)**:
+- `Id`, `IsDeleted`, `MasterRecordId` - Salesforce system IDs
+- `ReportsToId` - Manager relationships
+- `AssistantName`, `AssistantPhone` - Assistant details
+- `HomePhone`, `OtherPhone`, `Fax` - Additional phone numbers
+- `LeadSource`, `Birthdate` - Lead tracking
+- `Description` - Contact description (use sponsor notes instead)
+- `OwnerId`, `CreatedDate`, `CreatedById`, `LastModifiedDate`, `LastModifiedById`, `SystemModstamp` - Salesforce audit fields
+- `LastActivityDate`, `LastCURequestDate`, `LastCUUpdateDate` - Activity tracking
+- `HasOptedOutOfEmail`, `HasOptedOutOfFax`, `DoNotCall` - Communication preferences
+- `EmailBouncedReason`, `EmailBouncedDate` - Email validation
+- `Jigsaw`, `JigsawContactId` - Data enrichment
+- `IndividualId`, `Pronouns`, `GenderIdentity`, `ContactSource` - Extended profile
+- `OtherStreet`, `OtherCity`, `OtherState`, `OtherPostalCode`, `OtherCountry` - Other address
+- `OtherStateCode`, `OtherCountryCode`, `OtherLatitude`, `OtherLongitude`, `OtherGeocodeAccuracy` - Address metadata
+- `MailingStreet`, `MailingCity`, `MailingState`, `MailingPostalCode`, `MailingCountry` - Mailing address
+- `MailingStateCode`, `MailingCountryCode`, `MailingLatitude`, `MailingLongitude`, `MailingGeocodeAccuracy` - Mailing metadata
+
+### Example: Salesforce CSV Structure
+
+**Account.csv (Sponsors)**:
+```csv
+"Name","Website","Industry","AnnualRevenue","Description"
+"Acme Corporation","https://acme.com","Technology","1000000","Leading tech company"
+"TechCorp","https://techcorp.com","Software","500000","Software solutions provider"
+```
+
+**Contact.csv (Contacts)**:
+```csv
+"FirstName","LastName","Email","Phone","Title","AccountId"
+"John","Doe","john@acme.com","+1234567890","CEO","Acme Corporation"
+"Jane","Smith","jane@techcorp.com","+0987654321","CTO","TechCorp"
+```
+
+<Note>
+The `AccountId` column in the Contact CSV must match the `Name` column in the Account CSV for automatic sponsor linking.
+</Note>
+
+## Other CRM Systems
+
+### HubSpot
+
+HubSpot uses similar field names with slight variations:
+
+| HubSpot Field | Valiyou Field | Imported |
+|--------------|---------------|----------|
+| `Company name` | `name` | ✅ Yes |
+| `Company domain name` | `website` | ✅ Yes |
+| `Industry` | `industry` | ✅ Yes |
+| `Annual Revenue` | `sponsorship_value` | ✅ Yes |
+| `Description` | `notes` | ✅ Yes |
+
+### Pipedrive
+
+Pipedrive exports with these field names:
+
+| Pipedrive Field | Valiyou Field | Imported |
+|----------------|---------------|----------|
+| `Organization name` | `name` | ✅ Yes |
+| `Website` | `website` | ✅ Yes |
+| `Industry` | `industry` | ✅ Yes |
+| `Value` | `sponsorship_value` | ✅ Yes |
+| `Notes` | `notes` | ✅ Yes |
+
+### Microsoft Dynamics
+
+Dynamics uses these field names:
+
+| Dynamics Field | Valiyou Field | Imported |
+|---------------|---------------|----------|
+| `Account Name` | `name` | ✅ Yes |
+| `Website URL` | `website` | ✅ Yes |
+| `Industry` | `industry` | ✅ Yes |
+| `Annual Revenue` | `sponsorship_value` | ✅ Yes |
+| `Description` | `notes` | ✅ Yes |
+
+## Validation & Error Handling
+
+### Required Fields
+
+**Sponsors**:
+- ✅ `Name` - Sponsor name is required
+
+**Contacts**:
+- ✅ `Name` - Contact name (FirstName + LastName) is required
+- ✅ `Email` - Contact email is required
+
+### Duplicate Detection
+
+The importer automatically detects duplicates:
+
+- **Sponsors** - Duplicate sponsor names (case-insensitive) are skipped
+- **Contacts** - Duplicate email addresses are skipped
+
+<Warning>
+**Skipped vs Error**
+
+- **Skipped** - Record already exists (duplicate), intentionally not imported
+- **Error** - Record failed validation (missing required fields, invalid format, etc.)
+</Warning>
+
+### Common Import Errors
+
+| Error Message | Cause | Solution |
+|--------------|-------|----------|
+| "Sponsor name is required" | Missing `Name` column or empty values | Ensure all sponsors have a name |
+| "Contact email is required" | Missing `Email` column or empty values | Ensure all contacts have an email |
+| "Duplicate sponsor name" | Sponsor with same name already exists | Update existing sponsor or use different name |
+| "Invalid email format" | Email format is incorrect | Fix email addresses in CSV |
+| "Cannot link contact to sponsor" | AccountId/Account Name doesn't match any sponsor | Ensure account names match exactly |
+
+## Best Practices
+
+### 1. Clean Your Data First
+
+Before importing, review your CSV files:
+- ✅ Remove test/dummy data
+- ✅ Fix invalid email addresses
+- ✅ Ensure sponsor names are unique
+- ✅ Check that account names match between files
+
+### 2. Import Sponsors First
+
+When importing both sponsors and contacts:
+1. Import sponsors CSV first
+2. Wait for completion
+3. Then import contacts CSV
+
+This ensures contacts can be properly linked to sponsors.
+
+### 3. Review Field Mappings
+
+Always review the auto-mapped fields before importing:
+- 🟢 High confidence mappings are usually correct
+- 🟡 Medium confidence mappings should be verified
+- 🔴 Low confidence mappings must be manually confirmed
+
+### 4. Start Small
+
+For large imports:
+- Test with a small CSV file (5-10 records) first
+- Verify results look correct
+- Then import the full dataset
+
+### 5. Backup Your Data
+
+Before large imports, export your existing sponsors/contacts as a backup:
+- Navigate to **Sponsorships** → **Sponsors**
+- Click **Export** to download current data
+- Keep the backup until you verify the import succeeded
+
+## Troubleshooting
+
+### "No matches found for CSV columns"
+
+**Cause**: The CSV column names don't match any known CRM system patterns.
+
+**Solution**:
+1. Select "Other" or "Excel/Manual CSV" as source system
+2. Manually map each CSV column to the correct Valiyou field
+3. Use the dropdown to select the appropriate source column
+
+### "Contacts not linked to sponsors"
+
+**Cause**: The account name in the Contact CSV doesn't exactly match the sponsor name.
+
+**Solution**:
+- Ensure account names match exactly (case-sensitive)
+- Check for extra spaces or special characters
+- Import sponsors first, then contacts
+
+### "Import failed with validation errors"
+
+**Cause**: CSV data doesn't meet validation requirements.
+
+**Solution**:
+1. Review the error details in the import results
+2. Fix the issues in your CSV file
+3. Re-import the corrected file
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Can I import sponsors and contacts at the same time?">
+    Yes! The importer supports multi-file upload. Upload both the sponsors CSV and contacts CSV in Step 2, and the importer will:
+    1. Import all sponsors first
+    2. Automatically link contacts to sponsors by matching account names
+    3. Import all contacts with proper relationships
+  </Accordion>
+
+  <Accordion title="What happens to duplicate sponsors/contacts?">
+    Duplicates are automatically detected and **skipped** (not imported). The importer checks:
+    - **Sponsors**: Name (case-insensitive)
+    - **Contacts**: Email address
+
+    You'll see the skipped count in the import results.
+  </Accordion>
+
+  <Accordion title="Can I update existing sponsors/contacts via import?">
+    Currently, the importer only **creates new** records. It does not update existing records. Duplicates are skipped.
+
+    To update existing records, edit them manually in the Sponsors page.
+  </Accordion>
+
+  <Accordion title="Which CRM systems are supported?">
+    The importer auto-detects and maps fields for:
+    - Salesforce
+    - HubSpot
+    - Pipedrive
+    - Microsoft Dynamics
+    - Zoho CRM
+
+    You can also import from Excel or any custom CSV file by selecting "Excel/Manual CSV" and mapping fields manually.
+  </Accordion>
+
+  <Accordion title="How do I export data from Salesforce?">
+    1. Navigate to **Reports** in Salesforce
+    2. Create or open a report for **Accounts** (sponsors) or **Contacts**
+    3. Click **Export** → **Export Details Only**
+    4. Choose **Comma Delimited (.csv)** format
+    5. Download and upload to Valiyou
+  </Accordion>
+
+  <Accordion title="What if my CSV has different column names?">
+    Select "Other" or "Excel/Manual CSV" as the source system, and you can manually map your CSV columns to Valiyou fields using the dropdowns in Step 3.
+  </Accordion>
+
+  <Accordion title="Can I import logos with sponsors?">
+    Not yet. Logo import is planned for a future update. Currently, you need to upload sponsor logos manually after importing by editing each sponsor.
+  </Accordion>
+
+  <Accordion title="What's the maximum file size for CSV import?">
+    The importer supports CSV files up to **10 MB** and **10,000 rows** per file. For larger imports, split your CSV into multiple smaller files.
+  </Accordion>
+</AccordionGroup>
+
+## Related Documentation
+
+- [Sponsors Management](/sponsorships/sponsors) - Learn how to manage sponsors after importing
+- [Packages](/sponsorships/packages) - Create sponsorship packages using imported sponsors
+- [Proposals](/sponsorships/proposals) - Send proposals to imported sponsors
+- [Plugins](/platform/plugins) - Overview of all Valiyou plugins

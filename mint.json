@@ -97,7 +97,16 @@
           ]
         },
         "platform/audit-log",
-        "platform/plugins",
+        {
+          "group": "Plugins",
+          "pages": [
+            "platform/plugins",
+            "platform/plugins/universal-importer",
+            "platform/plugins/ai-insights",
+            "platform/plugins/cash-flow-visualization",
+            "platform/plugins/social-deep-dive"
+          ]
+        },
         "platform/api"
       ]
     },

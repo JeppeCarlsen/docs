@@ -19,6 +19,54 @@ Navigate to **Platform** → **Plugins** from the sidebar to manage plugins.
 
 ## Available Plugins
 
+### Universal CSV Importer
+
+<Frame>
+  <img src="/images/platform/plugins/universal-importer.png" alt="Universal CSV Importer" />
+</Frame>
+
+<Note>
+**Plan Required**: Professional or Enterprise plan
+**Permission Required**: Sponsors permission (write access)
+</Note>
+
+**What it does**: Import sponsors and contacts from Salesforce, HubSpot, Pipedrive, and other CRM systems with intelligent auto-mapping.
+
+**Where it appears**: Sponsorships → Sponsors page → "Import from CSV" button
+
+**Supported CRM Systems**:
+- **Salesforce** - Auto-detects and maps Salesforce CSV exports
+- **HubSpot** - Auto-detects and maps HubSpot CSV exports
+- **Pipedrive** - Auto-detects and maps Pipedrive CSV exports
+- **Microsoft Dynamics** - Auto-detects and maps Dynamics CSV exports
+- **Zoho CRM** - Auto-detects and maps Zoho CRM exports
+- **Excel/Manual CSV** - Custom CSV files with manual field mapping
+- **Other** - Generic CSV import
+
+**Features**:
+- Multi-file upload (sponsors + contacts)
+- Intelligent auto-field mapping
+- Confidence level indicators (High, Medium, Low)
+- Relationship linking (contacts → sponsors)
+- Duplicate detection
+- Validation and error handling
+- Preview before import
+- Import results summary
+
+**Benefits**:
+- Migrate from existing CRM to Valiyou
+- Import large datasets quickly
+- Auto-link contacts to sponsors
+- Reduce manual data entry
+
+<Tip>
+**Salesforce Users**: Export Account and Contact reports from Salesforce, then import directly into Valiyou with automatic field mapping.
+</Tip>
+
+See [Universal CSV Importer](/platform/plugins/universal-importer) for complete documentation.
+
+---
+
 ### AI Insights for Reports
 
 <Frame>
@@ -377,6 +425,7 @@ Grid layout (2 columns on desktop, 1 on mobile) with detailed plugin information
 
 | Plugin | Plan Required | Permission Required | Can Configure |
 |--------|--------------|-------------------|--------------|
+| **Universal CSV Importer** | Professional/Enterprise | Sponsors (write) | No |
 | **AI Insights** | Professional/Enterprise | Reports + Plugins | Yes |
 | **Cash Flow Visualization** | Professional/Enterprise | Plugins | Yes |
 | **SocialDeepDive** | Professional/Enterprise | Plugins | Yes |
@@ -386,6 +435,12 @@ Grid layout (2 columns on desktop, 1 on mobile) with detailed plugin information
 </Note>
 
 ## Where Plugins Appear
+
+### Universal CSV Importer
+- **Location**: Sponsorships → Sponsors page
+- **Section**: "Import from CSV" button (top right)
+- **Trigger**: Click import button
+- **See**: [Universal CSV Importer](/platform/plugins/universal-importer)
 
 ### AI Insights
 - **Location**: Valuations → Reports page
@@ -530,7 +585,7 @@ Grid layout (2 columns on desktop, 1 on mobile) with detailed plugin information
   <Card
     title="Enable AI Insights"
     icon="brain"
-    href="/platform/plugins#ai-insights"
+    href="/platform/plugins/ai-insights"
   >
     Get free API keys and try AI-generated insights
   </Card>
@@ -538,7 +593,7 @@ Grid layout (2 columns on desktop, 1 on mobile) with detailed plugin information
   <Card
     title="Customize Sankey"
     icon="chart-network"
-    href="/platform/plugins#cash-flow-visualization"
+    href="/platform/plugins/cash-flow-visualization"
   >
     Adjust visualization to match your brand
   </Card>
@@ -546,17 +601,17 @@ Grid layout (2 columns on desktop, 1 on mobile) with detailed plugin information
   <Card
     title="Explore SocialDeepDive"
     icon="share-nodes"
-    href="/platform/plugins#socialdeepDive"
+    href="/platform/plugins/social-deep-dive"
   >
     Enable for future social media features
   </Card>
 
   <Card
-    title="Review Health"
-    icon="heart-pulse"
-    href="/platform/plugins#plugin-health"
+    title="Import from CSV"
+    icon="file-import"
+    href="/platform/plugins/universal-importer"
   >
-    Check plugin health status regularly
+    Import sponsors and contacts from CRM systems
   </Card>
 
   <Card
