@@ -296,12 +296,26 @@ Deleting a contact is permanent and cannot be undone.
 - Cancel: "Cancel" (gray button)
 
 <Warning>
-**Cascading Delete**: Deleting a sponsor also deletes:
-- All contacts for that sponsor
-- All packages linked to that sponsor
-- All proposals for those packages
+**Cascading Delete**: Deleting a sponsor permanently deletes ALL related data:
 
-This action is permanent and cannot be undone.
+**✅ What Gets Deleted:**
+- ✅ All sponsor contacts (all contact persons)
+- ✅ All packages linked to this sponsor
+- ✅ All package items within those packages
+- ✅ All proposals (including sent/approved proposals)
+- ✅ Stored PDF files in cloud storage
+- ✅ Proposal tokens and email links (will stop working)
+
+**⚠️ Cannot Be Recovered:**
+- Approved sponsorship agreements
+- Historical proposal data
+- Package pricing and configurations
+- PDF documents sent to sponsors
+
+**🛡️ Alternative to Deletion:**
+Instead of deleting, consider changing the sponsor status to **"Archived"**. This preserves all historical data while hiding the sponsor from active lists.
+
+This action is **permanent and cannot be undone**. Always export important data before deleting.
 </Warning>
 
 ### Affected Packages
@@ -524,7 +538,7 @@ Different permissions show different content:
   <Card
     title="Asset Library"
     icon="photo-film"
-    href="/sponsorships/library/item-library"
+    href="/sponsorships/inventory/inventory"
   >
     Manage sponsorable assets and inventory
   </Card>

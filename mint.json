@@ -60,11 +60,11 @@
       "pages": [
         "sponsorships/sponsors",
         {
-          "group": "Library",
+          "group": "Inventory",
           "pages": [
-            "sponsorships/library/item-library",
-            "sponsorships/library/settings",
-            "sponsorships/library/negotiator"
+            "sponsorships/inventory/inventory",
+            "sponsorships/inventory/settings",
+            "sponsorships/inventory/negotiator"
           ]
         },
         "sponsorships/packages",
