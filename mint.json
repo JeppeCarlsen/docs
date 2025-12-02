@@ -89,7 +89,7 @@
         },
         "platform/team-management",
         {
-          "group": "Settings",
+          "group": "Organisation",
           "pages": [
             "platform/settings/general",
             "platform/settings/sso",
