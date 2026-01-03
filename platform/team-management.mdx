@@ -1,13 +1,13 @@
 ---
-title: 'Users'
-description: 'Invite users, manage permissions, and control team access with role-based permissions'
+title: 'Team Management - User Permissions & Access Control | Valiyou'
+description: 'Invite users, manage team permissions, and control access with role-based permissions. Assign user roles, manage seat allocation, send invitations, and implement granular access control for secure team collaboration and organization management.'
 ---
 
 <Frame>
-  <img src="/images/platform/team-management/overview.png" alt="Team Management" />
+  <img src="/images/platform/team-management/overview.png" alt="Valiyou team management interface showing user invitations, role-based permissions, access control settings, and seat management dashboard" />
 </Frame>
 
-Comprehensive team member management including invitations, role assignments, permission control, and user administration.
+**Comprehensive team member management including invitations, role assignments, permission control, and user administration.** Implement role-based access control, manage user permissions granularly, track team activity, and ensure secure collaboration with enterprise-grade access management.
 
 ## Accessing Team Management
 
@@ -608,6 +608,50 @@ Different permissions control access to team management:
 - Verify email address is correct
 - Check with user if email was received (spam folder)
 
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="How do I invite users to my organization and assign permissions?">
+    Navigate to Platform → Users, click "Invite User" in the top right, enter the team member's email address, select appropriate permissions from the permissions tree (e.g., Admin for full access, or specific roles like Reports and Dashboard for analysts), and click "Send Invitation". The recipient receives an email with an invitation link and must accept using the same email address to join your organization with the assigned permissions.
+  </Accordion>
+
+  <Accordion title="What is role-based access control and how does it work in Valiyou?">
+    Role-based access control allows you to assign specific permissions to users based on their responsibilities. Valiyou offers granular permissions including Admin, Dashboard, Reports, Sales, Transfer, Marketing, Brand, Users, Billing, Settings, Plugins, Audit Log, API, and Approver. Each permission controls access to specific features and data. Admin permission automatically grants all sub-permissions, while other roles can be assigned individually for precise access control.
+  </Accordion>
+
+  <Accordion title="How many users can I invite to my organization?">
+    The number of users depends on your plan: Starter plans include 3 seats, Professional plans include 10 seats, and Enterprise plans offer unlimited seats or custom limits. Both active users and pending invitations count towards your seat limit. You can manage seat allocation by removing inactive users or upgrading your plan via Platform → Billing if you need additional capacity.
+  </Accordion>
+
+  <Accordion title="Can I change user permissions after they've joined the organization?">
+    Yes, you can modify permissions at any time for active users. Find the user card, click "Permissions" to expand the permissions tree, check or uncheck the desired permissions, and confirm the changes. Permission updates apply immediately with optimistic UI updates. Note that only Admins can grant or revoke Admin permission—users with User Management permission cannot modify Admin status.
+  </Accordion>
+
+  <Accordion title="What happens when I remove a user from the organization?">
+    When you remove a user, they immediately lose access to the organization, but their historical data (valuations, edits, comments) remains intact for audit trail purposes. The user receives a notification email (optional), and the seat is freed up for new invitations. Removed users can be re-invited later if needed, and they will need to accept a new invitation to regain access.
+  </Accordion>
+
+  <Accordion title="How do I help team members who forgot their password?">
+    Find the user's card in Platform → Users (they must have Active status, not Pending), click the "Send reset link" button, and confirm sending. The user receives a password reset email with a link (usually valid for 1 hour) to reset their password. Users can also request password resets themselves via the login page—this admin feature is helpful when users can't find or didn't receive the reset email.
+  </Accordion>
+
+  <Accordion title="What's the difference between Admin and User Management permissions?">
+    Admin permission grants full access to all features and the ability to manage all users including granting/revoking Admin status. User Management permission allows inviting users, assigning most permissions, removing users, and sending password reset links, but cannot grant or revoke Admin permission. This separation ensures only Admins can create new Admins, maintaining security and access control hierarchy.
+  </Accordion>
+
+  <Accordion title="Why can't pending invitation permissions be modified?">
+    Pending invitations show permissions as assigned during invitation, but cannot be modified until the user accepts and becomes Active. This prevents confusion about what permissions users will receive and ensures the invitation email accurately reflects the access level. To change permissions for pending users, you must cancel the invitation and send a new one with the correct permissions.
+  </Accordion>
+
+  <Accordion title="How does seat management work for team collaboration?">
+    Seats represent the number of team members (active and pending) allowed in your organization. Both active users and pending invitations count towards your seat limit. To optimize seat allocation, regularly review your team list, remove inactive users, cancel unused pending invitations, and upgrade your plan if you need more capacity. The owner always counts as one seat and cannot be removed.
+  </Accordion>
+
+  <Accordion title="Can I assign different permissions to different team members for access control?">
+    Yes, Valiyou supports granular role-based access control. You can assign specific permissions to each team member based on their responsibilities. For example, assign Dashboard and Reports to analysts, Sales and Dashboard to financial managers, or Admin to senior management. Follow the principle of least privilege by granting only the permissions each team member needs to perform their job, enhancing security and data protection.
+  </Accordion>
+</AccordionGroup>
+
 ## Next Steps
 
 <CardGroup cols={2}>
@@ -655,3 +699,93 @@ Different permissions control access to team management:
 <Tip>
 **Security Best Practice**: Follow the principle of least privilege - give team members only the permissions they need to do their job. Review permissions regularly and remove unnecessary access.
 </Tip>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Manage Team Members and User Permissions",
+  "description": "Step-by-step guide to inviting users, assigning role-based permissions, and managing team access control",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Navigate to Users",
+      "text": "Go to Platform → Users from the sidebar (requires User Management or Admin permission)",
+      "position": 1
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Invite User",
+      "text": "Click 'Invite User' button, enter the team member's email address, and select appropriate permissions",
+      "position": 2
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Assign Permissions",
+      "text": "Check permissions in the tree (Admin for full access, or specific roles like Dashboard, Reports, Sales, etc.)",
+      "position": 3
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Send Invitation",
+      "text": "Click 'Send Invitation' to email the team member with an invitation link and assigned roles",
+      "position": 4
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Manage Access",
+      "text": "Modify permissions anytime by expanding the user card, checking/unchecking roles, and confirming changes",
+      "position": 5
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I invite users to my organization and assign permissions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Navigate to Platform → Users, click Invite User, enter the email address, select appropriate permissions from the tree, and click Send Invitation. The recipient receives an email and must accept using the same email address."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is role-based access control in Valiyou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Role-based access control allows granular permission assignment including Admin, Dashboard, Reports, Sales, Transfer, Marketing, Brand, Users, Billing, Settings, Plugins, Audit Log, API, and Approver. Each permission controls access to specific features for secure team collaboration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many users can I invite to my organization?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Starter plans include 3 seats, Professional plans include 10 seats, and Enterprise plans offer unlimited seats. Both active users and pending invitations count towards your seat limit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change user permissions after they've joined?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, expand the user card permissions, check or uncheck desired roles, and confirm changes. Permission updates apply immediately. Only Admins can grant or revoke Admin permission."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when I remove a user from the organization?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Users immediately lose access, but their historical data remains intact for audit purposes. The seat is freed for new invitations, and removed users can be re-invited later if needed."
+      }
+    }
+  ]
+}
+</script>

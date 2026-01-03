@@ -1,13 +1,13 @@
 ---
-title: 'API'
-description: 'Create and manage API keys for programmatic access to your Valiyou data'
+title: 'API Keys - REST API Authentication & Documentation | Valiyou'
+description: 'Create and manage API keys for secure REST API access to Valiyou data. Generate authentication tokens, monitor API usage, integrate with Power BI and Excel, and explore comprehensive endpoint documentation with examples.'
 ---
 
 <Frame>
-  <img src="/images/platform/api-management/overview.png" alt="API Management" />
+  <img src="/images/platform/api-management/overview.png" alt="Valiyou API management dashboard showing API keys creation, usage analytics, and REST API documentation for programmatic data access" />
 </Frame>
 
-Integrate Valiyou data into your workflows with REST API access. Create API keys, monitor usage, and explore endpoint documentation.
+**Integrate Valiyou data into your workflows with secure REST API access and Bearer token authentication.** Create API keys, monitor usage in real-time, and explore comprehensive endpoint documentation for seamless integration with Power BI, Excel, and custom applications.
 
 ## Accessing API Management
 
@@ -688,6 +688,50 @@ Access to API Management requires specific permissions:
 **Security Audit**: Set a calendar reminder to review your API keys every 3 months. Revoke any keys that are no longer needed or haven't been used recently.
 </Tip>
 
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="What is an API key and why do I need one?">
+    An API key is a unique authentication token that allows secure programmatic access to your Valiyou data. You need an API key to integrate Valiyou with external tools like Power BI, Excel, custom applications, or automated workflows. API keys act as Bearer tokens to verify your identity and permissions when making REST API requests.
+  </Accordion>
+
+  <Accordion title="How do I create my first API key?">
+    Navigate to Platform → API, click "Create API Key" in the top right, enter a descriptive name, select the data scopes you need (valuations, player sales, clubs), choose the operations (GET for read-only is recommended for most integrations), and click "Create API Key". Copy the generated key immediately and store it securely—you won't be able to see it again.
+  </Accordion>
+
+  <Accordion title="Can I use the same API key for multiple integrations?">
+    While technically possible, it's not recommended. Best practice is to create separate API keys for each integration (e.g., one for Power BI, one for Excel, one for custom scripts). This allows you to track usage per integration, revoke access to specific tools without affecting others, and follow the principle of least privilege by granting only the necessary permissions.
+  </Accordion>
+
+  <Accordion title="What should I do if my API key is compromised or leaked?">
+    Immediately revoke the compromised API key by going to Platform → API, finding the key in the table, and clicking the red trash icon. Create a new API key with a different name, update your integrations with the new key, and review your API usage logs for any suspicious activity. Never commit API keys to version control or share them in public channels.
+  </Accordion>
+
+  <Accordion title="How do I integrate Valiyou API with Power BI?">
+    Create an API key with GET operation and required scopes, open Power BI Desktop, select Get Data → Web, enter your API endpoint URL with the api_key and club_id parameters (e.g., https://valiyou.com/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID), transform the data in Power Query Editor, and create your visualizations. You can set up scheduled refresh to keep your reports automatically updated.
+  </Accordion>
+
+  <Accordion title="What's the difference between scopes and operations in API keys?">
+    Scopes define which data resources the API key can access (valuations, player sales, clubs), while operations define what actions the key can perform (GET for reading, POST for creating, PUT for updating, DELETE for deleting). For example, a key with "Valuations" scope and "GET" operation can read valuation data but cannot modify it.
+  </Accordion>
+
+  <Accordion title="How can I monitor my API usage and performance?">
+    Navigate to Platform → API → Usage tab to see visual analytics of your API requests over the last 30 days, including total requests, success rate, average response time, and breakdown by endpoint. This helps you identify issues, optimize performance, and understand which integrations are most active.
+  </Accordion>
+
+  <Accordion title="What does a 401 Unauthorized error mean and how do I fix it?">
+    A 401 Unauthorized error means your API key is invalid, revoked, or missing from the request. Verify that you're including the api_key parameter in your URL, check that the key hasn't been revoked in the API Keys table, ensure you're copying the entire key without typos, and verify that you're using the correct club_id for your organization.
+  </Accordion>
+
+  <Accordion title="Are there rate limits on API requests?">
+    Currently, there are no rate limits for Professional and Enterprise plans—you can make unlimited API requests. However, excessive usage may be flagged for review under fair use policies. We recommend implementing exponential backoff and retry logic in your integrations to ensure resilience if rate limits are introduced in the future.
+  </Accordion>
+
+  <Accordion title="Can I use API keys to integrate with Excel and automate data refresh?">
+    Yes, you can integrate Valiyou API with Excel by creating an API key with GET operation, opening Excel, selecting Data → Get Data → From Web, entering your API endpoint URL with authentication parameters, and loading the data. Excel supports scheduled refresh, allowing you to automatically update your spreadsheets with the latest Valiyou data at regular intervals.
+  </Accordion>
+</AccordionGroup>
+
 ## Next Steps
 
 <CardGroup cols={2}>
@@ -735,3 +779,93 @@ Access to API Management requires specific permissions:
 <Note>
 **Support**: Need help with API integration? Contact support at support@valiyou.com with your use case and we'll help you get started.
 </Note>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Create and Use Valiyou API Keys",
+  "description": "Step-by-step guide to creating API keys for secure REST API access to Valiyou data",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Navigate to API Management",
+      "text": "Go to Platform → API from the sidebar to access API key management",
+      "position": 1
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Create API Key",
+      "text": "Click 'Create API Key' button in the top right corner of the page",
+      "position": 2
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Configure Key Settings",
+      "text": "Enter a descriptive name, select data scopes (valuations, player sales, clubs), and choose operations (GET, POST, PUT, DELETE)",
+      "position": 3
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Generate and Save Key",
+      "text": "Click 'Create API Key' to generate your key, copy it immediately, and store it securely in a password manager",
+      "position": 4
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Use API Key in Requests",
+      "text": "Include the API key in your requests using the api_key parameter: https://valiyou.com/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID",
+      "position": 5
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an API key and why do I need one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An API key is a unique authentication token that allows secure programmatic access to your Valiyou data. You need an API key to integrate Valiyou with external tools like Power BI, Excel, custom applications, or automated workflows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I create my first API key?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Navigate to Platform → API, click 'Create API Key', enter a descriptive name, select data scopes (valuations, player sales, clubs), choose operations (GET for read-only), and click 'Create API Key'. Copy the generated key immediately and store it securely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do if my API key is compromised?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Immediately revoke the compromised API key, create a new one, update your integrations, and review API usage logs for suspicious activity. Never commit API keys to version control or share them publicly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I integrate Valiyou API with Power BI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Create an API key with GET operation, open Power BI Desktop, select Get Data → Web, enter your API endpoint URL with authentication parameters, transform data in Power Query, and create visualizations. Set up scheduled refresh for automatic updates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there rate limits on API requests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Currently, there are no rate limits for Professional and Enterprise plans. You can make unlimited API requests, though excessive usage may be flagged. Implement exponential backoff for future resilience."
+      }
+    }
+  ]
+}
+</script>

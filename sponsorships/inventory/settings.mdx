@@ -1,13 +1,36 @@
 ---
-title: 'Settings'
-description: 'Configure categories, tiers, and events for your sponsorship inventory'
+title: 'Inventory Settings - Categories, Tiers & Events | Valiyou'
+description: 'Configure sponsorship inventory settings including custom categories, tier hierarchies, event management, and organizational structure. Manage category management, tier configuration, and custom fields.'
 ---
 
 <Frame>
-  <img src="/images/valiyou.com_products_sponsorships_item-library(iPad Pro)Settings.png" alt="Inventory Settings" />
+  <img src="/images/valiyou.com_products_sponsorships_item-library(iPad Pro)Settings.png" alt="Inventory settings interface showing category management with color indicators, tier configuration with drag-and-drop ordering, event settings with location and period details, and custom field configuration for sponsorship organization" />
 </Frame>
 
-Configure categories, tiers, and events used throughout the sponsorship module.
+**Configure and customize your sponsorship inventory structure with categories, tiers, and events.** Organize inventory items with custom categories, define sponsor tier hierarchies, manage events and seasons, and create a flexible framework that adapts to your organization's unique sponsorship program needs.
+
+## What Are Inventory Settings?
+
+Inventory settings control the organizational structure of your sponsorship program across three key areas:
+
+**Categories Settings:**
+- Organize inventory items by type (Designation, Hospitality, Media, etc.)
+- Apply color coding for visual organization
+- Create custom categories for your specific offerings
+
+**Tiers Settings:**
+- Define sponsor hierarchy levels (Platinum, Gold, Silver, Bronze)
+- Set tier ordering and priority levels
+- Control item availability by sponsor tier
+
+**Events Settings:**
+- Manage seasons, tournaments, and individual events
+- Assign inventory items to specific events or all events
+- Track location and period details for each event
+
+<Info>
+**One-Time Setup**: Configure categories, tiers, and events once during initial setup. Refine as your program evolves and new offerings emerge.
+</Info>
 
 ## Categories Settings
 
@@ -18,19 +41,63 @@ Configure categories, tiers, and events used throughout the sponsorship module.
 - List of existing categories
 - Edit/delete buttons per category
 - Color indicators (visual organization)
+- Drag-and-drop reordering (optional)
 
 **Built-in Categories:**
-- Designation (cannot be deleted)
-- Hospitality (cannot be deleted)
+- **Designation** (cannot be deleted) - Naming rights, titles, branding
+- **Hospitality** (cannot be deleted) - VIP access, tickets, events
 
 **Custom Categories:**
 - Add unlimited custom categories
 - Edit name and color
 - Delete when no longer needed
+- Examples: Media, Signage, Digital, Activation, Product
 
 <Warning>
 **Cannot Delete**: Categories with items assigned cannot be deleted. Reassign or delete items first.
 </Warning>
+
+### Adding a New Category
+
+1. Click **Add Category** button
+2. Enter category name (e.g., "Digital Assets")
+3. Select color indicator (for visual identification)
+4. Click **Save** to create
+5. New category appears in list
+6. Available immediately in inventory item forms
+
+### Editing a Category
+
+1. Click **Edit** button next to category
+2. Modify category name
+3. Change color indicator
+4. Click **Save** to update
+5. All items with this category update automatically
+
+### Deleting a Category
+
+1. Click **Delete** button next to category
+2. Confirm deletion in modal
+3. **Error if items assigned**: "Cannot delete category with assigned items"
+4. **Fix**: Reassign items to different category first
+5. **Then delete**: Category removed from system
+
+### Category Best Practices
+
+**Standard Categories**:
+- Designation (naming rights, title sponsorships)
+- Hospitality (tickets, VIP access, events)
+- Media (broadcast, digital, print)
+- Signage (venue, event, permanent)
+- Digital (social media, website, email)
+- Activation (fan engagement, promotions)
+- Product (samples, displays, exclusivity)
+
+**Color Coding**:
+- Use consistent color scheme
+- Match brand colors when possible
+- Ensure accessibility (high contrast)
+- Document color meanings for team
 
 ## Tiers Settings
 
@@ -41,17 +108,72 @@ Configure categories, tiers, and events used throughout the sponsorship module.
 - Drag-and-drop reordering (priority levels)
 - Edit/delete buttons per tier
 - List shows: tier name, order
+- Visual hierarchy indicator
 
 **Common Tier Examples:**
-- Platinum
-- Gold
-- Silver
-- Bronze
-- Standard
+- **Platinum** (highest tier, premium pricing, maximum benefits)
+- **Gold** (high tier, strong value, extensive benefits)
+- **Silver** (mid tier, balanced value, core benefits)
+- **Bronze** (entry tier, accessible pricing, essential benefits)
+- **Standard** (default tier, basic access, foundation benefits)
 
 <Info>
-**Tier Order**: The order determines priority in Package Builder. Top = highest tier, bottom = lowest tier.
+**Tier Order**: The order determines priority in Package Builder. Top = highest tier, bottom = lowest tier. Drag to reorder.
 </Info>
+
+### Adding a New Tier
+
+1. Click **Add Tier** button
+2. Enter tier name (e.g., "Diamond")
+3. Tier automatically added to bottom of list
+4. Drag to reorder if needed
+5. Available immediately in sponsor assignments
+
+### Reordering Tiers
+
+1. Hover over tier in list
+2. Click and hold drag handle (six dots icon)
+3. Drag tier up or down
+4. Drop in desired position
+5. Order saves automatically
+6. Affects Package Builder tier availability
+
+### Editing a Tier
+
+1. Click **Edit** button next to tier
+2. Modify tier name (e.g., "Gold" to "Gold Elite")
+3. Click **Save** to update
+4. All sponsors assigned to this tier update automatically
+5. All items with tier requirement update
+
+### Deleting a Tier
+
+1. Click **Delete** button next to tier
+2. Confirm deletion in modal
+3. **Error if items use tier**: "Cannot delete tier with assigned items"
+4. **Error if sponsors use tier**: "Cannot delete tier with assigned sponsors"
+5. **Fix**: Change tier requirement to "All Tiers" or different tier
+6. **Then delete**: Tier removed from system
+
+### Tier Hierarchy Best Practices
+
+**Naming Conventions**:
+- Use recognizable metal tiers (Platinum, Gold, Silver, Bronze)
+- Or level-based (Premier, Elite, Standard, Basic)
+- Or descriptive (Presenting, Founding, Supporting, Partner)
+- Maintain consistency across all communications
+
+**Ordering Strategy**:
+- Highest value at top (shows first in dropdowns)
+- Lowest value at bottom
+- Matches visual hierarchy in presentations
+- Aligns with pricing structure
+
+**Tier Count**:
+- 3-5 tiers typical for most programs
+- Too many tiers confuse sponsors
+- Too few tiers limit flexibility
+- Adjust based on sponsor volume and differentiation needs
 
 ## Events Settings
 
@@ -62,37 +184,363 @@ Configure categories, tiers, and events used throughout the sponsorship module.
 - List of existing events
 - Edit/delete buttons per event
 - Shows: event name, location, period
+- Filter and search capabilities
 
 **Event Details:**
-- **Name** - Event identifier
+- **Name** - Event identifier (e.g., "2024/2025 Season")
 - **Location** - Venue name and full address
 - **Period** - Start and end dates
-- **Description** - Additional notes
+- **Description** - Additional notes and context
 
 **Common Event Examples:**
-- 2024/2025 Season
-- Championship Game
-- Opening Ceremony
-- Summer Tour
-- Annual Gala
+- **2024/2025 Season** - Full season sponsorships
+- **Championship Game** - Single high-profile event
+- **Opening Ceremony** - Season kickoff event
+- **Summer Tour** - Multi-location series
+- **Annual Gala** - Fundraising event
+- **Playoff Series** - Postseason tournament
 
 <Tip>
-**Season vs Single Event**: Create events for entire seasons or individual games depending on your sponsorship structure.
+**Season vs Single Event**: Create events for entire seasons or individual games depending on your sponsorship structure. Use "All Events" assignment for year-round benefits.
 </Tip>
+
+### Adding a New Event
+
+1. Click **Add Event** button
+2. Enter event name (required)
+3. Add location details:
+   - Venue name
+   - Street address
+   - City, state, zip
+   - Country (for international)
+4. Set period:
+   - Start date (required)
+   - End date (required)
+   - Time zone (optional)
+5. Add description (optional)
+6. Click **Save** to create
+7. Event available for inventory item assignment
+
+### Editing an Event
+
+1. Click **Edit** button next to event
+2. Modify any field (name, location, period, description)
+3. Click **Save** to update
+4. All items assigned to this event update automatically
+5. Changes reflect in proposals and packages
+
+### Deleting an Event
+
+1. Click **Delete** button next to event
+2. Confirm deletion in modal
+3. **Error if items assigned**: "Cannot delete event with assigned items"
+4. **Fix**: Change event assignment to "All events" or different event
+5. **Then delete**: Event removed from system
+
+### Event Management Best Practices
+
+**Season-Long Events**:
+- Create one event for entire season
+- Use season year (e.g., "2024/2025 Season")
+- Set start date to first game
+- Set end date to last possible game (including playoffs)
+- Covers all season-long sponsorship benefits
+
+**Single-Game Events**:
+- Create separate event for high-profile games
+- Use specific date and time
+- Include exact venue location
+- Useful for event-specific sponsorships
+- Examples: Championship, All-Star Game, Opening Day
+
+**Event Series**:
+- Create parent event for series
+- Or create individual events for each date
+- Choose based on how sponsors buy
+- If sponsors buy series as package, use one event
+- If sponsors buy individual events, create separately
+
+**Naming Conventions**:
+- Include year for clarity
+- Use descriptive names
+- Match public-facing event names
+- Consider sponsor recognition needs
 
 ## Troubleshooting
 
 ### Can't Delete Category
 
 **Reason**: Category has items assigned
-**Fix**: Reassign or delete all items using this category first
+
+**Fix**:
+1. Navigate to **Inventory** page
+2. Filter items by category (use filter dropdown)
+3. For each item, click **Edit**
+4. Change category to different option
+5. Save item changes
+6. Repeat for all items
+7. Return to Settings and delete category
+
+**Alternative**:
+- Delete items entirely if no longer needed
+- Then delete empty category
 
 ### Can't Delete Tier
 
 **Reason**: Tier has items with tier requirement
-**Fix**: Change tier requirement to "All Tiers" or different tier for all items
+
+**Fix**:
+1. Go to **Inventory** page
+2. Filter items by tier requirement
+3. Edit each item
+4. Change "Tier Requirement" to:
+   - "All Tiers" (if item should be available to everyone)
+   - Different specific tier
+5. Save item changes
+6. Also check **Sponsors** page for sponsors assigned to this tier
+7. Reassign sponsors to different tier
+8. Return to Settings and delete tier
 
 ### Can't Delete Event
 
 **Reason**: Event has items assigned
-**Fix**: Change event assignment to "All events" or different event for all items
+
+**Fix**:
+1. Navigate to **Inventory** page
+2. Filter items by event assignment
+3. Edit each item
+4. Change "Event" to:
+   - "All events" (if item is year-round)
+   - Different specific event
+5. Save item changes
+6. Return to Settings and delete event
+
+### Changes Not Appearing in Package Builder
+
+**Reason**: Browser cache or session outdated
+
+**Fix**:
+1. Refresh browser (Ctrl+R or Cmd+R)
+2. Hard refresh (Ctrl+Shift+R or Cmd+Shift+R)
+3. Clear browser cache
+4. Log out and log back in
+5. Changes should now appear
+
+### Color Changes Not Saving
+
+**Reason**: Form validation error or network issue
+
+**Fix**:
+1. Check browser console for errors
+2. Verify network connection
+3. Try different color
+4. Refresh page and try again
+5. Contact support if persists
+
+## Frequently Asked Questions
+
+### How many categories should I create?
+
+Most organizations use 5-8 categories to organize sponsorship inventory effectively. Common categories include Designation, Hospitality, Media, Signage, Digital, and Activation. Too many categories create confusion; too few limit organizational clarity. Start with core categories and add specialized ones as your program grows.
+
+### Can I change tier order after creating packages?
+
+Yes, you can reorder tiers at any time using drag-and-drop. Existing packages and sponsor assignments remain unchanged. The new order affects only future package building and dropdown displays. Tier ordering helps prioritize options in Package Builder and maintain visual hierarchy in presentations.
+
+### What happens to items when I delete a category?
+
+You cannot delete a category with items assigned. First reassign all items to different categories or delete the items entirely. This protection prevents accidental data loss and ensures every inventory item maintains proper categorization for filtering and organization.
+
+### How do I assign items to all events?
+
+When editing an inventory item, select "All Events" from the Event dropdown. This makes the item available year-round regardless of specific event dates. Use "All Events" for perpetual benefits like logo placement, digital assets, and ongoing brand exposure.
+
+### Can sponsors belong to multiple tiers?
+
+No, each sponsor can be assigned to only one tier at a time. Tiers represent a hierarchy, so multiple tier assignments would create conflicts in Package Builder. If a sponsor upgrades, reassign them to the new tier. This ensures clear tier-based item availability.
+
+### What's the difference between built-in and custom categories?
+
+Built-in categories (Designation and Hospitality) are standard across all Valiyou accounts and cannot be deleted. Custom categories are organization-specific, fully customizable, and deletable when not in use. Both function identically for item organization and filtering.
+
+### How do I create event templates?
+
+There's no formal template system, but you can duplicate event details manually. Create a new event, copy name/location/description from an existing similar event, adjust dates and specific details, and save. Consider creating a documentation file with standard event structures for consistency.
+
+### Can I have items without a tier requirement?
+
+Yes, set the tier requirement to "All Tiers" when creating or editing an inventory item. This makes the item available to sponsors of any tier level. Use this for base-level benefits, add-on items, or items with pricing variations by tier.
+
+### How do periods work for multi-day events?
+
+Set the start date to the first day and end date to the last day of the event. The period represents when sponsorship benefits are active. For tournaments or series, use the entire span from first to last event date to ensure complete coverage.
+
+### What if I need to reorganize all my settings?
+
+You can edit categories, tiers, and events at any time. Changes apply to future item assignments and package building. Existing items, packages, and proposals remain unchanged unless you explicitly edit them. Plan reorganization during low-activity periods to minimize confusion.
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Add Inventory Items"
+    icon="box"
+    href="/sponsorships/inventory/inventory"
+  >
+    Create sponsorship assets using configured categories and tiers
+  </Card>
+
+  <Card
+    title="Build Packages"
+    icon="layer-group"
+    href="/sponsorships/packages"
+  >
+    Combine inventory items into sponsorship packages
+  </Card>
+
+  <Card
+    title="Configure Negotiator"
+    icon="handshake"
+    href="/sponsorships/inventory/negotiator"
+  >
+    Set up cost-plus pricing and margin labels
+  </Card>
+
+  <Card
+    title="Manage Sponsors"
+    icon="users"
+    href="/sponsorships/sponsors"
+  >
+    Assign sponsors to tiers for proper item availability
+  </Card>
+</CardGroup>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Configure Sponsorship Inventory Settings",
+  "description": "Step-by-step guide to setting up categories, tiers, and events for sponsorship inventory organization",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Navigate to Inventory Settings",
+      "text": "Go to Sponsorships → Inventory, click Settings tab to access categories, tiers, and events configuration."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Configure Categories",
+      "text": "Add custom categories (Media, Signage, Digital, Activation) with color indicators for visual organization. Built-in Designation and Hospitality categories are pre-configured."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Define Sponsor Tiers",
+      "text": "Create tier hierarchy (Platinum, Gold, Silver, Bronze) and drag-and-drop to set priority order from highest to lowest tier."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Set Up Events",
+      "text": "Add events and seasons with name, location details, start/end dates, and descriptions. Create season-long or single-event entries based on sponsorship structure."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Test Configuration",
+      "text": "Navigate to Inventory page and create test item to verify categories, tiers, and events appear correctly in dropdowns and function as expected."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Refine and Maintain",
+      "text": "Edit settings as program evolves, add new categories/tiers/events as needed, and delete unused options after reassigning or removing associated items."
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many categories should I create?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most organizations use 5-8 categories to organize sponsorship inventory effectively. Common categories include Designation, Hospitality, Media, Signage, Digital, and Activation. Too many categories create confusion; too few limit organizational clarity. Start with core categories and add specialized ones as your program grows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change tier order after creating packages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can reorder tiers at any time using drag-and-drop. Existing packages and sponsor assignments remain unchanged. The new order affects only future package building and dropdown displays. Tier ordering helps prioritize options in Package Builder and maintain visual hierarchy in presentations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to items when I delete a category?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You cannot delete a category with items assigned. First reassign all items to different categories or delete the items entirely. This protection prevents accidental data loss and ensures every inventory item maintains proper categorization for filtering and organization."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I assign items to all events?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When editing an inventory item, select All Events from the Event dropdown. This makes the item available year-round regardless of specific event dates. Use All Events for perpetual benefits like logo placement, digital assets, and ongoing brand exposure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can sponsors belong to multiple tiers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, each sponsor can be assigned to only one tier at a time. Tiers represent a hierarchy, so multiple tier assignments would create conflicts in Package Builder. If a sponsor upgrades, reassign them to the new tier. This ensures clear tier-based item availability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between built-in and custom categories?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Built-in categories (Designation and Hospitality) are standard across all Valiyou accounts and cannot be deleted. Custom categories are organization-specific, fully customizable, and deletable when not in use. Both function identically for item organization and filtering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I create event templates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There's no formal template system, but you can duplicate event details manually. Create a new event, copy name/location/description from an existing similar event, adjust dates and specific details, and save. Consider creating a documentation file with standard event structures for consistency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I have items without a tier requirement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, set the tier requirement to All Tiers when creating or editing an inventory item. This makes the item available to sponsors of any tier level. Use this for base-level benefits, add-on items, or items with pricing variations by tier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do periods work for multi-day events?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Set the start date to the first day and end date to the last day of the event. The period represents when sponsorship benefits are active. For tournaments or series, use the entire span from first to last event date to ensure complete coverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I need to reorganize all my settings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can edit categories, tiers, and events at any time. Changes apply to future item assignments and package building. Existing items, packages, and proposals remain unchanged unless you explicitly edit them. Plan reorganization during low-activity periods to minimize confusion."
+      }
+    }
+  ]
+}
+</script>

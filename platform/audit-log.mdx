@@ -1,13 +1,13 @@
 ---
-title: 'Audit Log'
-description: 'Track all data changes with comprehensive audit trail for compliance and security'
+title: 'Audit Log - Compliance Tracking & Security Monitoring | Valiyou'
+description: 'Track all data changes with comprehensive audit trail for compliance and security. Monitor user activity, maintain GDPR compliance, investigate security incidents, and export detailed logs for regulatory reporting and forensic analysis.'
 ---
 
 <Frame>
-  <img src="/images/platform/audit-log/overview.png" alt="Audit Log" />
+  <img src="/images/platform/audit-log/overview.png" alt="Valiyou audit log interface showing detailed compliance tracking, security monitoring, user activity logs, and GDPR-compliant data change history" />
 </Frame>
 
-View detailed history of all data changes in your organization with who, what, when, and how tracking for compliance, security investigations, and team monitoring.
+**View detailed history of all data changes in your organization with comprehensive who, what, when, and how tracking for compliance, security investigations, and team monitoring.** The audit log provides an immutable record of every action, complete before/after values, and export capabilities for regulatory reporting and forensic analysis.
 
 ## Accessing Audit Log
 
@@ -515,6 +515,50 @@ Access to audit log requires specific permissions:
 - Immutable (cannot be edited/deleted)
 - Compliant with GDPR and SOX requirements
 
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="What is an audit log and why is it important for compliance?">
+    An audit log is a comprehensive, immutable record of all data changes in your organization. It tracks who made changes, what was modified, when it happened, and how the data changed. Audit logs are critical for GDPR compliance, SOX compliance, security monitoring, forensic analysis, and regulatory reporting. They provide an evidence trail for auditors and help investigate data breaches or unauthorized access.
+  </Accordion>
+
+  <Accordion title="How do I export audit logs for compliance reporting?">
+    Navigate to Platform → Audit Log, apply filters to select the audit period (e.g., last quarter, last year), and click "Export to CSV" in the top right. The export includes all currently visible entries with Date & Time, User, Action, Table, and Changes columns. Use filters to create targeted exports for specific compliance requirements, such as all changes by a particular user or all modifications to sensitive data.
+  </Accordion>
+
+  <Accordion title="Can I restore data to a previous version using the audit log?">
+    Yes, if you have Admin permission. Open the detail panel for the audit log entry you want to restore, click "Restore Previous Version", review the changes that will be restored, and confirm. The record is immediately reverted to its previous state, and a new "restore" action is logged in the audit log. Only Admins can restore versions—users with Audit Log permission can view and export but cannot restore.
+  </Accordion>
+
+  <Accordion title="How do I investigate suspicious user activity for security monitoring?">
+    Navigate to Platform → Audit Log, filter by the user's email address in the "All Users" dropdown, set a date range for the investigation period, and review all actions taken by that user. Look for unusual patterns like mass deletions, unauthorized data access, or changes outside normal working hours. Export the filtered results as CSV for documentation and further analysis. The audit log shows complete before/after values for forensic investigation.
+  </Accordion>
+
+  <Accordion title="What data changes are tracked in the audit log?">
+    The audit log tracks all changes to critical business data including organization settings, valuations, sponsorships, user permissions, player transfers, and more. Every create, update, delete, and restore action is logged with complete field-level tracking and before/after values. Changes to organization logo, SSO configuration, brand indicators, sponsor contacts, library items, packages, and proposals are all tracked automatically.
+  </Accordion>
+
+  <Accordion title="Is the audit log GDPR and SOX compliant?">
+    Yes, the audit log is designed to meet GDPR, SOX, and most financial/healthcare compliance requirements. Logs are immutable (cannot be edited or deleted), encrypted at rest, stored securely, and retained indefinitely for compliance purposes. You can export logs at any time for regulatory reporting and external audits. The system automatically tracks all data access and modifications with complete user attribution.
+  </Accordion>
+
+  <Accordion title="How can I filter audit logs to find specific changes?">
+    Use the filter bar to narrow down audit log entries by User (email address), Action (create, update, delete, restore), Table (organization, valuations, sponsors, etc.), and Date Range. Filters apply instantly and combine with AND logic for precise targeting. For example, filter by a specific user and date range to see all their activity during an investigation period, or filter by table and action to see all updates to valuations.
+  </Accordion>
+
+  <Accordion title="What happens to audit logs when a user is removed from the organization?">
+    Audit log entries remain permanently in the system even after a user is removed. The entries continue to show the user's email address and all changes they made. This ensures complete audit trail preservation for compliance and security investigations. Audit logs are immutable and cannot be deleted, even when the associated user account is removed.
+  </Accordion>
+
+  <Accordion title="Can I schedule automatic audit log exports for compliance reporting?">
+    Currently, audit log exports must be triggered manually by clicking "Export to CSV". However, you can establish a regular schedule (e.g., monthly or quarterly) to export logs for compliance archiving. Use filters to select the appropriate date range, export the CSV, and store it securely for regulatory requirements. Contact support if you need assistance with automated compliance reporting workflows.
+  </Accordion>
+
+  <Accordion title="How do I use audit logs to resolve disputes about data changes?">
+    When a dispute arises (e.g., "I didn't change that data"), navigate to Platform → Audit Log, filter by the relevant table and date range, locate the specific change entry, open the detail panel to view complete before/after values, and note the user email and timestamp. The immutable audit trail provides definitive proof of who made what changes and when, allowing you to resolve disputes with evidence-based facts.
+  </Accordion>
+</AccordionGroup>
+
 ## Next Steps
 
 <CardGroup cols={2}>
@@ -562,3 +606,93 @@ Access to audit log requires specific permissions:
 <Tip>
 **Compliance Ready**: The audit log meets GDPR, SOX, and most financial/healthcare compliance requirements. Contact support for specific compliance questions.
 </Tip>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Use Audit Logs for Compliance Tracking and Security Monitoring",
+  "description": "Step-by-step guide to accessing, filtering, and exporting audit logs for regulatory compliance and security investigations",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Access Audit Log",
+      "text": "Navigate to Platform → Audit Log from the sidebar (requires Admin permission and Enterprise plan)",
+      "position": 1
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Apply Filters",
+      "text": "Use the filter bar to select User, Action type, Table, and Date Range to narrow down audit entries",
+      "position": 2
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Review Changes",
+      "text": "Click on any row or the Details button to view complete before/after values and change metadata",
+      "position": 3
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Export for Compliance",
+      "text": "Click Export to CSV to download filtered audit logs for regulatory reporting, external audits, or archiving",
+      "position": 4
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Restore if Needed",
+      "text": "Admins can click Restore Previous Version in the detail panel to revert data to its previous state",
+      "position": 5
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an audit log and why is it important for compliance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An audit log is a comprehensive, immutable record of all data changes in your organization. It tracks who made changes, what was modified, when it happened, and how the data changed. Audit logs are critical for GDPR compliance, SOX compliance, security monitoring, and regulatory reporting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I export audit logs for compliance reporting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Navigate to Platform → Audit Log, apply filters to select the audit period, and click Export to CSV. The export includes all currently visible entries with complete change details for regulatory reporting and external audits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I restore data to a previous version using the audit log?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you have Admin permission. Open the detail panel for the audit log entry, click Restore Previous Version, and confirm. The record is immediately reverted and a new restore action is logged."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the audit log GDPR and SOX compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the audit log is designed to meet GDPR, SOX, and most financial/healthcare compliance requirements. Logs are immutable, encrypted at rest, stored securely, and retained indefinitely for compliance purposes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I investigate suspicious user activity for security monitoring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Filter by the user's email address, set a date range for the investigation period, and review all actions. Look for unusual patterns and export filtered results as CSV for documentation and forensic analysis."
+      }
+    }
+  ]
+}
+</script>

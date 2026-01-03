@@ -1,13 +1,19 @@
 ---
-title: 'Proposals'
-description: 'Track sent proposals, view status, monitor approval progress, and manage sponsor responses'
+title: 'Sponsorship Proposals - Send Offers & Track Status | Valiyou'
+description: 'Send sponsorship proposals to sponsors, track approval status, monitor response rates, and manage branded PDF documents. Generate proposals with digital signatures and automated tracking.'
 ---
+
+<Frame>
+  <img src="/images/proposals-dashboard.png" alt="Sponsorship proposals dashboard showing sent offers, pending approvals, proposal tracking status, sponsor responses, and branded PDF documents with real-time status updates and audit trails" />
+</Frame>
+
+**Send professional sponsorship proposals and track sponsor decisions in real-time.** Generate branded PDF documents, monitor proposal status, track email opens and approvals, collect digital signatures, and manage the complete proposal lifecycle from send to contract with comprehensive audit trails.
 
 View all sent sponsorship proposals, track their status, review audit trails, and monitor sponsor decisions in real-time.
 
 ## Accessing Proposals
 
-Navigate to **Sponsorships** → **Proposals** from the sidebar to access sent proposals.
+Navigate to **Sponsorships** → **Proposals** from the sidebar to access sent proposals and track sponsor responses.
 
 <Note>
 **Plan Required**: Proposals feature requires Professional or Enterprise plan.
@@ -24,6 +30,10 @@ Proposals are packages that have been sent to sponsors for review and approval. 
 3. **Approved** - Sponsor accepted the proposal (shows in Proposals page)
 4. **Rejected** - Sponsor declined the proposal (shows in Proposals page)
 5. **Expired** - Proposal deadline passed without response (shows in Proposals page)
+
+<Info>
+**Lifecycle Tracking**: Each proposal maintains complete history from creation through final decision, with timestamps, IP addresses, and sponsor actions recorded for compliance and analysis.
+</Info>
 
 ## Proposals List Page
 
@@ -738,6 +748,48 @@ Different permissions show different content:
 - Try different browser
 - Use "Print to PDF" as alternative
 
+## Frequently Asked Questions
+
+### How do I send a sponsorship proposal?
+
+Create a package in the Packages page, add inventory items and set pricing, click "Send Proposal" button, enter sponsor contact emails, set expiration date, and click send. The system generates a branded PDF and emails it to the sponsor with a unique approval link.
+
+### Can I track when sponsors open proposals?
+
+Yes, the audit trail shows when sponsors open proposal emails (if tracking is enabled) including timestamp and IP address. Check the proposal preview page audit trail section to see "Proposal Opened" event with date, time, and location details.
+
+### What happens when a sponsor approves?
+
+When a sponsor approves, the status changes to "Approved," signature data is recorded (name, title, company, timestamp, IP), audit trail captures approval event, and you receive notification. Download the approved proposal PDF with signature data for contract finalization.
+
+### How long do proposal links stay active?
+
+Proposal links expire on the date you set when sending the proposal. After expiration, sponsors see an "Expired" message and cannot approve. The link remains accessible for viewing but approval buttons are disabled. Resend proposals to extend deadlines.
+
+### Can I edit a proposal after sending?
+
+You can edit pending proposals before sponsor responds by clicking "Edit Package" in the proposal preview. After approval or rejection, proposals are locked and cannot be edited. Create a new package for changes to approved or rejected proposals.
+
+### What if a sponsor doesn't respond?
+
+If a sponsor doesn't respond, check the audit trail to see if they opened the proposal, wait 3-7 days before following up, use the "Resend" button to send a reminder, or contact them directly via phone or email to discuss the proposal.
+
+### How do digital signatures work?
+
+Digital signatures require sponsor to fill in name, job title, and company, check consent checkbox confirming authorization and agreement, and click "Approve Package" button. The system captures IP address, timestamp, and browser details, creating legally binding approval documentation with SHA-256 package hash.
+
+### Can I customize the proposal PDF?
+
+Yes, proposal PDFs automatically include your organization logo and branding, sponsor information and contact details, package name, tier, and pricing, inventory items with quantities and costs (unless Negotiator Mode), and custom terms and conditions. Configure branding in organization settings.
+
+### What's the difference between Packages and Proposals?
+
+Packages are draft sponsorship bundles being built in Package Builder that haven't been sent. Proposals are packages that have been sent to sponsors for approval and appear in the Proposals page with tracking, status badges, and audit trails.
+
+### How do I generate proposal reports?
+
+Export proposal data by downloading individual PDFs from proposal preview pages, using analytics dashboard (Professional/Enterprise plans) to view acceptance rates, exporting proposal lists to CSV for custom analysis, and scheduling automated reports for team and stakeholder distribution.
+
 ## Next Steps
 
 <CardGroup cols={2}>
@@ -785,3 +837,133 @@ Different permissions show different content:
 <Tip>
 **Best Practice**: Set up email notifications (if available) to get instant alerts when sponsors approve or reject proposals. This enables immediate follow-up.
 </Tip>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Send and Track Sponsorship Proposals",
+  "description": "Step-by-step guide to generating branded proposal PDFs, sending to sponsors, and tracking approval status with digital signatures",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Create Package",
+      "text": "Build a sponsorship package in Package Builder by adding inventory items, setting quantities, configuring pricing, and choosing tier level."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Send Proposal",
+      "text": "Click Send Proposal button, enter sponsor contact emails, set expiration date, and send. System generates branded PDF and emails unique approval link to sponsor."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Monitor Status",
+      "text": "Navigate to Proposals page to view all sent proposals with status badges (Pending, Approved, Rejected, Expired) sorted by sent date."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Track Engagement",
+      "text": "Click on proposal to view audit trail showing when sponsor opened email, viewed PDF, and took action with timestamps and IP addresses."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Follow Up",
+      "text": "Check audit trail after 3-7 days for opens. Use Resend button to send reminders or contact sponsor directly if no response."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Process Approval",
+      "text": "When sponsor approves, review digital signature data, download PDF with signature for records, and proceed to contract finalization and fulfillment."
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I send a sponsorship proposal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Create a package in the Packages page, add inventory items and set pricing, click Send Proposal button, enter sponsor contact emails, set expiration date, and click send. The system generates a branded PDF and emails it to the sponsor with a unique approval link."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I track when sponsors open proposals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the audit trail shows when sponsors open proposal emails (if tracking is enabled) including timestamp and IP address. Check the proposal preview page audit trail section to see Proposal Opened event with date, time, and location details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when a sponsor approves?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When a sponsor approves, the status changes to Approved, signature data is recorded (name, title, company, timestamp, IP), audit trail captures approval event, and you receive notification. Download the approved proposal PDF with signature data for contract finalization."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do proposal links stay active?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Proposal links expire on the date you set when sending the proposal. After expiration, sponsors see an Expired message and cannot approve. The link remains accessible for viewing but approval buttons are disabled. Resend proposals to extend deadlines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I edit a proposal after sending?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can edit pending proposals before sponsor responds by clicking Edit Package in the proposal preview. After approval or rejection, proposals are locked and cannot be edited. Create a new package for changes to approved or rejected proposals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if a sponsor doesn't respond?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If a sponsor doesn't respond, check the audit trail to see if they opened the proposal, wait 3-7 days before following up, use the Resend button to send a reminder, or contact them directly via phone or email to discuss the proposal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do digital signatures work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Digital signatures require sponsor to fill in name, job title, and company, check consent checkbox confirming authorization and agreement, and click Approve Package button. The system captures IP address, timestamp, and browser details, creating legally binding approval documentation with SHA-256 package hash."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize the proposal PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, proposal PDFs automatically include your organization logo and branding, sponsor information and contact details, package name, tier, and pricing, inventory items with quantities and costs (unless Negotiator Mode), and custom terms and conditions. Configure branding in organization settings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Packages and Proposals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Packages are draft sponsorship bundles being built in Package Builder that haven't been sent. Proposals are packages that have been sent to sponsors for approval and appear in the Proposals page with tracking, status badges, and audit trails."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I generate proposal reports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Export proposal data by downloading individual PDFs from proposal preview pages, using analytics dashboard (Professional/Enterprise plans) to view acceptance rates, exporting proposal lists to CSV for custom analysis, and scheduling automated reports for team and stakeholder distribution."
+      }
+    }
+  ]
+}
+</script>

@@ -1,9 +1,9 @@
 ---
-title: 'Payment Methods'
-description: 'View and manage saved payment methods'
+title: 'Payment Methods - Secure Card Management | Valiyou'
+description: 'Manage your credit card and debit card payment methods securely on Valiyou. Add, update, or remove cards with Stripe integration ensuring PCI DSS compliant payment security for subscriptions.'
 ---
 
-View and manage saved payment methods.
+**Manage your credit card and debit card payment methods securely through Valiyou's Stripe integration.** Add new cards, update existing payment information, set default payment methods, and remove old cards with bank-level security. All payment method management happens through Stripe's PCI DSS compliant Customer Portal for maximum payment security.
 
 ## Payment Methods Card
 
@@ -62,3 +62,167 @@ View and manage saved payment methods.
 - Contact your bank to authorize payment
 - Verify billing details: **Billing Details** tab → **Update Billing Details**
 - Try again after fixing issue
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="How do I add a new credit card or debit card to my account?">
+    Navigate to Platform → Billing → Payment Methods tab and click the "Manage Payment Methods" button. The Stripe Customer Portal will open in a new window where you can securely add your credit card or debit card information. After saving, return to Valiyou to see your new payment method.
+  </Accordion>
+
+  <Accordion title="What payment methods does Valiyou accept through Stripe?">
+    Valiyou accepts all major credit cards and debit cards through Stripe integration, including Visa, Mastercard, American Express, and Discover. Payment processing is handled securely through Stripe's PCI DSS compliant infrastructure.
+  </Accordion>
+
+  <Accordion title="Is it safe to add my card details to Valiyou?">
+    Yes, payment security is ensured through Stripe's PCI DSS compliant platform. Card details are never stored in Valiyou's database or displayed in full. Only the last 4 digits appear for identification, and all sensitive information is securely managed by Stripe.
+  </Accordion>
+
+  <Accordion title="How do I change my default payment method for subscriptions?">
+    Click "Manage Payment Methods" to open the Stripe Customer Portal. If you have multiple cards, you can set a different card as the default payment method for future subscription charges. The default card is marked with a blue "Default" badge.
+  </Accordion>
+
+  <Accordion title="Can I remove an old expired card from my account?">
+    Yes, in the Stripe Customer Portal accessed via the "Manage Payment Methods" button, you can remove old or expired payment methods. Ensure you have at least one active payment method for your subscription before removing cards.
+  </Accordion>
+
+  <Accordion title="What should I do if my payment method is about to expire?">
+    Update your payment method before expiration by clicking "Manage Payment Methods" and either updating the existing card's expiration date or adding a new card. This prevents payment failures and subscription interruptions when renewal charges are attempted.
+  </Accordion>
+
+  <Accordion title="Why was my credit card payment declined?">
+    Payment failures can occur due to insufficient funds, expired cards, bank blocks, or incorrect billing details. Contact your bank to authorize Stripe payments, verify your billing address matches your bank records, and ensure your card hasn't expired.
+  </Accordion>
+
+  <Accordion title="How do I update my card's expiration date without adding a new card?">
+    Access the Stripe Customer Portal via "Manage Payment Methods" and update the expiration date for your existing card. Some banks automatically update card information with Stripe, but manually updating ensures no payment disruptions.
+  </Accordion>
+
+  <Accordion title="Can I use a different payment method for different subscriptions?">
+    Currently, your default payment method is used for all Valiyou subscription charges, including base plans, add-ons, seats, and one-time purchases. Set your preferred card as the default in the Stripe Customer Portal.
+  </Accordion>
+
+  <Accordion title="Where can I see which payment method was used for past invoices?">
+    Invoice PDFs downloaded from the Invoices tab show the payment method used for each transaction, displaying the card brand and last 4 digits. This helps you track which card was charged for specific billing periods.
+  </Accordion>
+</AccordionGroup>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Manage Payment Methods on Valiyou",
+  "description": "Step-by-step guide to adding, updating, and managing credit card payment methods securely through Stripe",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Access Payment Methods",
+      "text": "Navigate to Platform → Billing → Payment Methods tab to view your saved credit cards and debit cards."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Open Stripe Portal",
+      "text": "Click the 'Manage Payment Methods' button to open the secure Stripe Customer Portal in a new window."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add or Update Card",
+      "text": "Enter your credit card or debit card information, or update existing card details like expiration date."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Set Default Method",
+      "text": "Optionally set a card as your default payment method for future subscription charges, then return to Valiyou."
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I add a new credit card or debit card to my account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Navigate to Platform → Billing → Payment Methods tab and click the 'Manage Payment Methods' button. The Stripe Customer Portal will open in a new window where you can securely add your credit card or debit card information. After saving, return to Valiyou to see your new payment method."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods does Valiyou accept through Stripe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Valiyou accepts all major credit cards and debit cards through Stripe integration, including Visa, Mastercard, American Express, and Discover. Payment processing is handled securely through Stripe's PCI DSS compliant infrastructure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to add my card details to Valiyou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, payment security is ensured through Stripe's PCI DSS compliant platform. Card details are never stored in Valiyou's database or displayed in full. Only the last 4 digits appear for identification, and all sensitive information is securely managed by Stripe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I change my default payment method for subscriptions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click 'Manage Payment Methods' to open the Stripe Customer Portal. If you have multiple cards, you can set a different card as the default payment method for future subscription charges. The default card is marked with a blue 'Default' badge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I remove an old expired card from my account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in the Stripe Customer Portal accessed via the 'Manage Payment Methods' button, you can remove old or expired payment methods. Ensure you have at least one active payment method for your subscription before removing cards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do if my payment method is about to expire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Update your payment method before expiration by clicking 'Manage Payment Methods' and either updating the existing card's expiration date or adding a new card. This prevents payment failures and subscription interruptions when renewal charges are attempted."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why was my credit card payment declined?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Payment failures can occur due to insufficient funds, expired cards, bank blocks, or incorrect billing details. Contact your bank to authorize Stripe payments, verify your billing address matches your bank records, and ensure your card hasn't expired."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I update my card's expiration date without adding a new card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Access the Stripe Customer Portal via 'Manage Payment Methods' and update the expiration date for your existing card. Some banks automatically update card information with Stripe, but manually updating ensures no payment disruptions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a different payment method for different subscriptions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Currently, your default payment method is used for all Valiyou subscription charges, including base plans, add-ons, seats, and one-time purchases. Set your preferred card as the default in the Stripe Customer Portal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I see which payment method was used for past invoices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Invoice PDFs downloaded from the Invoices tab show the payment method used for each transaction, displaying the card brand and last 4 digits. This helps you track which card was charged for specific billing periods."
+      }
+    }
+  ]
+}
+</script>
