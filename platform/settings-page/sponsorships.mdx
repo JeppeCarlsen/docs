@@ -1,0 +1,273 @@
+---
+title: 'Sponsorships Settings'
+description: 'Configure Negotiator contribution margin ratio labels for Package Builder'
+---
+
+<Frame>
+  <img src="/images/platform/settings/sponsorships-tab.png" alt="Sponsorships Settings - Negotiator" />
+</Frame>
+
+<Note>
+**Plan Required**: Enterprise plan only
+</Note>
+
+The Sponsorships tab in Settings allows you to configure the Negotiator feature for Package Builder, including custom labels and visual indicators for contribution margin ratios.
+
+## Negotiator Settings
+
+<Frame>
+  <img src="/images/valiyou.com_products_sponsorships_item-library(iPad Pro)Nagotiator.png" alt="Negotiator Settings Table" />
+</Frame>
+
+Configure contribution margin ratio labels, emojis, colors, and temperature indicators for different coverage percentage ranges.
+
+**Purpose**: Define custom visual indicators that appear in Package Builder's negotiator mode to help you quickly assess deal profitability.
+
+### Coverage Ranges
+
+The negotiator uses 21 different coverage ranges from negative (loss) to 95-100% contribution margin:
+
+| Range | Default Label | Purpose |
+|-------|---------------|---------|
+| **Negative (Loss)** | 💀 Black | Deal is losing money |
+| **0-5%** | 🥶 Dark Red | Very low margin |
+| **5-10%** | 😖 Red | Low margin |
+| **10-15%** | 😫 Red | Below target |
+| ... | ... | ... |
+| **40-45%** | 😑 Yellow | Acceptable |
+| **45-50%** | 🤨 Yellow-Green | Good |
+| **50-55%** | 🙂 Light Green | Very good |
+| ... | ... | ... |
+| **85-90%** | 😍 Dark Green | Excellent |
+| **90-95%** | 🤯 Darker Green | Outstanding |
+| **95-100%** | 🥳 Darkest Green | Perfect |
+
+### Customizable Indicators
+
+For each coverage range, you can customize four types of indicators:
+
+1. **Smilie** (Emoji)
+   - Visual emotion indicator
+   - Examples: 😖 (low), 😐 (medium), 😊 (good), 🤩 (excellent)
+   - Shows deal quality at a glance
+
+2. **Temp** (Temperature)
+   - Temperature-based indicator
+   - Examples: 🥶 (cold), ☁️ (neutral), 🌞 (warm), 🔥 (hot)
+   - Alternative visual metaphor
+
+3. **Color** (Hex Code)
+   - Background color for indicator
+   - Gradient from red (bad) → yellow (medium) → green (good)
+   - Examples: `#DC2626` (red), `#FBBF24` (yellow), `#84CC16` (green)
+
+4. **ABC** (Free Text)
+   - Custom text label
+   - Examples: "A" (best), "B", "C", ..., "T" (worst)
+   - Letter grading system
+
+### How to Configure
+
+1. Navigate to **Platform** → **Settings** → **Sponsorships** tab
+2. Review the table with 21 coverage ranges
+3. Edit any of the four columns for each range:
+   - Click input field to edit
+   - Enter emoji, hex color, or text
+4. Click **"Save Negotiator Settings"** button
+5. Click **"Reset to Defaults"** to restore original values
+
+<Tip>
+**Color Picker**: Click the color input to open a visual color picker. You can also paste hex codes directly (e.g., `#FF0000` for red).
+</Tip>
+
+## Display Modes
+
+The negotiator can display indicators in four different modes (configured per user in Package Builder):
+
+1. **Emoji Mode** - Shows smilie column (😖, 😐, 😊, 🤩)
+2. **Temperature Mode** - Shows temp column (🥶, ☁️, 🌞, 🔥)
+3. **Color Mode** - Shows color background only
+4. **Free Text Mode** - Shows ABC column (A, B, C, D, ...)
+
+<Info>
+**Per-User Setting**: Each user chooses their preferred display mode in Package Builder. The settings here define what appears in each mode.
+</Info>
+
+## Where Negotiator Is Used
+
+**Package Builder Negotiator Mode**:
+- Special view mode that hides unit costs
+- Shows contribution margin coverage percentages
+- Displays visual indicators based on your settings
+- Helps assess deal profitability quickly
+- Useful for proposal-based pricing strategies
+
+**Floating Indicator**:
+- Real-time indicator shown while building packages
+- Updates as you adjust items and pricing
+- Uses your configured labels and colors
+- Appears in bottom corner of Package Builder
+
+## Permission Requirements
+
+<Warning>
+**Plan & Permission Required**:
+- Enterprise plan subscription (Sponsorship Packages feature)
+- "Settings" permission to access and edit
+If you don't see the Sponsorships tab, upgrade your plan or contact your admin.
+</Warning>
+
+## Common Use Cases
+
+### Initial Setup for Sales Team
+
+**Scenario**: Configure negotiator for your sales team's preferences
+
+1. Navigate to **Platform** → **Settings** → **Sponsorships** tab
+2. Review default ranges
+3. Customize labels to match your organization's language
+4. Adjust color gradient if needed (e.g., more orange for medium ranges)
+5. Set ABC labels (A for best deals, T for worst)
+6. Click "Save Negotiator Settings"
+7. Test in Package Builder to verify appearance
+
+### Adjusting for Different Pricing Strategy
+
+**Scenario**: Your target margin is 60% instead of 50%
+
+1. Open **Settings** → **Sponsorships** tab
+2. Adjust emoji/color ranges:
+   - Move "good" indicators (😊, 🙂) to 60-70% range
+   - Keep "excellent" (🤩, 😍) for 70%+ range
+3. Adjust color gradient accordingly
+4. Click "Save Negotiator Settings"
+5. Inform team about new target thresholds
+
+### Using Temperature Theme Instead of Emojis
+
+**Scenario**: Team prefers temperature metaphor
+
+1. Open **Settings** → **Sponsorships** tab
+2. Focus on **Temp** column
+3. Customize temperature emojis for each range
+4. Ensure gradient from cold (❄️, 🥶) to hot (🔥, 🥵)
+5. Click "Save Negotiator Settings"
+6. In Package Builder, users switch display mode to "Temperature"
+
+### Reset to Defaults After Experiment
+
+1. Open **Settings** → **Sponsorships** tab
+2. Click **"Reset to Defaults"** button
+3. Confirmation message appears: "Reset to defaults. Click 'Save' to persist changes."
+4. Click **"Save Negotiator Settings"** to confirm
+5. All indicators return to original values
+
+## Troubleshooting
+
+### Sponsorships Tab Not Visible
+
+**Reasons**:
+- On Starter or Professional plan (not included)
+- No Settings permission
+- Sponsorship Packages feature not enabled
+
+**Fix**:
+- Upgrade to Enterprise plan
+- Request Settings permission from admin
+- Contact support to enable Sponsorship Packages feature
+
+### Changes Not Appearing in Package Builder
+
+**Check**:
+- Settings saved successfully (confirmation message)
+- Package Builder page refreshed
+- Correct display mode selected in Package Builder
+
+**Try**:
+- Re-save negotiator settings
+- Hard refresh Package Builder page (Cmd+Shift+R / Ctrl+Shift+R)
+- Clear browser cache
+- Verify display mode matches edited column (e.g., emoji mode for smilie edits)
+
+### Color Not Displaying Correctly
+
+**Reasons**:
+- Invalid hex code format
+- Browser cache showing old colors
+- Dark mode affecting color visibility
+
+**Fix**:
+- Use proper hex format: `#RRGGBB` (e.g., `#FF0000`)
+- Use color picker instead of typing hex code
+- Test in both light and dark mode
+- Refresh Package Builder after saving
+
+### Reset Button Not Working
+
+**Check**:
+- Must click "Save Negotiator Settings" AFTER clicking "Reset to Defaults"
+- Reset only prepares changes, save confirms them
+
+**Process**:
+1. Click "Reset to Defaults"
+2. See confirmation message
+3. Click "Save Negotiator Settings"
+4. Verify defaults restored
+
+## Best Practices
+
+### Consistent Color Gradient
+- Use logical color progression (red → yellow → green)
+- Avoid jarring color jumps between adjacent ranges
+- Test visibility in both light and dark mode
+
+### Meaningful Labels
+- Choose emojis that match your team's culture
+- Use consistent metaphor (emotions, temperature, or letters)
+- Avoid confusing similar emojis for adjacent ranges
+
+### Target-Based Ranges
+- Align "good" range with your organization's target margin
+- Mark anything above target as "excellent"
+- Keep "acceptable" range clearly defined
+
+### Team Communication
+- Inform team about custom ranges and what they mean
+- Document target margins and expectations
+- Train users on display mode options
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Build Packages"
+    icon="box"
+    href="/sponsorships/packages"
+  >
+    Create sponsorship bundles using negotiator mode
+  </Card>
+
+  <Card
+    title="Package Builder Guide"
+    icon="wand-magic-sparkles"
+    href="/sponsorships/packages"
+  >
+    Learn how to use negotiator mode in Package Builder
+  </Card>
+
+  <Card
+    title="Manage Inventory"
+    icon="warehouse"
+    href="/sponsorships/inventory/inventory"
+  >
+    Configure items and pricing for packages
+  </Card>
+
+  <Card
+    title="Sponsors Management"
+    icon="handshake"
+    href="/sponsorships/sponsors"
+  >
+    Assign sponsors to tiers for proper item availability
+  </Card>
+</CardGroup>

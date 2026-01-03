@@ -48,8 +48,12 @@
       "pages": [
         "valuations/create-valuation",
         "valuations/dashboard",
-        "valuations/valuations-list",
-        "valuations/valuation-details",
+        {
+          "page": "valuations/valuations-list",
+          "pages": [
+            "valuations/valuation-details"
+          ]
+        },
         "valuations/reports",
         "valuations/methods"
       ]
@@ -59,15 +63,14 @@
       "icon": "sun",
       "pages": [
         "sponsorships/sponsors",
+        "sponsorships/packages",
         {
           "group": "Inventory",
           "pages": [
             "sponsorships/inventory/inventory",
-            "sponsorships/inventory/settings",
-            "sponsorships/inventory/negotiator"
+            "sponsorships/inventory/settings"
           ]
         },
-        "sponsorships/packages",
         "sponsorships/proposals",
         "sponsorships/analytics"
       ]
@@ -76,7 +79,29 @@
       "group": "Platform",
       "icon": "desktop",
       "pages": [
-        "platform/user-profile",
+        "platform/team-management",
+        {
+          "group": "Organisation",
+          "pages": [
+            "platform/organisation",
+            "platform/settings/sso",
+            "platform/settings/advanced"
+          ]
+        },
+        {
+          "group": "Documents",
+          "pages": [
+            "platform/settings/documents"
+          ]
+        },
+        {
+          "group": "Settings",
+          "pages": [
+            "platform/settings-page/platform",
+            "platform/settings-page/valuations",
+            "platform/settings-page/sponsorships"
+          ]
+        },
         {
           "group": "Billing",
           "pages": [
@@ -87,16 +112,6 @@
             "platform/billing/billing-details"
           ]
         },
-        "platform/team-management",
-        {
-          "group": "Organisation",
-          "pages": [
-            "platform/settings/general",
-            "platform/settings/sso",
-            "platform/settings/advanced"
-          ]
-        },
-        "platform/audit-log",
         {
           "group": "Plugins",
           "pages": [
@@ -110,6 +125,7 @@
         "platform/api"
       ]
     },
+    "platform/user-profile",
     {
       "group": "Authentication",
       "icon": "key",
@@ -151,6 +167,16 @@
     "thumbsRating": true,
     "suggestEdit": true,
     "raiseIssue": true
+  },
+  "seo": {
+    "indexHiddenPages": false
+  },
+  "metadata": {
+    "og:site_name": "Valiyou Knowledge Center",
+    "og:type": "website",
+    "og:image": "https://valiyou.com/images/og-image.png",
+    "twitter:card": "summary_large_image",
+    "twitter:site": "@valiyou"
   },
   "footerText": "© 2025 Valiyou. All rights reserved."
 }
