@@ -176,7 +176,8 @@
     "og:type": "website",
     "og:image": "https://valiyou.com/images/og-image.png",
     "twitter:card": "summary_large_image",
-    "twitter:site": "@valiyou"
+    "twitter:site": "@valiyou",
+    "msvalidate.01": "18DB38E83E2D9AFAA71406549CED97EF"
   },
   "footerText": "© 2025 Valiyou. All rights reserved."
 }
