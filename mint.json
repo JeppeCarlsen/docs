@@ -163,15 +163,17 @@
     "raiseIssue": true
   },
   "seo": {
-    "indexHiddenPages": false
+    "indexHiddenPages": false,
+    "metatags": {
+      "msvalidate.01": "18DB38E83E2D9AFAA71406549CED97EF"
+    }
   },
   "metadata": {
     "og:site_name": "Valiyou Knowledge Center",
     "og:type": "website",
     "og:image": "https://valiyou.com/images/og-image.png",
     "twitter:card": "summary_large_image",
-    "twitter:site": "@valiyou",
-    "msvalidate.01": "18DB38E83E2D9AFAA71406549CED97EF"
+    "twitter:site": "@valiyou"
   },
   "footerText": "© 2026 Valiyou. All rights reserved."
 }
