@@ -164,11 +164,7 @@
     "raiseIssue": true
   },
   "seo": {
-    "indexHiddenPages": false,
-    "metatags": {
-      "google-site-verification": "test123",
-      "msvalidate.01": "18DB38E83E2D9AFAA71406549CED97EF"
-    }
+    "indexHiddenPages": false
   },
   "metadata": {
     "og:site_name": "Valiyou™ Knowledge Center",
