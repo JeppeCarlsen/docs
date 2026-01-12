@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Valiyou Knowledge Center",
+  "name": "Valiyou™ Knowledge Center",
   "url": "https://docs.valiyou.com",
   "logo": {
     "dark": "/logo/logo-dark.png",
@@ -171,7 +171,7 @@
     }
   },
   "metadata": {
-    "og:site_name": "Valiyou Knowledge Center",
+    "og:site_name": "Valiyou™ Knowledge Center",
     "og:type": "website",
     "og:image": "https://valiyou.com/images/og-image.png",
     "twitter:card": "summary_large_image",
@@ -183,5 +183,5 @@
       "apiHost": ""
     }
   },
-  "footerText": "© 2026 Valiyou. All rights reserved."
+  "footerText": "© 2026 Valiyou™. All rights reserved."
 }
