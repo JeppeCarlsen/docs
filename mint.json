@@ -171,7 +171,8 @@
     "og:type": "website",
     "og:image": "https://valiyou.com/images/og-image.png",
     "twitter:card": "summary_large_image",
-    "twitter:site": "@valiyou"
+    "twitter:site": "@valiyou",
+    "canonical": "https://docs.valiyou.com"
   },
   "analytics": {
     "posthog": {
