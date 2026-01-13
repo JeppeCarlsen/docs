@@ -32,11 +32,10 @@
   },
   "anchors": [],
   "navigation": [
-    "introduction",
     {
-      "group": "Getting Started",
-      "icon": "zap",
+      "group": "Get started",
       "pages": [
+        "index",
         "getting-started/quick-start",
         "getting-started/your-profile",
         "getting-started/organization-settings",
