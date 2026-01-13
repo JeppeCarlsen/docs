@@ -164,7 +164,10 @@
     "raiseIssue": true
   },
   "seo": {
-    "indexHiddenPages": false
+    "indexHiddenPages": false,
+    "metatags": {
+      "canonical": "https://docs.valiyou.com"
+    }
   },
   "metadata": {
     "og:site_name": "Valiyou™ Knowledge Center",
