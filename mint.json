@@ -55,8 +55,9 @@
         "valuations/create-valuation",
         "valuations/dashboard",
         {
-          "page": "valuations/valuations-list",
+          "group": "Valuations List",
           "pages": [
+            "valuations/valuations-list",
             "valuations/valuation-details"
           ]
         },
@@ -128,10 +129,10 @@
             "platform/plugins/social-deep-dive"
           ]
         },
-        "platform/api"
+        "platform/api",
+        "platform/user-profile"
       ]
     },
-    "platform/user-profile",
     {
       "group": "Authentication",
       "icon": "key",
