@@ -54,13 +54,8 @@
       "pages": [
         "valuations/create-valuation",
         "valuations/dashboard",
-        {
-          "group": "Valuations List",
-          "pages": [
-            "valuations/valuations-list",
-            "valuations/valuation-details"
-          ]
-        },
+        "valuations/valuations-list",
+        "valuations/valuation-details",
         "valuations/reports",
         "valuations/methods"
       ]
