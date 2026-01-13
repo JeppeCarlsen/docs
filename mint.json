@@ -143,10 +143,15 @@
   "metadata": {
     "og:site_name": "Valiyou™ Knowledge Center",
     "og:type": "website",
-    "og:image": "https://valiyou.com/images/og-image.png",
+    "og:image": "https://docs.valiyou.com/images/socker-parallax.webp",
+    "og:url": "https://docs.valiyou.com",
+    "og:description": "Complete documentation for Valiyou - the sponsorship valuation platform. Learn how to value, package, and report on sponsorship deals with data-driven insights.",
     "twitter:card": "summary_large_image",
     "twitter:site": "@valiyou",
-    "canonical": "https://docs.valiyou.com"
+    "twitter:image": "https://docs.valiyou.com/images/socker-parallax.webp",
+    "twitter:description": "Complete documentation for Valiyou - the sponsorship valuation platform. Learn how to value, package, and report on sponsorship deals with data-driven insights.",
+    "canonical": "https://docs.valiyou.com",
+    "keywords": "sponsorship valuation, sports sponsorship, sponsorship pricing, CPM calculator, sponsorship packages, brand visibility, sponsorship ROI, sports marketing, creator sponsorships"
   },
   "footerText": "© 2026 Valiyou™. All rights reserved."
 }
