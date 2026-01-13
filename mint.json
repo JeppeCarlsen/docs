@@ -41,218 +41,86 @@
     {
       "group": "Get started",
       "pages": [
-        {
-          "page": "index",
-          "label": "Welcome"
-        },
-        {
-          "page": "getting-started/quick-start",
-          "label": "Quick Start"
-        },
-        {
-          "page": "getting-started/your-profile",
-          "label": "Your Profile"
-        },
-        {
-          "page": "getting-started/organization-settings",
-          "label": "Organization"
-        },
-        {
-          "page": "getting-started/invite-team-members",
-          "label": "Invite Team"
-        }
+        "index",
+        "getting-started/quick-start",
+        "getting-started/your-profile",
+        "getting-started/organization-settings",
+        "getting-started/invite-team-members"
       ]
     },
     {
       "group": "Valuations",
       "icon": "rocket",
       "pages": [
-        {
-          "page": "valuations/create-valuation",
-          "label": "Create"
-        },
-        {
-          "page": "valuations/dashboard",
-          "label": "Dashboard"
-        },
-        {
-          "page": "valuations/valuations-list",
-          "label": "List"
-        },
-        {
-          "page": "valuations/valuation-details",
-          "label": "Details"
-        },
-        {
-          "page": "valuations/reports",
-          "label": "Reports"
-        },
-        {
-          "page": "valuations/methods",
-          "label": "Methods"
-        }
+        "valuations/create-valuation",
+        "valuations/dashboard",
+        "valuations/valuations-list",
+        "valuations/valuation-details",
+        "valuations/reports",
+        "valuations/methods"
       ]
     },
     {
       "group": "Sponsorships",
       "icon": "sun",
       "pages": [
-        {
-          "page": "sponsorships/sponsors",
-          "label": "Sponsors"
-        },
-        {
-          "page": "sponsorships/packages",
-          "label": "Packages"
-        },
-        {
-          "page": "sponsorships/inventory/inventory",
-          "label": "Inventory"
-        },
-        {
-          "page": "sponsorships/inventory/settings",
-          "label": "Settings"
-        },
-        {
-          "page": "sponsorships/proposals",
-          "label": "Proposals"
-        },
-        {
-          "page": "sponsorships/analytics",
-          "label": "Analytics"
-        }
+        "sponsorships/sponsors",
+        "sponsorships/packages",
+        "sponsorships/inventory/inventory",
+        "sponsorships/inventory/settings",
+        "sponsorships/proposals",
+        "sponsorships/analytics"
       ]
     },
     {
       "group": "Platform",
       "icon": "desktop",
       "pages": [
-        {
-          "page": "platform/team-management",
-          "label": "Team"
-        },
-        {
-          "page": "platform/organisation",
-          "label": "Organization"
-        },
-        {
-          "page": "platform/settings/sso",
-          "label": "SSO"
-        },
-        {
-          "page": "platform/settings/advanced",
-          "label": "Advanced"
-        },
-        {
-          "page": "platform/settings/documents",
-          "label": "Documents"
-        },
-        {
-          "page": "platform/settings-page/platform",
-          "label": "Platform Settings"
-        },
-        {
-          "page": "platform/settings-page/valuations",
-          "label": "Valuation Settings"
-        },
-        {
-          "page": "platform/settings-page/sponsorships",
-          "label": "Sponsorship Settings"
-        },
-        {
-          "page": "platform/billing/billing",
-          "label": "Billing"
-        },
-        {
-          "page": "platform/billing/usage",
-          "label": "Usage"
-        },
-        {
-          "page": "platform/billing/payment-methods",
-          "label": "Payment Methods"
-        },
-        {
-          "page": "platform/billing/invoices",
-          "label": "Invoices"
-        },
-        {
-          "page": "platform/billing/billing-details",
-          "label": "Billing Details"
-        },
-        {
-          "page": "platform/plugins",
-          "label": "Plugins"
-        },
-        {
-          "page": "platform/plugins/universal-importer",
-          "label": "Universal Importer"
-        },
-        {
-          "page": "platform/plugins/ai-insights",
-          "label": "AI Insights"
-        },
-        {
-          "page": "platform/plugins/cash-flow-visualization",
-          "label": "Cash Flow"
-        },
-        {
-          "page": "platform/plugins/social-deep-dive",
-          "label": "Social Analytics"
-        },
-        {
-          "page": "platform/api",
-          "label": "API"
-        },
-        {
-          "page": "platform/user-profile",
-          "label": "Profile"
-        }
+        "platform/team-management",
+        "platform/organisation",
+        "platform/settings/sso",
+        "platform/settings/advanced",
+        "platform/settings/documents",
+        "platform/settings-page/platform",
+        "platform/settings-page/valuations",
+        "platform/settings-page/sponsorships",
+        "platform/billing/billing",
+        "platform/billing/usage",
+        "platform/billing/payment-methods",
+        "platform/billing/invoices",
+        "platform/billing/billing-details",
+        "platform/plugins",
+        "platform/plugins/universal-importer",
+        "platform/plugins/ai-insights",
+        "platform/plugins/cash-flow-visualization",
+        "platform/plugins/social-deep-dive",
+        "platform/api",
+        "platform/user-profile"
       ]
     },
     {
       "group": "Authentication",
       "icon": "key",
       "pages": [
-        {
-          "page": "authentication/login",
-          "label": "Login"
-        },
-        {
-          "page": "authentication/signup",
-          "label": "Sign Up"
-        },
-        {
-          "page": "authentication/verify-email",
-          "label": "Verify Email"
-        },
-        {
-          "page": "authentication/forgot-password",
-          "label": "Forgot Password"
-        },
-        {
-          "page": "authentication/reset-password",
-          "label": "Reset Password"
-        }
+        "authentication/login",
+        "authentication/signup",
+        "authentication/verify-email",
+        "authentication/forgot-password",
+        "authentication/reset-password"
       ]
     },
     {
       "group": "Trust & Security",
       "icon": "shield-check",
       "pages": [
-        {
-          "page": "trust-security/trust-center",
-          "label": "Trust Center"
-        }
+        "trust-security/trust-center"
       ]
     },
     {
       "group": "Resources",
       "icon": "book",
       "pages": [
-        {
-          "page": "resources/glossary",
-          "label": "Glossary"
-        }
+        "resources/glossary"
       ]
     }
   ],
