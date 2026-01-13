@@ -66,13 +66,8 @@
       "pages": [
         "sponsorships/sponsors",
         "sponsorships/packages",
-        {
-          "group": "Inventory",
-          "pages": [
-            "sponsorships/inventory/inventory",
-            "sponsorships/inventory/settings"
-          ]
-        },
+        "sponsorships/inventory/inventory",
+        "sponsorships/inventory/settings",
         "sponsorships/proposals",
         "sponsorships/analytics"
       ]
@@ -82,48 +77,23 @@
       "icon": "desktop",
       "pages": [
         "platform/team-management",
-        {
-          "group": "Organisation",
-          "pages": [
-            "platform/organisation",
-            "platform/settings/sso",
-            "platform/settings/advanced"
-          ]
-        },
-        {
-          "group": "Documents",
-          "pages": [
-            "platform/settings/documents"
-          ]
-        },
-        {
-          "group": "Settings",
-          "pages": [
-            "platform/settings-page/platform",
-            "platform/settings-page/valuations",
-            "platform/settings-page/sponsorships"
-          ]
-        },
-        {
-          "group": "Billing",
-          "pages": [
-            "platform/billing/billing",
-            "platform/billing/usage",
-            "platform/billing/payment-methods",
-            "platform/billing/invoices",
-            "platform/billing/billing-details"
-          ]
-        },
-        {
-          "group": "Plugins",
-          "pages": [
-            "platform/plugins",
-            "platform/plugins/universal-importer",
-            "platform/plugins/ai-insights",
-            "platform/plugins/cash-flow-visualization",
-            "platform/plugins/social-deep-dive"
-          ]
-        },
+        "platform/organisation",
+        "platform/settings/sso",
+        "platform/settings/advanced",
+        "platform/settings/documents",
+        "platform/settings-page/platform",
+        "platform/settings-page/valuations",
+        "platform/settings-page/sponsorships",
+        "platform/billing/billing",
+        "platform/billing/usage",
+        "platform/billing/payment-methods",
+        "platform/billing/invoices",
+        "platform/billing/billing-details",
+        "platform/plugins",
+        "platform/plugins/universal-importer",
+        "platform/plugins/ai-insights",
+        "platform/plugins/cash-flow-visualization",
+        "platform/plugins/social-deep-dive",
         "platform/api",
         "platform/user-profile"
       ]
