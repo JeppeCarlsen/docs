@@ -31,6 +31,12 @@
     "url": "https://valiyou.com/auth/signup"
   },
   "anchors": [],
+  "redirects": [
+    {
+      "source": "/getting-started/introduction",
+      "destination": "/"
+    }
+  ],
   "navigation": [
     {
       "group": "Get started",
