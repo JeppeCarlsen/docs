@@ -182,11 +182,5 @@
     "twitter:site": "@valiyou",
     "canonical": "https://docs.valiyou.com"
   },
-  "analytics": {
-    "posthog": {
-      "apiKey": "",
-      "apiHost": ""
-    }
-  },
   "footerText": "© 2026 Valiyou™. All rights reserved."
 }
