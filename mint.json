@@ -32,7 +32,12 @@
   },
   "anchors": [],
   "navigation": [
-    "index",
+    {
+      "group": "Overview",
+      "pages": [
+        "index"
+      ]
+    },
     {
       "group": "Getting Started",
       "icon": "zap",
