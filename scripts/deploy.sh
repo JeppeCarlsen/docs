@@ -48,6 +48,15 @@ echo "✅ Pushed successfully!"
 echo ""
 echo "🔄 Mintlify will automatically deploy within 2-5 minutes"
 echo ""
+
+# Submit to IndexNow for instant search engine indexing
+if [ -f "scripts/indexnow.js" ]; then
+  echo "🔍 Notifying search engines via IndexNow..."
+  echo ""
+  node scripts/indexnow.js
+  echo ""
+fi
+
 echo "🔗 Check deployment status:"
 echo "   https://dashboard.mintlify.com"
 echo "   https://docs.valiyou.com"

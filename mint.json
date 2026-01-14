@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Valiyou™ Knowledge Center",
+  "name": "Valiyou Knowledge Center",
   "url": "https://docs.valiyou.com",
   "logo": {
     "dark": "/logo/logo-dark.png",
@@ -151,24 +151,23 @@
     "raiseIssue": true
   },
   "seo": {
-    "indexHiddenPages": false,
-    "metatags": {
-      "canonical": "https://docs.valiyou.com"
-    }
+    "indexHiddenPages": false
   },
   "metadata": {
     "description": "Complete documentation for Valiyou - the sponsorship valuation platform. Learn how to value, package, and report on sponsorship deals with data-driven insights.",
-    "og:site_name": "Valiyou™ Knowledge Center",
+    "og:site_name": "Valiyou Knowledge Center",
+    "og:title": "Valiyou Documentation - Sponsorship Valuation Platform Guide",
     "og:type": "website",
     "og:image": "https://docs.valiyou.com/images/socker-parallax.webp",
     "og:url": "https://docs.valiyou.com",
     "og:description": "Complete documentation for Valiyou - the sponsorship valuation platform. Learn how to value, package, and report on sponsorship deals with data-driven insights.",
     "twitter:card": "summary_large_image",
     "twitter:site": "@valiyou",
+    "twitter:title": "Valiyou Documentation - Sponsorship Valuation Platform Guide",
     "twitter:image": "https://docs.valiyou.com/images/socker-parallax.webp",
     "twitter:description": "Complete documentation for Valiyou - the sponsorship valuation platform. Learn how to value, package, and report on sponsorship deals with data-driven insights.",
     "canonical": "https://docs.valiyou.com",
-    "keywords": "sponsorship valuation, sports sponsorship, sponsorship pricing, CPM calculator, sponsorship packages, brand visibility, sponsorship ROI, sports marketing, creator sponsorships"
+    "keywords": "sponsorship valuation, sports sponsorship, sponsorship pricing, CPM calculator, sponsorship packages, brand visibility, sponsorship ROI, sports marketing, creator sponsorships, valuation documentation, sponsorship platform guide, sports sponsorship software, sponsorship analytics, sponsorship management, sponsorship proposals, sponsorship reporting"
   },
-  "footerText": "© 2026 Valiyou™. All rights reserved."
+  "footerText": "© 2026 Valiyou. All rights reserved."
 }
