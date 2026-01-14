@@ -35,6 +35,10 @@
     {
       "source": "/getting-started/introduction",
       "destination": "/"
+    },
+    {
+      "source": "/sponsorships/library/settings",
+      "destination": "/sponsorships/inventory/settings"
     }
   ],
   "navigation": [
