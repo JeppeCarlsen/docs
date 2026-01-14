@@ -37,8 +37,20 @@
       "destination": "/"
     },
     {
+      "source": "/sponsorships/library",
+      "destination": "/sponsorships/inventory/inventory"
+    },
+    {
       "source": "/sponsorships/library/settings",
       "destination": "/sponsorships/inventory/settings"
+    },
+    {
+      "source": "/sponsorships/item-library",
+      "destination": "/sponsorships/inventory/inventory"
+    },
+    {
+      "source": "/sponsorships/item-library/:path*",
+      "destination": "/sponsorships/inventory/:path*"
     }
   ],
   "navigation": [
