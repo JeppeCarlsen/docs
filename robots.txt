@@ -1,0 +1,11 @@
+# Valiyou Knowledge Center - robots.txt
+
+# Allow all crawlers to access documentation pages
+User-agent: *
+Allow: /
+
+# Block crawling of Mintlify asset files (CSS, JS, fonts, etc.)
+Disallow: /mintlify-assets/
+
+# Sitemap location
+Sitemap: https://docs.valiyou.com/sitemap.xml
