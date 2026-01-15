@@ -23,12 +23,12 @@
   "topbarLinks": [
     {
       "name": "Sign In",
-      "url": "https://valiyou.com/auth/login"
+      "url": "https://valiyou.io/auth/login"
     }
   ],
   "topbarCtaButton": {
     "name": "Get Started",
-    "url": "https://valiyou.com/auth/signup"
+    "url": "https://valiyou.io/auth/signup"
   },
   "anchors": [],
   "redirects": [
