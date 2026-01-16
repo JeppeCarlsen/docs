@@ -10,9 +10,9 @@
   "favicon": "/favicon.png",
   "customCSS": ["/custom.css"],
   "colors": {
-    "primary": "#2997ff",
-    "light": "#4da6ff",
-    "dark": "#0066cc",
+    "primary": "#7067fc",
+    "light": "#8f84fd",
+    "dark": "#5850d8",
     "background": {
       "dark": "#161618",
       "light": "#ffffff"
