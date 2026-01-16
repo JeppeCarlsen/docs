@@ -8,6 +8,7 @@
     "href": "https://valiyou.com"
   },
   "favicon": "/favicon.png",
+  "customCSS": ["/custom.css"],
   "colors": {
     "primary": "#2997ff",
     "light": "#4da6ff",
