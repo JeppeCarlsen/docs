@@ -3,8 +3,8 @@
   "name": "Valiyou Knowledge Center",
   "url": "https://docs.valiyou.com",
   "logo": {
-    "dark": "/logo/logo-dark.png",
-    "light": "/logo/logo-light.png",
+    "dark": "/logo/logo-dark.svg",
+    "light": "/logo/logo-light.svg",
     "href": "https://valiyou.com"
   },
   "favicon": "/favicon.png",
