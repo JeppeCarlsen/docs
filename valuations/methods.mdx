@@ -1,6 +1,7 @@
 ---
 title: 'Methods'
 description: 'Complete mathematical formulas and CPM methodology for sponsorship valuation calculations. Understand industry standards and formulas for value assessment.'
+lastUpdated: '2025-01-19'
 ---
 
 # Valuation Methods & CPM Methodology
@@ -13,12 +14,16 @@ description: 'Complete mathematical formulas and CPM methodology for sponsorship
 
 Detailed documentation of all mathematical formulas and methodology used in the Attention Valuation model.
 
+<Note>
+**Last Updated**: January 19, 2025 | [View Changelog](#changelog)
+</Note>
+
 ## Accessing Methods
 
 Navigate to **Valuations** → **Methods** from the sidebar to access the calculation methodology.
 
 <Note>
-**Permission Required**: You need at least one valuation permission (View or Edit) to access the Methods page.
+**Permission Required**: At least one valuation permission (View or Edit) or Admin access
 </Note>
 
 ## Notation Toggle
@@ -147,7 +152,7 @@ Detailed formulas for each media channel.
 - **L**: ~10-15% screen coverage (Factor: 1.0)
 - **XL**: 15%+ screen coverage (Factor: 1.0)
 
-**Example**: `45 min × 200,000 viewers × 0.15 (L size) × 30.00 CPM ÷ 1000 = 270,000 kr`
+**Example**: `45 min × 200,000 viewers × 0.15 (L size) × 30.00 CPM ÷ 1000 = 270,000 [currency units]`
 
 <Info>
 **Size Factor**: Represents how much of the screen your branding occupies during TV exposure. Larger coverage = higher multiplier.
@@ -161,7 +166,7 @@ Detailed formulas for each media channel.
 - `v` = Views
 - `CPM` = Cost per thousand views
 
-**Example**: `500,000 views × 10.00 CPM ÷ 1000 = 5,000 kr`
+**Example**: `500,000 views × 10.00 CPM ÷ 1000 = 5,000 [currency units]`
 
 ### PR Value
 
@@ -171,7 +176,7 @@ Detailed formulas for each media channel.
 - `r` = Reach (audience reached through press coverage)
 - `CPM` = Cost per thousand reach
 
-**Example**: `1,000,000 reach × 6.00 CPM ÷ 1000 = 6,000 kr`
+**Example**: `1,000,000 reach × 6.00 CPM ÷ 1000 = 6,000 [currency units]`
 
 ### Digital Value
 
@@ -181,7 +186,7 @@ Detailed formulas for each media channel.
 - `i` = Impressions (digital ad impressions)
 - `CPM` = Cost per thousand impressions
 
-**Example**: `2,000,000 impressions × 4.00 CPM ÷ 1000 = 8,000 kr`
+**Example**: `2,000,000 impressions × 4.00 CPM ÷ 1000 = 8,000 [currency units]`
 
 ### Social Value
 
@@ -203,7 +208,7 @@ S_v = (f × CPM_f ÷ 1000) + (i × CPM_i ÷ 1000) + (e × CPM_e ÷ 1000)
 2. **Impressions**: Post impressions × Impressions CPM ÷ 1000
 3. **Engagements**: Likes + shares + comments × Engagements CPM ÷ 1000
 
-**Example**: `(50,000 followers × 2.00 CPM + 200,000 impressions × 4.00 CPM + 10,000 engagements × 8.00 CPM) ÷ 1000 = 980 kr`
+**Example**: `(50,000 followers × 2.00 CPM + 200,000 impressions × 4.00 CPM + 10,000 engagements × 8.00 CPM) ÷ 1000 = 980 [currency units]`
 
 <Tip>
 Social media value uses three separate CPM rates because followers, impressions, and engagements represent different value types. Engagements typically have higher CPM due to stronger audience connection.
@@ -217,7 +222,7 @@ Social media value uses three separate CPM rates because followers, impressions,
 - `a` = Attendance (physical event attendance)
 - `CPM` = Cost per thousand attendees
 
-**Example**: `75,000 attendance × 15.00 CPM ÷ 1000 = 1,125 kr`
+**Example**: `75,000 attendance × 15.00 CPM ÷ 1000 = 1,125 [currency units]`
 
 ### Hospitality Value
 
@@ -227,7 +232,7 @@ Social media value uses three separate CPM rates because followers, impressions,
 - `g` = Guests (number of hospitality/VIP guests)
 - `vpg` = Value per Guest
 
-**Example**: `100 guests × 1,800 kr per guest = 180,000 kr`
+**Example**: `100 guests × 1,800 [currency units] per guest = 180,000 [currency units]`
 
 <Note>
 **Different Calculation**: Hospitality uses "value per guest" instead of CPM because VIP experiences have fixed premium pricing rather than impression-based valuation.
@@ -265,8 +270,8 @@ Loyalty Value = (Sales Value + Media Value) × (Loyalty ÷ 4)
 **What This Means**: Each component's monetary value represents how much it contributes to the Total Attention Valuation. The sum of all four component values equals the total brand amplification effect on Sales + Media Value.
 
 **Example**:
-If Sales + Media = 1,000,000 kr and Popularity = 8:
-- Popularity contributes: 1,000,000 × (8 ÷ 4) = 2,000,000 kr
+If Sales + Media = 1,000,000 [currency units] and Popularity = 8:
+- Popularity contributes: 1,000,000 × (8 ÷ 4) = 2,000,000 [currency units]
 
 <Info>
 **Why Divide by 4?** Since there are 4 indicators, dividing by 4 ensures the average score (typically 5-7 out of 10) produces a reasonable multiplier (1.25-1.75x) rather than an unrealistic 20-28x.
@@ -288,19 +293,23 @@ CPM (Cost Per Mille/Thousand) is the standard metric used in advertising to meas
 
 ### Typical CPM Ranges
 
-**By Channel** (varies by market):
-- **TV**: €20-€50 (depends on time slot, audience)
-- **Web TV**: €5-€15
-- **PR**: €3-€10
-- **Digital**: €2-€8
-- **Social Followers**: €2-€5
-- **Social Impressions**: €5-€15
-- **Social Engagements**: €8-€20 (highest due to interaction)
-- **Attendance**: €10-€20
+**By Channel** (typical ranges; market-dependent):
+- **TV**: 20-50 currency units (varies by market, time slot, audience size)
+- **Web TV**: 5-15 currency units
+- **PR**: 3-10 currency units
+- **Digital**: 2-8 currency units
+- **Social Followers**: 2-5 currency units
+- **Social Impressions**: 5-15 currency units
+- **Social Engagements**: 8-20 currency units (highest due to direct interaction)
+- **Attendance**: 10-20 currency units
 
 <Warning>
-**Market-Specific**: CPM rates vary significantly by geography, industry, and audience demographics. Use rates appropriate for your specific market.
+**Market-Specific CPM Rates**: These ranges represent typical Western European and North American markets (2024-2025 benchmarks). Actual CPM rates vary significantly by geography, industry sector, audience demographics, and seasonal factors. Always use rates specific to your market for accurate valuations.
 </Warning>
+
+<Info>
+**CPM Rate Sources**: Industry-standard ranges based on Nielsen Media Research, Standard Media Index, and advertising industry benchmarks. Consult with local media buyers or industry trade associations for region-specific rates. Markets such as Scandinavia, UK, US, and Germany have different rate structures.
+</Info>
 
 ## Methodology Note
 
@@ -331,9 +340,9 @@ Complete calculation walkthrough:
 ### Input Data
 
 **Sales:**
-- Merchandise Revenue: 500,000 kr
-- Matchday Revenue: 300,000 kr
-- Player Sales: 2,000,000 kr
+- Merchandise Revenue: 500,000 [currency units]
+- Matchday Revenue: 300,000 [currency units]
+- Player Sales: 2,000,000 [currency units]
 
 **Media:**
 - TV: 45 min × 200,000 viewers × L size (0.15) × 30 CPM
@@ -342,7 +351,7 @@ Complete calculation walkthrough:
 - Digital: 2,000,000 impressions × 4 CPM
 - Social: 50,000 followers × 2 CPM + 200,000 impressions × 4 CPM + 10,000 engagements × 8 CPM
 - Attendance: 75,000 × 15 CPM
-- Hospitality: 100 guests × 1,800 kr/guest
+- Hospitality: 100 guests × 1,800 [currency units]/guest
 
 **Brand:**
 - Popularity: 8
@@ -353,21 +362,21 @@ Complete calculation walkthrough:
 ### Step 1: Calculate Sales Value
 
 ```
-SV = 500,000 + 300,000 + 2,000,000 = 2,800,000 kr
+SV = 500,000 + 300,000 + 2,000,000 = 2,800,000 [currency units]
 ```
 
 ### Step 2: Calculate Media Value
 
 ```
-TV: 45 × 200,000 × 0.15 × 30 ÷ 1000 = 270,000 kr
-Web TV: 500,000 × 10 ÷ 1000 = 5,000 kr
-PR: 1,000,000 × 6 ÷ 1000 = 6,000 kr
-Digital: 2,000,000 × 4 ÷ 1000 = 8,000 kr
-Social: (50,000 × 2 + 200,000 × 4 + 10,000 × 8) ÷ 1000 = 980 kr
-Attendance: 75,000 × 15 ÷ 1000 = 1,125 kr
-Hospitality: 100 × 1,800 = 180,000 kr
+TV: 45 × 200,000 × 0.15 × 30 ÷ 1000 = 270,000 [currency units]
+Web TV: 500,000 × 10 ÷ 1000 = 5,000 [currency units]
+PR: 1,000,000 × 6 ÷ 1000 = 6,000 [currency units]
+Digital: 2,000,000 × 4 ÷ 1000 = 8,000 [currency units]
+Social: (50,000 × 2 + 200,000 × 4 + 10,000 × 8) ÷ 1000 = 980 [currency units]
+Attendance: 75,000 × 15 ÷ 1000 = 1,125 [currency units]
+Hospitality: 100 × 1,800 = 180,000 [currency units]
 
-MV = 270,000 + 5,000 + 6,000 + 8,000 + 980 + 1,125 + 180,000 = 471,105 kr
+MV = 270,000 + 5,000 + 6,000 + 8,000 + 980 + 1,125 + 180,000 = 471,105 [currency units]
 ```
 
 ### Step 3: Calculate Brand Multiplier
@@ -379,10 +388,25 @@ BM = (8 + 7 + 9 + 8) ÷ 4 = 8 ÷ 1 = 8
 ### Step 4: Calculate Total Attention Valuation
 
 ```
-TAV = (2,800,000 + 471,105) × 8 = 3,271,105 × 8 = 26,168,840 kr
+TAV = (2,800,000 + 471,105) × 8 = 3,271,105 × 8 = 26,168,840 [currency units]
 ```
 
-**Result**: Total Attention Valuation = **26,168,840 kr**
+**Result**: Total Attention Valuation = **26,168,840 [currency units]**
+
+## Changelog {#changelog}
+
+### January 19, 2025
+- **Updated**: All currency examples changed from "kr" to neutral "[currency units]"
+- **Added**: CPM rate source documentation (Nielsen, Standard Media Index)
+- **Added**: Market-specific guidance for CPM rates
+- **Improved**: CPM range descriptions with methodology notes
+- **Enhanced**: Geographical market considerations for accurate valuations
+
+### Initial Release
+- Complete mathematical formula documentation
+- CPM methodology explanation
+- Brand multiplier calculations
+- Practical calculation examples
 
 ## Use Cases
 

@@ -1,6 +1,7 @@
 ---
 title: 'Analytics'
 description: 'Comprehensive sponsorship analytics dashboard for tracking revenue, package performance, sponsor engagement, and ROI. Monitor KPIs with real-time charts.'
+lastUpdated: '2025-01-19'
 ---
 
 # Sponsorship Analytics Dashboard
@@ -11,20 +12,74 @@ description: 'Comprehensive sponsorship analytics dashboard for tracking revenue
 
 **Track, measure, and optimize your sponsorship program performance with comprehensive analytics.** View real-time revenue metrics, package performance data, sponsor engagement insights, and custom KPI dashboards to maximize your sponsorship ROI and make data-driven decisions.
 
+<Note>
+**Last Updated**: January 19, 2025 | [View Changelog](#changelog)
+</Note>
+
 ## Accessing Analytics
 
 Navigate to **Sponsorships** → **Analytics** from the sidebar to access sponsorship analytics and performance tracking.
 
 <Note>
-**Plan Required**: Analytics feature requires Professional or Enterprise plan.
-**Permission Required**: You need Analytics role or Admin access.
+**Plan Required**: Professional or Enterprise plan
+**Permission Required**: Analytics permission or Admin access
 </Note>
 
 ## Current Status
 
-The Analytics page is currently under development and will be available in a future update.
+<Info>
+**Under Development**: The full analytics dashboard is coming soon with automated reporting, real-time metrics, and custom KPIs.
+</Info>
 
-### Empty State
+### What to Use Instead
+
+While we build the analytics dashboard, here's how to track sponsorship performance today:
+
+**1. Export Reports from Valuations**
+
+- Navigate to **Valuations** → **Reports**
+- Compare multiple valuations to identify trends over time
+- Export comparison data as PDF or CSV for analysis
+- Use AI Insights plugin for automated trend detection
+- **[View Reports Guide →](/valuations/reports)**
+
+**2. Track Proposals Manually**
+
+- Use **Sponsorships** → **Proposals** to monitor package status
+- Filter by status: Draft, Sent, Approved, Rejected
+- Export proposal list to CSV for external analysis
+- Calculate acceptance rates manually in Excel/Google Sheets
+- **[View Proposals Guide →](/sponsorships/proposals)**
+
+**3. Use API for Custom Analytics**
+
+- Create read-only API key with GET permissions
+- Pull valuation and sponsorship data programmatically
+- Build custom dashboards in Power BI, Tableau, or Excel
+- Schedule automated data exports with cron jobs
+- **[View API Documentation →](/platform/api)**
+
+**4. Weekly Manual Review Routine**
+
+Set up a consistent review process:
+- **Monday**: Check sponsor statuses and new responses
+- **Wednesday**: Review proposal performance (sent vs. approved)
+- **Friday**: Track new sponsor additions and package updates
+- **Monthly**: Export all data and calculate key metrics
+
+<Tip>
+**Pro Tip**: Set up a weekly API export to automatically pull valuation and sponsorship data into a Google Sheet or Excel file. Use formulas to calculate basic metrics like acceptance rate, average package value, and revenue trends. This gives you interim analytics until the full dashboard launches.
+</Tip>
+
+### Temporary Metrics You Can Track
+
+**Manual calculations to perform:**
+- **Acceptance Rate**: (Approved Proposals ÷ Sent Proposals) × 100
+- **Average Package Value**: Total Revenue ÷ Number of Packages
+- **Sponsor Growth**: New Sponsors This Month vs. Last Month
+- **Proposal Velocity**: Days from Sent to Response
+
+### Empty State (When Accessing Analytics Page)
 
 If you access Analytics now, you'll see:
 
@@ -33,9 +88,7 @@ If you access Analytics now, you'll see:
 - **Message**: "Add sponsors and packages to see revenue analytics."
 - **Action**: "Go to Sponsorships" button
 
-<Info>
-**Coming Soon**: Full analytics dashboard with revenue tracking, package performance metrics, sponsor engagement insights, and custom reports.
-</Info>
+This will be replaced with the full analytics dashboard in a future release.
 
 ## Planned Features
 
@@ -206,6 +259,20 @@ Yes, you can schedule automated analytics reports to be emailed daily, weekly, m
 ### Is analytics available on all plans?
 
 No, analytics features require Professional or Enterprise plans. Starter plan users cannot access the analytics module. Upgrade to Professional or Enterprise to unlock revenue tracking, performance metrics, engagement insights, and custom reporting capabilities.
+
+## Changelog {#changelog}
+
+### January 19, 2025
+- **Added**: "What to Use Instead" section with 4 alternative analytics approaches
+- **Added**: Temporary metrics tracking guidance (acceptance rate, package value, etc.)
+- **Added**: Pro tip for API-based interim analytics solution
+- **Added**: Weekly manual review routine recommendations
+- **Improved**: Clarity on dashboard development status
+
+### Initial Release
+- Analytics page placeholder
+- Empty state documentation
+- Planned features overview
 
 ## Next Steps
 

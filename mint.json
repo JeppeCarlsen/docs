@@ -134,6 +134,15 @@
       ]
     },
     {
+      "group": "Guides",
+      "icon": "map",
+      "pages": [
+        "guides/close-first-sponsorship",
+        "guides/quarterly-sponsor-report",
+        "guides/api-powerbi-integration"
+      ]
+    },
+    {
       "group": "Resources",
       "icon": "book",
       "pages": [
@@ -143,7 +152,6 @@
   ],
   "footerSocials": {
     "website": "https://valiyou.com",
-    "github": "https://valiyou.io",
     "linkedin": "https://www.linkedin.com/company/valiyou",
     "facebook": "https://www.facebook.com/valiyou.io"
   },

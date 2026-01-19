@@ -1,6 +1,7 @@
 ---
 title: 'API'
 description: 'Create and manage API keys for secure REST API access. Generate tokens, monitor usage, integrate with Power BI and Excel, and explore endpoint docs.'
+lastUpdated: '2025-01-19'
 ---
 
 # API Keys & REST API
@@ -10,6 +11,10 @@ description: 'Create and manage API keys for secure REST API access. Generate to
 </Frame>
 
 **Integrate Valiyou data into your workflows with secure REST API access and Bearer token authentication.** Create API keys, monitor usage in real-time, and explore comprehensive endpoint documentation for seamless integration with Power BI, Excel, and custom applications.
+
+<Note>
+**Last Updated**: January 19, 2025 | [View Changelog](#changelog)
+</Note>
 
 ## Accessing API Management
 
@@ -291,7 +296,7 @@ All API requests require authentication with an API key.
 
 **Example**:
 ```
-https://valiyou.com/api/v1/valuations?api_key=vly_abc123&club_id=org_xyz789
+https://valiyou.io/api/v1/valuations?api_key=vly_abc123&club_id=org_xyz789
 ```
 
 **Requirements**:
@@ -299,8 +304,38 @@ https://valiyou.com/api/v1/valuations?api_key=vly_abc123&club_id=org_xyz789
 - `club_id` - Your organization ID (required)
 
 <Warning>
-**Security**: Always use HTTPS when making API requests. Never send API keys over unencrypted connections.
+**Security Risk with Query Parameters**: When using `?api_key=` in URLs, keys may appear in server logs, browser history, and analytics tools. For production integrations, we strongly recommend using header-based authentication instead (see below).
 </Warning>
+
+### Recommended: Header-Based Authentication
+
+**For production integrations, use header-based authentication to prevent API key exposure:**
+
+**Method**: Authorization Header
+
+**Format**:
+```bash
+Authorization: Bearer YOUR_API_KEY
+```
+
+**Example Request**:
+```bash
+curl -X GET "https://valiyou.io/api/v1/valuations?club_id=YOUR_CLUB_ID" \
+  -H "Authorization: Bearer vly_abc123..."
+```
+
+**Benefits**:
+- ✅ API keys NOT logged in server access logs
+- ✅ NOT visible in browser history
+- ✅ NOT leaked via Referer headers
+- ✅ Standard OAuth 2.0 Bearer token pattern
+- ✅ More secure for production environments
+
+**Power BI & Excel**: These tools support custom headers. In Power BI's Web connector, click "Advanced" and add a custom HTTP header: `Authorization: Bearer YOUR_API_KEY`.
+
+<Info>
+**API Key Rotation Best Practice**: Rotate API keys every 90 days or immediately if exposed. Create a new key before revoking the old one to prevent integration downtime.
+</Info>
 
 ### HTTP Operations
 
@@ -355,7 +390,7 @@ Get club information (name, address, base currency).
 
 **Example Request**:
 ```bash
-curl -X GET "https://valiyou.com/api/v1/clubs?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID"
+curl -X GET "https://valiyou.io/api/v1/clubs?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID"
 ```
 
 **Example Response**:
@@ -418,12 +453,12 @@ Get all valuations for your organization.
 
 **Example Request**:
 ```bash
-curl -X GET "https://valiyou.com/api/v1/valuations?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID"
+curl -X GET "https://valiyou.io/api/v1/valuations?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID"
 ```
 
 **Example Request with Date Filter**:
 ```bash
-curl -X GET "https://valiyou.com/api/v1/valuations?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID&from_date=2024-01-01&to_date=2024-12-31"
+curl -X GET "https://valiyou.io/api/v1/valuations?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID&from_date=2024-01-01&to_date=2024-12-31"
 ```
 
 ---
@@ -449,7 +484,7 @@ Get all player sales with valuation information.
 
 **Example Request**:
 ```bash
-curl -X GET "https://valiyou.com/api/v1/player-sales?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID"
+curl -X GET "https://valiyou.io/api/v1/player-sales?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID"
 ```
 
 ---
@@ -536,7 +571,7 @@ Access to API Management requires specific permissions:
 9. Store key securely
 10. Open Power BI Desktop
 11. Get Data → Web
-12. Enter URL: `https://valiyou.com/api/v1/valuations?api_key=vly_abc123&club_id=org_xyz`
+12. Enter URL: `https://valiyou.io/api/v1/valuations?api_key=vly_abc123&club_id=org_xyz`
 13. Transform data in Power Query
 14. Create visualizations
 
@@ -556,7 +591,7 @@ Access to API Management requires specific permissions:
 1. Create API key with GET operation
 2. Use curl or programming language to fetch data:
    ```bash
-   curl "https://valiyou.com/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID" > valuations.json
+   curl "https://valiyou.io/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID" > valuations.json
    ```
 3. Process JSON data in your analytics tool
 4. Schedule regular exports with cron job or task scheduler
@@ -567,7 +602,7 @@ Access to API Management requires specific permissions:
 2. Select specific scopes (e.g., Valuations)
 3. Build integration to create valuations automatically:
    ```bash
-   curl -X POST "https://valiyou.com/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID" \
+   curl -X POST "https://valiyou.io/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID" \
      -H "Content-Type: application/json" \
      -d '{"valuation_date": "2024-01-15", "merch_revenue": 50000, ...}'
    ```
@@ -710,7 +745,7 @@ Access to API Management requires specific permissions:
   </Accordion>
 
   <Accordion title="How do I integrate Valiyou API with Power BI?">
-    Create an API key with GET operation and required scopes, open Power BI Desktop, select Get Data → Web, enter your API endpoint URL with the api_key and club_id parameters (e.g., https://valiyou.com/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID), transform the data in Power Query Editor, and create your visualizations. You can set up scheduled refresh to keep your reports automatically updated.
+    Create an API key with GET operation and required scopes, open Power BI Desktop, select Get Data → Web, enter your API endpoint URL with the api_key and club_id parameters (e.g., https://valiyou.io/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID), transform the data in Power Query Editor, and create your visualizations. You can set up scheduled refresh to keep your reports automatically updated.
   </Accordion>
 
   <Accordion title="What's the difference between scopes and operations in API keys?">
@@ -733,6 +768,22 @@ Access to API Management requires specific permissions:
     Yes, you can integrate Valiyou API with Excel by creating an API key with GET operation, opening Excel, selecting Data → Get Data → From Web, entering your API endpoint URL with authentication parameters, and loading the data. Excel supports scheduled refresh, allowing you to automatically update your spreadsheets with the latest Valiyou data at regular intervals.
   </Accordion>
 </AccordionGroup>
+
+## Changelog {#changelog}
+
+### January 19, 2025
+- **Added**: Header-based authentication recommendation for production integrations
+- **Added**: Security warnings about query parameter API key exposure
+- **Added**: Power BI header configuration guidance
+- **Added**: API key rotation best practices (90-day rotation cycle)
+- **Updated**: All API endpoint URLs from valiyou.com to valiyou.io
+- **Improved**: Security best practices section with specific implementation guidance
+
+### Initial Release
+- API key creation and management
+- REST API endpoint documentation
+- Usage analytics and monitoring
+- Power BI and Excel integration guides
 
 ## Next Steps
 
@@ -816,7 +867,7 @@ Access to API Management requires specific permissions:
     {
       "@type": "HowToStep",
       "name": "Use API Key in Requests",
-      "text": "Include the API key in your requests using the api_key parameter: https://valiyou.com/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID",
+      "text": "Include the API key in your requests using the api_key parameter: https://valiyou.io/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID",
       "position": 5
     }
   ]

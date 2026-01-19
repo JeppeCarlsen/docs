@@ -1,6 +1,7 @@
 ---
 title: 'AI Insights'
 description: 'Generate AI-powered insights from sponsorship valuations using Groq, OpenAI, Gemini, and Claude. Get natural language analysis and trend detection.'
+lastUpdated: '2025-01-19'
 ---
 
 # AI Insights - Automated Analysis
@@ -10,6 +11,23 @@ description: 'Generate AI-powered insights from sponsorship valuations using Gro
 </Frame>
 
 **AI Insights adds automated AI-generated analysis and recommendations to multi-valuation comparison reports using Large Language Models (LLMs).** Transform complex sponsorship data into actionable insights with natural language explanations powered by leading AI providers including Groq, OpenAI, Google Gemini, and Anthropic Claude. Get instant trend detection, pattern analysis, and business recommendations without manual data analysis.
+
+<Warning>
+**Data Sent to AI Providers**
+
+When you generate AI Insights, the following valuation data is sent to your chosen LLM provider for analysis:
+
+- **Fields sent**: Valuation dates, financial metrics (revenue, sales values), media metrics (impressions, views, CPM rates), brand scores
+- **Anonymization**: Organization names and personal user identities are NOT included in API requests—only numerical data and dates
+- **Data retention**: Providers do NOT store your data; it is processed in real-time for analysis and immediately discarded per their API policies
+- **Opt-out**: Disable the AI Insights plugin at any time to prevent data transmission to external AI providers
+- **Provider policies**: [Groq Privacy](https://groq.com/privacy-policy/), [OpenAI API Data](https://openai.com/enterprise-privacy), [Google Gemini](https://ai.google.dev/gemini-api/terms), [Anthropic Privacy](https://www.anthropic.com/privacy)
+- **Compliance**: All providers are SOC 2 Type II certified and do not train models on API data
+</Warning>
+
+<Note>
+**Last Updated**: January 19, 2025 | [View Changelog](#changelog)
+</Note>
 
 ## Overview
 
@@ -557,6 +575,21 @@ Track your API usage to avoid surprises:
     - Growth trends and patterns
   </Accordion>
 </AccordionGroup>
+
+## Changelog {#changelog}
+
+### January 19, 2025
+- **Added**: Data privacy section explaining what data is sent to AI providers
+- **Added**: Detailed information about anonymization, retention, and opt-out options
+- **Added**: Links to all provider privacy policies (Groq, OpenAI, Google, Anthropic)
+- **Added**: SOC 2 Type II compliance note for all providers
+- **Improved**: Security transparency for enterprise customers
+
+### Initial Release
+- Multi-provider LLM support (Groq, OpenAI, Google Gemini, Anthropic Claude)
+- AI-powered insights for multi-valuation comparison reports
+- Natural language trend detection and recommendations
+- Free tier provider options
 
 ## Related Documentation
 

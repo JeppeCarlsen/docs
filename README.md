@@ -49,6 +49,54 @@ valiyou-knowledge-center/
 └── images/                    # Screenshots and assets
 ```
 
+## 🌐 Domain Structure
+
+**Understanding Valiyou's domain architecture:**
+
+| Domain | Purpose | Use For |
+|--------|---------|---------|
+| **valiyou.com** | Marketing website | Marketing content, landing pages, company info |
+| **valiyou.io** | Application (SaaS platform) | App URLs, authentication, user features |
+| **docs.valiyou.com** | Documentation (this site) | Help articles, guides, API reference |
+| **valiyou.io/trust-center** | Trust & Security page | Compliance, security, certifications |
+
+### Domain Usage Guidelines
+
+**Authentication & User Actions:**
+- Sign In: `https://valiyou.io/auth/login`
+- Sign Up: `https://valiyou.io/auth/signup`
+- App features: `https://valiyou.io/*`
+
+**Marketing & Info:**
+- Homepage: `https://valiyou.com`
+- About, Pricing, Features: `https://valiyou.com/*`
+
+**Documentation:**
+- All help articles: `https://docs.valiyou.com/*`
+- Link to app from docs: Use `valiyou.io`
+
+**Trust & Compliance:**
+- Trust Center: `https://valiyou.io/trust-center`
+- Privacy Policy: `https://valiyou.io/trust-center#privacy`
+
+### When Linking in Documentation
+
+```markdown
+✅ Correct:
+- [Sign in to your account](https://valiyou.io/auth/login)
+- [View our Trust Center](https://valiyou.io/trust-center)
+- [Visit our website](https://valiyou.com)
+
+❌ Incorrect:
+- [Sign in](https://valiyou.com/auth/login) ← Wrong domain
+- [Trust Center](https://valiyou.com/trust-center) ← Should be .io
+```
+
+**Email addresses:**
+- Support: `support@valiyou.com`
+- Security: `security@valiyou.com`
+- No-reply: `no-reply@valiyou.com`
+
 ## ✍️ Writing Documentation
 
 ### Create a New Article
