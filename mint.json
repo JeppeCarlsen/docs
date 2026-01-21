@@ -55,51 +55,75 @@
     },
     {
       "source": "/platform/organization",
-      "destination": "/platform/org-logo-settings"
+      "destination": "/platform/company-logo"
     },
     {
       "source": "/platform/organization-settings",
-      "destination": "/platform/org-logo-settings"
+      "destination": "/platform/company-logo"
+    },
+    {
+      "source": "/platform/org-logo-settings",
+      "destination": "/platform/company-logo"
     },
     {
       "source": "/platform/settings/documents",
-      "destination": "/platform/settings/proposal-documents"
+      "destination": "/platform/settings/documents-library"
     },
     {
       "source": "/platform/settings/contract-documents",
-      "destination": "/platform/settings/proposal-documents"
+      "destination": "/platform/settings/documents-library"
+    },
+    {
+      "source": "/platform/settings/proposal-documents",
+      "destination": "/platform/settings/documents-library"
     },
     {
       "source": "/platform/settings-page/platform",
-      "destination": "/platform/settings-page/currency-settings"
+      "destination": "/platform/settings-page/base-currency"
     },
     {
       "source": "/platform/settings-page/platform-settings",
-      "destination": "/platform/settings-page/currency-settings"
+      "destination": "/platform/settings-page/base-currency"
+    },
+    {
+      "source": "/platform/settings-page/currency-settings",
+      "destination": "/platform/settings-page/base-currency"
     },
     {
       "source": "/platform/settings-page/valuations",
-      "destination": "/platform/settings-page/brand-indicators"
+      "destination": "/platform/settings-page/brand-values"
     },
     {
       "source": "/platform/settings-page/valuation-settings",
-      "destination": "/platform/settings-page/brand-indicators"
+      "destination": "/platform/settings-page/brand-values"
+    },
+    {
+      "source": "/platform/settings-page/brand-indicators",
+      "destination": "/platform/settings-page/brand-values"
     },
     {
       "source": "/platform/settings-page/sponsorships",
-      "destination": "/platform/settings-page/negotiator-config"
+      "destination": "/platform/settings-page/negotiator-labels"
     },
     {
       "source": "/platform/settings-page/sponsorship-settings",
-      "destination": "/platform/settings-page/negotiator-config"
+      "destination": "/platform/settings-page/negotiator-labels"
+    },
+    {
+      "source": "/platform/settings-page/negotiator-config",
+      "destination": "/platform/settings-page/negotiator-labels"
     },
     {
       "source": "/guides/quarterly-sponsor-report",
-      "destination": "/guides/sponsor-quarterly-reports"
+      "destination": "/guides/quarterly-reporting"
     },
     {
       "source": "/guides/quarterly-reports",
-      "destination": "/guides/sponsor-quarterly-reports"
+      "destination": "/guides/quarterly-reporting"
+    },
+    {
+      "source": "/guides/sponsor-quarterly-reports",
+      "destination": "/guides/quarterly-reporting"
     },
     {
       "source": "/guides/close-first-sponsorship",
@@ -150,10 +174,14 @@
       "group": "Platform",
       "icon": "desktop",
       "pages": [
-        "test-org-settings",
         "platform/team-management",
+        "platform/company-logo",
+        "platform/settings-page/base-currency",
+        "platform/settings-page/brand-values",
+        "platform/settings-page/negotiator-labels",
         "platform/settings/sso",
         "platform/settings/advanced",
+        "platform/settings/documents-library",
         "platform/billing/billing",
         "platform/billing/usage",
         "platform/billing/payment-methods",
@@ -191,6 +219,7 @@
       "icon": "map",
       "pages": [
         "guides/sponsor-deal-workflow",
+        "guides/quarterly-reporting",
         "guides/api-powerbi-integration"
       ]
     },
