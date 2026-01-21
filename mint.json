@@ -182,6 +182,7 @@
         "platform/settings-page/brand-values",
         "platform/settings-page/negotiator-labels",
         "platform/settings/sso",
+        "platform/settings/sso-copy-test",
         "platform/settings/advanced",
         "platform/settings/documents-library",
         "platform/billing/billing",

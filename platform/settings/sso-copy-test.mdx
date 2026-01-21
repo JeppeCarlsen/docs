@@ -1,0 +1,225 @@
+---
+title: 'SSO'
+description: 'Configure Enterprise SSO with SAML 2.0, OAuth 2.0, and OpenID Connect. Set up Okta, Azure AD, and Google Workspace for secure authentication.'
+seo:
+  title: 'Enterprise SSO & SAML Authentication | Valiyou'
+---
+
+# SSO Settings - Enterprise Single Sign-On
+
+<Frame>
+  <img src="/images/platform/organization-settings/sso-settings.png" alt="Valiyou SSO settings interface for configuring Enterprise Single Sign-On with SAML, OAuth, and OpenID Connect identity providers" />
+</Frame>
+
+<Note>
+**Plan Required**: Enterprise plan only
+**Permission Required**: Admin or SSO management permission
+</Note>
+
+**Configure Enterprise Single Sign-On (SSO) to allow team members to authenticate using your organization's identity provider.** This advanced security feature enables seamless login through corporate credentials, centralized user management, enhanced security with multi-factor authentication (MFA), and simplified onboarding and offboarding processes. Valiyou supports SAML 2.0, OAuth 2.0, and OpenID Connect protocols with popular identity providers including Okta, Azure Active Directory, Google Workspace, OneLogin, and Auth0.
+
+## Supported Protocols
+
+- **SAML 2.0** - Industry-standard authentication protocol
+- **OAuth 2.0** - Modern authorization protocol
+- **OpenID Connect** - Identity layer built on OAuth 2.0
+
+## Supported Identity Providers
+
+- Okta
+- Azure Active Directory (Microsoft Entra ID)
+- Google Workspace
+- OneLogin
+- Auth0
+- Custom SAML/OAuth providers
+
+## SSO Configuration Fields
+
+- Provider type selection
+- Entity ID / Issuer URL
+- SSO URL / Login URL
+- Certificate upload (X.509)
+- Attribute mapping
+- JIT (Just-In-Time) provisioning toggle
+
+## Benefits of SSO
+
+- Single set of credentials for all tools
+- Centralized user management
+- Enhanced security (MFA, conditional access)
+- Simplified onboarding/offboarding
+- Compliance with corporate policies
+
+<Info>
+**Contact Support**: SSO configuration requires technical setup. Contact support@valiyou.com for assistance with SSO setup and testing.
+</Info>
+
+## SSO Login Flow
+
+1. User clicks "Sign in with SSO" on login page
+2. Redirected to identity provider
+3. Authenticates with corporate credentials
+4. Redirected back to Valiyou with session
+5. Automatically logged in (or account created via JIT)
+
+## Common Use Cases
+
+### Enabling SSO for Team (Enterprise)
+
+1. Contact support@valiyou.com to begin SSO setup
+2. Provide identity provider details
+3. Work with support to configure SAML/OAuth
+4. Test SSO login with admin account
+5. Enable JIT provisioning (optional)
+6. Roll out SSO to team
+7. Communicate SSO login instructions
+
+## Troubleshooting
+
+### SSO Not Working
+
+**Common Issues**:
+- Incorrect Entity ID or SSO URL
+- Certificate expired or invalid
+- Attribute mapping incorrect
+- JIT provisioning disabled
+
+**Solution**:
+- Contact support@valiyou.com for SSO troubleshooting
+- Verify identity provider configuration
+- Test with admin account first
+- Check browser console for errors
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="What is Single Sign-On (SSO) and how does it work in Valiyou?">
+    Single Sign-On (SSO) allows team members to authenticate to Valiyou using your organization's identity provider instead of separate login credentials. When users click "Sign in with SSO," they're redirected to your corporate identity provider (like Okta or Azure AD), authenticate with their corporate credentials, and are automatically logged into Valiyou. This provides enhanced security, centralized user management, and simplified access control.
+  </Accordion>
+
+  <Accordion title="Which identity providers are supported for SSO configuration?">
+    Valiyou supports all major enterprise identity providers including Okta, Azure Active Directory (Microsoft Entra ID), Google Workspace, OneLogin, Auth0, and any custom SAML 2.0 or OAuth 2.0 compliant provider. The platform supports three authentication protocols: SAML 2.0 (industry standard), OAuth 2.0 (modern authorization), and OpenID Connect (identity layer on OAuth 2.0).
+  </Accordion>
+
+  <Accordion title="What are the requirements for enabling Enterprise SSO?">
+    Enterprise SSO requires an active Enterprise plan subscription and Admin or SSO management permissions. You'll also need access to your organization's identity provider configuration, including Entity ID/Issuer URL, SSO URL/Login URL, X.509 certificate, and attribute mapping details. Contact support@valiyou.com to initiate the SSO setup process.
+  </Accordion>
+
+  <Accordion title="How does SAML authentication work with Valiyou SSO settings?">
+    SAML 2.0 (Security Assertion Markup Language) is an industry-standard authentication protocol that exchanges authentication and authorization data between your identity provider and Valiyou. When configured, users authenticate through your SAML provider, which sends a secure assertion to Valiyou confirming the user's identity. This enables secure, password-less authentication using your existing corporate credentials.
+  </Accordion>
+
+  <Accordion title="What is JIT provisioning in SSO configuration?">
+    JIT (Just-In-Time) provisioning automatically creates user accounts in Valiyou when someone logs in via SSO for the first time. When enabled, employees can access Valiyou immediately after SSO setup without manual account creation. The system uses attribute mapping from your identity provider to populate user details like name, email, and department during automatic account creation.
+  </Accordion>
+
+  <Accordion title="Can I use Azure Active Directory for SSO authentication?">
+    Yes, Azure Active Directory (now called Microsoft Entra ID) is fully supported for SSO configuration. Valiyou integrates with Azure AD using SAML 2.0 or OpenID Connect protocols. You'll configure Valiyou as an enterprise application in your Azure AD tenant, provide the required URLs and certificates, and map user attributes. Contact support for Azure AD specific setup guidance.
+  </Accordion>
+
+  <Accordion title="How do I troubleshoot SSO login failures?">
+    Common SSO issues include incorrect Entity ID or SSO URL configuration, expired or invalid X.509 certificates, improper attribute mapping, or disabled JIT provisioning. First, verify your identity provider configuration matches the values in Valiyou SSO settings. Test with an admin account before rolling out to all users. Check browser console for error messages. For persistent issues, contact support@valiyou.com with specific error details.
+  </Accordion>
+
+  <Accordion title="What security benefits does SSO provide for enterprise authentication?">
+    SSO enhances security through multiple mechanisms: centralized authentication reduces password-related vulnerabilities, enables multi-factor authentication (MFA) enforcement through your identity provider, supports conditional access policies (like IP restrictions or device compliance), provides centralized audit logs of authentication attempts, simplifies offboarding by disabling access from a single location, and ensures compliance with corporate security policies.
+  </Accordion>
+
+  <Accordion title="How do I configure OAuth 2.0 or OpenID Connect for SSO?">
+    OAuth 2.0 and OpenID Connect configuration requires similar steps to SAML setup. You'll provide your OAuth provider's authorization endpoint, token endpoint, client ID, client secret, and configure attribute mapping. OpenID Connect adds an identity layer to OAuth 2.0 for user authentication. Contact support@valiyou.com for protocol-specific configuration guidance and testing assistance.
+  </Accordion>
+
+  <Accordion title="Can I roll out SSO gradually to my team?">
+    Yes, you can implement SSO in phases. Start by configuring SSO with support assistance, test thoroughly with admin accounts, enable JIT provisioning if desired, then gradually communicate SSO login instructions to team members. Users can continue using password authentication during the transition until everyone is comfortable with SSO. You can also configure SSO as optional or required based on your security policies.
+  </Accordion>
+</AccordionGroup>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Configure Enterprise SSO in Valiyou",
+  "description": "Step-by-step guide to setting up Single Sign-On with SAML, OAuth, or OpenID Connect",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Contact Support for SSO Setup",
+      "text": "Email support@valiyou.com to initiate Enterprise SSO configuration (requires Enterprise plan and Admin permission)",
+      "position": 1
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Provide Identity Provider Details",
+      "text": "Share your identity provider information including provider type (Okta, Azure AD, Google Workspace, etc.), Entity ID, SSO URL, and X.509 certificate",
+      "position": 2
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Configure SAML or OAuth",
+      "text": "Work with Valiyou support to configure authentication protocol (SAML 2.0, OAuth 2.0, or OpenID Connect), attribute mapping, and JIT provisioning settings",
+      "position": 3
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Test SSO Authentication",
+      "text": "Test SSO login with admin account first, verify user attributes map correctly, and confirm JIT provisioning works if enabled",
+      "position": 4
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Roll Out to Team",
+      "text": "Communicate SSO login instructions to team members, provide Sign in with SSO guidance, and monitor initial logins for any issues",
+      "position": 5
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Single Sign-On (SSO) and how does it work in Valiyou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Single Sign-On (SSO) allows team members to authenticate to Valiyou using your organization's identity provider instead of separate login credentials. Users click Sign in with SSO, authenticate with corporate credentials at their identity provider, and are automatically logged into Valiyou with enhanced security and centralized user management."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which identity providers are supported for SSO configuration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Valiyou supports all major enterprise identity providers including Okta, Azure Active Directory (Microsoft Entra ID), Google Workspace, OneLogin, Auth0, and any custom SAML 2.0 or OAuth 2.0 compliant provider. The platform supports SAML 2.0, OAuth 2.0, and OpenID Connect protocols."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is JIT provisioning in SSO configuration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JIT (Just-In-Time) provisioning automatically creates user accounts in Valiyou when someone logs in via SSO for the first time. When enabled, employees can access Valiyou immediately after SSO setup without manual account creation, with user details populated from your identity provider's attribute mapping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does SAML authentication work with Valiyou SSO settings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SAML 2.0 is an industry-standard authentication protocol that exchanges authentication data between your identity provider and Valiyou. Users authenticate through your SAML provider, which sends a secure assertion confirming identity, enabling secure password-less authentication using corporate credentials."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What security benefits does SSO provide for enterprise authentication?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SSO enhances security through centralized authentication reducing password vulnerabilities, MFA enforcement, conditional access policies, centralized audit logs, simplified offboarding, and compliance with corporate security policies."
+      }
+    }
+  ]
+}
+</script>
