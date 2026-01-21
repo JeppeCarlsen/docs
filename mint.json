@@ -85,6 +85,7 @@
         "sponsorships/packages",
         "sponsorships/inventory/inventory",
         "sponsorships/inventory/settings",
+        "sponsorships/inventory/negotiator",
         "sponsorships/proposals",
         "sponsorships/analytics"
       ]
