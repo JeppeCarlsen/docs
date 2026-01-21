@@ -151,13 +151,8 @@
       "icon": "desktop",
       "pages": [
         "platform/team-management",
-        "platform/org-logo-settings",
-        "platform/settings-page/currency-settings",
-        "platform/settings-page/brand-indicators",
-        "platform/settings-page/negotiator-config",
         "platform/settings/sso",
         "platform/settings/advanced",
-        "platform/settings/proposal-documents",
         "platform/billing/billing",
         "platform/billing/usage",
         "platform/billing/payment-methods",
@@ -195,7 +190,6 @@
       "icon": "map",
       "pages": [
         "guides/sponsor-deal-workflow",
-        "guides/sponsor-quarterly-reports",
         "guides/api-powerbi-integration"
       ]
     },
