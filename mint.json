@@ -52,6 +52,34 @@
     {
       "source": "/sponsorships/item-library/:path*",
       "destination": "/sponsorships/inventory/:path*"
+    },
+    {
+      "source": "/platform/organization",
+      "destination": "/platform/organization-settings"
+    },
+    {
+      "source": "/platform/settings/documents",
+      "destination": "/platform/settings/contract-documents"
+    },
+    {
+      "source": "/platform/settings-page/platform",
+      "destination": "/platform/settings-page/platform-settings"
+    },
+    {
+      "source": "/platform/settings-page/valuations",
+      "destination": "/platform/settings-page/valuation-settings"
+    },
+    {
+      "source": "/platform/settings-page/sponsorships",
+      "destination": "/platform/settings-page/sponsorship-settings"
+    },
+    {
+      "source": "/guides/quarterly-sponsor-report",
+      "destination": "/guides/quarterly-reports"
+    },
+    {
+      "source": "/guides/close-first-sponsorship",
+      "destination": "/guides/first-sponsorship-deal"
     }
   ],
   "navigation": [
@@ -95,13 +123,13 @@
       "icon": "desktop",
       "pages": [
         "platform/team-management",
-        "platform/organization",
-        "platform/settings-page/platform",
-        "platform/settings-page/valuations",
-        "platform/settings-page/sponsorships",
+        "platform/organization-settings",
+        "platform/settings-page/platform-settings",
+        "platform/settings-page/valuation-settings",
+        "platform/settings-page/sponsorship-settings",
         "platform/settings/sso",
         "platform/settings/advanced",
-        "platform/settings/documents",
+        "platform/settings/contract-documents",
         "platform/billing/billing",
         "platform/billing/usage",
         "platform/billing/payment-methods",
@@ -138,8 +166,8 @@
       "group": "Guides",
       "icon": "map",
       "pages": [
-        "guides/close-first-sponsorship",
-        "guides/quarterly-sponsor-report",
+        "guides/first-sponsorship-deal",
+        "guides/quarterly-reports",
         "guides/api-powerbi-integration"
       ]
     },
