@@ -150,6 +150,7 @@
       "group": "Platform",
       "icon": "desktop",
       "pages": [
+        "test-org-settings",
         "platform/team-management",
         "platform/settings/sso",
         "platform/settings/advanced",
