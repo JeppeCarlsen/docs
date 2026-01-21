@@ -66,6 +66,18 @@
       "destination": "/platform/company-logo"
     },
     {
+      "source": "/platform/settings/documents",
+      "destination": "/platform/settings/documents-library"
+    },
+    {
+      "source": "/platform/settings/contract-documents",
+      "destination": "/platform/settings/documents-library"
+    },
+    {
+      "source": "/platform/settings/proposal-documents",
+      "destination": "/platform/settings/documents-library"
+    },
+    {
       "source": "/platform/settings-page/platform",
       "destination": "/platform/settings-page/base-currency"
     },
