@@ -172,8 +172,7 @@
       "group": "Resources",
       "icon": "book",
       "pages": [
-        "resources/glossary",
-        "test-new-page-jan21"
+        "resources/glossary"
       ]
     }
   ],
