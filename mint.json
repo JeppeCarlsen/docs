@@ -95,7 +95,7 @@
       "icon": "desktop",
       "pages": [
         "platform/team-management",
-        "platform/organisation",
+        "platform/organization",
         "platform/settings-page/platform",
         "platform/settings-page/valuations",
         "platform/settings-page/sponsorships",
