@@ -54,6 +54,26 @@
       "destination": "/sponsorships/inventory/:path*"
     },
     {
+      "source": "/platform/company-logo",
+      "destination": "/platform/company"
+    },
+    {
+      "source": "/platform/settings-page/negotiator-labels",
+      "destination": "/platform/settings/negotiator"
+    },
+    {
+      "source": "/platform/settings-page/base-currency",
+      "destination": "/platform/settings/base-currency"
+    },
+    {
+      "source": "/platform/settings-page/brand-values",
+      "destination": "/platform/settings/brand-values"
+    },
+    {
+      "source": "/platform/settings/documents-library",
+      "destination": "/platform/settings/documents"
+    },
+    {
       "source": "/guides/close-first-sponsorship",
       "destination": "/guides/sponsor-deal-workflow"
     },
@@ -103,12 +123,12 @@
       "icon": "desktop",
       "pages": [
         "platform/team-management",
-        "platform/company-logo",
-        "platform/settings-page/base-currency",
-        "platform/settings-page/brand-values",
-        "platform/settings-page/negotiator-labels",
+        "platform/company",
+        "platform/settings/base-currency",
+        "platform/settings/brand-values",
+        "platform/settings/negotiator",
         "platform/settings/sso",
-        "platform/settings/documents-library",
+        "platform/settings/documents",
         "platform/billing/payment-methods",
         "platform/billing/invoices",
         "platform/billing/billing-details",
