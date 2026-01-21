@@ -66,18 +66,6 @@
       "destination": "/platform/company-logo"
     },
     {
-      "source": "/platform/settings/documents",
-      "destination": "/platform/settings/documents-library"
-    },
-    {
-      "source": "/platform/settings/contract-documents",
-      "destination": "/platform/settings/documents-library"
-    },
-    {
-      "source": "/platform/settings/proposal-documents",
-      "destination": "/platform/settings/documents-library"
-    },
-    {
       "source": "/platform/settings-page/platform",
       "destination": "/platform/settings-page/base-currency"
     },
@@ -174,19 +162,12 @@
       "group": "Platform",
       "icon": "desktop",
       "pages": [
-        "test-in-root",
-        "test-folder/test-in-subfolder",
         "platform/team-management",
         "platform/company-logo",
         "platform/settings-page/base-currency",
         "platform/settings-page/brand-values",
         "platform/settings-page/negotiator-labels",
         "platform/settings/sso",
-        "platform/settings/sso-copy-test",
-        "platform/settings/advanced",
-        "platform/settings/documents-library",
-        "platform/billing/billing",
-        "platform/billing/usage",
         "platform/billing/payment-methods",
         "platform/billing/invoices",
         "platform/billing/billing-details",

@@ -146,23 +146,6 @@ Mintlify provides beautiful components:
   Important warning
 </Warning>
 
-<Steps>
-  <Step title="Step 1">Content</Step>
-  <Step title="Step 2">Content</Step>
-</Steps>
-
-<CodeGroup>
-  ```bash Example Code
-  # Example code block
-  echo "Hello World"
-  ```
-
-  ```javascript JavaScript Example
-  // Example JavaScript code
-  console.log("Hello World");
-  ```
-</CodeGroup>
-
 See [Mintlify Components](https://mintlify.com/docs/content/components/accordions) for full reference.
 
 ## 🚢 Deployment
