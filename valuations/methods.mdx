@@ -1,69 +1,81 @@
 ---
 title: 'Methods'
-description: 'Overview of valuation methodology and calculation components. Learn about CPM-based valuation, brand multipliers, and industry-standard metrics.'
-lastUpdated: '2025-01-26'
+description: 'Complete mathematical formulas and CPM methodology for sponsorship valuation calculations. Understand industry standards and formulas for value assessment.'
+lastUpdated: '2025-01-19'
 seo:
-  title: 'Valuation Methodology Overview | Valiyou'
+  title: 'CPM Methodology & Valuation Formulas | Valiyou'
 ---
 
-# Valuation Methods & Methodology
+# Valuation Methods & CPM Methodology
 
 <Frame>
-  <img src="/images/valuations/methods/overview.png" alt="Valuation methods overview showing methodology components and calculation approach" />
+  <img src="/images/valuations/methods/overview.png" alt="Valuation methods showing CPM methodology, calculation formulas, industry standards for sponsorship metrics and mathematical calculations" />
 </Frame>
 
-**Understand the methodology behind attention valuation** with industry-standard CPM-based metrics, brand strength assessment, and transparent value calculation components.
+**Master the complete mathematical framework behind attention valuation calculations** with industry-standard CPM methodology, proven formulas, and transparent metrics. This comprehensive guide explains every calculation step, from basic CPM formulas to complex brand multiplier methodology, ensuring accurate and credible sponsorship valuations.
 
-This guide explains the concepts and components used in the Attention Valuation model. All detailed calculation formulas and mathematical documentation are available within the Methods section of the Valiyou app.
+Detailed documentation of all mathematical formulas and methodology used in the Attention Valuation model.
 
 <Note>
-**Last Updated**: January 26, 2025 | [View Changelog](#changelog)
+**Last Updated**: January 19, 2025 | [View Changelog](#changelog)
 </Note>
 
 ## Accessing Methods
 
-Navigate to **Valuations** → **Methods** from the sidebar within the Valiyou app to access complete calculation documentation and formulas.
+Navigate to **Valuations** → **Methods** from the sidebar to access the calculation methodology.
 
 <Note>
 **Permission Required**: At least one valuation permission (View or Edit) or Admin access
 </Note>
 
-<Info>
-**Complete Formula Documentation**: All mathematical formulas, detailed calculations, and specific methodology are available in the Methods section within the Valiyou platform. This ensures you always have access to the most current calculation documentation as part of your subscription.
-</Info>
+## Notation Toggle
 
-## Methodology Overview
+**Button**: "Show Full Notation" / "Show Abbreviated Notation" (top right)
 
-The Attention Valuation methodology combines quantitative and qualitative factors to provide a comprehensive measure of organizational value in the attention economy.
+**Options:**
+- **Abbreviated** (default): Short mathematical notation (e.g., `TAV = (SV + MV) × BM`)
+- **Full**: Complete text-based formulas (e.g., `Total Attention Valuation = (Sales Value + Media Value) × Brand Multiplier`)
 
-### Core Components
-
-The valuation model consists of three primary components:
-
-1. **Sales Value** - Direct revenue from merchandise, matchday, and player sales
-2. **Media Value** - Calculated value from media exposure and engagement across channels
-3. **Brand Multiplier** - Qualitative factor based on brand strength (1.0 - 10.0)
-
-These components work together to create the Total Attention Valuation, which represents the complete value of your organization's attention and reach.
-
-### Philosophy
-
-Modern organizations derive value not only from direct revenue but also from the **attention they command** across various channels. The Brand Multiplier acknowledges that strong brands can **leverage attention more effectively**, creating a compounding effect on overall valuation.
+<Tip>
+Toggle between notations to switch between quick reference (abbreviated) and detailed understanding (full notation).
+</Tip>
 
 ## Total Attention Valuation
 
-The primary metric that combines all value components to provide a comprehensive measure of your organization's worth.
+The primary metric combining all value components.
 
-**Components:**
-- Sales Value (direct revenue)
-- Media Value (value from all media channels)
-- Brand Multiplier (qualitative brand strength factor)
+### Formula
 
+**Abbreviated**: `TAV = (SV + MV) × BM`
+
+**Full**: `Total Attention Valuation = (Sales Value + Media Value) × Brand Multiplier`
+
+### Components
+
+- **Sales Value (SV)** - Total revenue from merchandise, matchday, and player sales
+- **Media Value (MV)** - Total value from all media exposure and engagement
+- **Brand Multiplier (BM)** - Qualitative factor based on brand strength (1.0 - 10.0)
+
+<Info>
 The Brand Multiplier amplifies the combined Sales and Media Value, reflecting how brand strength influences overall valuation.
+</Info>
 
 ## Total Reach
 
-Aggregate measure of audience across all channels, combining:
+Aggregate measure of audience across all channels.
+
+### Formula
+
+**Abbreviated**: `TR = TV + WTV + PR + DI + SI + A + HG`
+
+**Full**:
+```
+Total Reach = TV Viewers + Web TV Views + PR Reach
+            + Digital Impressions + Social Impressions
+            + Attendance + Hospitality Guests
+```
+
+### Components
 
 - **TV Viewers** - Total television audience
 - **Web TV Views** - Online streaming views
@@ -79,11 +91,19 @@ Aggregate measure of audience across all channels, combining:
 
 ## Sales Value
 
-Direct revenue calculation combining:
+Direct revenue calculation.
 
-- **Merchandise Revenue** - Total sales of club merchandise
-- **Matchday Revenue** - Ticket sales and matchday income
-- **Player Sales Value** - Cumulative transfer fees from player sales
+### Formula
+
+**Abbreviated**: `SV = MR + MDR + PSV`
+
+**Full**: `Sales Value = Merchandise Revenue + Matchday Revenue + Player Sales Value`
+
+### Components
+
+- **Merchandise Revenue (MR)** - Total sales of club merchandise
+- **Matchday Revenue (MDR)** - Ticket sales and matchday income
+- **Player Sales Value (PSV)** - Cumulative transfer fees from player sales
 
 <Info>
 Sales values are entered directly - no CPM calculation involved for these components.
@@ -91,44 +111,130 @@ Sales values are entered directly - no CPM calculation involved for these compon
 
 ## Media Value
 
-Calculated value from media exposure and engagement across multiple channels:
+Calculated value from media exposure and engagement.
 
-- **TV Value** - Television exposure value
-- **Web TV Value** - Online streaming value
-- **PR Value** - Press and media coverage value
-- **Digital Value** - Digital advertising value
-- **Social Value** - Social media value (followers, impressions, engagements)
-- **Attendance Value** - Physical event attendance value
-- **Hospitality Value** - VIP and hospitality guest value
+### Overall Formula
 
-### CPM-Based Calculation
+**Abbreviated**: `MV = TV_v + WTV_v + PR_v + D_v + S_v + A_v + H_v`
 
-Most media components use CPM (Cost Per Mille/Thousand) methodology to calculate value. CPM represents the market value of exposure - what that reach would cost to purchase as advertising.
+**Full**:
+```
+Media Value = TV Value + Web TV Value + PR Value
+            + Digital Value + Social Value
+            + Attendance Value + Hospitality Value
+```
+
+### General Calculation Pattern
+
+Most media components follow this pattern:
+
+**Formula**: `Component Value = (Impressions × CPM) ÷ 1000`
 
 <Tip>
-**CPM = Cost Per Mille**: CPM is the industry standard metric measuring the cost of 1,000 impressions. This methodology is recognized globally by marketing professionals, sponsors, and stakeholders.
+**CPM = Cost Per Mille**: CPM is always "per thousand impressions", which is why we divide by 1,000 in calculations.
 </Tip>
 
-### Media Value Components
+## Media Value Components
 
-Each media channel is valued based on industry-standard CPM rates appropriate for that channel type:
+Detailed formulas for each media channel.
 
-**TV Value**: Based on duration, viewers, screen coverage size, and market-appropriate TV CPM rates.
+### TV Value
 
-**Web TV Value**: Based on total views and online video CPM rates.
+**Formula**: `TV_v = d × v × s × (CPM ÷ 1000)`
 
-**PR Value**: Based on reach achieved through press coverage and PR CPM rates.
+**Components:**
+- `d` = Duration (minutes)
+- `v` = Viewers
+- `s` = Size Factor (screen coverage percentage)
+- `CPM` = Cost per thousand viewers
 
-**Digital Value**: Based on digital ad impressions and digital CPM rates.
+**Size Categories:**
+- **S**: ~1-5% screen coverage (Factor: 0.4)
+- **M**: ~5-10% screen coverage (Factor: 0.7)
+- **L**: ~10-15% screen coverage (Factor: 1.0)
+- **XL**: 15%+ screen coverage (Factor: 1.0)
 
-**Social Value**: Combines three sub-components with separate CPM rates:
-- Followers (total social media following)
-- Impressions (post views)
-- Engagements (likes, shares, comments - typically highest CPM due to stronger audience connection)
+**Example**: `45 min × 200,000 viewers × 0.15 (L size) × 30.00 CPM ÷ 1000 = 270,000 [currency units]`
 
-**Attendance Value**: Based on physical event attendance and appropriate CPM rate.
+<Info>
+**Size Factor**: Represents how much of the screen your branding occupies during TV exposure. Larger coverage = higher multiplier.
+</Info>
 
-**Hospitality Value**: Based on number of VIP/hospitality guests and value per guest (uses fixed premium pricing rather than CPM).
+### Web TV Value
+
+**Formula**: `WTV_v = v × (CPM ÷ 1000)`
+
+**Components:**
+- `v` = Views
+- `CPM` = Cost per thousand views
+
+**Example**: `500,000 views × 10.00 CPM ÷ 1000 = 5,000 [currency units]`
+
+### PR Value
+
+**Formula**: `PR_v = r × (CPM ÷ 1000)`
+
+**Components:**
+- `r` = Reach (audience reached through press coverage)
+- `CPM` = Cost per thousand reach
+
+**Example**: `1,000,000 reach × 6.00 CPM ÷ 1000 = 6,000 [currency units]`
+
+### Digital Value
+
+**Formula**: `D_v = i × (CPM ÷ 1000)`
+
+**Components:**
+- `i` = Impressions (digital ad impressions)
+- `CPM` = Cost per thousand impressions
+
+**Example**: `2,000,000 impressions × 4.00 CPM ÷ 1000 = 8,000 [currency units]`
+
+### Social Value
+
+**Formula**:
+```
+S_v = (f × CPM_f ÷ 1000) + (i × CPM_i ÷ 1000) + (e × CPM_e ÷ 1000)
+```
+
+**Components:**
+- `f` = Followers (total social media followers)
+- `i` = Impressions (post views)
+- `e` = Engagements (likes, shares, comments)
+- `CPM_f` = Followers CPM
+- `CPM_i` = Impressions CPM
+- `CPM_e` = Engagements CPM
+
+**Three Sub-Components:**
+1. **Followers**: Total followers × Followers CPM ÷ 1000
+2. **Impressions**: Post impressions × Impressions CPM ÷ 1000
+3. **Engagements**: Likes + shares + comments × Engagements CPM ÷ 1000
+
+**Example**: `(50,000 followers × 2.00 CPM + 200,000 impressions × 4.00 CPM + 10,000 engagements × 8.00 CPM) ÷ 1000 = 980 [currency units]`
+
+<Tip>
+Social media value uses three separate CPM rates because followers, impressions, and engagements represent different value types. Engagements typically have higher CPM due to stronger audience connection.
+</Tip>
+
+### Attendance Value
+
+**Formula**: `A_v = a × (CPM ÷ 1000)`
+
+**Components:**
+- `a` = Attendance (physical event attendance)
+- `CPM` = Cost per thousand attendees
+
+**Example**: `75,000 attendance × 15.00 CPM ÷ 1000 = 1,125 [currency units]`
+
+### Hospitality Value
+
+**Formula**: `H_v = g × vpg`
+
+**Components:**
+- `g` = Guests (number of hospitality/VIP guests)
+- `vpg` = Value per Guest
+
+**Example**: `100 guests × 1,800 [currency units] per guest = 180,000 [currency units]`
 
 <Note>
 **Different Calculation**: Hospitality uses "value per guest" instead of CPM because VIP experiences have fixed premium pricing rather than impression-based valuation.
@@ -136,108 +242,210 @@ Each media channel is valued based on industry-standard CPM rates appropriate fo
 
 ## Brand Value Indicator
 
-Qualitative brand strength measurement that amplifies the combined Sales and Media Value.
+Qualitative brand strength measurement on a 1-10 scale.
 
-### Brand Multiplier Components
+### Brand Multiplier Formula
 
-The brand multiplier is calculated from four indicators rated on a 1-10 scale:
+**Abbreviated**: `BM = (P + CSR + C + L) ÷ 4`
 
-- **Popularity** - Public recognition and fanbase size
+**Full**: `Brand Multiplier = (Popularity + CSR + Culture + Loyalty) ÷ 4`
+
+### Components (1-10 Scale)
+
+- **Popularity (P)** - Public recognition and fanbase size
 - **CSR** - Corporate Social Responsibility (social and environmental impact)
-- **Culture** - Organization values, traditions, and identity
-- **Fans/Loyalty** - Fan engagement and loyalty strength
+- **Culture (C)** - Club values, traditions, and identity
+- **Fans/Loyalty (L)** - Fan engagement and loyalty strength
 
-Each component contributes monetary value to the total valuation. The stronger your brand across these dimensions, the more value you create from the same exposure.
+### Component Value Contribution
+
+Each brand indicator contributes monetary value to the total valuation:
+
+**Formula**:
+```
+Popularity Value = (Sales Value + Media Value) × (Popularity ÷ 4)
+CSR Value = (Sales Value + Media Value) × (CSR ÷ 4)
+Culture Value = (Sales Value + Media Value) × (Culture ÷ 4)
+Loyalty Value = (Sales Value + Media Value) × (Loyalty ÷ 4)
+```
+
+**What This Means**: Each component's monetary value represents how much it contributes to the Total Attention Valuation. The sum of all four component values equals the total brand amplification effect on Sales + Media Value.
+
+**Example**:
+If Sales + Media = 1,000,000 [currency units] and Popularity = 8:
+- Popularity contributes: 1,000,000 × (8 ÷ 4) = 2,000,000 [currency units]
 
 <Info>
-**Why Brand Matters**: A strong brand leverages attention more effectively. A post from a well-known organization generates more engagement than the same post from a lesser-known entity. The brand multiplier reflects this amplification effect on attention value.
+**Why Divide by 4?** Since there are 4 indicators, dividing by 4 ensures the average score (typically 5-7 out of 10) produces a reasonable multiplier (1.25-1.75x) rather than an unrealistic 20-28x.
 </Info>
 
 ## CPM (Cost Per Mille)
 
-Industry-standard advertising metric used to calculate media value.
+Industry-standard advertising metric.
 
-### What is CPM?
+### Formula
+
+**Abbreviated**: `CPM = (c ÷ i) × 1000`
+
+**Full**: `CPM = (Cost ÷ Impressions) × 1000`
+
+### Explanation
 
 CPM (Cost Per Mille/Thousand) is the standard metric used in advertising to measure the cost of 1,000 impressions. In the valuation model, market-standard CPM rates for each media channel are used to calculate the equivalent advertising value of organic exposure and engagement.
 
-### Why Use CPM?
-
-CPM represents the **market value** of exposure, not your actual spending. If you get 1 million TV viewers organically, the CPM calculation shows what that exposure would cost to buy as advertising - this is the **value you're providing to sponsors** and what they would pay for equivalent reach.
-
 ### Typical CPM Ranges
 
-CPM rates vary by channel type, with typical ranges including:
-
-- **TV**: Higher CPM (varies by market, time slot, audience size)
-- **Web TV**: Moderate CPM for online video
-- **PR**: Lower to moderate CPM for press coverage
-- **Digital**: Moderate CPM for digital impressions
-- **Social Followers**: Lower CPM (potential audience)
-- **Social Impressions**: Moderate CPM (actual views)
-- **Social Engagements**: Highest CPM (direct interaction with content)
-- **Attendance**: Moderate to high CPM for physical presence
+**By Channel** (typical ranges; market-dependent):
+- **TV**: 20-50 currency units (varies by market, time slot, audience size)
+- **Web TV**: 5-15 currency units
+- **PR**: 3-10 currency units
+- **Digital**: 2-8 currency units
+- **Social Followers**: 2-5 currency units
+- **Social Impressions**: 5-15 currency units
+- **Social Engagements**: 8-20 currency units (highest due to direct interaction)
+- **Attendance**: 10-20 currency units
 
 <Warning>
-**Market-Specific CPM Rates**: CPM rates vary significantly by geography, industry sector, audience demographics, and seasonal factors. Always use rates specific to your market for accurate valuations.
+**Market-Specific CPM Rates**: These ranges represent typical Western European and North American markets (2024-2025 benchmarks). Actual CPM rates vary significantly by geography, industry sector, audience demographics, and seasonal factors. Always use rates specific to your market for accurate valuations.
 </Warning>
 
-### CPM Rate Sources
-
-Industry-standard CPM rates are available from:
-
-- **Nielsen Media Research** - Industry-standard media measurement and advertising benchmarks
-- **Standard Media Index (SMI)** - Real-time advertising spend data and CPM tracking
-- **IAB (Interactive Advertising Bureau)** - Digital media standards and pricing benchmarks
-- **Local Media Buyers** - Request CPM rate cards from media agencies in your specific market
-- **Industry Trade Associations** - Sports marketing associations often publish regional benchmarks
-
 <Info>
-**Accessing CPM Data**: Consult with media buyers, industry reports, or the sources listed above to use accurate rates for your specific geographic market and industry sector. This ensures credible valuations recognized by sponsors and stakeholders.
+**CPM Rate Sources & Verification**:
+
+**Primary Industry Sources**:
+- **Nielsen Media Research**: Industry-standard media measurement and advertising benchmarks (Nielsen Ad Intel, Media Impact services)
+- **Standard Media Index (SMI)**: Real-time advertising spend data and CPM tracking
+- **Choozle Research**: Digital advertising benchmarks ([Brand Lift Overview PDF](https://choozle.com/wp-content/uploads/Brand-lift-overview.pdf))
+- **IAB (Interactive Advertising Bureau)**: Digital media standards and pricing benchmarks
+
+**How to Access CPM Data**:
+- **Nielsen Ad Intel**: Subscription-based advertising intelligence (enterprise pricing ~$110k-$380k annually per Vendr benchmarks)
+- **Standard Media Index**: Real-time CPM tracking with free trial available
+- **Local Media Buyers**: Request CPM rate cards from media agencies in your specific market
+- **Industry Trade Associations**: Sports marketing associations often publish regional benchmarks
+
+**Market Considerations**: CPM rates vary significantly by geography (Scandinavia, UK, US, Germany have different structures), industry sector, audience demographics, and seasonal factors. Always validate with local market data for accurate valuations.
 </Info>
 
-## Complete Formula Documentation
+## Methodology Note
 
-All mathematical formulas, calculation steps, and detailed methodology are documented within the **Methods** section of the Valiyou platform.
+### Approach
 
-### What's Included in the App
+The Attention Valuation methodology combines:
+1. **Quantitative Metrics** - Sales and media value (objective, measurable)
+2. **Qualitative Factors** - Brand strength (subjective, scored 1-10)
 
-The Methods section within Valiyou provides:
+This provides a comprehensive measure of organizational value in the attention economy.
 
-- Complete mathematical formulas for all calculations
-- Step-by-step calculation breakdowns
-- Notation toggle (abbreviated vs. full formulas)
-- Detailed examples with real numbers
-- Component-by-component value contributions
-- Market-specific guidance for CPM rates
+### Philosophy
 
-### Why In-App Documentation?
+Modern organizations derive value not only from direct revenue but also from the **attention they command** across various channels. The Brand Multiplier acknowledges that strong brands can **leverage attention more effectively**, creating a compounding effect on overall valuation.
 
-Keeping complete formula documentation within the platform ensures:
-- You always have access to the most current methodology
-- Documentation stays synchronized with calculation updates
-- Formulas are available when you need them during valuation creation
-- Transparent methodology for sponsor proposals and stakeholder reporting
+### Updates
+
+All calculations use market-standard CPM rates and are **updated periodically** to reflect current media market conditions.
 
 <Tip>
-**For Sponsor Proposals**: Export the Methods documentation from within the app to include transparent calculation methodology in your sponsor presentations, building trust and credibility.
+**Industry Standards**: The methodology follows industry-standard advertising valuation practices, making it recognized and accepted by sponsors and stakeholders.
 </Tip>
+
+## Practical Example
+
+Complete calculation walkthrough:
+
+### Input Data
+
+**Sales:**
+- Merchandise Revenue: 500,000 [currency units]
+- Matchday Revenue: 300,000 [currency units]
+- Player Sales: 2,000,000 [currency units]
+
+**Media:**
+- TV: 45 min × 200,000 viewers × L size (0.15) × 30 CPM
+- Web TV: 500,000 views × 10 CPM
+- PR: 1,000,000 reach × 6 CPM
+- Digital: 2,000,000 impressions × 4 CPM
+- Social: 50,000 followers × 2 CPM + 200,000 impressions × 4 CPM + 10,000 engagements × 8 CPM
+- Attendance: 75,000 × 15 CPM
+- Hospitality: 100 guests × 1,800 [currency units]/guest
+
+**Brand:**
+- Popularity: 8
+- CSR: 7
+- Culture: 9
+- Loyalty: 8
+
+### Step 1: Calculate Sales Value
+
+```
+SV = 500,000 + 300,000 + 2,000,000 = 2,800,000 [currency units]
+```
+
+### Step 2: Calculate Media Value
+
+```
+TV: 45 × 200,000 × 0.15 × 30 ÷ 1000 = 270,000 [currency units]
+Web TV: 500,000 × 10 ÷ 1000 = 5,000 [currency units]
+PR: 1,000,000 × 6 ÷ 1000 = 6,000 [currency units]
+Digital: 2,000,000 × 4 ÷ 1000 = 8,000 [currency units]
+Social: (50,000 × 2 + 200,000 × 4 + 10,000 × 8) ÷ 1000 = 980 [currency units]
+Attendance: 75,000 × 15 ÷ 1000 = 1,125 [currency units]
+Hospitality: 100 × 1,800 = 180,000 [currency units]
+
+MV = 270,000 + 5,000 + 6,000 + 8,000 + 980 + 1,125 + 180,000 = 471,105 [currency units]
+```
+
+### Step 3: Calculate Brand Multiplier
+
+```
+BM = (8 + 7 + 9 + 8) ÷ 4 = 8 ÷ 1 = 8
+```
+
+### Step 4: Calculate Total Attention Valuation
+
+```
+TAV = (2,800,000 + 471,105) × 8 = 3,271,105 × 8 = 26,168,840 [currency units]
+```
+
+**Result**: Total Attention Valuation = **26,168,840 [currency units]**
+
+## Changelog {#changelog}
+
+### January 19, 2025 (Update 2)
+- **Enhanced**: Comprehensive CPM source verification with direct links
+- **Added**: Nielsen pricing benchmarks (Vendr buyer guide: ~$110k-$380k annual)
+- **Added**: Choozle research PDF link for digital advertising benchmarks
+- **Added**: IAB (Interactive Advertising Bureau) as additional industry source
+- **Added**: Detailed "How to Access CPM Data" guidance for enterprise customers
+
+### January 19, 2025 (Update 1)
+- **Updated**: All currency examples changed from "kr" to neutral "[currency units]"
+- **Added**: CPM rate source documentation (Nielsen, Standard Media Index)
+- **Added**: Market-specific guidance for CPM rates
+- **Improved**: CPM range descriptions with methodology notes
+- **Enhanced**: Geographical market considerations for accurate valuations
+
+### Initial Release
+- Complete mathematical formula documentation
+- CPM methodology explanation
+- Brand multiplier calculations
+- Practical calculation examples
 
 ## Use Cases
 
 ### Sponsor Proposals
 
-Use methodology to:
+Use methodology documentation to:
 - Explain valuation credibility to sponsors
-- Show industry-standard approach
-- Build trust through transparent methodology
-- Justify pricing with recognized metrics
+- Show industry-standard calculations
+- Justify pricing with transparent formulas
+- Build trust through clear methodology
 
 ### Budget Planning
 
-Understand components to:
+Use formulas to:
 - Forecast valuation impact of investments
-- Optimize spending across channels
+- Optimize CPM spending across channels
 - Model "what-if" scenarios
 - Set realistic targets
 
@@ -261,72 +469,43 @@ Use for:
 
 ### What is CPM methodology and how does it work?
 
-CPM (Cost Per Mille) methodology calculates the cost of reaching 1,000 impressions. In valuation, we use industry-standard CPM rates to determine the advertising value of your organic media exposure. This represents what sponsors would pay for equivalent reach.
+CPM (Cost Per Mille) methodology calculates the cost of reaching 1,000 impressions. In valuation, we use industry-standard CPM rates to determine the advertising value of your organic media exposure. For example, if you have 100,000 TV viewers and the TV CPM is €30, the value is (100,000 ÷ 1,000) × €30 = €3,000.
 
 ### Why use CPM instead of actual costs for valuation?
 
 CPM represents the **market value** of exposure, not your actual spending. If you get 1 million TV viewers organically, the CPM calculation shows what that exposure would cost to buy as advertising - this is the **value you're providing to sponsors** and what they would pay for equivalent reach.
 
-### How are calculations standardized across industries?
+### How are calculation formulas standardized across industries?
 
 The Attention Valuation methodology follows industry-standard advertising metrics used globally. CPM-based calculations, brand multiplier concepts, and reach aggregation align with practices recognized by marketing professionals, sponsors, and stakeholders worldwide, ensuring credibility and acceptance.
 
 ### Why does brand strength multiply the total valuation?
 
-Strong brands leverage attention more effectively. A post from a well-known organization gets more engagement than the same post from a lesser-known entity. The brand multiplier methodology reflects this **brand amplification effect** on attention value - stronger brands create more value from the same exposure.
+Strong brands leverage attention more effectively. A post from Real Madrid gets more engagement than the same post from a local club. The brand multiplier methodology reflects this **brand amplification effect** on attention value - stronger brands create more value from the same exposure.
 
 ### Can I customize CPM rates for my market?
 
 Yes! CPM rates should reflect your specific geographic market, industry sector, and audience demographics. Markets like Denmark, US, and UK have different CPM standards. Consult with media buyers or industry reports to use accurate rates for credible valuations.
 
-### What metrics are included in the brand multiplier?
+### What metrics are included in the brand multiplier calculation?
 
-The brand multiplier uses four metrics on a 1-10 scale: Popularity (brand awareness), CSR (corporate social responsibility), Culture (brand identity strength), and Fans/Loyalty. These scores combine to create the multiplier that amplifies your sales and media value.
+The brand multiplier uses four metrics on a 1-10 scale: Popularity (brand awareness), CSR (corporate social responsibility), Culture (brand identity strength), and Fans/Loyalty. The average of these four scores creates the multiplier that amplifies your sales and media value.
 
-### What if I don't have all data for calculations?
+### Why divide by 1,000 in media value formulas?
+
+CPM means "Cost Per **Mille**" (mille = thousand in Latin). The calculation formula is: `Total Cost = (Impressions ÷ 1000) × CPM`. Dividing by 1,000 converts impression count to "thousands of impressions" before multiplying by the per-thousand cost, ensuring accurate CPM-based valuation.
+
+### What if I don't have all data for calculation formulas?
 
 Enter zero for missing components. The methodology calculates value only from available data. However, **more complete data = more accurate valuation** for sponsor proposals. Focus on collecting data for your highest-value channels first.
 
 ### How do industry standards affect valuation accuracy?
 
-Using industry-standard CPM methodology ensures your valuations are recognized and trusted by sponsors, investors, and stakeholders. It provides a common language for discussing sponsorship value and makes your proposals more credible and defensible.
+Using industry-standard CPM methodology and calculation formulas ensures your valuations are recognized and trusted by sponsors, investors, and stakeholders. It provides a common language for discussing sponsorship value and makes your proposals more credible and defensible.
 
-### Where can I find the complete calculation formulas?
+### How often are CPM rates and formulas updated?
 
-All mathematical formulas and detailed calculation steps are available in the **Methods** section within the Valiyou platform. Navigate to Valuations → Methods to access complete formula documentation.
-
-### How often is methodology updated?
-
-The methodology is reviewed and updated periodically to reflect current media market conditions and industry best practices. Using in-app documentation ensures you always have access to the most current formulas and guidance.
-
-## Changelog {#changelog}
-
-### January 26, 2025
-- **Updated**: Removed detailed calculation formulas from public documentation
-- **Added**: Reference to in-app Methods section for complete formula documentation
-- **Maintained**: Conceptual explanations and component descriptions
-- **Enhanced**: Focus on methodology understanding rather than specific calculations
-- **Improved**: Guidance for accessing CPM rates and industry standards
-
-### January 19, 2025 (Update 2)
-- Enhanced CPM source verification with direct links
-- Added Nielsen pricing benchmarks
-- Added Choozle research PDF link for digital advertising benchmarks
-- Added IAB as additional industry source
-- Added detailed "How to Access CPM Data" guidance
-
-### January 19, 2025 (Update 1)
-- Updated currency examples to neutral format
-- Added CPM rate source documentation
-- Added market-specific guidance for CPM rates
-- Improved CPM range descriptions
-- Enhanced geographical market considerations
-
-### Initial Release
-- Complete methodology overview
-- CPM methodology explanation
-- Brand multiplier concept
-- Component descriptions
+All calculations use market-standard CPM rates that are reviewed and updated periodically to reflect current media market conditions. We recommend reviewing your CPM rates annually or when significant market shifts occur to maintain valuation accuracy.
 
 ## Next Steps
 
@@ -337,14 +516,6 @@ The methodology is reviewed and updated periodically to reflect current media ma
     href="/valuations/create-valuation"
   >
     Put methodology into practice and start calculating value
-  </Card>
-
-  <Card
-    title="View Methods in App"
-    icon="calculator"
-    href="/valuations/methods"
-  >
-    Access complete formula documentation within Valiyou
   </Card>
 
   <Card
@@ -361,5 +532,13 @@ The methodology is reviewed and updated periodically to reflect current media ma
     href="/platform/team-management"
   >
     Use as documentation for transparent reporting
+  </Card>
+
+  <Card
+    title="View Reports"
+    icon="chart-bar"
+    href="/valuations/reports"
+  >
+    Apply formulas and analyze trends with advanced analytics
   </Card>
 </CardGroup>
