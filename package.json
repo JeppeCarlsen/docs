@@ -1,0 +1,26 @@
+{
+  "name": "valiyou-knowledge-center",
+  "version": "1.0.0",
+  "description": "Valiyou documentation and knowledge center",
+  "private": true,
+  "scripts": {
+    "lint": "prettier --check '**/*.{md,mdx,json}'",
+    "lint:fix": "prettier --write '**/*.{md,mdx,json}'",
+    "validate:mdx": "node scripts/validate-mdx.js",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4"
+  },
+  "lint-staged": {
+    "*.{md,mdx}": [
+      "node scripts/validate-mdx.js",
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  }
+}
