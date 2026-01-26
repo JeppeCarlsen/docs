@@ -53,6 +53,15 @@ files.forEach((file) => {
     )
   }
 
+  // Check for HTML comments (Mintlify doesn't support them)
+  const htmlCommentPattern = /<!--/g
+  while ((match = htmlCommentPattern.exec(content)) !== null) {
+    const lineNum = content.substring(0, match.index).split('\n').length
+    errors.push(
+      `Line ${lineNum}: Found HTML comment <!-- --> - Mintlify doesn't support HTML comments. Use {/* */} for MDX comments instead`
+    )
+  }
+
   // Check frontmatter exists (for MDX files)
   if (file.endsWith('.mdx')) {
     if (!content.startsWith('---\n')) {
