@@ -1,30 +1,30 @@
 ---
 title: 'Advanced'
 description: 'Access Enterprise audit log for compliance tracking and manage organization deletion. View data change history with 30-day grace period for reactivation.'
-seo:
-  title: 'Audit Log & Organization Settings | Valiyou'
+'og:title': 'Audit Log & Organization Settings | Valiyou'
 ---
 
 # Advanced Settings & Audit Log
 
 <Frame>
-  <img src="/images/platform/organization-settings/advanced-settings.png" alt="Valiyou advanced settings showing audit log access button and danger zone for organization deletion with security warnings" />
+  <img
+    src="/images/platform/organization-settings/advanced-settings.png"
+    alt="Valiyou advanced settings showing audit log access button and danger zone for organization deletion with security warnings"
+  />
 </Frame>
 
 **Advanced Settings provide Enterprise audit log access for comprehensive compliance tracking and organization deletion management with safety features.** The audit log tracks all data changes with complete before/after diffs for regulatory compliance, security investigations, and team activity monitoring. The Danger Zone allows organization owners to permanently delete their organization with a 30-day grace period for reactivation, ensuring data safety while providing exit flexibility.
 
 ## Audit Log (Enterprise)
 
-<Note>
-**Plan Required**: Enterprise plan only
-**Permission Required**: Admin permission
-</Note>
+<Note>**Plan Required**: Enterprise plan only **Permission Required**: Admin permission</Note>
 
 Access comprehensive audit trail of all data changes in your organization.
 
 **Button**: "View Audit Log" (opens full audit log page)
 
 **What Is Tracked**:
+
 - **Who**: User name and email who made the change
 - **What**: Before and after values (complete diff)
 - **When**: Precise timestamp (date and time)
@@ -32,6 +32,7 @@ Access comprehensive audit trail of all data changes in your organization.
 - **How**: Action type (create, update, delete)
 
 **Tracked Resources**:
+
 - Valuations (create, update, delete, status changes)
 - Organization settings (all fields)
 - User permissions and roles
@@ -42,6 +43,7 @@ Access comprehensive audit trail of all data changes in your organization.
 - All other critical data
 
 **Audit Log Page Features**:
+
 - Searchable by user, action, resource type
 - Date range filtering
 - Sortable columns
@@ -50,10 +52,12 @@ Access comprehensive audit trail of all data changes in your organization.
 - Pagination for large datasets
 
 <Info>
-**Retention**: Audit logs are retained indefinitely for compliance purposes. Contact support for specific retention policy questions.
+  **Retention**: Audit logs are retained indefinitely for compliance purposes. Contact support for
+  specific retention policy questions.
 </Info>
 
 **Use Cases**:
+
 - **Compliance Audits**: GDPR, SOX, financial regulations
 - **Security Investigations**: Track unauthorized access or suspicious activity
 - **Team Activity Monitoring**: Review team member actions
@@ -66,18 +70,21 @@ Access comprehensive audit trail of all data changes in your organization.
 ## Danger Zone: Delete Organization
 
 <Warning>
-**Owner Only**: Only the organization owner can delete the organization. This action is permanent after 30 days.
+  **Owner Only**: Only the organization owner can delete the organization. This action is permanent
+  after 30 days.
 </Warning>
 
 Permanently delete your organization and all associated data.
 
 **What Happens Immediately**:
+
 - Stripe subscription cancelled (at end of current billing period)
 - Organization hidden from all members
 - Members lose access to organization
 - Offboarding email sent to owner with reactivation link
 
 **What Happens After 30 Days (Permanent Deletion)**:
+
 - All valuations and player transfers
 - All organization members and pending invitations
 - All sponsorship packages, proposals, and sponsors
@@ -86,7 +93,8 @@ Permanently delete your organization and all associated data.
 - Organization name becomes available for reuse
 
 <Info>
-**30-Day Grace Period**: You can reactivate your organization within 30 days using the link in the offboarding email. After 30 days, data is permanently deleted.
+  **30-Day Grace Period**: You can reactivate your organization within 30 days using the link in the
+  offboarding email. After 30 days, data is permanently deleted.
 </Info>
 
 **Deletion Process**:
@@ -99,6 +107,7 @@ Permanently delete your organization and all associated data.
 6. **Save reactivation link** (valid for 30 days only)
 
 **Confirmation Modal**:
+
 - Red border and warning colors
 - Lists all data that will be deleted
 - Requires exact organization name match
@@ -106,6 +115,7 @@ Permanently delete your organization and all associated data.
 - "Cancel" button (gray)
 
 **Offboarding Email Contents**:
+
 - Confirmation of deletion request
 - 30-day grace period explanation
 - Reactivation link (valid for 30 days)
@@ -113,10 +123,12 @@ Permanently delete your organization and all associated data.
 - Data export instructions (if needed)
 
 <Tip>
-**Reactivation**: If you change your mind, simply click the reactivation link in your offboarding email within 30 days. Your organization and all data will be restored immediately.
+  **Reactivation**: If you change your mind, simply click the reactivation link in your offboarding
+  email within 30 days. Your organization and all data will be restored immediately.
 </Tip>
 
 **Alternatives to Deletion**:
+
 - **Downgrade plan**: Cancel subscription but keep data
 - **Export data**: Download valuations and reports first
 - **Transfer ownership**: Assign new owner instead of deleting
@@ -152,11 +164,13 @@ Permanently delete your organization and all associated data.
 ### Can't Delete Organization
 
 **Reasons**:
+
 - Not organization owner (only owner can delete)
 - Organization name typed incorrectly (case-sensitive)
 - Browser JavaScript error
 
 **Fix**:
+
 - Transfer ownership to yourself first
 - Type exact organization name (check capitalization)
 - Try different browser
@@ -169,37 +183,67 @@ Permanently delete your organization and all associated data.
     The Enterprise audit log provides a comprehensive audit trail of all data changes in your organization for compliance and security. It tracks who made changes (user name and email), what changed (complete before/after diff), when changes occurred (precise timestamp), where changes happened (table name and record ID), and how (action type: create, update, delete). All valuations, settings, user permissions, sponsorships, and other critical data are tracked indefinitely.
   </Accordion>
 
-  <Accordion title="How do I access and use the audit log for compliance?">
-    Navigate to Organisation → Advanced tab and click "View Audit Log" (requires Enterprise plan and Admin permission). The audit log page features searchable records by user, action, or resource type, date range filtering, sortable columns, CSV export capability, detailed change diff viewer, and pagination for large datasets. Use this for GDPR compliance, SOX audits, security investigations, team activity monitoring, and dispute resolution.
-  </Accordion>
+<Accordion title="How do I access and use the audit log for compliance?">
+  Navigate to Organisation → Advanced tab and click "View Audit Log" (requires Enterprise plan and
+  Admin permission). The audit log page features searchable records by user, action, or resource
+  type, date range filtering, sortable columns, CSV export capability, detailed change diff viewer,
+  and pagination for large datasets. Use this for GDPR compliance, SOX audits, security
+  investigations, team activity monitoring, and dispute resolution.
+</Accordion>
 
-  <Accordion title="What happens when I delete my organization?">
-    Organization deletion occurs in two phases: Immediately - your Stripe subscription is cancelled (at end of billing period), organization becomes hidden from all members, access is revoked, and you receive an offboarding email with reactivation link. After 30 days (permanent) - all valuations, player transfers, members, sponsorships, settings, SSO providers, audit logs, and historical data are permanently deleted, and the organization name becomes available for reuse.
-  </Accordion>
+<Accordion title="What happens when I delete my organization?">
+  Organization deletion occurs in two phases: Immediately - your Stripe subscription is cancelled
+  (at end of billing period), organization becomes hidden from all members, access is revoked, and
+  you receive an offboarding email with reactivation link. After 30 days (permanent) - all
+  valuations, player transfers, members, sponsorships, settings, SSO providers, audit logs, and
+  historical data are permanently deleted, and the organization name becomes available for reuse.
+</Accordion>
 
-  <Accordion title="Can I reactivate my organization after deletion?">
-    Yes, you have a 30-day grace period to reactivate. The offboarding email sent immediately after deletion contains a reactivation link valid for 30 days. Simply click the link to restore your organization and all data immediately. After 30 days, reactivation is no longer possible and all data is permanently deleted. Save the reactivation link in a safe place if you might change your mind.
-  </Accordion>
+<Accordion title="Can I reactivate my organization after deletion?">
+  Yes, you have a 30-day grace period to reactivate. The offboarding email sent immediately after
+  deletion contains a reactivation link valid for 30 days. Simply click the link to restore your
+  organization and all data immediately. After 30 days, reactivation is no longer possible and all
+  data is permanently deleted. Save the reactivation link in a safe place if you might change your
+  mind.
+</Accordion>
 
-  <Accordion title="Who can delete an organization and what are the requirements?">
-    Only the organization owner can delete the organization - this action is restricted to prevent accidental deletion by team members. The deletion process requires typing the exact organization name (case-sensitive) as confirmation. If you're not the owner but need to delete the organization, you must first have ownership transferred to your account by the current owner.
-  </Accordion>
+<Accordion title="Who can delete an organization and what are the requirements?">
+  Only the organization owner can delete the organization - this action is restricted to prevent
+  accidental deletion by team members. The deletion process requires typing the exact organization
+  name (case-sensitive) as confirmation. If you're not the owner but need to delete the
+  organization, you must first have ownership transferred to your account by the current owner.
+</Accordion>
 
-  <Accordion title="How do I export data before deleting my organization?">
-    Before deletion, export all valuations, financial reports, sponsor lists, player transfer records, and any other critical data you want to preserve. Navigate to relevant sections (Valuations, Sponsorships, etc.) and use export features to download CSV or PDF files. The offboarding email includes data export instructions, but it's best to export everything before initiating deletion to ensure you have complete records.
-  </Accordion>
+<Accordion title="How do I export data before deleting my organization?">
+  Before deletion, export all valuations, financial reports, sponsor lists, player transfer records,
+  and any other critical data you want to preserve. Navigate to relevant sections (Valuations,
+  Sponsorships, etc.) and use export features to download CSV or PDF files. The offboarding email
+  includes data export instructions, but it's best to export everything before initiating deletion
+  to ensure you have complete records.
+</Accordion>
 
-  <Accordion title="What alternatives exist to permanently deleting my organization?">
-    Instead of deletion, consider: (1) Downgrade plan - cancel your subscription but keep all data accessible at a lower tier, (2) Export data - download all information before making any changes, (3) Transfer ownership - assign a new owner instead of deleting if someone else will manage the organization, (4) Archive organization - keep data intact but stop active use of the platform.
-  </Accordion>
+<Accordion title="What alternatives exist to permanently deleting my organization?">
+  Instead of deletion, consider: (1) Downgrade plan - cancel your subscription but keep all data
+  accessible at a lower tier, (2) Export data - download all information before making any changes,
+  (3) Transfer ownership - assign a new owner instead of deleting if someone else will manage the
+  organization, (4) Archive organization - keep data intact but stop active use of the platform.
+</Accordion>
 
-  <Accordion title="How does the audit log help with security investigations?">
-    The audit log is essential for security investigations as it tracks all unauthorized access attempts, suspicious activity patterns, unusual data modifications, and user behavior anomalies. You can filter by specific users to review their complete action history, search by date range to investigate incidents during specific timeframes, and export detailed change diffs showing exactly what was modified. This supports forensic analysis and compliance reporting.
-  </Accordion>
+<Accordion title="How does the audit log help with security investigations?">
+  The audit log is essential for security investigations as it tracks all unauthorized access
+  attempts, suspicious activity patterns, unusual data modifications, and user behavior anomalies.
+  You can filter by specific users to review their complete action history, search by date range to
+  investigate incidents during specific timeframes, and export detailed change diffs showing exactly
+  what was modified. This supports forensic analysis and compliance reporting.
+</Accordion>
 
-  <Accordion title="What compliance regulations does the audit log support?">
-    The Enterprise audit log supports multiple compliance frameworks including GDPR (data processing records and right to access), SOX (financial data change tracking), industry-specific regulations requiring data audit trails, security compliance standards, and internal corporate governance policies. Logs are retained indefinitely and can be exported to CSV for regulatory submissions. Contact support for specific retention policy questions.
-  </Accordion>
+<Accordion title="What compliance regulations does the audit log support?">
+  The Enterprise audit log supports multiple compliance frameworks including GDPR (data processing
+  records and right to access), SOX (financial data change tracking), industry-specific regulations
+  requiring data audit trails, security compliance standards, and internal corporate governance
+  policies. Logs are retained indefinitely and can be exported to CSV for regulatory submissions.
+  Contact support for specific retention policy questions.
+</Accordion>
 
   <Accordion title="How do I monitor team activity using advanced settings?">
     Use the audit log to monitor team member actions by filtering by specific users to see their complete activity history, setting date ranges to review recent actions, searching for specific resource types (valuations, sponsorships, settings) to see who modified them, and exporting activity reports for team performance reviews. This helps identify areas where team members need additional training and ensures accountability for data changes.

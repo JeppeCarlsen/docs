@@ -1,14 +1,16 @@
 ---
 title: 'Login'
 description: 'Access your Valiyou account securely with email, password, or social login (Google, LinkedIn, Microsoft). Quick authentication with SSO support and demo mode.'
-seo:
-  title: 'Secure Login & Authentication | Valiyou'
+'og:title': 'Secure Login & Authentication | Valiyou'
 ---
 
 # Login & Secure Sign In
 
 <Frame>
-  <img src="/images/authentication/valiyou.com_auth_login(iPad Pro).png" alt="Valiyou login page showing email and password authentication with social sign-in options including Google, LinkedIn, Microsoft, and Salesforce" />
+  <img
+    src="/images/authentication/valiyou.com_auth_login(iPad Pro).png"
+    alt="Valiyou login page showing email and password authentication with social sign-in options including Google, LinkedIn, Microsoft, and Salesforce"
+  />
 </Frame>
 
 **Secure user authentication is the gateway to your Valiyou sponsorship management platform.** Access your Valiyou account using email/password authentication, social login providers (Google, LinkedIn, Microsoft, Salesforce), or enterprise Single Sign-On (SSO). Our platform offers multiple secure sign-in methods with advanced security features including session management, rate limiting, and encrypted authentication protocols.
@@ -18,40 +20,40 @@ seo:
 ### Email and Password
 
 **Standard Login**:
+
 1. Navigate to [valiyou.io/auth/login](https://valiyou.io/auth/login)
 2. Enter your **email address**
 3. Enter your **password**
 4. Optional: Check **"Remember me"** to stay signed in (30 days)
 5. Click **"Sign in"**
 
-<Tip>
-**Remember Me**: Keeps you logged in for 30 days. Disable on shared devices for security.
-</Tip>
+<Tip>**Remember Me**: Keeps you logged in for 30 days. Disable on shared devices for security.</Tip>
 
 ### Social Authentication
 
 Sign in with your existing accounts for quick access:
 
 **Available Providers**:
+
 - **Google** - Sign in with Google account
 - **LinkedIn** - Sign in with LinkedIn account
 - **Microsoft** - Sign in with Microsoft account
 - **Salesforce** - Sign in with Salesforce account (for enterprise customers)
 
 **How to Use**:
+
 1. Click the provider button (e.g., "Continue with Google")
 2. Authorize Valiyou to access your profile
 3. Automatically redirected to dashboard
 
 <Info>
-**First-Time Social Login**: Creates a new Valiyou account automatically if one doesn't exist for that email.
+  **First-Time Social Login**: Creates a new Valiyou account automatically if one doesn't exist for
+  that email.
 </Info>
 
 ### Single Sign-On (SSO)
 
-<Note>
-**Enterprise Only**: SSO is available for Enterprise plan customers.
-</Note>
+<Note>**Enterprise Only**: SSO is available for Enterprise plan customers.</Note>
 
 For organizations with custom SSO configuration:
 
@@ -61,13 +63,14 @@ For organizations with custom SSO configuration:
 4. Click to authenticate via your organization's identity provider
 
 **Supported SSO Protocols**:
+
 - SAML 2.0
 - OpenID Connect (OIDC)
 
 ## Demo Mode
 
 <Warning>
-**Public Demo**: Demo mode creates a temporary read-only account. Data is cleared periodically.
+  **Public Demo**: Demo mode creates a temporary read-only account. Data is cleared periodically.
 </Warning>
 
 Try Valiyou without signing up:
@@ -78,6 +81,7 @@ Try Valiyou without signing up:
 4. Full feature access with sample data
 
 **Demo Limitations**:
+
 - Read-only access (cannot save changes)
 - Temporary session (expires after inactivity)
 - Shared demo environment
@@ -101,11 +105,13 @@ See [Forgot Password](/authentication/forgot-password) for details.
 **Error**: "Invalid email or password"
 
 **Causes**:
+
 - Incorrect password
 - Email not registered
 - Account created with social login (use same provider)
 
 **Solutions**:
+
 - Check for typos in email/password
 - Try social login if you signed up that way
 - Use "Forgot password" to reset
@@ -116,6 +122,7 @@ See [Forgot Password](/authentication/forgot-password) for details.
 **Error**: "Please verify your email address"
 
 **Solution**:
+
 1. Check your inbox for verification email
 2. Click verification link
 3. Return to login page
@@ -128,11 +135,13 @@ See [Verify Email](/authentication/verify-email) for details.
 **Error**: "SSO not configured for this domain"
 
 **Causes**:
+
 - Organization hasn't set up SSO
 - Using personal email instead of work email
 - Not on Enterprise plan
 
 **Solution**:
+
 - Contact your organization's admin
 - Use regular email/password login
 - Upgrade to Enterprise plan for SSO access
@@ -142,6 +151,7 @@ See [Verify Email](/authentication/verify-email) for details.
 **Error**: "Your session has expired"
 
 **Causes**:
+
 - Logged out due to inactivity
 - Session timeout (30 days without "Remember me", 7 days with)
 - Logged in on another device
@@ -152,20 +162,20 @@ See [Verify Email](/authentication/verify-email) for details.
 
 ### Two-Factor Authentication (2FA)
 
-<Note>
-**Coming Soon**: 2FA support is planned for a future release.
-</Note>
+<Note>**Coming Soon**: 2FA support is planned for a future release.</Note>
 
 ### Password Requirements
 
 When setting passwords:
+
 - Minimum 8 characters
 - No maximum length limit
 - Can include special characters
 - Case-sensitive
 
 <Tip>
-**Strong Passwords**: Use a password manager to generate and store unique passwords for each service.
+  **Strong Passwords**: Use a password manager to generate and store unique passwords for each
+  service.
 </Tip>
 
 ### Session Management
@@ -192,37 +202,56 @@ See [Trust Center](/trust-security/trust-center) for full security documentation
     Valiyou supports multiple user authentication methods: email and password login, social sign-in through Google, LinkedIn, Microsoft, and Salesforce, and enterprise Single Sign-On (SSO) using SAML 2.0 or OpenID Connect protocols. You can choose the method that best fits your workflow and security requirements.
   </Accordion>
 
-  <Accordion title="How long do login sessions last on Valiyou?">
-    Login sessions last 7 days by default. If you enable the "Remember me" option, your session extends to 30 days. For security, sessions automatically expire after 30 minutes of inactivity. You can be logged in on multiple devices simultaneously without conflicts.
-  </Accordion>
+<Accordion title="How long do login sessions last on Valiyou?">
+  Login sessions last 7 days by default. If you enable the "Remember me" option, your session
+  extends to 30 days. For security, sessions automatically expire after 30 minutes of inactivity.
+  You can be logged in on multiple devices simultaneously without conflicts.
+</Accordion>
 
-  <Accordion title="Can I use social login with Google or LinkedIn?">
-    Yes, Valiyou supports social authentication with Google, LinkedIn, Microsoft, and Salesforce accounts. Simply click the provider button during login, authorize Valiyou to access your basic profile information, and you'll be automatically signed in. If it's your first time using social login, a new account will be created automatically.
-  </Accordion>
+<Accordion title="Can I use social login with Google or LinkedIn?">
+  Yes, Valiyou supports social authentication with Google, LinkedIn, Microsoft, and Salesforce
+  accounts. Simply click the provider button during login, authorize Valiyou to access your basic
+  profile information, and you'll be automatically signed in. If it's your first time using social
+  login, a new account will be created automatically.
+</Accordion>
 
-  <Accordion title="What should I do if I forgot my password?">
-    Click the "Forgot your password?" link on the login page, enter your email address, and check your inbox for a secure password reset link. The reset link is valid for 24 hours. Follow the instructions to create a new password and regain access to your account.
-  </Accordion>
+<Accordion title="What should I do if I forgot my password?">
+  Click the "Forgot your password?" link on the login page, enter your email address, and check your
+  inbox for a secure password reset link. The reset link is valid for 24 hours. Follow the
+  instructions to create a new password and regain access to your account.
+</Accordion>
 
-  <Accordion title="Is Single Sign-On (SSO) available for my organization?">
-    Single Sign-On is available exclusively for Enterprise plan customers. Valiyou supports SAML 2.0 and OpenID Connect (OIDC) protocols. Contact your organization's administrator to set up SSO configuration, or upgrade to the Enterprise plan to enable this feature.
-  </Accordion>
+<Accordion title="Is Single Sign-On (SSO) available for my organization?">
+  Single Sign-On is available exclusively for Enterprise plan customers. Valiyou supports SAML 2.0
+  and OpenID Connect (OIDC) protocols. Contact your organization's administrator to set up SSO
+  configuration, or upgrade to the Enterprise plan to enable this feature.
+</Accordion>
 
-  <Accordion title="How secure is the Valiyou login process?">
-    Valiyou implements multiple security measures: passwords are hashed with bcrypt and never stored in plain text, all authentication requests use HTTPS encryption, failed login attempts trigger rate limiting after 5 tries, reCAPTCHA v3 protects against automated attacks, and all login attempts are logged for security auditing.
-  </Accordion>
+<Accordion title="How secure is the Valiyou login process?">
+  Valiyou implements multiple security measures: passwords are hashed with bcrypt and never stored
+  in plain text, all authentication requests use HTTPS encryption, failed login attempts trigger
+  rate limiting after 5 tries, reCAPTCHA v3 protects against automated attacks, and all login
+  attempts are logged for security auditing.
+</Accordion>
 
-  <Accordion title="Can I try Valiyou without creating an account?">
-    Yes, use demo mode to explore Valiyou instantly. Click "Explore the demo" on the login page, complete the reCAPTCHA verification, and access a read-only demo organization with full feature access and sample data. Demo sessions are temporary and data is cleared periodically.
-  </Accordion>
+<Accordion title="Can I try Valiyou without creating an account?">
+  Yes, use demo mode to explore Valiyou instantly. Click "Explore the demo" on the login page,
+  complete the reCAPTCHA verification, and access a read-only demo organization with full feature
+  access and sample data. Demo sessions are temporary and data is cleared periodically.
+</Accordion>
 
-  <Accordion title="Why can't I log in with my email and password?">
-    Common causes include: incorrect password, email address not registered, or account created using social login. Verify your email address has no typos, try the social login method you used during signup, use the "Forgot password" feature to reset your credentials, or contact support if issues persist.
-  </Accordion>
+<Accordion title="Why can't I log in with my email and password?">
+  Common causes include: incorrect password, email address not registered, or account created using
+  social login. Verify your email address has no typos, try the social login method you used during
+  signup, use the "Forgot password" feature to reset your credentials, or contact support if issues
+  persist.
+</Accordion>
 
-  <Accordion title="What does the 'Remember me' option do?">
-    The "Remember me" checkbox extends your login session from 7 days to 30 days, allowing you to stay signed in longer without re-entering credentials. For security, avoid enabling this option on shared or public computers. Sessions still expire after 30 minutes of inactivity.
-  </Accordion>
+<Accordion title="What does the 'Remember me' option do?">
+  The "Remember me" checkbox extends your login session from 7 days to 30 days, allowing you to stay
+  signed in longer without re-entering credentials. For security, avoid enabling this option on
+  shared or public computers. Sessions still expire after 30 minutes of inactivity.
+</Accordion>
 
   <Accordion title="How do I switch between different login methods?">
     You can use any available login method for the same account. If you created an account with email/password, you can also add social login providers. However, if you initially signed up with social login only, you'll need to continue using that provider until you set up a password through account settings.
@@ -231,7 +260,7 @@ See [Trust Center](/trust-security/trust-center) for full security documentation
 
 ## Next Steps
 
-<CardGroup cols={2}>
+<CardGroup cols="2">
   <Card
     title="Create Account"
     icon="user-plus"
@@ -240,21 +269,13 @@ See [Trust Center](/trust-security/trust-center) for full security documentation
     Don't have an account? Sign up for free
   </Card>
 
-  <Card
-    title="Forgot Password"
-    icon="key"
-    href="/authentication/forgot-password"
-  >
-    Reset your password if you can't log in
-  </Card>
+<Card title="Forgot Password" icon="key" href="/authentication/forgot-password">
+  Reset your password if you can't log in
+</Card>
 
-  <Card
-    title="Dashboard"
-    icon="chart-line"
-    href="/valuations/dashboard"
-  >
-    After login, explore your dashboard
-  </Card>
+<Card title="Dashboard" icon="chart-line" href="/valuations/dashboard">
+  After login, explore your dashboard
+</Card>
 
   <Card
     title="Quick Start"

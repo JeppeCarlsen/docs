@@ -1,14 +1,16 @@
 ---
 title: 'Proposals'
 description: 'Send sponsorship proposals to sponsors, track approval status, and manage branded PDF documents. Generate proposals with digital signatures and auto-tracking.'
-seo:
-  title: 'Sponsorship Proposals & Tracking | Valiyou'
+'og:title': 'Sponsorship Proposals & Tracking | Valiyou'
 ---
 
 # Sponsorship Proposals & Tracking
 
 <Frame>
-  <img src="/images/proposals-dashboard.png" alt="Sponsorship proposals dashboard showing sent offers, pending approvals, proposal tracking status, sponsor responses, and branded PDF documents with real-time status updates and audit trails" />
+  <img
+    src="/images/proposals-dashboard.png"
+    alt="Sponsorship proposals dashboard showing sent offers, pending approvals, proposal tracking status, sponsor responses, and branded PDF documents with real-time status updates and audit trails"
+  />
 </Frame>
 
 **Send professional sponsorship proposals and track sponsor decisions in real-time.** Generate branded PDF documents, monitor proposal status, track email opens and approvals, collect digital signatures, and manage the complete proposal lifecycle from send to contract with comprehensive audit trails.
@@ -20,8 +22,8 @@ View all sent sponsorship proposals, track their status, review audit trails, an
 Navigate to **Sponsorships** → **Proposals** from the sidebar to access sent proposals and track sponsor responses.
 
 <Note>
-**Plan Required**: Professional or Enterprise plan
-**Permission Required**: Proposals permission or Admin access
+  **Plan Required**: Professional or Enterprise plan **Permission Required**: Proposals permission
+  or Admin access
 </Note>
 
 ## What Are Proposals?
@@ -29,6 +31,7 @@ Navigate to **Sponsorships** → **Proposals** from the sidebar to access sent p
 Proposals are packages that have been sent to sponsors for review and approval. When you send a package from Package Builder, it moves from the Packages page to the Proposals page.
 
 **Proposal Lifecycle:**
+
 1. **Draft** - Package created but not sent (shows in Packages page)
 2. **Pending Approval** - Sent to sponsor, awaiting response (shows in Proposals page)
 3. **Approved** - Sponsor accepted the proposal (shows in Proposals page)
@@ -36,7 +39,8 @@ Proposals are packages that have been sent to sponsors for review and approval. 
 5. **Expired** - Proposal deadline passed without response (shows in Proposals page)
 
 <Info>
-**Lifecycle Tracking**: Each proposal maintains complete history from creation through final decision, with timestamps, IP addresses, and sponsor actions recorded for compliance and analysis.
+  **Lifecycle Tracking**: Each proposal maintains complete history from creation through final
+  decision, with timestamps, IP addresses, and sponsor actions recorded for compliance and analysis.
 </Info>
 
 ## Proposals List Page
@@ -51,7 +55,8 @@ If you haven't sent any proposals yet, you'll see:
 - **Action**: "Go to Packages" button
 
 <Tip>
-**Getting Started**: Create a package in Packages page, build inclusions, then use "Send Proposal" to generate your first proposal.
+  **Getting Started**: Create a package in Packages page, build inclusions, then use "Send Proposal"
+  to generate your first proposal.
 </Tip>
 
 ### Proposals List
@@ -63,12 +68,14 @@ Vertical list of all sent proposals sorted by sent date (newest first).
 Each proposal displays:
 
 **Left Side:**
-- **Sponsor Logo**: 48×48px square (or document icon fallback)
+
+- **Sponsor Logo**: 48\*48px square (or document icon fallback)
 - **Sponsor Name**: Bold, clickable
 - **Package Tier**: Below name (e.g., "Gold", "Platinum")
 - **Sales Price**: Currency formatted (hidden in Negotiator Mode)
 
 **Right Side (Desktop):**
+
 - **Package Name**: Bold
 - **Sent Date**: "Sent [date]" (e.g., "Sent Jan 15, 2025")
 - **Expires Date**: "Expires [date]"
@@ -76,9 +83,7 @@ Each proposal displays:
 
 **Chevron**: Right-facing arrow indicating clickable item
 
-<Info>
-**Click Anywhere**: The entire row is clickable and opens the proposal preview page.
-</Info>
+<Info>**Click Anywhere**: The entire row is clickable and opens the proposal preview page.</Info>
 
 ### Status Badges
 
@@ -117,7 +122,8 @@ Four status types with colored indicators:
 **Shows**: After expiration date (still pending)
 
 <Warning>
-**Expiration**: Expired proposals remain in "pending" status but are marked as expired. Sponsors can no longer accept expired proposals via the proposal link.
+  **Expiration**: Expired proposals remain in "pending" status but are marked as expired. Sponsors
+  can no longer accept expired proposals via the proposal link.
 </Warning>
 
 ### Sorting
@@ -140,35 +146,38 @@ Detailed view of a single proposal with PDF preview and audit trail.
 Split-screen layout:
 
 **Left Side (Main):**
+
 - Full PDF preview
 - Download button
 
 **Right Side (Sidebar):**
+
 - Proposal Preview header
 - Status badge
 - Audit trail
 - Action buttons
 
-<Info>
-**Responsive**: On mobile, sidebar appears above PDF for better UX.
-</Info>
+<Info>**Responsive**: On mobile, sidebar appears above PDF for better UX.</Info>
 
 ### PDF Preview
 
 **Display**: Embedded PDF viewer
 **Content**: Exact proposal PDF sent to sponsor
 **Features**:
+
 - Scroll to view all pages
 - Zoom controls
 - Fullscreen option (browser-dependent)
 
 **Loading States**:
+
 - Shows spinner while PDF loads
 - Error message if PDF fails to load
 - Retry option on error
 
 <Tip>
-**Same as Sent**: This is the exact PDF the sponsor received via email. Use it to verify proposal contents after sending.
+  **Same as Sent**: This is the exact PDF the sponsor received via email. Use it to verify proposal
+  contents after sending.
 </Tip>
 
 ### Status Badge (Detailed)
@@ -176,24 +185,28 @@ Split-screen layout:
 Expanded status information:
 
 **Pending Approval:**
+
 - Icon: Clock
 - Color: Amber
 - Label: "Pending Approval"
 - Sub-text: "Awaiting sponsor response"
 
 **Approved:**
+
 - Icon: Check Circle
 - Color: Green
 - Label: "Approved"
 - Sub-text: "Accepted on [date]"
 
 **Rejected:**
+
 - Icon: X Circle
 - Color: Red
 - Label: "Rejected"
 - Sub-text: "Declined on [date]"
 
 **Expired:**
+
 - Icon: Clock
 - Color: Gray
 - Label: "Expired"
@@ -206,6 +219,7 @@ Chronological timeline of proposal events.
 #### Timeline Events
 
 **1. Proposal Sent**:
+
 - Icon: Envelope
 - Label: "Proposal Sent"
 - Date: Sent date and time
@@ -213,6 +227,7 @@ Chronological timeline of proposal events.
 - Shows: Always (first event)
 
 **2. Proposal Opened** (if tracking enabled):
+
 - Icon: Eye
 - Label: "Proposal Opened"
 - Date: First open timestamp
@@ -220,6 +235,7 @@ Chronological timeline of proposal events.
 - Shows: If sponsor opened email
 
 **3. Sponsor Response**:
+
 - **Approved**:
   - Icon: Check Circle (green)
   - Label: "Proposal Approved"
@@ -233,6 +249,7 @@ Chronological timeline of proposal events.
   - Details: Rejected by [contact name]
 
 **4. Signature Data** (if signed):
+
 - Icon: Pen
 - Label: "Digitally Signed"
 - Details:
@@ -242,6 +259,7 @@ Chronological timeline of proposal events.
 - Shows: If sponsor signed electronically
 
 **5. Expiration**:
+
 - Icon: Clock (gray)
 - Label: "Proposal Expired"
 - Date: Expiration date
@@ -249,7 +267,8 @@ Chronological timeline of proposal events.
 - Shows: If expired without response
 
 <Info>
-**Chronological Order**: Events appear in timeline order from top (most recent) to bottom (oldest).
+  **Chronological Order**: Events appear in timeline order from top (most recent) to bottom
+  (oldest).
 </Info>
 
 ### Action Buttons
@@ -264,7 +283,8 @@ Located in sidebar panel.
 **Use Case**: Make changes before sponsor responds
 
 <Warning>
-**After Approval**: Edit button is hidden for approved proposals. You cannot edit an approved package.
+  **After Approval**: Edit button is hidden for approved proposals. You cannot edit an approved
+  package.
 </Warning>
 
 #### Download PDF
@@ -287,23 +307,27 @@ Located in sidebar panel.
 Additional details shown in sidebar:
 
 **Sent To:**
+
 - List of recipient email addresses
 - Primary contact highlighted
 - Shows all recipients from original send
 
 **Package Details:**
+
 - Package name
 - Package tier badge
 - Sales price (if not Negotiator Mode)
 - Event assignments (if any)
 
 **Expiration Info:**
+
 - "Expires on [date]" (if pending)
 - "Expired on [date]" (if expired)
 - Countdown timer (optional, if pending)
 
 <Tip>
-**Track Progress**: Check audit trail regularly to see if sponsors opened the proposal. This helps with follow-up timing.
+  **Track Progress**: Check audit trail regularly to see if sponsors opened the proposal. This helps
+  with follow-up timing.
 </Tip>
 
 ## Proposal Status Management
@@ -329,7 +353,7 @@ draft → pending_approval → approved
 **Expired**: Status remains "pending_approval" but badge shows "Expired"
 
 <Info>
-**Real-Time Updates**: Refresh the page to see latest status changes from sponsor actions.
+  **Real-Time Updates**: Refresh the page to see latest status changes from sponsor actions.
 </Info>
 
 ## Sponsor Approval via Email
@@ -339,6 +363,7 @@ draft → pending_approval → approved
 When you send a proposal, sponsors receive an email containing:
 
 **Email Contents**:
+
 - Subject line with your organization name and package name
 - Personalized greeting with sponsor contact name
 - Brief introduction to the sponsorship package
@@ -348,13 +373,15 @@ When you send a proposal, sponsors receive an email containing:
 - Contact information for questions
 
 **Proposal Link**:
+
 - Format: `https://yourorg.valiyou.com/proposal/[token]`
 - Token: Unique, secure, non-guessable identifier
 - Access: No login required (public link)
 - Expires: After the expiration date set in package
 
 <Warning>
-**Security**: Proposal links are public but unguessable tokens. Don't share links publicly. Only send to intended sponsor contacts via the Send Proposal feature.
+  **Security**: Proposal links are public but unguessable tokens. Don't share links publicly. Only
+  send to intended sponsor contacts via the Send Proposal feature.
 </Warning>
 
 ### External Approval Page
@@ -362,10 +389,12 @@ When you send a proposal, sponsors receive an email containing:
 Split-screen interface designed for sponsor decision-making:
 
 **Layout**:
+
 - **Left Side (75%)**: Full PDF preview of proposal
 - **Right Side (25%)**: Signing panel with approval form
 
 **Mobile Layout**:
+
 - PDF preview on top (full width)
 - Signing panel below (full width)
 - Scrollable content
@@ -377,7 +406,8 @@ Fixed panel with all approval controls.
 #### Header Section
 
 **Organization Branding**:
-- Organization logo (48×48px)
+
+- Organization logo (48\*48px)
 - "Sponsorship Proposal" title
 - "From [Organization Name]" subtitle
 - White background
@@ -387,17 +417,20 @@ Fixed panel with all approval controls.
 **Section Title**: "Entitled to draw"
 
 **Required Fields**:
+
 1. **Full Name** - Text input for signer's full name
 2. **Job Title** - Text input for position/role
 3. **Company** - Pre-filled with sponsor name (editable)
 
 **Validation**:
+
 - All fields required before approval
 - Empty fields prevent submission
 - Error message shown if incomplete
 
 <Tip>
-**Pre-filled Company**: The company field is automatically filled with the sponsor name but can be edited if needed.
+  **Pre-filled Company**: The company field is automatically filled with the sponsor name but can be
+  edited if needed.
 </Tip>
 
 #### Approval Consent Checkbox
@@ -408,6 +441,7 @@ Fixed panel with all approval controls.
 "I confirm that I am authorized to approve this sponsorship on behalf of [Company Name], that I have reviewed the complete package, and that I accept the terms and agree to pay [Sales Price] for this package."
 
 **Features**:
+
 - Single comprehensive consent checkbox
 - Dynamic company name (from Company field)
 - Dynamic sales price display
@@ -415,6 +449,7 @@ Fixed panel with all approval controls.
 - Unchecked by default
 
 **Legal Compliance**:
+
 - Records consent timestamp
 - Captures IP address
 - Stores user agent (browser/device info)
@@ -427,13 +462,15 @@ Fixed panel with all approval controls.
 **Link Text**: "Download proposal as PDF" with download icon
 
 **Action**:
+
 - Fetches PDF from API via proposal token
 - Creates blob and triggers browser download
 - Filename: `[Package_Name]_Proposal.pdf`
 - Allows sponsor to save proposal before deciding
 
 <Info>
-**Download First**: Sponsors can download the proposal PDF to share internally or review offline before making a decision.
+  **Download First**: Sponsors can download the proposal PDF to share internally or review offline
+  before making a decision.
 </Info>
 
 #### Action Buttons
@@ -441,6 +478,7 @@ Fixed panel with all approval controls.
 Fixed at bottom of signing panel.
 
 **Approve Package Button**:
+
 - **Style**: Primary blue button, full width
 - **Text**: "Approve Package" with check icon
 - **State**: Disabled until form is valid (all fields filled + consent checked)
@@ -448,6 +486,7 @@ Fixed at bottom of signing panel.
 - **Action**: Submits approval with signature data
 
 **Decline Proposal Button**:
+
 - **Style**: Secondary gray button, full width
 - **Text**: "Decline Proposal"
 - **State**: Always enabled (no form validation required)
@@ -455,6 +494,7 @@ Fixed at bottom of signing panel.
 - **Action**: Submits rejection (optional signer info if provided)
 
 **Validation Message**:
+
 - Shows below buttons if submission attempted with incomplete form
 - Text: "Please complete all required fields and checkboxes"
 - Red text, center-aligned
@@ -464,12 +504,14 @@ Fixed at bottom of signing panel.
 Embedded PDF viewer showing exact proposal sent via email.
 
 **Features**:
+
 - Full-page PDF display
 - Scroll to view all pages
 - Zoom controls (browser-native)
 - Same PDF as downloaded version
 
 **Content**:
+
 - Organization header and logo
 - Sponsor name and logo
 - Package tier and pricing
@@ -482,12 +524,14 @@ Embedded PDF viewer showing exact proposal sent via email.
 Step-by-step process when sponsor approves:
 
 **1. Sponsor Clicks Approve Button**:
+
 - Form validation runs
 - Check all required fields
 - Check consent checkbox
 - Show error if incomplete
 
 **2. Submit Approval to API**:
+
 - POST request to `/api/products/sponsorships/proposal/[token]`
 - Body includes:
   - `action: 'approve'`
@@ -495,24 +539,28 @@ Step-by-step process when sponsor approves:
   - `signature.consent`: All consent data with timestamp
 
 **3. Server Validation**:
+
 - Verify proposal token exists
 - Check proposal hasn't expired
 - Confirm status is "pending_approval" (not already responded)
 - Validate signature data provided
 
 **4. Capture Audit Trail**:
+
 - IP address from request headers
 - User agent (browser/device info)
 - Timestamp of signature
 - SHA-256 hash of package snapshot for data integrity
 
 **5. Update Package Status**:
+
 - Change status from "pending_approval" to "approved"
 - Store signature data (signer info + consent + audit trail)
 - Clear expiration date (no longer relevant)
 - Keep proposal token active (for confirmation page)
 
 **6. Show Success Modal**:
+
 - Green checkmark icon
 - "Proposal Approved" title
 - Thank you message
@@ -521,6 +569,7 @@ Step-by-step process when sponsor approves:
 - Modal overlays entire page
 
 **Signature Data Stored**:
+
 ```json
 {
   "signer": {
@@ -548,28 +597,33 @@ Step-by-step process when sponsor approves:
 Simplified process when sponsor declines:
 
 **1. Sponsor Clicks Decline Button**:
+
 - No form validation required
 - Can decline even without filling form
 - Confirmation immediate (no additional modal)
 
 **2. Submit Rejection to API**:
+
 - POST request to `/api/products/sponsorships/proposal/[token]`
 - Body includes:
   - `action: 'reject'`
   - `signature.signer`: Optional (if name provided, includes it)
 
 **3. Server Processing**:
+
 - Verify proposal token and expiration
 - Confirm status is "pending_approval"
 - No signature data validation required
 
 **4. Update Package Status**:
+
 - Change status from "pending_approval" to "rejected"
 - Store minimal signer info (if provided)
 - Clear expiration date
 - Keep proposal token active
 
 **5. Show Declined Modal**:
+
 - Red X icon
 - "Proposal Declined" title
 - "You have declined the sponsorship package..." message
@@ -577,7 +631,8 @@ Simplified process when sponsor declines:
 - Modal overlays entire page
 
 <Info>
-**No Form Required**: Sponsors can decline without filling any fields. Signer information is optional for rejections.
+  **No Form Required**: Sponsors can decline without filling any fields. Signer information is
+  optional for rejections.
 </Info>
 
 ### Post-Response States
@@ -585,24 +640,28 @@ Simplified process when sponsor declines:
 What happens after sponsor responds:
 
 **Proposal Already Approved**:
+
 - Shows success modal immediately on page load
 - Green checkmark with "Proposal Approved" message
 - Download PDF link available
 - Prevents duplicate submissions
 
 **Proposal Already Rejected**:
+
 - Shows declined modal immediately on page load
 - Red X with "Proposal Declined" message
 - Organization notified text
 - Prevents duplicate submissions
 
 **Proposal Expired**:
+
 - Yellow clock icon
 - "Proposal Expired" title
 - Message: "This proposal link has expired. Please contact the organization for a new proposal."
 - No form or buttons shown
 
 **Proposal Not Found**:
+
 - Red error icon
 - "Error Loading Proposal" title
 - Generic error message
@@ -611,44 +670,50 @@ What happens after sponsor responds:
 ### Security and Compliance
 
 **Data Integrity**:
+
 - Package snapshot hash (SHA-256) ensures proposal wasn't modified after signing
 - Hash includes: package ID, name, sales price, cost price, items
 - Prevents tampering and provides legal proof
 
 **Audit Trail**:
+
 - IP address capture (x-forwarded-for header)
 - User agent capture (browser/device info)
 - Timestamp in ISO 8601 format
 - All data stored in `signature_data` JSONB column
 
 **Legal Compliance**:
+
 - Digital signature with explicit consent
 - Timestamp and IP for non-repudiation
 - Package snapshot hash for integrity
 - Audit trail for legal documentation
 
 **Privacy**:
+
 - No user account required (public link)
 - Minimal data collection (only what's needed for signature)
 - Secure token prevents unauthorized access
 - Expiration date limits exposure window
 
 <Warning>
-**Legal Weight**: The digital signature with consent, timestamp, IP, and package hash provides legally binding documentation of approval. Treat approval seriously.
+  **Legal Weight**: The digital signature with consent, timestamp, IP, and package hash provides
+  legally binding documentation of approval. Treat approval seriously.
 </Warning>
 
 ## Permissions
 
 Different permissions show different content:
 
-| Permission | Can View List | Can View Preview | Can Edit | Can Resend |
-|------------|--------------|-----------------|----------|-----------|
-| **Proposals Role** | ✅ Yes | ✅ Yes | ✅ Yes (pending only) | ✅ Yes |
-| **Admin** | ✅ Yes | ✅ Yes | ✅ Yes (pending only) | ✅ Yes |
-| **Other Roles** | ❌ No | ❌ No | ❌ No | ❌ No |
+| Permission         | Can View List | Can View Preview | Can Edit              | Can Resend |
+| ------------------ | ------------- | ---------------- | --------------------- | ---------- |
+| **Proposals Role** | ✅ Yes        | ✅ Yes           | ✅ Yes (pending only) | ✅ Yes     |
+| **Admin**          | ✅ Yes        | ✅ Yes           | ✅ Yes (pending only) | ✅ Yes     |
+| **Other Roles**    | ❌ No         | ❌ No            | ❌ No                 | ❌ No      |
 
 <Info>
-**Professional/Enterprise Only**: Proposals feature requires Professional or Enterprise plan. Starter plans cannot access this module.
+  **Professional/Enterprise Only**: Proposals feature requires Professional or Enterprise plan.
+  Starter plans cannot access this module.
 </Info>
 
 ## Common Use Cases
@@ -708,6 +773,7 @@ Different permissions show different content:
 ### Proposal Not Showing in List
 
 **Check**:
+
 - Proposal was sent (not still draft)
 - You have Proposals permission
 - Refresh page to update list
@@ -716,6 +782,7 @@ Different permissions show different content:
 ### PDF Preview Won't Load
 
 **Try**:
+
 - Refresh page
 - Clear browser cache
 - Check network connection
@@ -725,6 +792,7 @@ Different permissions show different content:
 ### Status Not Updating
 
 **Fix**:
+
 - Refresh page manually (status updates on refresh)
 - Check sponsor received link
 - Verify link wasn't expired when sponsor clicked
@@ -733,12 +801,14 @@ Different permissions show different content:
 ### Can't Edit Proposal
 
 **Reasons**:
+
 - Proposal is approved (can't edit)
 - Proposal is rejected (can't edit)
 - Don't have edit permissions
 - Network error
 
 **Solution**:
+
 - Create new package for approved/rejected
 - Request permissions from admin
 - Check browser console for errors
@@ -746,6 +816,7 @@ Different permissions show different content:
 ### Download PDF Fails
 
 **Try**:
+
 - Disable popup blocker
 - Allow file downloads in browser
 - Check disk space
@@ -796,7 +867,7 @@ Export proposal data by downloading individual PDFs from proposal preview pages,
 
 ## Next Steps
 
-<CardGroup cols={2}>
+<CardGroup cols="2">
   <Card
     title="Monitor Responses"
     icon="inbox"
@@ -805,29 +876,17 @@ Export proposal data by downloading individual PDFs from proposal preview pages,
     Check proposals daily for sponsor decisions
   </Card>
 
-  <Card
-    title="Follow Up"
-    icon="phone"
-    href="/sponsorships/sponsors#contacts"
-  >
-    Contact sponsors after 3-7 days if no response
-  </Card>
+<Card title="Follow Up" icon="phone" href="/sponsorships/sponsors#contacts">
+  Contact sponsors after 3-7 days if no response
+</Card>
 
-  <Card
-    title="Analyze Performance"
-    icon="chart-line"
-    href="/sponsorships/analytics"
-  >
-    Review proposal success rates and metrics
-  </Card>
+<Card title="Analyze Performance" icon="chart-line" href="/sponsorships/analytics">
+  Review proposal success rates and metrics
+</Card>
 
-  <Card
-    title="Refine Packages"
-    icon="box"
-    href="/sponsorships/packages"
-  >
-    Use approval data to optimize future packages
-  </Card>
+<Card title="Refine Packages" icon="box" href="/sponsorships/packages">
+  Use approval data to optimize future packages
+</Card>
 
   <Card
     title="Manage Contracts"
@@ -839,7 +898,8 @@ Export proposal data by downloading individual PDFs from proposal preview pages,
 </CardGroup>
 
 <Tip>
-**Best Practice**: Set up email notifications (if available) to get instant alerts when sponsors approve or reject proposals. This enables immediate follow-up.
+  **Best Practice**: Set up email notifications (if available) to get instant alerts when sponsors
+  approve or reject proposals. This enables immediate follow-up.
 </Tip>
 
 <script type="application/ld+json">

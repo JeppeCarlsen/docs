@@ -2,14 +2,16 @@
 title: 'AI Insights'
 description: 'Generate AI-powered insights from sponsorship valuations using Groq, OpenAI, Gemini, and Claude. Get natural language analysis and trend detection.'
 lastUpdated: '2025-01-19'
-seo:
-  title: 'AI Insights - Automated Analysis | Valiyou'
+'og:title': 'AI Insights - Automated Analysis | Valiyou'
 ---
 
 # AI Insights - Automated Analysis
 
 <Frame>
-  <img src="/images/platform/plugins/ai-insights.png" alt="AI Insights configuration interface showing automated analysis settings for sponsorship valuations with Groq and OpenAI integration" />
+  <img
+    src="/images/platform/plugins/ai-insights.png"
+    alt="AI Insights configuration interface showing automated analysis settings for sponsorship valuations with Groq and OpenAI integration"
+  />
 </Frame>
 
 **AI Insights adds automated AI-generated analysis and recommendations to multi-valuation comparison reports using Large Language Models (LLMs).** Transform complex sponsorship data into actionable insights with natural language explanations powered by leading AI providers including Groq, OpenAI, Google Gemini, and Anthropic Claude. Get instant trend detection, pattern analysis, and business recommendations without manual data analysis.
@@ -25,17 +27,15 @@ When you generate AI Insights, the following valuation data is sent to your chos
 - **Opt-out**: Disable the AI Insights plugin at any time to prevent data transmission to external AI providers
 - **Provider policies**: [Groq Privacy](https://groq.com/privacy-policy/), [OpenAI API Data](https://openai.com/enterprise-privacy), [Google Gemini](https://ai.google.dev/gemini-api/terms), [Anthropic Privacy](https://www.anthropic.com/privacy)
 - **Compliance**: All providers are SOC 2 Type II certified and do not train models on API data
-</Warning>
+  </Warning>
 
-<Note>
-**Last Updated**: January 19, 2025 | [View Changelog](#changelog)
-</Note>
+<Note>**Last Updated**: January 19, 2025 | [View Changelog](#changelog)</Note>
 
 ## Overview
 
 <Note>
-**Plan Required**: Professional or Enterprise plan
-**Permission Required**: Reports permission + Plugins permission
+  **Plan Required**: Professional or Enterprise plan **Permission Required**: Reports permission +
+  Plugins permission
 </Note>
 
 **What it does**: Adds AI-generated insights and analysis to multi-valuation comparison reports using Large Language Models (LLMs).
@@ -58,6 +58,7 @@ When you generate AI Insights, the following valuation data is sent to your chos
     - gemma2-9b-it (Fast)
 
     **Free Tier**: Yes ✅
+
   </Card>
 
   <Card title="Google Gemini" icon="sparkles">
@@ -69,6 +70,7 @@ When you generate AI Insights, the following valuation data is sent to your chos
     - gemini-1.5-flash (Fast)
 
     **Free Tier**: Yes ✅
+
   </Card>
 
   <Card title="OpenRouter" icon="route">
@@ -78,6 +80,7 @@ When you generate AI Insights, the following valuation data is sent to your chos
     - Multiple models with free tier
 
     **Free Tier**: Yes ✅
+
   </Card>
 </CardGroup>
 
@@ -91,6 +94,7 @@ When you generate AI Insights, the following valuation data is sent to your chos
     - gpt-4-turbo
 
     **Pricing**: Pay per token
+
   </Card>
 
   <Card title="Anthropic (Claude)" icon="message-bot">
@@ -100,11 +104,13 @@ When you generate AI Insights, the following valuation data is sent to your chos
     - claude-3-opus-20240229 (Powerful)
 
     **Pricing**: Pay per token
+
   </Card>
 </CardGroup>
 
 <Tip>
-**Start Free**: All AI Insights providers offer free tiers or trials. Try Groq or Google Gemini first to test AI Insights without cost.
+  **Start Free**: All AI Insights providers offer free tiers or trials. Try Groq or Google Gemini
+  first to test AI Insights without cost.
 </Tip>
 
 ## Configuration
@@ -136,7 +142,8 @@ Before configuring, you need an API key from your chosen LLM provider.
 4. **Copy** the key (it's only shown once!)
 
 <Warning>
-**Save Your Key**: API keys are only shown once. Copy and save it immediately. If you lose it, you'll need to create a new one.
+  **Save Your Key**: API keys are only shown once. Copy and save it immediately. If you lose it,
+  you'll need to create a new one.
 </Warning>
 
 ### Step 3: Configure Provider
@@ -145,7 +152,10 @@ Before configuring, you need an API key from your chosen LLM provider.
 2. Configuration modal opens
 
 <Frame>
-  <img src="/images/platform/plugins/ai-insights-config-modal.png" alt="AI Insights configuration modal showing LLM provider selection, model options, and API key input for automated sponsorship analysis" />
+  <img
+    src="/images/platform/plugins/ai-insights-config-modal.png"
+    alt="AI Insights configuration modal showing LLM provider selection, model options, and API key input for automated sponsorship analysis"
+  />
 </Frame>
 
 **Configuration Modal Fields**:
@@ -169,10 +179,12 @@ Before configuring, you need an API key from your chosen LLM provider.
 4. Click **"Save Configuration"**
 
 <Warning>
-**API Key Required**: You must enter a valid API key before saving. Warning shown if missing: "Please enter a valid [Provider] API key before saving."
+  **API Key Required**: You must enter a valid API key before saving. Warning shown if missing:
+  "Please enter a valid [Provider] API key before saving."
 </Warning>
 
 **Example Configuration**:
+
 ```
 LLM Provider: Groq (Free badge)
 Model: Llama 3.3 70B Versatile (Recommended badge)
@@ -193,14 +205,11 @@ Need more detailed instructions? Expand your provider below for step-by-step gui
     6. Paste into Valiyou configuration
   </Accordion>
 
-  <Accordion title="Google Gemini (Free)">
-    1. Visit [Google AI Studio](https://aistudio.google.com)
-    2. Sign in with Google account
-    3. Click **"Get API Key"**
-    4. Create new project or select existing
-    5. Copy key (starts with `AIza...`)
-    6. Paste into Valiyou configuration
-  </Accordion>
+<Accordion title="Google Gemini (Free)">
+  1. Visit [Google AI Studio](https://aistudio.google.com) 2. Sign in with Google account 3. Click
+  **"Get API Key"** 4. Create new project or select existing 5. Copy key (starts with `AIza...`) 6.
+  Paste into Valiyou configuration
+</Accordion>
 
   <Accordion title="OpenAI (Paid)">
     1. Visit [OpenAI Platform](https://platform.openai.com)
@@ -211,6 +220,7 @@ Need more detailed instructions? Expand your provider below for step-by-step gui
     6. Paste into Valiyou configuration
 
     **Note**: Requires payment method on file
+
   </Accordion>
 
   <Accordion title="Anthropic/Claude (Paid)">
@@ -222,6 +232,7 @@ Need more detailed instructions? Expand your provider below for step-by-step gui
     6. Paste into Valiyou configuration
 
     **Note**: Requires payment method on file
+
   </Accordion>
 
   <Accordion title="OpenRouter (Free Tier)">
@@ -243,7 +254,10 @@ Go to **Valuations** → **Reports**
 ### Step 2: Select Multiple Valuations
 
 <Frame>
-  <img src="/images/valuations/reports/select-valuations.png" alt="Multi-select dropdown interface for choosing multiple sponsorship valuations to generate AI-powered comparison analysis, trend insights, and automated recommendations using LLM integration" />
+  <img
+    src="/images/valuations/reports/select-valuations.png"
+    alt="Multi-select dropdown interface for choosing multiple sponsorship valuations to generate AI-powered comparison analysis, trend insights, and automated recommendations using LLM integration"
+  />
 </Frame>
 
 - Select **2 or more valuations** from the dropdown
@@ -252,7 +266,10 @@ Go to **Valuations** → **Reports**
 ### Step 3: View AI Insights
 
 <Frame>
-  <img src="/images/valuations/reports/ai-insights-section.png" alt="AI Insights section showing automated analysis, recommendations, and pattern detection for sponsorship valuations" />
+  <img
+    src="/images/valuations/reports/ai-insights-section.png"
+    alt="AI Insights section showing automated analysis, recommendations, and pattern detection for sponsorship valuations"
+  />
 </Frame>
 
 The AI Insights section appears below the comparison charts with:
@@ -267,24 +284,28 @@ The AI Insights section appears below the comparison charts with:
 The AI receives comprehensive data from all selected valuations:
 
 ### Financial Metrics
+
 - Total valuation amounts
 - Sales revenue (transfers, merchandise, tickets)
 - Growth rates and trends
 - Revenue mix analysis
 
 ### Media Metrics
+
 - Media impressions (print, digital, social, broadcast)
 - Media value calculations
 - Platform-specific performance
 - Engagement rates
 
 ### Brand Metrics
+
 - Brand exposure value
 - Sponsorship coverage
 - Marketing effectiveness
 - Brand visibility trends
 
 ### Comparative Analysis
+
 - Year-over-year changes
 - Performance benchmarks
 - Trend identification
@@ -297,13 +318,13 @@ The AI receives comprehensive data from all selected valuations:
     Get instant insights without manual data analysis
   </Card>
 
-  <Card title="Trend Detection" icon="chart-line">
-    Identify patterns and trends across valuations
-  </Card>
+<Card title="Trend Detection" icon="chart-line">
+  Identify patterns and trends across valuations
+</Card>
 
-  <Card title="Recommendations" icon="lightbulb">
-    Receive actionable suggestions for improvement
-  </Card>
+<Card title="Recommendations" icon="lightbulb">
+  Receive actionable suggestions for improvement
+</Card>
 
   <Card title="Natural Language" icon="comment">
     Understand complex data through clear explanations
@@ -316,11 +337,11 @@ The AI receives comprehensive data from all selected valuations:
 
 **Best for**: Fast analysis with good quality
 
-| Model | Speed | Quality | Cost |
-|-------|-------|---------|------|
-| llama-3.3-70b-versatile | ⚡⚡⚡ Fast | ⭐⭐⭐⭐ High | 🆓 Free |
-| mixtral-8x7b-32768 | ⚡⚡ Medium | ⭐⭐⭐ Good | 🆓 Free |
-| gemma2-9b-it | ⚡⚡⚡⚡ Very Fast | ⭐⭐ Fair | 🆓 Free |
+| Model                   | Speed              | Quality       | Cost    |
+| ----------------------- | ------------------ | ------------- | ------- |
+| llama-3.3-70b-versatile | ⚡⚡⚡ Fast        | ⭐⭐⭐⭐ High | 🆓 Free |
+| mixtral-8x7b-32768      | ⚡⚡ Medium        | ⭐⭐⭐ Good   | 🆓 Free |
+| gemma2-9b-it            | ⚡⚡⚡⚡ Very Fast | ⭐⭐ Fair     | 🆓 Free |
 
 **Recommendation**: Use `llama-3.3-70b-versatile` for best balance
 
@@ -328,11 +349,11 @@ The AI receives comprehensive data from all selected valuations:
 
 **Best for**: Balanced speed and quality
 
-| Model | Speed | Quality | Cost |
-|-------|-------|---------|------|
-| gemini-2.0-flash-exp | ⚡⚡⚡ Fast | ⭐⭐⭐⭐⭐ Excellent | 🆓 Free |
-| gemini-1.5-pro | ⚡⚡ Medium | ⭐⭐⭐⭐ High | 🆓 Free |
-| gemini-1.5-flash | ⚡⚡⚡⚡ Very Fast | ⭐⭐⭐ Good | 🆓 Free |
+| Model                | Speed              | Quality              | Cost    |
+| -------------------- | ------------------ | -------------------- | ------- |
+| gemini-2.0-flash-exp | ⚡⚡⚡ Fast        | ⭐⭐⭐⭐⭐ Excellent | 🆓 Free |
+| gemini-1.5-pro       | ⚡⚡ Medium        | ⭐⭐⭐⭐ High        | 🆓 Free |
+| gemini-1.5-flash     | ⚡⚡⚡⚡ Very Fast | ⭐⭐⭐ Good          | 🆓 Free |
 
 **Recommendation**: Use `gemini-1.5-pro` for best results
 
@@ -340,10 +361,10 @@ The AI receives comprehensive data from all selected valuations:
 
 **Best for**: Maximum quality and reliability
 
-| Model | Speed | Quality | Cost |
-|-------|-------|---------|------|
-| gpt-4o | ⚡⚡ Medium | ⭐⭐⭐⭐⭐ Excellent | 💰 $$$ |
-| gpt-4o-mini | ⚡⚡⚡ Fast | ⭐⭐⭐⭐ High | 💰 $ |
+| Model       | Speed       | Quality              | Cost    |
+| ----------- | ----------- | -------------------- | ------- |
+| gpt-4o      | ⚡⚡ Medium | ⭐⭐⭐⭐⭐ Excellent | 💰 $$$  |
+| gpt-4o-mini | ⚡⚡⚡ Fast | ⭐⭐⭐⭐ High        | 💰 $    |
 | gpt-4-turbo | ⚡⚡ Medium | ⭐⭐⭐⭐⭐ Excellent | 💰 $$$$ |
 
 **Recommendation**: Use `gpt-4o` for production reports
@@ -352,11 +373,11 @@ The AI receives comprehensive data from all selected valuations:
 
 **Best for**: Complex analysis and reasoning
 
-| Model | Speed | Quality | Cost |
-|-------|-------|---------|------|
-| claude-3-5-sonnet | ⚡⚡ Medium | ⭐⭐⭐⭐⭐ Excellent | 💰 $$$ |
-| claude-3-5-haiku | ⚡⚡⚡⚡ Very Fast | ⭐⭐⭐ Good | 💰 $ |
-| claude-3-opus | ⚡ Slow | ⭐⭐⭐⭐⭐ Excellent | 💰 $$$$ |
+| Model             | Speed              | Quality              | Cost    |
+| ----------------- | ------------------ | -------------------- | ------- |
+| claude-3-5-sonnet | ⚡⚡ Medium        | ⭐⭐⭐⭐⭐ Excellent | 💰 $$$  |
+| claude-3-5-haiku  | ⚡⚡⚡⚡ Very Fast | ⭐⭐⭐ Good          | 💰 $    |
+| claude-3-opus     | ⚡ Slow            | ⭐⭐⭐⭐⭐ Excellent | 💰 $$$$ |
 
 **Recommendation**: Use `claude-3-5-sonnet` for detailed analysis
 
@@ -365,6 +386,7 @@ The AI receives comprehensive data from all selected valuations:
 ### AI Insights Not Appearing
 
 **Check**:
+
 - ✅ Plugin enabled (green "Enabled" badge)
 - ✅ Reports permission granted
 - ✅ Professional/Enterprise plan active
@@ -372,6 +394,7 @@ The AI receives comprehensive data from all selected valuations:
 - ✅ API key configured correctly
 
 **Fix**:
+
 1. Enable AI Insights plugin
 2. Request Reports permission from admin
 3. Upgrade plan if needed
@@ -381,12 +404,14 @@ The AI receives comprehensive data from all selected valuations:
 ### "Invalid API Key" Error
 
 **Causes**:
+
 - API key expired or revoked
 - Wrong provider selected
 - Copy/paste error (extra spaces)
 - API key from wrong provider
 
 **Fix**:
+
 1. Verify provider selection matches your API key
 2. Check for extra spaces when pasting
 3. Generate new API key from provider
@@ -400,12 +425,14 @@ The AI receives comprehensive data from all selected valuations:
 ### Plugin Shows "Unhealthy"
 
 **Causes**:
+
 - API key invalid or expired
 - Rate limit exceeded
 - Provider service unavailable
 - Insufficient credits (paid providers)
 
 **Fix**:
+
 1. Check API key validity in provider dashboard
 2. Wait for rate limit reset (usually hourly)
 3. Check provider status page
@@ -415,11 +442,13 @@ The AI receives comprehensive data from all selected valuations:
 ### Slow Analysis
 
 **Causes**:
+
 - Large number of valuations selected
 - Slow model selected (e.g., claude-3-opus)
 - Provider experiencing high load
 
 **Fix**:
+
 1. Select fewer valuations (2-5 optimal)
 2. Switch to faster model:
    - Groq: gemma2-9b-it
@@ -433,6 +462,7 @@ The AI receives comprehensive data from all selected valuations:
 ### 1. Start with Free Providers
 
 Test AI Insights with Groq or Google Gemini before committing to paid providers:
+
 - Zero cost to experiment
 - Good quality results
 - Fast response times
@@ -441,6 +471,7 @@ Test AI Insights with Groq or Google Gemini before committing to paid providers:
 ### 2. Compare 3-5 Valuations
 
 Optimal number for meaningful insights:
+
 - 2 valuations: Basic comparison
 - 3-5 valuations: Trend analysis (recommended)
 - 6+ valuations: May slow analysis
@@ -448,6 +479,7 @@ Optimal number for meaningful insights:
 ### 3. Use Consistent Date Ranges
 
 For best trend analysis:
+
 - Select valuations from similar time periods
 - Compare same season/quarter when possible
 - Avoid mixing different valuation types
@@ -455,6 +487,7 @@ For best trend analysis:
 ### 4. Review and Interpret
 
 AI insights are suggestions, not directives:
+
 - ✅ Use as starting point for analysis
 - ✅ Verify insights against actual data
 - ✅ Apply domain knowledge and context
@@ -463,6 +496,7 @@ AI insights are suggestions, not directives:
 ### 5. Monitor API Usage
 
 Track your API usage to avoid surprises:
+
 - Check provider dashboard regularly
 - Set up usage alerts if available
 - Consider upgrading to paid tier for high usage
@@ -477,6 +511,7 @@ Track your API usage to avoid surprises:
     **For best results**: Use **Google Gemini 1.5 Pro** (free, excellent quality)
 
     **For production**: Use **OpenAI GPT-4o** or **Claude 3.5 Sonnet** (paid, highest quality)
+
   </Accordion>
 
   <Accordion title="Are my sponsorship valuation data shared with the AI provider?">
@@ -487,6 +522,7 @@ Track your API usage to avoid surprises:
     - Providers do not store or train on API data
     - No data retention beyond analysis
     - SOC 2 Type II certified providers
+
   </Accordion>
 
   <Accordion title="Can I switch between different AI providers later?">
@@ -497,6 +533,7 @@ Track your API usage to avoid surprises:
     4. Save configuration
 
     Previous insights remain unchanged, but new analyses will use the new provider.
+
   </Accordion>
 
   <Accordion title="How much does AI Insights cost for sponsorship analysis?">
@@ -510,6 +547,7 @@ Track your API usage to avoid surprises:
     - Anthropic: ~$0.01-0.03 per analysis (Claude)
 
     Valiyou does not charge extra for AI Insights (Professional/Enterprise plan required).
+
   </Accordion>
 
   <Accordion title="Can I use multiple AI providers for different reports?">
@@ -519,6 +557,7 @@ Track your API usage to avoid surprises:
     3. Switch back to original provider if desired
 
     Tip: Use free providers for testing, paid providers for important reports.
+
   </Accordion>
 
   <Accordion title="What happens if I exceed my AI API limits?">
@@ -531,43 +570,32 @@ Track your API usage to avoid surprises:
     - Hard limits require credit top-up
 
     **Solution**: Use multiple providers or wait for limit reset.
+
   </Accordion>
 
-  <Accordion title="How accurate are the AI-generated sponsorship insights?">
-    AI insights are highly accurate for pattern detection and trend analysis, but should be verified:
-    - ✅ Excellent at identifying trends and anomalies
-    - ✅ Reliable for comparative analysis
-    - ✅ Good at generating actionable recommendations
-    - ⚠️ Always verify insights against source data
-    - ⚠️ Apply domain expertise to recommendations
-  </Accordion>
+<Accordion title="How accurate are the AI-generated sponsorship insights?">
+  AI insights are highly accurate for pattern detection and trend analysis, but should be verified:
+  - ✅ Excellent at identifying trends and anomalies - ✅ Reliable for comparative analysis - ✅
+  Good at generating actionable recommendations - ⚠️ Always verify insights against source data - ⚠️
+  Apply domain expertise to recommendations
+</Accordion>
 
-  <Accordion title="Can AI Insights analyze historical sponsorship trends?">
-    Yes! AI Insights excels at historical trend analysis:
-    - Compare valuations across multiple years
-    - Identify seasonal patterns
-    - Detect growth trajectories
-    - Forecast future performance
-    - Benchmark against historical data
-  </Accordion>
+<Accordion title="Can AI Insights analyze historical sponsorship trends?">
+  Yes! AI Insights excels at historical trend analysis: - Compare valuations across multiple years -
+  Identify seasonal patterns - Detect growth trajectories - Forecast future performance - Benchmark
+  against historical data
+</Accordion>
 
-  <Accordion title="Does AI Insights work with all valuation types?">
-    Yes, AI Insights analyzes all valuation types including:
-    - Sponsorship valuations
-    - Brand exposure calculations
-    - Media value assessments
-    - Multi-platform campaigns
-    - Mixed revenue streams
-  </Accordion>
+<Accordion title="Does AI Insights work with all valuation types?">
+  Yes, AI Insights analyzes all valuation types including: - Sponsorship valuations - Brand exposure
+  calculations - Media value assessments - Multi-platform campaigns - Mixed revenue streams
+</Accordion>
 
-  <Accordion title="How long does it take to generate AI insights?">
-    Generation time varies by provider and model:
-    - **Groq**: 2-5 seconds (fastest)
-    - **Gemini Flash**: 3-7 seconds
-    - **GPT-4o-mini**: 5-10 seconds
-    - **GPT-4o/Claude**: 10-20 seconds
-    - **Claude Opus**: 15-30 seconds (most detailed)
-  </Accordion>
+<Accordion title="How long does it take to generate AI insights?">
+  Generation time varies by provider and model: - **Groq**: 2-5 seconds (fastest) - **Gemini
+  Flash**: 3-7 seconds - **GPT-4o-mini**: 5-10 seconds - **GPT-4o/Claude**: 10-20 seconds - **Claude
+  Opus**: 15-30 seconds (most detailed)
+</Accordion>
 
   <Accordion title="Can I customize what the AI analyzes in my valuations?">
     Currently, AI Insights analyzes all available valuation data automatically. Custom analysis parameters are planned for future releases. The AI focuses on:
@@ -581,6 +609,7 @@ Track your API usage to avoid surprises:
 ## Changelog {#changelog}
 
 ### January 19, 2025
+
 - **Added**: Data privacy section explaining what data is sent to AI providers
 - **Added**: Detailed information about anonymization, retention, and opt-out options
 - **Added**: Links to all provider privacy policies (Groq, OpenAI, Google, Anthropic)
@@ -588,6 +617,7 @@ Track your API usage to avoid surprises:
 - **Improved**: Security transparency for enterprise customers
 
 ### Initial Release
+
 - Multi-provider LLM support (Groq, OpenAI, Google Gemini, Anthropic Claude)
 - AI-powered insights for multi-valuation comparison reports
 - Natural language trend detection and recommendations

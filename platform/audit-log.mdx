@@ -1,14 +1,16 @@
 ---
 title: 'Audit Log - Compliance & Security | Valiyou'
 description: 'Track all data changes with comprehensive audit trail for compliance and security. Monitor user activity, maintain GDPR compliance, and export logs.'
-seo:
-  title: 'Audit Log - Compliance Tracking | Valiyou'
+'og:title': 'Audit Log - Compliance Tracking | Valiyou'
 ---
 
 # Audit Log - Compliance Tracking
 
 <Frame>
-  <img src="/images/platform/audit-log/overview.png" alt="Valiyou audit log interface showing detailed compliance tracking, security monitoring, user activity logs, and GDPR-compliant data change history" />
+  <img
+    src="/images/platform/audit-log/overview.png"
+    alt="Valiyou audit log interface showing detailed compliance tracking, security monitoring, user activity logs, and GDPR-compliant data change history"
+  />
 </Frame>
 
 **View detailed history of all data changes in your organization with comprehensive who, what, when, and how tracking for compliance, security investigations, and team monitoring.** The audit log provides an immutable record of every action, complete before/after values, and export capabilities for regulatory reporting and forensic analysis.
@@ -17,16 +19,14 @@ seo:
 
 Navigate to **Platform** → **Audit Log** from the sidebar.
 
-<Note>
-**Plan Required**: Enterprise plan only
-**Permission Required**: Admin permission
-</Note>
+<Note>**Plan Required**: Enterprise plan only **Permission Required**: Admin permission</Note>
 
 ## What is the Audit Log?
 
 The Audit Log is a comprehensive, immutable record of all data changes in your organization. Every create, update, and delete action is automatically tracked with complete before/after values, user information, and timestamps.
 
 **Tracked Information**:
+
 - **Who**: User email who made the change
 - **What**: Complete field-level diff (before → after values)
 - **When**: Precise timestamp (date and time to the second)
@@ -34,7 +34,8 @@ The Audit Log is a comprehensive, immutable record of all data changes in your o
 - **How**: Action type (create, update, delete, restore)
 
 <Info>
-**Automatic Tracking**: All changes are automatically logged. No manual action required. Logs cannot be edited or deleted (immutable).
+  **Automatic Tracking**: All changes are automatically logged. No manual action required. Logs
+  cannot be edited or deleted (immutable).
 </Info>
 
 ## Page Layout
@@ -42,17 +43,20 @@ The Audit Log is a comprehensive, immutable record of all data changes in your o
 The Audit Log page has three main sections:
 
 ### Page Header
+
 - Title: "Audit Log"
 - Breadcrumbs: Dashboard → Audit Log
 - **Export to CSV** button (top right)
 
 ### Filter Bar
+
 - User filter dropdown
 - Action filter dropdown
 - Table filter dropdown
 - Date range picker (start and end dates)
 
 ### Audit Log Table
+
 - Sortable columns
 - Paginated (50 entries per page)
 - Row click opens detail panel
@@ -65,23 +69,27 @@ Comprehensive table showing all logged changes.
 ### Table Columns
 
 **Actions** (85px width)
+
 - "Details" button (blue)
 - Opens detail panel on click
 - Always visible
 
 **Date & Time** (180px)
+
 - Format: dd/MM/yyyy HH:mm:ss
 - Example: 15/01/2025 14:30:45
 - Sortable column
 - Defaults to newest first
 
 **User** (200px)
+
 - User email address
 - Example: john.doe@company.com
 - Sortable column
 - Filterable via dropdown
 
 **Action** (120px)
+
 - Badge with action type
 - **Create** (green badge)
 - **Update** (blue badge)
@@ -91,12 +99,14 @@ Comprehensive table showing all logged changes.
 - Filterable via dropdown
 
 **Table** (150px)
+
 - Table name (human-readable)
 - Examples: Organisation, valuations, sponsors
 - Sortable column
 - Filterable via dropdown
 
 **Changes** (300px)
+
 - Shows up to 2 field changes
 - Format: `field: old_value → new_value`
 - Example: `name: "Old Name" → "New Name"`
@@ -106,23 +116,27 @@ Comprehensive table showing all logged changes.
 ### Table Features
 
 **Sorting**:
+
 - Click column headers to sort
 - Ascending/descending toggle
 - Default sort: Date & Time (newest first)
 
 **Pagination**:
+
 - 50 entries per page
 - Page navigation controls at bottom
 - Shows "Showing X to Y of Z entries"
 
 **Row Click**:
+
 - Click any row to open detail panel
 - Shows full change details
 - Desktop: Side panel (two-column layout)
 - Mobile: Drawer overlay
 
 <Tip>
-**Quick Details**: Click the blue "Details" button or click anywhere on the row to open the detail panel.
+  **Quick Details**: Click the blue "Details" button or click anywhere on the row to open the detail
+  panel.
 </Tip>
 
 ## Filter Bar
@@ -132,12 +146,14 @@ Comprehensive filtering to find specific audit log entries.
 ### Filter Options
 
 **All Users Dropdown**:
+
 - Shows all unique users who made changes
 - Alphabetically sorted
 - "All Users" option (default)
 - Updates table instantly
 
 **All Actions Dropdown**:
+
 - All Actions (default)
 - Create
 - Update
@@ -145,12 +161,14 @@ Comprehensive filtering to find specific audit log entries.
 - Restore
 
 **All Tables Dropdown**:
+
 - Shows all unique tables with logged changes
 - Human-readable names (Organisation, valuations, etc.)
 - "All Tables" option (default)
 - Alphabetically sorted
 
 **Date Range Picker**:
+
 - Start Date input (optional)
 - End Date input (optional)
 - Format: YYYY-MM-DD
@@ -160,23 +178,26 @@ Comprehensive filtering to find specific audit log entries.
 ### Filter Behavior
 
 **Real-time Filtering**:
+
 - Filters apply instantly (no submit button)
 - Multiple filters combine with AND logic
 - Empty filter = no restriction
 
 **Filter Combinations**:
+
 - User + Action: Show specific user's creates
 - Action + Table: Show all updates to valuations
 - Date Range + User: Show user activity in period
 - All filters: Precise targeting
 
 <Info>
-**Saved State**: Filter selections persist during your session. Refresh page to reset all filters.
+  **Saved State**: Filter selections persist during your session. Refresh page to reset all filters.
 </Info>
 
 ### Clearing Filters
 
 To clear filters:
+
 1. Select "All Users", "All Actions", or "All Tables" in dropdowns
 2. Clear start and end date fields
 3. Or refresh page
@@ -188,10 +209,12 @@ Comprehensive view of a single audit log entry.
 ### Desktop Layout (&gt;1024px)
 
 **Two-Column Layout**:
+
 - Left: Audit Log table (main)
 - Right: Detail panel (450px wide, sticky)
 
 **Panel Features**:
+
 - Sticky positioning (stays visible when scrolling)
 - Max height: calc(100vh - 32px)
 - Scrollable if content overflows
@@ -200,6 +223,7 @@ Comprehensive view of a single audit log entry.
 ### Mobile Layout (&lt;1024px)
 
 **Drawer Overlay**:
+
 - Full-screen overlay (darkened background)
 - Panel slides in from right
 - Close button or backdrop click closes
@@ -208,17 +232,20 @@ Comprehensive view of a single audit log entry.
 ### Panel Contents
 
 **Header Section**:
+
 - Close button (X icon)
 - Action type badge (Create, Update, Delete, Restore)
 - Date and time
 - User email
 
 **Metadata Section**:
+
 - **Table**: Human-readable table name
 - **Record ID**: UUID of changed record
 - **Action**: Action type with description
 
 **Changes Section**:
+
 - **Title**: "Field Changes" or "Fields Changed"
 - List of all field changes
 - Each change shows:
@@ -228,6 +255,7 @@ Comprehensive view of a single audit log entry.
   - New value (green)
 
 **Example Change Display**:
+
 ```
 name: "Old Organization Name" → "New Organization Name"
 email: "old@email.com" → "new@email.com"
@@ -235,19 +263,22 @@ status: "pending" → "approved"
 ```
 
 **Value Formatting**:
+
 - Null/undefined: Shown as "-"
 - Objects: JSON stringified
 - Strings: Quoted
 - Numbers/Booleans: As-is
 
 **Restore Button** (Admin only):
+
 - **Text**: "Restore Previous Version"
 - **Color**: Indigo button
 - **Visibility**: Only if user is Admin
 - **Action**: Opens restore confirmation modal
 
 <Warning>
-**Restore Capability**: Only Admins can restore previous versions. Restoring creates a new "restore" action in the audit log.
+  **Restore Capability**: Only Admins can restore previous versions. Restoring creates a new
+  "restore" action in the audit log.
 </Warning>
 
 ## Export to CSV
@@ -255,6 +286,7 @@ status: "pending" → "approved"
 Download audit log entries as CSV file for compliance reporting or external analysis.
 
 **How to Export**:
+
 1. Click **"Export to CSV"** button (top right)
 2. Confirmation modal appears:
    - Title: "Export Audit Log to CSV?"
@@ -264,21 +296,25 @@ Download audit log entries as CSV file for compliance reporting or external anal
 3. Click "Export" to download
 
 **CSV Contents**:
+
 - Headers: Date & Time, User, Action, Table, Changes
 - Rows: All currently visible entries (respects filters!)
 - Format: Standard CSV (comma-separated)
 - Filename: `audit-logs-YYYY-MM-DD.csv`
 
 **Changes Column Format**:
+
 ```
 "field1: old1 → new1; field2: old2 → new2"
 ```
 
 <Info>
-**Filtered Export**: Export only includes entries currently visible after applying filters. Use filters to export specific subsets.
+  **Filtered Export**: Export only includes entries currently visible after applying filters. Use
+  filters to export specific subsets.
 </Info>
 
 **Use Cases**:
+
 - Compliance reporting (GDPR, SOX)
 - External audits
 - Backup/archive
@@ -303,23 +339,27 @@ Admins can restore previous versions of records directly from the audit log.
 5. **Success Dialog** appears: "Previous version restored successfully!"
 
 **What Happens**:
+
 - Record is reverted to previous state (old values restored)
 - New "restore" action logged in audit log
 - Original audit log entry remains unchanged
 - Change is immediate (no undo)
 
 **Restore Action Logged**:
+
 - Action type: "restore" (purple badge)
 - User: Admin who performed restore
 - Changes: Shows what was restored
 - Links back to original audit log entry
 
 <Warning>
-**Admin Only**: Only users with Admin permission can restore previous versions. Regular users see detail panel without restore button.
+  **Admin Only**: Only users with Admin permission can restore previous versions. Regular users see
+  detail panel without restore button.
 </Warning>
 
 <Tip>
-**Audit Trail Preserved**: Restores create new audit log entries. Full history is always preserved, including restore actions.
+  **Audit Trail Preserved**: Restores create new audit log entries. Full history is always
+  preserved, including restore actions.
 </Tip>
 
 ## Tracked Resources
@@ -327,12 +367,14 @@ Admins can restore previous versions of records directly from the audit log.
 The audit log tracks changes to all critical data:
 
 ### Organization Data
+
 - Organization settings (name, address, VAT, currency)
 - Organization logo changes
 - Brand value indicator defaults
 - SSO configuration changes
 
 ### Valuations
+
 - Create new valuation
 - Update valuation fields (status, values, media data)
 - Delete valuation
@@ -340,6 +382,7 @@ The audit log tracks changes to all critical data:
 - Media value updates
 
 ### Sponsorships
+
 - Sponsor changes (name, status, value, logo)
 - Sponsor contact changes (add, edit, delete)
 - Library item changes (name, category, cost, quantity)
@@ -347,41 +390,48 @@ The audit log tracks changes to all critical data:
 - Proposal status changes (sent, approved, rejected)
 
 ### User Management
+
 - User permission changes
 - Role assignments
 - User invitations
 - User removals
 
 ### Player Transfers
+
 - Create transfer record
 - Update transfer details
 - Delete transfer
 
 ### All Other Data
+
 - Every table with critical business data
 - Complete field-level tracking
 - Before/after value capture
 
 <Info>
-**Comprehensive Coverage**: If it's in the database and matters for your business, it's tracked in the audit log.
+  **Comprehensive Coverage**: If it's in the database and matters for your business, it's tracked in
+  the audit log.
 </Info>
 
 ## Permissions
 
 Access to audit log requires specific permissions:
 
-| Permission | Can View Audit Log | Can Export CSV | Can Restore Versions |
-|------------|-------------------|----------------|---------------------|
-| **Admin** | ✅ Yes | ✅ Yes | ✅ Yes |
-| **Audit Log** | ✅ Yes | ✅ Yes | ❌ No |
-| **Other Roles** | ❌ No | ❌ No | ❌ No |
+| Permission      | Can View Audit Log | Can Export CSV | Can Restore Versions |
+| --------------- | ------------------ | -------------- | -------------------- |
+| **Admin**       | ✅ Yes             | ✅ Yes         | ✅ Yes               |
+| **Audit Log**   | ✅ Yes             | ✅ Yes         | ❌ No                |
+| **Other Roles** | ❌ No              | ❌ No          | ❌ No                |
 
 <Note>
-**Plan Requirement**: All audit log features require Enterprise plan. Professional and Starter plans cannot access audit log.
+  **Plan Requirement**: All audit log features require Enterprise plan. Professional and Starter
+  plans cannot access audit log.
 </Note>
 
 <Warning>
-**Restore Versions**: Only users with **Admin** role can restore previous versions. Users with Audit Log permission can view and export logs, but cannot restore data to prevent accidental data changes.
+  **Restore Versions**: Only users with **Admin** role can restore previous versions. Users with
+  Audit Log permission can view and export logs, but cannot restore data to prevent accidental data
+  changes.
 </Warning>
 
 ## Common Use Cases
@@ -448,11 +498,13 @@ Access to audit log requires specific permissions:
 ### Can't Access Audit Log
 
 **Reasons**:
+
 - Not on Enterprise plan
 - No Admin, Log, or Settings permission
 - Redirected to dashboard automatically
 
 **Fix**:
+
 - Upgrade to Enterprise plan
 - Request Admin permission from owner
 - Contact owner for access
@@ -460,11 +512,13 @@ Access to audit log requires specific permissions:
 ### Filters Not Working
 
 **Check**:
+
 - Filter values selected correctly
 - Date range format: YYYY-MM-DD
 - No typos in dropdown selections
 
 **Try**:
+
 - Clear all filters and start over
 - Refresh page
 - Check that data matching filter exists
@@ -472,11 +526,13 @@ Access to audit log requires specific permissions:
 ### Export CSV Fails
 
 **Reasons**:
+
 - Browser popup blocker
 - No data matching current filters
 - Network error
 
 **Fix**:
+
 - Disable popup blocker for site
 - Clear filters to export all logs
 - Check network connection
@@ -485,11 +541,13 @@ Access to audit log requires specific permissions:
 ### Restore Not Available
 
 **Reasons**:
+
 - Not an Admin
 - Record already deleted
 - Database constraint prevents restore
 
 **Fix**:
+
 - Request Admin permission
 - Contact support if restore critical
 - Manual re-entry if restore impossible
@@ -497,6 +555,7 @@ Access to audit log requires specific permissions:
 ### Detail Panel Won't Open
 
 **Try**:
+
 - Click "Details" button instead of row
 - Refresh page
 - Clear browser cache
@@ -506,14 +565,17 @@ Access to audit log requires specific permissions:
 ## Retention Policy
 
 <Info>
-**Indefinite Retention**: Audit logs are retained indefinitely for compliance purposes. Logs are never automatically deleted.
+  **Indefinite Retention**: Audit logs are retained indefinitely for compliance purposes. Logs are
+  never automatically deleted.
 </Info>
 
 **Exceptions**:
+
 - Organization deletion: Audit logs deleted after 30-day grace period
 - Export and backup recommended before deletion
 
 **Storage**:
+
 - Logs stored in secure database
 - Encrypted at rest
 - Immutable (cannot be edited/deleted)
@@ -526,37 +588,68 @@ Access to audit log requires specific permissions:
     An audit log is a comprehensive, immutable record of all data changes in your organization. It tracks who made changes, what was modified, when it happened, and how the data changed. Audit logs are critical for GDPR compliance, SOX compliance, security monitoring, forensic analysis, and regulatory reporting. They provide an evidence trail for auditors and help investigate data breaches or unauthorized access.
   </Accordion>
 
-  <Accordion title="How do I export audit logs for compliance reporting?">
-    Navigate to Platform → Audit Log, apply filters to select the audit period (e.g., last quarter, last year), and click "Export to CSV" in the top right. The export includes all currently visible entries with Date & Time, User, Action, Table, and Changes columns. Use filters to create targeted exports for specific compliance requirements, such as all changes by a particular user or all modifications to sensitive data.
-  </Accordion>
+<Accordion title="How do I export audit logs for compliance reporting?">
+  Navigate to Platform → Audit Log, apply filters to select the audit period (e.g., last quarter,
+  last year), and click "Export to CSV" in the top right. The export includes all currently visible
+  entries with Date & Time, User, Action, Table, and Changes columns. Use filters to create targeted
+  exports for specific compliance requirements, such as all changes by a particular user or all
+  modifications to sensitive data.
+</Accordion>
 
-  <Accordion title="Can I restore data to a previous version using the audit log?">
-    Yes, if you have Admin permission. Open the detail panel for the audit log entry you want to restore, click "Restore Previous Version", review the changes that will be restored, and confirm. The record is immediately reverted to its previous state, and a new "restore" action is logged in the audit log. Only Admins can restore versions—users with Audit Log permission can view and export but cannot restore.
-  </Accordion>
+<Accordion title="Can I restore data to a previous version using the audit log?">
+  Yes, if you have Admin permission. Open the detail panel for the audit log entry you want to
+  restore, click "Restore Previous Version", review the changes that will be restored, and confirm.
+  The record is immediately reverted to its previous state, and a new "restore" action is logged in
+  the audit log. Only Admins can restore versions—users with Audit Log permission can view and
+  export but cannot restore.
+</Accordion>
 
-  <Accordion title="How do I investigate suspicious user activity for security monitoring?">
-    Navigate to Platform → Audit Log, filter by the user's email address in the "All Users" dropdown, set a date range for the investigation period, and review all actions taken by that user. Look for unusual patterns like mass deletions, unauthorized data access, or changes outside normal working hours. Export the filtered results as CSV for documentation and further analysis. The audit log shows complete before/after values for forensic investigation.
-  </Accordion>
+<Accordion title="How do I investigate suspicious user activity for security monitoring?">
+  Navigate to Platform → Audit Log, filter by the user's email address in the "All Users" dropdown,
+  set a date range for the investigation period, and review all actions taken by that user. Look for
+  unusual patterns like mass deletions, unauthorized data access, or changes outside normal working
+  hours. Export the filtered results as CSV for documentation and further analysis. The audit log
+  shows complete before/after values for forensic investigation.
+</Accordion>
 
-  <Accordion title="What data changes are tracked in the audit log?">
-    The audit log tracks all changes to critical business data including organization settings, valuations, sponsorships, user permissions, player transfers, and more. Every create, update, delete, and restore action is logged with complete field-level tracking and before/after values. Changes to organization logo, SSO configuration, brand indicators, sponsor contacts, library items, packages, and proposals are all tracked automatically.
-  </Accordion>
+<Accordion title="What data changes are tracked in the audit log?">
+  The audit log tracks all changes to critical business data including organization settings,
+  valuations, sponsorships, user permissions, player transfers, and more. Every create, update,
+  delete, and restore action is logged with complete field-level tracking and before/after values.
+  Changes to organization logo, SSO configuration, brand indicators, sponsor contacts, library
+  items, packages, and proposals are all tracked automatically.
+</Accordion>
 
-  <Accordion title="Is the audit log GDPR and SOX compliant?">
-    Yes, the audit log is designed to meet GDPR, SOX, and most financial/healthcare compliance requirements. Logs are immutable (cannot be edited or deleted), encrypted at rest, stored securely, and retained indefinitely for compliance purposes. You can export logs at any time for regulatory reporting and external audits. The system automatically tracks all data access and modifications with complete user attribution.
-  </Accordion>
+<Accordion title="Is the audit log GDPR and SOX compliant?">
+  Yes, the audit log is designed to meet GDPR, SOX, and most financial/healthcare compliance
+  requirements. Logs are immutable (cannot be edited or deleted), encrypted at rest, stored
+  securely, and retained indefinitely for compliance purposes. You can export logs at any time for
+  regulatory reporting and external audits. The system automatically tracks all data access and
+  modifications with complete user attribution.
+</Accordion>
 
-  <Accordion title="How can I filter audit logs to find specific changes?">
-    Use the filter bar to narrow down audit log entries by User (email address), Action (create, update, delete, restore), Table (organization, valuations, sponsors, etc.), and Date Range. Filters apply instantly and combine with AND logic for precise targeting. For example, filter by a specific user and date range to see all their activity during an investigation period, or filter by table and action to see all updates to valuations.
-  </Accordion>
+<Accordion title="How can I filter audit logs to find specific changes?">
+  Use the filter bar to narrow down audit log entries by User (email address), Action (create,
+  update, delete, restore), Table (organization, valuations, sponsors, etc.), and Date Range.
+  Filters apply instantly and combine with AND logic for precise targeting. For example, filter by a
+  specific user and date range to see all their activity during an investigation period, or filter
+  by table and action to see all updates to valuations.
+</Accordion>
 
-  <Accordion title="What happens to audit logs when a user is removed from the organization?">
-    Audit log entries remain permanently in the system even after a user is removed. The entries continue to show the user's email address and all changes they made. This ensures complete audit trail preservation for compliance and security investigations. Audit logs are immutable and cannot be deleted, even when the associated user account is removed.
-  </Accordion>
+<Accordion title="What happens to audit logs when a user is removed from the organization?">
+  Audit log entries remain permanently in the system even after a user is removed. The entries
+  continue to show the user's email address and all changes they made. This ensures complete audit
+  trail preservation for compliance and security investigations. Audit logs are immutable and cannot
+  be deleted, even when the associated user account is removed.
+</Accordion>
 
-  <Accordion title="Can I schedule automatic audit log exports for compliance reporting?">
-    Currently, audit log exports must be triggered manually by clicking "Export to CSV". However, you can establish a regular schedule (e.g., monthly or quarterly) to export logs for compliance archiving. Use filters to select the appropriate date range, export the CSV, and store it securely for regulatory requirements. Contact support if you need assistance with automated compliance reporting workflows.
-  </Accordion>
+<Accordion title="Can I schedule automatic audit log exports for compliance reporting?">
+  Currently, audit log exports must be triggered manually by clicking "Export to CSV". However, you
+  can establish a regular schedule (e.g., monthly or quarterly) to export logs for compliance
+  archiving. Use filters to select the appropriate date range, export the CSV, and store it securely
+  for regulatory requirements. Contact support if you need assistance with automated compliance
+  reporting workflows.
+</Accordion>
 
   <Accordion title="How do I use audit logs to resolve disputes about data changes?">
     When a dispute arises (e.g., "I didn't change that data"), navigate to Platform → Audit Log, filter by the relevant table and date range, locate the specific change entry, open the detail panel to view complete before/after values, and note the user email and timestamp. The immutable audit trail provides definitive proof of who made what changes and when, allowing you to resolve disputes with evidence-based facts.
@@ -574,29 +667,17 @@ Access to audit log requires specific permissions:
     Check audit log weekly for unusual activity
   </Card>
 
-  <Card
-    title="Export for Compliance"
-    icon="file-export"
-    href="/platform/audit-log#exporting-logs"
-  >
-    Schedule quarterly exports for audit records
-  </Card>
+<Card title="Export for Compliance" icon="file-export" href="/platform/audit-log#exporting-logs">
+  Schedule quarterly exports for audit records
+</Card>
 
-  <Card
-    title="Train Team"
-    icon="chalkboard-user"
-    href="/platform/team-management"
-  >
-    Educate team about audit log and accountability
-  </Card>
+<Card title="Train Team" icon="chalkboard-user" href="/platform/team-management">
+  Educate team about audit log and accountability
+</Card>
 
-  <Card
-    title="Set Up Alerts"
-    icon="bell"
-    href="/trust-security/trust-center"
-  >
-    Request alert notifications for critical changes
-  </Card>
+<Card title="Set Up Alerts" icon="bell" href="/trust-security/trust-center">
+  Request alert notifications for critical changes
+</Card>
 
   <Card
     title="Document Processes"
@@ -608,7 +689,8 @@ Access to audit log requires specific permissions:
 </CardGroup>
 
 <Tip>
-**Compliance Ready**: The audit log meets GDPR, SOX, and most financial/healthcare compliance requirements. Contact support for specific compliance questions.
+  **Compliance Ready**: The audit log meets GDPR, SOX, and most financial/healthcare compliance
+  requirements. Contact support for specific compliance questions.
 </Tip>
 
 <script type="application/ld+json">

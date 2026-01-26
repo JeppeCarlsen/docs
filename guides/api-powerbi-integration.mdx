@@ -2,8 +2,7 @@
 title: 'Connect Valiyou to Power BI with API'
 description: 'Complete guide to integrating Valiyou API with Microsoft Power BI for automated sponsorship dashboards, real-time metrics, and scheduled data refresh.'
 lastUpdated: '2025-01-19'
-seo:
-  title: 'Power BI Integration with API | Valiyou'
+'og:title': 'Power BI Integration with API | Valiyou'
 ---
 
 # Connect Valiyou to Power BI with API
@@ -11,15 +10,15 @@ seo:
 **Build automated sponsorship dashboards in Power BI with live data from Valiyou API.** This guide covers API key creation, Power BI connector configuration, data transformation, and scheduled refresh setup for real-time sponsorship analytics.
 
 <Note>
-**Time Required**: 60-90 minutes (first-time setup)
-**Prerequisites**: Microsoft Power BI Desktop installed, Professional/Enterprise Valiyou plan
-**Permissions Required**: API permission or Admin access
-**Technical Level**: Intermediate (basic Power Query knowledge helpful)
+  **Time Required**: 60-90 minutes (first-time setup) **Prerequisites**: Microsoft Power BI Desktop
+  installed, Professional/Enterprise Valiyou plan **Permissions Required**: API permission or Admin
+  access **Technical Level**: Intermediate (basic Power Query knowledge helpful)
 </Note>
 
 ## Why Power BI Integration?
 
 **Benefits**:
+
 - 📊 **Custom Dashboards**: Build sponsor-facing dashboards with your branding
 - ⚡ **Real-Time Data**: Auto-refresh keeps dashboards current
 - 📈 **Advanced Analytics**: Combine Valiyou data with other sources
@@ -65,7 +64,8 @@ graph LR
    - You cannot view it again!
 
 <Warning>
-**Security**: Use header-based authentication (recommended) or query parameter. Never commit API keys to version control or share publicly.
+  **Security**: Use header-based authentication (recommended) or query parameter. Never commit API
+  keys to version control or share publicly.
 </Warning>
 
 **Related Documentation**: [API Keys Guide](/platform/api)
@@ -90,6 +90,7 @@ graph LR
 2. Enter API endpoint in **URL parts**:
 
 **For Valuations**:
+
 ```
 https://valiyou.io/api/v1/valuations
 ```
@@ -97,6 +98,7 @@ https://valiyou.io/api/v1/valuations
 3. Add **URL Parameters**:
 
 **Option A: Header Authentication (Recommended)**:
+
 - Skip URL parameters
 - Click **OK**
 - In next dialog, select **"Web API"** authentication
@@ -105,12 +107,14 @@ https://valiyou.io/api/v1/valuations
   - **Value**: `Bearer vly_YOUR_API_KEY_HERE`
 
 **Option B: Query Parameter Authentication**:
+
 - Add parameter: `club_id` = `YOUR_CLUB_ID`
 - Add parameter: `api_key` = `vly_YOUR_API_KEY_HERE`
 - Click **OK**
 
 <Tip>
-**Finding Club ID**: Your club ID is in Valiyou URL when logged in: `valiyou.io/dashboard?club=YOUR_CLUB_ID` or ask support for it.
+  **Finding Club ID**: Your club ID is in Valiyou URL when logged in:
+  `valiyou.io/dashboard?club=YOUR_CLUB_ID` or ask support for it.
 </Tip>
 
 ### Step 3: Preview and Transform Data
@@ -170,9 +174,11 @@ Make column names user-friendly:
 1. Click **Add Column** ribbon
 2. Click **Custom Column**
 3. Enter formula:
+
 ```
 = [Total Valuation] / 500000
 ```
+
 (Replace 500000 with actual sponsor investment)
 
 4. Name column: `ROI Multiple`
@@ -182,9 +188,11 @@ Make column names user-friendly:
 
 1. Click **Add Column** ribbon → **Custom Column**
 2. Enter formula:
+
 ```
 = "Q" & Number.ToText(Date.QuarterOfYear([valuation_date]))
 ```
+
 3. Name: `Quarter`
 4. Click **OK**
 
@@ -204,17 +212,20 @@ Make column names user-friendly:
 ### Dashboard Layout Suggestions:
 
 **Top Row - Key Metrics**:
+
 - **Card**: Total Valuation (latest quarter)
 - **Card**: Quarter-over-Quarter Growth %
 - **Card**: Total Reach (sum of all impressions)
 - **Card**: ROI Multiple
 
 **Middle Row - Trends**:
+
 - **Line Chart**: Valuation over time (X=Date, Y=Total Valuation)
 - **Stacked Bar Chart**: Sales vs. Media Value by Quarter
 - **Area Chart**: Social Impressions trend
 
 **Bottom Row - Breakdown**:
+
 - **Pie Chart**: Media Value by Channel
 - **Table**: Detailed metrics by date
 - **Gauge**: YoY Growth %
@@ -241,7 +252,8 @@ Make column names user-friendly:
 3. Show percentages in labels
 
 <Tip>
-**Design Best Practice**: Use your brand colors for consistency. Go to View → Themes → Import Theme to add your brand palette.
+  **Design Best Practice**: Use your brand colors for consistency. Go to View → Themes → Import
+  Theme to add your brand palette.
 </Tip>
 
 ---
@@ -265,7 +277,8 @@ Make column names user-friendly:
 9. Click **Apply**
 
 <Warning>
-**Gateway Required**: For on-premises Power BI, you need Power BI Gateway installed. Cloud users can refresh directly.
+  **Gateway Required**: For on-premises Power BI, you need Power BI Gateway installed. Cloud users
+  can refresh directly.
 </Warning>
 
 ### Option B: Manual Refresh
@@ -307,7 +320,8 @@ Sponsor receives email with dashboard link.
 4. Email to sponsor
 
 <Info>
-**Access Control**: Power BI Pro license required for each viewer. Alternatively, use Power BI Embedded or Premium capacity for external sharing without viewer licenses.
+  **Access Control**: Power BI Pro license required for each viewer. Alternatively, use Power BI
+  Embedded or Premium capacity for external sharing without viewer licenses.
 </Info>
 
 ---
@@ -374,6 +388,7 @@ Sponsor receives email with dashboard link.
     2. Check key hasn't been revoked
     3. Ensure no extra spaces in key when pasting
     4. Confirm club_id is correct
+
   </Accordion>
 
   <Accordion title="Empty Dataset / No Data Returned">
@@ -384,6 +399,7 @@ Sponsor receives email with dashboard link.
     2. Verify valuations exist in Valiyou
     3. Test API URL in browser first
     4. Check API endpoint is correct (.io not .com)
+
   </Accordion>
 
   <Accordion title="Refresh Fails in Power BI Service">
@@ -394,6 +410,7 @@ Sponsor receives email with dashboard link.
     2. For on-premises: Install Power BI Gateway
     3. Check data source credentials in Power BI Service settings
     4. Verify firewall allows outbound HTTPS to valiyou.io
+
   </Accordion>
 
   <Accordion title="Data Types Show as Text">
@@ -404,6 +421,7 @@ Sponsor receives email with dashboard link.
     2. Numeric columns → Decimal Number or Whole Number
     3. Date columns → Date
     4. Close & Apply
+
   </Accordion>
 </AccordionGroup>
 
@@ -412,18 +430,21 @@ Sponsor receives email with dashboard link.
 ## Dashboard Examples
 
 **Sponsor Quarterly Review Dashboard**:
+
 - KPIs: Total Valuation, ROI, Reach
 - Trend: Valuation line chart (quarterly)
 - Breakdown: Media channels pie chart
 - Table: Detailed metrics
 
 **Executive Summary Dashboard**:
+
 - Cards: Current quarter valuation
 - Gauge: YoY growth %
 - Map: Geographic reach (if data available)
 - Waterfall: Sales + Media = Total
 
 **Social Media Performance Dashboard**:
+
 - Line: Impressions trend
 - Bar: Engagement by platform
 - Table: Top posts (requires social API integration)
@@ -432,18 +453,18 @@ Sponsor receives email with dashboard link.
 
 ## Next Steps
 
-<CardGroup cols={2}>
+<CardGroup cols="2">
   <Card title="Automate Reports" icon="calendar-check" href="/guides/quarterly-sponsor-report">
     Use Power BI dashboards for quarterly sponsor reports
   </Card>
 
-  <Card title="Advanced Analytics" icon="chart-mixed">
-    Combine with Google Analytics, CRM data for attribution modeling
-  </Card>
+<Card title="Advanced Analytics" icon="chart-mixed">
+  Combine with Google Analytics, CRM data for attribution modeling
+</Card>
 
-  <Card title="API Documentation" icon="code" href="/platform/api">
-    Explore all available API endpoints and parameters
-  </Card>
+<Card title="API Documentation" icon="code" href="/platform/api">
+  Explore all available API endpoints and parameters
+</Card>
 
   <Card title="Custom Calculations" icon="calculator">
     Build DAX measures for complex KPIs (ROAS, engagement rate, etc.)
@@ -465,11 +486,13 @@ Sponsor receives email with dashboard link.
 <Card title="Contact Support" icon="headset">
   **Email**: support@valiyou.com
 
-  Our team can help with Power BI connector issues, DAX formulas, and dashboard design best practices.
+Our team can help with Power BI connector issues, DAX formulas, and dashboard design best practices.
+
 </Card>
 
 <Card title="Power BI Community" icon="users">
   **Forum**: [community.powerbi.com](https://community.powerbi.com)
 
-  For Power BI-specific questions (not Valiyou API issues)
+For Power BI-specific questions (not Valiyou API issues)
+
 </Card>

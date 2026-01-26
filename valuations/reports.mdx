@@ -1,14 +1,16 @@
 ---
 title: 'Reports'
 description: 'Generate comprehensive valuation reports with PDF exports, stakeholder presentations, and advanced data export. Compare valuations with trend analysis and AI.'
-seo:
-  title: 'Valuation Reports & PDF Exports | Valiyou'
+'og:title': 'Valuation Reports & PDF Exports | Valiyou'
 ---
 
 # Valuation Reports & PDF Exports
 
 <Frame>
-  <img src="/images/valuations/reports/overview.png" alt="Valuation reports showing PDF exports, data analytics, stakeholder presentations, and branded report generation with comparison charts" />
+  <img
+    src="/images/valuations/reports/overview.png"
+    alt="Valuation reports showing PDF exports, data analytics, stakeholder presentations, and branded report generation with comparison charts"
+  />
 </Frame>
 
 **Create professional valuation reports for stakeholder presentations** with comprehensive PDF exports, branded reports, and advanced data analytics. Compare multiple valuations side-by-side, generate AI-powered insights, and export presentation-ready documents that demonstrate your sponsorship value with credibility and clarity.
@@ -19,9 +21,7 @@ Generate comprehensive reports by comparing multiple valuations side-by-side wit
 
 Navigate to **Valuations** → **Reports** from the sidebar to access the reports page.
 
-<Note>
-**Permission Required**: You need Reports role or Admin access to view reports.
-</Note>
+<Note>**Permission Required**: You need Reports role or Admin access to view reports.</Note>
 
 ## Empty State
 
@@ -41,6 +41,7 @@ At the top of the page, configure which valuations to compare.
 **Label**: "Select valuations..." (or "X valuations selected")
 
 **Features:**
+
 - Multi-select dropdown (select multiple valuations)
 - Shows valuation dates as options
 - Draft badge for draft valuations
@@ -49,7 +50,8 @@ At the top of the page, configure which valuations to compare.
 - Draft count: "(X Draft)" badge if any drafts are selected
 
 <Info>
-**Auto-Selection**: By default, the newest 2 valuations are automatically selected when you first open the page.
+  **Auto-Selection**: By default, the newest 2 valuations are automatically selected when you first
+  open the page.
 </Info>
 
 ### Selection Persistence
@@ -64,19 +66,19 @@ At the top of the page, configure which valuations to compare.
 **Button**: "Clear" (appears when valuations are selected)
 
 **Action**:
+
 - Removes all selected valuations
 - Clears saved selection from storage
 - Prevents auto-selection on next visit
 
-<Tip>
-Select at least **2 valuations** to generate a report and see comparison charts.
-</Tip>
+<Tip>Select at least **2 valuations** to generate a report and see comparison charts.</Tip>
 
 ## Report Empty State
 
 **Displays when**: Fewer than 2 valuations are selected
 
 **Message**:
+
 - Icon: Chart graphic
 - Title: "Select At Least 2 Valuations"
 - Description: "Choose at least two valuations from the dropdown above to generate a report"
@@ -112,7 +114,8 @@ Four summary cards showing key metrics from the **newest** selected valuation wi
 **Color**: Green/Red/Gray based on trend
 
 <Info>
-Trends compare the **oldest** selected valuation to the **newest** selected valuation, not sequential changes.
+  Trends compare the **oldest** selected valuation to the **newest** selected valuation, not
+  sequential changes.
 </Info>
 
 ## Historical Comparison Chart
@@ -124,18 +127,21 @@ A multi-line area chart showing valuation trends over time.
 ### Chart Features
 
 **Three Stacked Areas:**
+
 1. **Sales Value (Blue)** - Bottom layer
 2. **Media Value (Green)** - Middle layer
 3. **Total Attention Valuation (Purple)** - Top layer with brand multiplier
 
 **Additional Elements:**
+
 - **Grid lines** - Help read values
 - **Legend** - Shows all three series
 - **X-Axis**: Valuation dates (e.g., "Jan 15")
 - **Y-Axis**: Currency values
 
 <Tip>
-**Interactive**: Hover over any point to see exact values for Total, Sales, Media, and Multiplier for that date.
+  **Interactive**: Hover over any point to see exact values for Total, Sales, Media, and Multiplier
+  for that date.
 </Tip>
 
 ### How to Read
@@ -148,12 +154,15 @@ A multi-line area chart showing valuation trends over time.
 ## AI Insights
 
 <Note>
-**Plugin Required**: AI Insights require the AI Insights for Reports plugin (Professional/Enterprise plans). See [AI Insights for Reports](/platform/plugins/ai-insights) for setup details.
+  **Plugin Required**: AI Insights require the AI Insights for Reports plugin
+  (Professional/Enterprise plans). See [AI Insights for Reports](/platform/plugins/ai-insights) for
+  setup details.
 </Note>
 
 ### Enabling AI Insights
 
 **To enable:**
+
 1. Go to **Platform** → **Plugins**
 2. Find "AI Insights for Reports" plugin
 3. Click "Enable"
@@ -168,6 +177,7 @@ See [AI Insights Configuration Guide](/platform/plugins/ai-insights#configuratio
 **Button**: "Generate AI Insights" (blue primary button with sparkles icon)
 
 **Action**:
+
 - Sends selected valuations to AI for analysis
 - Generates insights about trends, patterns, and recommendations
 - Shows loading spinner while processing
@@ -179,23 +189,27 @@ See [AI Insights Configuration Guide](/platform/plugins/ai-insights#configuratio
 **Card Title**: "AI Insights" with provider badge (e.g., "Powered by Groq")
 
 **Insight Items**:
+
 - Icon: Sparkles, Bolt, CPU Chip, or Beaker (randomly assigned)
 - Title: Bold insight summary
 - Description: Detailed insight text
 - Multiple insights per report (typically 3-5)
 
 **Empty State** (before generating):
+
 - Icon: Sparkles
 - Message: "No insights generated yet"
 - Subtitle: "Click 'Generate AI Insights' to analyze your valuations"
 
 <Tip>
-**Saved Insights**: Insights are cached in browser storage for your current selection. They'll reload automatically if you return to the same selection.
+  **Saved Insights**: Insights are cached in browser storage for your current selection. They'll
+  reload automatically if you return to the same selection.
 </Tip>
 
 ### AI Provider Options
 
 **Supported Providers:**
+
 - **Groq** - Fast and cost-effective
 - **Google Gemini** - High quality insights
 - **OpenAI** - GPT-powered analysis
@@ -206,6 +220,7 @@ See [AI Insights Configuration Guide](/platform/plugins/ai-insights#configuratio
 ### Custom Prompts
 
 You can customize the AI prompt in plugin settings to:
+
 - Focus on specific metrics
 - Request specific analysis types
 - Add context about your organization
@@ -214,20 +229,25 @@ You can customize the AI prompt in plugin settings to:
 ### Common Errors
 
 **"AI Insights plugin is not enabled"**
+
 - Go to Plugins and enable AI Insights
 
 **"AI Insights is not configured"**
+
 - Add your API key in plugin settings
 
 **"Response was truncated due to length"**
+
 - Try selecting fewer valuations
 - Reduce custom prompt length
 
 **"AI quota exceeded"**
+
 - Check your API provider plan limits
 - Upgrade plan or wait for quota reset
 
 **"AI service is temporarily overloaded"**
+
 - Wait a moment and try again
 
 ## Valuation Comparison Table
@@ -239,17 +259,20 @@ A table comparing key metrics across all selected valuations.
 ### Desktop Table
 
 **Columns:**
+
 - **Metric** - Metric name (left-aligned)
 - **[Date 1]**, **[Date 2]**, etc. - One column per selected valuation (right-aligned)
 - **Change** - Percentage change from oldest to newest (right-aligned)
 
 **Rows:**
+
 1. **Total Value** - Final total valuation
 2. **Sales Value** - Total sales revenue
 3. **Media Value** - Total media value
 4. **Quality Multiplier** - Brand multiplier (shows absolute change, not percentage)
 
 **Colors:**
+
 - Green: Positive change (increase)
 - Red: Negative change (decrease)
 - Gray: No change
@@ -257,6 +280,7 @@ A table comparing key metrics across all selected valuations.
 ### Mobile View
 
 Instead of table, shows one card per valuation with all metrics:
+
 - Valuation date as card title
 - Total Value
 - Sales Value
@@ -272,6 +296,7 @@ Detailed sales revenue comparison.
 ### Desktop Table
 
 **Rows:**
+
 - Merchandise Revenue
 - Matchday Revenue
 
@@ -282,6 +307,7 @@ Detailed sales revenue comparison.
 ### Mobile View
 
 One card per valuation showing:
+
 - Merchandise Revenue
 - Matchday Revenue
 
@@ -294,6 +320,7 @@ Individual player transfer breakdown.
 ### Desktop Table
 
 **Rows**: One row per player sale across all valuations
+
 - Player name in left column
 - Sale value only shown for the valuation where player was sold
 - Other columns are empty (players are only sold once)
@@ -304,12 +331,13 @@ Individual player transfer breakdown.
 ### Mobile View
 
 One card per player sale showing:
+
 - Player name as card title
 - Sale date
 - Sale value
 
 <Note>
-**Professional/Enterprise Only**: Player sales tracking requires Professional or Enterprise plan.
+  **Professional/Enterprise Only**: Player sales tracking requires Professional or Enterprise plan.
 </Note>
 
 ## Media Value Breakdown Table
@@ -321,6 +349,7 @@ Comparison across all six media channels.
 ### Desktop Table
 
 **Rows:**
+
 1. TV
 2. Web TV
 3. PR
@@ -337,12 +366,12 @@ One card per valuation showing all six channels with values.
 
 ### Calculation Notes
 
-- **TV**: Duration × Size Multiplier × CPM × Viewers ÷ 1000
-- **Web TV**: Views ÷ 1000 × CPM
-- **PR**: Reach ÷ 1000 × CPM
-- **Digital**: Impressions ÷ 1000 × CPM
+- **TV**: Duration _ Size Multiplier _ CPM \* Viewers / 1000
+- **Web TV**: Views / 1000 \* CPM
+- **PR**: Reach / 1000 \* CPM
+- **Digital**: Impressions / 1000 \* CPM
 - **Social**: Sum of (Followers CPM + Impressions CPM + Engagements CPM)
-- **Attendance & Hospitality**: (Attendance ÷ 1000 × CPM) + (Guests × Value per Guest)
+- **Attendance & Hospitality**: (Attendance / 1000 _ CPM) + (Guests _ Value per Guest)
 
 ## Brand Value Indicators Table
 
@@ -353,6 +382,7 @@ Comparison of all four brand indicators on 1-10 scale.
 ### Desktop Table
 
 **Rows:**
+
 1. Popularity
 2. CSR
 3. Culture
@@ -362,6 +392,7 @@ Comparison of all four brand indicators on 1-10 scale.
 **Change Column**: Shows absolute change (e.g., "+0.5"), not percentage
 
 **Colors:**
+
 - Green: Increase
 - Red: Decrease
 - Gray: No change
@@ -381,6 +412,7 @@ Two export formats available:
 **Action**: Opens browser print dialog
 
 **What's included:**
+
 - Organization logo (if uploaded)
 - Report title: "Valuation Report"
 - Date range (if 2+ valuations)
@@ -390,19 +422,22 @@ Two export formats available:
 - AI Insights (if generated)
 
 **What's excluded:**
+
 - Navigation elements
 - Configuration dropdowns
 - Export buttons
 - Interactive elements
 
 **Print Settings:**
+
 - **Page size**: A4
 - **Margins**: 0.8cm
 - **Orientation**: Portrait
 - **Colors**: Preserved
 
 <Tip>
-**Print-friendly**: The page automatically adjusts for printing. Insights and charts are formatted for clear printing.
+  **Print-friendly**: The page automatically adjusts for printing. Insights and charts are formatted
+  for clear printing.
 </Tip>
 
 ### Export CSV
@@ -411,19 +446,22 @@ Two export formats available:
 **Filename**: `valuations-report-[first-date]_to_[last-date].csv`
 
 **What's included:**
+
 - All valuation fields for selected valuations
 - One row per valuation
 - Player sales in separate section
 - Raw values (not formatted currencies)
 
 **Use cases:**
+
 - Import into Excel/Google Sheets
 - Further analysis with other tools
 - Data archival
 - Integration with other systems
 
 <Warning>
-**2+ Valuations Required**: Export buttons only appear when you have selected at least 2 valuations.
+  **2+ Valuations Required**: Export buttons only appear when you have selected at least 2
+  valuations.
 </Warning>
 
 ## Common Use Cases
@@ -464,14 +502,15 @@ Two export formats available:
 
 Different permissions show different content:
 
-| Permission | Can Access | Can Generate Insights | Can Export |
-|------------|------------|---------------------|-----------|
-| **Reports Role** | ✅ Yes | ✅ Yes (if plugin enabled) | ✅ Yes |
-| **Admin** | ✅ Yes | ✅ Yes (if plugin enabled) | ✅ Yes |
-| **Other Roles** | ❌ Access Denied | ❌ No | ❌ No |
+| Permission       | Can Access       | Can Generate Insights      | Can Export |
+| ---------------- | ---------------- | -------------------------- | ---------- |
+| **Reports Role** | ✅ Yes           | ✅ Yes (if plugin enabled) | ✅ Yes     |
+| **Admin**        | ✅ Yes           | ✅ Yes (if plugin enabled) | ✅ Yes     |
+| **Other Roles**  | ❌ Access Denied | ❌ No                      | ❌ No      |
 
 <Note>
-**Reports-Only Access**: You can grant team members the Reports role without other valuation permissions. They can view reports but not create or edit valuations.
+  **Reports-Only Access**: You can grant team members the Reports role without other valuation
+  permissions. They can view reports but not create or edit valuations.
 </Note>
 
 ## Troubleshooting
@@ -479,6 +518,7 @@ Different permissions show different content:
 ### No Valuations Appear in Dropdown
 
 **Check:**
+
 - Valuations exist in your organization
 - You have Reports or Admin permission
 - Try refreshing the page
@@ -486,6 +526,7 @@ Different permissions show different content:
 ### Can't Generate AI Insights
 
 **Check:**
+
 1. AI Insights plugin is enabled (Settings → Plugins)
 2. API key is configured in plugin settings
 3. You have selected at least 2 valuations
@@ -494,6 +535,7 @@ Different permissions show different content:
 ### Export PDF Is Blank
 
 **Try:**
+
 1. Ensure popup blocker isn't blocking print dialog
 2. Use Chrome or Safari for best results
 3. Check browser print permissions
@@ -502,6 +544,7 @@ Different permissions show different content:
 ### Export CSV Is Empty
 
 **Check:**
+
 1. At least 2 valuations are selected
 2. Browser allows file downloads
 3. Try re-exporting
@@ -510,6 +553,7 @@ Different permissions show different content:
 ### Charts Not Loading
 
 **Check:**
+
 1. At least 2 valuations are selected
 2. Browser JavaScript is enabled
 3. Try refreshing the page
@@ -518,6 +562,7 @@ Different permissions show different content:
 ### Selection Not Saving
 
 **Check:**
+
 1. Browser cookies/storage is enabled
 2. Not in incognito/private mode
 3. Try clearing browser cache
@@ -567,7 +612,7 @@ Currently, reports are generated on-demand by selecting valuations and clicking 
 
 ## Next Steps
 
-<CardGroup cols={2}>
+<CardGroup cols="2">
   <Card
     title="Refine Selection"
     icon="sliders"
@@ -576,29 +621,17 @@ Currently, reports are generated on-demand by selecting valuations and clicking 
     Add or remove valuations to adjust comparison
   </Card>
 
-  <Card
-    title="Generate AI Insights"
-    icon="brain"
-    href="/platform/plugins/ai-insights"
-  >
-    Enable AI Insights plugin for automated analysis
-  </Card>
+<Card title="Generate AI Insights" icon="brain" href="/platform/plugins/ai-insights">
+  Enable AI Insights plugin for automated analysis
+</Card>
 
-  <Card
-    title="Export Report"
-    icon="file-export"
-    href="/valuations/reports#export-options"
-  >
-    Save as PDF for presentations or CSV for analysis
-  </Card>
+<Card title="Export Report" icon="file-export" href="/valuations/reports#export-options">
+  Save as PDF for presentations or CSV for analysis
+</Card>
 
-  <Card
-    title="Share with Team"
-    icon="users"
-    href="/platform/team-management"
-  >
-    Discuss trends and insights with your team
-  </Card>
+<Card title="Share with Team" icon="users" href="/platform/team-management">
+  Discuss trends and insights with your team
+</Card>
 
   <Card
     title="Create New Valuations"

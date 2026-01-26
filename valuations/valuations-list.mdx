@@ -1,14 +1,16 @@
 ---
 title: 'List'
 description: 'Browse all valuations with historical data tracking, comparison view, and trend analysis. Filter, compare, and analyze sponsorship value changes over time.'
-seo:
-  title: 'Valuation History & Trend Analysis | Valiyou'
+'og:title': 'Valuation History & Trend Analysis | Valiyou'
 ---
 
 # Valuations List & Historical Data
 
 <Frame>
-  <img src="/images/valuations/valuations-list/overview.png" alt="Valuations list showing historical data, comparison view, trend analysis charts, and time-series data for sponsorship tracking" />
+  <img
+    src="/images/valuations/valuations-list/overview.png"
+    alt="Valuations list showing historical data, comparison view, trend analysis charts, and time-series data for sponsorship tracking"
+  />
 </Frame>
 
 **Track sponsorship value changes over time with comprehensive historical data** and powerful comparison tools. View all valuations in a sortable list, analyze trends with time-series data visualization, and compare performance across periods to identify growth patterns and opportunities.
@@ -20,7 +22,8 @@ Browse all valuations in your organization, filter by status, and track value ch
 Navigate to **Valuations** → **Valuations** from the sidebar to access your full valuation list.
 
 <Note>
-**Permission Required**: You need at least one valuation permission (View Sales, View Transfer, View Marketing, View Brand, or Admin) to access this page.
+  **Permission Required**: You need at least one valuation permission (View Sales, View Transfer,
+  View Marketing, View Brand, or Admin) to access this page.
 </Note>
 
 ## Empty State
@@ -32,9 +35,7 @@ If you don't have any valuations yet, you'll see:
 - **Message**: "Create your first valuation to get started"
 - **Action**: "Create First Valuation" button
 
-<Tip>
-Click "Create First Valuation" to start tracking your sponsorship value!
-</Tip>
+<Tip>Click "Create First Valuation" to start tracking your sponsorship value!</Tip>
 
 ## Page Header
 
@@ -50,7 +51,8 @@ The page header shows:
 - **Limit reached**: Shows "Limit reached" text and is disabled
 
 <Warning>
-**Plan Limits**: Your plan has a maximum number of valuations per year. If you've reached your limit, you'll need to upgrade your plan or contact billing.
+  **Plan Limits**: Your plan has a maximum number of valuations per year. If you've reached your
+  limit, you'll need to upgrade your plan or contact billing.
 </Warning>
 
 ## Valuation Over Time Chart
@@ -62,6 +64,7 @@ A stacked area chart showing valuation trends across time.
 ### Chart Components
 
 **Three Stacked Areas:**
+
 1. **Sales Value (Blue)** - Bottom layer showing sales revenue
 2. **Media Value (Green)** - Middle layer showing media value
 3. **Total Attention Valuation (Purple)** - Top layer showing final total with brand multiplier
@@ -74,11 +77,8 @@ A stacked area chart showing valuation trends across time.
 - **Purple line**: Total valuation including brand multiplier
 
 <Tip>
-**Interactive Tooltip**: Hover over any point to see exact values for that date:
-- Total Attention Valuation
-- Sales Value
-- Media Value
-- Brand Multiplier (e.g., "1.15x")
+  **Interactive Tooltip**: Hover over any point to see exact values for that date: - Total Attention
+  Valuation - Sales Value - Media Value - Brand Multiplier (e.g., "1.15x")
 </Tip>
 
 ### Chart Features
@@ -90,7 +90,8 @@ A stacked area chart showing valuation trends across time.
 - **Value format**: Abbreviated for readability (€10k instead of €10,000)
 
 <Info>
-The chart displays valuations in chronological order based on the `valuation_date` field, not the creation date.
+  The chart displays valuations in chronological order based on the `valuation_date` field, not the
+  creation date.
 </Info>
 
 ## Filter Tabs
@@ -120,9 +121,7 @@ Shows only draft valuations.
 - **Can be edited**: Drafts can still be modified
 - **Status badge**: Gray "Draft" chip
 
-<Note>
-Filtering resets pagination to page 1 automatically.
-</Note>
+<Note>Filtering resets pagination to page 1 automatically.</Note>
 
 ## Valuation List
 
@@ -133,23 +132,27 @@ A card-based list showing all valuations with key metrics.
 Each valuation displays:
 
 **Left Section:**
+
 - **Circle indicator** - Visual breakdown of value composition
 - **Valuation date** - Primary date for this valuation (e.g., "15. jan 2025")
 - **Last edited date** - When the valuation was last updated
 
 **Middle Section (Desktop only):**
 Three columns showing:
+
 1. **Sales Value** - Total sales revenue
 2. **Media Value** - Total media value
 3. **Qualitative Multiplier** - Brand multiplier (e.g., "1.15x")
 
 **Right Section:**
+
 - **Total Valuation** - Final calculated value
 - **Status badge** - Draft or Approved
 - **Chevron icon** - Indicates clickable item
 
 <Info>
-The middle section (3 columns) is hidden on mobile and tablet to save space. All data is still available in the detail view.
+  The middle section (3 columns) is hidden on mobile and tablet to save space. All data is still
+  available in the detail view.
 </Info>
 
 ### Circle Indicator
@@ -157,6 +160,7 @@ The middle section (3 columns) is hidden on mobile and tablet to save space. All
 The circle on the left visually represents value composition using a conic gradient:
 
 **Colors:**
+
 - **Blue segment** - Sales value percentage
 - **Green segment** - Media value percentage
 - **Gray segment** - Remaining percentage (brand multiplier impact)
@@ -164,12 +168,14 @@ The circle on the left visually represents value composition using a conic gradi
 **Center number**: Shows brand multiplier (e.g., "1.15x")
 
 <Tip>
-The circle gives a quick visual breakdown of where your value comes from. Larger blue = more sales-driven, larger green = more media-driven.
+  The circle gives a quick visual breakdown of where your value comes from. Larger blue = more
+  sales-driven, larger green = more media-driven.
 </Tip>
 
 ### Loading State
 
 When clicking a valuation to open it:
+
 - **Circle indicator** - Shows spinner instead of gradient
 - **List item** - Becomes semi-transparent (60% opacity)
 - **Interaction** - Disabled while loading
@@ -184,7 +190,8 @@ When clicking a valuation to open it:
 - **Auto-scroll**: Scrolls to top when changing pages
 
 <Note>
-Pagination is applied **after** filtering. Each filter tab (All, Approved, Drafts) has its own pagination.
+  Pagination is applied **after** filtering. Each filter tab (All, Approved, Drafts) has its own
+  pagination.
 </Note>
 
 ## Interactions
@@ -192,13 +199,12 @@ Pagination is applied **after** filtering. Each filter tab (All, Approved, Draft
 ### Click on Valuation
 
 Click anywhere on a valuation list item to:
+
 1. Show loading spinner in circle
 2. Navigate to valuation detail page
 3. View complete breakdown
 
-<Tip>
-The entire row is clickable - no need to aim for a specific button!
-</Tip>
+<Tip>The entire row is clickable - no need to aim for a specific button!</Tip>
 
 ### Hover Effects
 
@@ -213,38 +219,38 @@ The entire row is clickable - no need to aim for a specific button!
 If you've reached your plan's valuation limit, clicking "Create Valuation" shows:
 
 **Modal Content:**
+
 - **Title**: "Valuation Limit Reached"
 - **Current usage**: e.g., "You've created 50 valuations this year"
 - **Plan limit**: e.g., "Your Professional plan includes 50 valuations/year"
 - **Action**: "Upgrade Plan" button (if you have billing access)
 
 <Warning>
-**Admin/Finance Only**: Only admins and finance managers can access billing to upgrade the plan. Other users will see the modal but can't upgrade.
+  **Admin/Finance Only**: Only admins and finance managers can access billing to upgrade the plan.
+  Other users will see the modal but can't upgrade.
 </Warning>
 
 ### Plan Tiers
 
 Valuation limits by plan:
+
 - **Starter**: Limited valuations per year
 - **Professional**: More valuations per year
 - **Enterprise**: Unlimited valuations
 
-<Info>
-Valuation limits reset annually based on your subscription start date.
-</Info>
+<Info>Valuation limits reset annually based on your subscription start date.</Info>
 
 ## Empty Filtered List
 
 If a filter shows no results:
 
 **Example**: Clicking "Drafts" when you have no draft valuations
+
 - No empty state message (intentional)
 - Shows empty list container
 - Filter tabs remain functional
 
-<Tip>
-If you see an empty list, try switching to the "All" tab to see all your valuations.
-</Tip>
+<Tip>If you see an empty list, try switching to the "All" tab to see all your valuations.</Tip>
 
 ## Common Use Cases
 
@@ -278,15 +284,16 @@ If you see an empty list, try switching to the "All" tab to see all your valuati
 
 Different permissions affect what you see:
 
-| Permission | Can View List | Can Create | Can Edit |
-|------------|--------------|------------|----------|
-| **View Sales/Transfer/Marketing/Brand** | ✅ Yes | ❌ No | ❌ No |
-| **Edit Sales/Transfer/Marketing/Brand** | ✅ Yes | ✅ Yes | ✅ Yes (specific fields only) |
-| **Admin** | ✅ Yes | ✅ Yes | ✅ Yes (all fields) |
-| **No valuation permissions** | ❌ Redirected | ❌ No | ❌ No |
+| Permission                              | Can View List | Can Create | Can Edit                      |
+| --------------------------------------- | ------------- | ---------- | ----------------------------- |
+| **View Sales/Transfer/Marketing/Brand** | ✅ Yes        | ❌ No      | ❌ No                         |
+| **Edit Sales/Transfer/Marketing/Brand** | ✅ Yes        | ✅ Yes     | ✅ Yes (specific fields only) |
+| **Admin**                               | ✅ Yes        | ✅ Yes     | ✅ Yes (all fields)           |
+| **No valuation permissions**            | ❌ Redirected | ❌ No      | ❌ No                         |
 
 <Info>
-Granular permissions (Edit Sales, Edit Transfer, Edit Marketing, Edit Brand) are available on Enterprise plans.
+  Granular permissions (Edit Sales, Edit Transfer, Edit Marketing, Edit Brand) are available on
+  Enterprise plans.
 </Info>
 
 ## Troubleshooting
@@ -294,6 +301,7 @@ Granular permissions (Edit Sales, Edit Transfer, Edit Marketing, Edit Brand) are
 ### "Access Denied" Page
 
 If you see "Access Denied":
+
 - You don't have any valuation permissions
 - Contact your organization admin to request access
 - They can grant you View or Edit permissions
@@ -301,6 +309,7 @@ If you see "Access Denied":
 ### Create Button Disabled
 
 If "Create Valuation" button shows "Limit reached":
+
 - Your organization has reached the plan limit
 - Admins/finance managers can upgrade the plan
 - Or wait until next year when the limit resets
@@ -308,12 +317,14 @@ If "Create Valuation" button shows "Limit reached":
 ### Chart Not Showing
 
 If you don't see the Valuation Over Time chart:
+
 - You need at least **2 approved valuations** to show trends
 - Create and approve more valuations to unlock the chart
 
 ### Values Look Wrong
 
 If valuation values seem incorrect:
+
 - Click on the valuation to view detailed breakdown
 - Check if all fields were properly filled
 - Verify CPM values are correct (common mistake: entering per-impression instead of per-thousand)
@@ -363,7 +374,7 @@ When your plan's annual limit is reached, the "Create Valuation" button becomes 
 
 ## Next Steps
 
-<CardGroup cols={2}>
+<CardGroup cols="2">
   <Card
     title="View Valuation Details"
     icon="file-lines"
@@ -372,21 +383,13 @@ When your plan's annual limit is reached, the "Create Valuation" button becomes 
     Learn how to view complete valuation breakdown
   </Card>
 
-  <Card
-    title="Create New Valuation"
-    icon="plus"
-    href="/valuations/create-valuation"
-  >
-    Add another data point to track progress
-  </Card>
+<Card title="Create New Valuation" icon="plus" href="/valuations/create-valuation">
+  Add another data point to track progress
+</Card>
 
-  <Card
-    title="Analyze Trends"
-    icon="chart-line"
-    href="/valuations/dashboard"
-  >
-    Use dashboard and charts to identify patterns
-  </Card>
+<Card title="Analyze Trends" icon="chart-line" href="/valuations/dashboard">
+  Use dashboard and charts to identify patterns
+</Card>
 
   <Card
     title="Generate Reports"

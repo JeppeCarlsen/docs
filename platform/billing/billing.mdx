@@ -1,14 +1,16 @@
 ---
 title: 'Billing'
 description: 'Manage subscription plans, add-ons, and billing renewal. Upgrade plans, enable AI Insights, manage Cash Flow Visualization, and view subscription details.'
-seo:
-  title: 'Billing & Subscription Management | Valiyou'
+'og:title': 'Billing & Subscription Management | Valiyou'
 ---
 
 # Billing Dashboard & Subscription
 
 <Frame>
-  <img src="/images/valiyou.com_platform_billing(iPad Pro) (1).png" alt="Valiyou billing dashboard showing subscription details, plan management, add-ons selection, and renewal information for managing monthly and annual payments" />
+  <img
+    src="/images/valiyou.com_platform_billing(iPad Pro) (1).png"
+    alt="Valiyou billing dashboard showing subscription details, plan management, add-ons selection, and renewal information for managing monthly and annual payments"
+  />
 </Frame>
 
 **Manage your subscription plans, add-ons, and billing renewal effortlessly with Valiyou's billing dashboard.** Access comprehensive subscription management tools including plan upgrades, add-on selection, and automatic renewal tracking. Control your Professional or Enterprise plan features, enable AI-powered insights, and manage your billing cycle all from one centralized location.
@@ -16,15 +18,18 @@ seo:
 ## Subscription Details Card
 
 **Displays:**
+
 - **Plan Name**: Starter, Professional, or Enterprise
 - **Billing Period**: Monthly or Annually
 - **Upgrade Button**: Appears for Starter/Professional plans
 
 <Info>
-**Upgrade Available**: Starter and Professional plans show an "Upgrade Plan" button to access higher tiers.
+  **Upgrade Available**: Starter and Professional plans show an "Upgrade Plan" button to access
+  higher tiers.
 </Info>
 
 **Upgrade Process:**
+
 1. Click "Upgrade Plan" button
 2. Upgrade Plan modal opens
 3. Select new plan tier
@@ -34,10 +39,12 @@ seo:
 ## Manage Add-ons Card
 
 <Note>
-**Feature Availability**: Add-ons available for Professional and Enterprise plans. Starter plans must upgrade to access add-ons.
+  **Feature Availability**: Add-ons available for Professional and Enterprise plans. Starter plans
+  must upgrade to access add-ons.
 </Note>
 
 **Available Add-ons:**
+
 - **AI Insights for Reports** - AI-powered insights using LLMs (Groq, Gemini, OpenAI, Anthropic)
   - Requires Professional or Enterprise plan
   - Price: Varies by currency (e.g., 99 DKK/month)
@@ -48,6 +55,7 @@ seo:
   - See [Cash Flow Visualization](/platform/plugins/cash-flow-visualization) for configuration
 
 **Add-on Management:**
+
 1. Click add-on card to select/deselect
 2. Selected add-ons show blue ring border
 3. Cost info appears showing price breakdown
@@ -55,27 +63,32 @@ seo:
 5. Pro-rated charges/credits applied immediately
 
 **Visual Indicators:**
+
 - **Ring Border**: Blue ring = selected, gray ring = not selected
 - **"Included" Badge**: Enterprise plans show green "Included" badge (add-ons included in plan)
 - **Cost Info Box**: Blue info box shows payment details when changes are made
 
 <Tip>
-**Enterprise Benefits**: Enterprise plans include all add-ons at no extra cost. The add-ons are automatically enabled.
+  **Enterprise Benefits**: Enterprise plans include all add-ons at no extra cost. The add-ons are
+  automatically enabled.
 </Tip>
 
 **Cost Calculation:**
+
 - **Adding add-ons**: Shows new monthly total + immediate pro-rated charge
 - **Removing add-ons**: Shows credit for unused time + new monthly total
 - **Mixed changes**: Credits and charges both apply
 
 **Example Cost Info:**
+
 ```
 Your next payment will be 148 DKK per month for add-ons.
 You will be charged immediately for the pro-rated amount.
 ```
 
 <Warning>
-**Immediate Charges**: Add-on changes are charged/credited immediately on a pro-rated basis. Next billing cycle reflects the full monthly amount.
+  **Immediate Charges**: Add-on changes are charged/credited immediately on a pro-rated basis. Next
+  billing cycle reflects the full monthly amount.
 </Warning>
 
 ## Subscription Renewal Card
@@ -83,11 +96,13 @@ You will be charged immediately for the pro-rated amount.
 Shows next renewal/payment date.
 
 **Displays:**
+
 - **Status**: Active (auto-renews) or Trial
 - **Renewal Date**: Next payment date in format "dd. month yyyy"
 - **Empty State**: "No active subscription found" if no payment method
 
 **Status Meanings:**
+
 - **Active**: Subscription auto-renews on renewal date
 - **Trialing**: Free trial period (auto-converts to paid)
 - **No Payment Method**: Entitlements active but no Stripe subscription
@@ -119,7 +134,8 @@ See [AI Insights for Reports](/platform/plugins/ai-insights) for AI Insights con
 8. New entitlements active (seats, valuations, features)
 
 <Info>
-**Pro-rated Charges**: Plan upgrades are pro-rated. You're only charged for the remaining days in your billing cycle at the new plan rate.
+  **Pro-rated Charges**: Plan upgrades are pro-rated. You're only charged for the remaining days in
+  your billing cycle at the new plan rate.
 </Info>
 
 ## Subscription Lifecycle
@@ -127,6 +143,7 @@ See [AI Insights for Reports](/platform/plugins/ai-insights) for AI Insights con
 ### Subscription Start
 
 **Initial Setup:**
+
 1. Sign up on pricing page
 2. Select plan and billing period
 3. Enter payment method
@@ -137,6 +154,7 @@ See [AI Insights for Reports](/platform/plugins/ai-insights) for AI Insights con
 ### Active Subscription
 
 **Ongoing Management:**
+
 - Monthly/annual automatic payments
 - Add-on changes pro-rated
 - Seat adjustments pro-rated
@@ -147,16 +165,19 @@ See [AI Insights for Reports](/platform/plugins/ai-insights) for AI Insights con
 ### Subscription Changes
 
 **Upgrade Plan:**
+
 - Pro-rated charge for remaining period
 - New entitlements active immediately
 - Next billing cycle reflects new plan price
 
 **Add/Remove Add-ons:**
+
 - Pro-rated charge/credit applied
 - Add-ons active/inactive immediately
 - Next billing cycle reflects changes
 
 **Manage Seats:**
+
 - Pro-rated charge/credit applied
 - New seat limit active immediately
 - Invite users to fill seats
@@ -164,12 +185,14 @@ See [AI Insights for Reports](/platform/plugins/ai-insights) for AI Insights con
 ### Subscription Renewal
 
 **Automatic Renewal:**
+
 - Payment processed on renewal date
 - Invoice generated automatically
 - Subscription continues uninterrupted
 - New billing period starts
 
 **Failed Payment:**
+
 - Payment retry attempted
 - Email notification sent
 - Subscription may be suspended
@@ -178,6 +201,7 @@ See [AI Insights for Reports](/platform/plugins/ai-insights) for AI Insights con
 ### Subscription Cancellation
 
 **Cancellation Process:**
+
 - Open Stripe Customer Portal (via Manage Payment Methods)
 - Cancel subscription
 - Access continues until period end
@@ -185,7 +209,8 @@ See [AI Insights for Reports](/platform/plugins/ai-insights) for AI Insights con
 - Data preserved (can reactivate later)
 
 <Warning>
-**Data Preservation**: Canceling subscription does not delete your data. Your valuations, reports, and settings are preserved for 30 days. Reactivate anytime to restore full access.
+  **Data Preservation**: Canceling subscription does not delete your data. Your valuations, reports,
+  and settings are preserved for 30 days. Reactivate anytime to restore full access.
 </Warning>
 
 ## Troubleshooting
@@ -193,11 +218,13 @@ See [AI Insights for Reports](/platform/plugins/ai-insights) for AI Insights con
 ### Add-on Not Available
 
 **Reasons:**
+
 - On Starter plan (AI Insights requires Professional/Enterprise)
 - Add-on already included in plan (Enterprise)
 - Demo mode active
 
 **Fix:**
+
 - Upgrade to Professional/Enterprise plan
 - Check if add-on is already enabled (Enterprise plans include all add-ons)
 - Upgrade from demo mode to paid plan
@@ -209,37 +236,54 @@ See [AI Insights for Reports](/platform/plugins/ai-insights) for AI Insights con
     Navigate to Platform → Billing → Subscription tab and click the "Upgrade Plan" button. Select your desired plan (Professional or Enterprise), review the features and pricing, then click "Upgrade to [Plan]". Your subscription upgrades immediately with pro-rated charges for the remaining billing period.
   </Accordion>
 
-  <Accordion title="What payment methods are accepted for subscription billing?">
-    Valiyou accepts all major credit and debit cards through Stripe, including Visa, Mastercard, American Express, and Discover. Payment methods are managed securely through the Stripe Customer Portal accessible from the Payment Methods tab.
-  </Accordion>
+<Accordion title="What payment methods are accepted for subscription billing?">
+  Valiyou accepts all major credit and debit cards through Stripe, including Visa, Mastercard,
+  American Express, and Discover. Payment methods are managed securely through the Stripe Customer
+  Portal accessible from the Payment Methods tab.
+</Accordion>
 
-  <Accordion title="Are add-ons charged separately from my plan subscription?">
-    Yes, add-ons like AI Insights for Reports and Cash Flow Visualization are billed separately from your base plan. When you enable an add-on, you'll be charged immediately on a pro-rated basis, and the full monthly amount will be included in your next billing cycle.
-  </Accordion>
+<Accordion title="Are add-ons charged separately from my plan subscription?">
+  Yes, add-ons like AI Insights for Reports and Cash Flow Visualization are billed separately from
+  your base plan. When you enable an add-on, you'll be charged immediately on a pro-rated basis, and
+  the full monthly amount will be included in your next billing cycle.
+</Accordion>
 
-  <Accordion title="How does pro-rated billing work for plan upgrades?">
-    When you upgrade your plan, Valiyou calculates a pro-rated charge based on the remaining days in your current billing period. You only pay the difference between your old plan and new plan for the unused time, ensuring fair billing when you upgrade mid-cycle.
-  </Accordion>
+<Accordion title="How does pro-rated billing work for plan upgrades?">
+  When you upgrade your plan, Valiyou calculates a pro-rated charge based on the remaining days in
+  your current billing period. You only pay the difference between your old plan and new plan for
+  the unused time, ensuring fair billing when you upgrade mid-cycle.
+</Accordion>
 
-  <Accordion title="Can I switch from monthly to annual billing to save money?">
-    Yes, annual billing typically offers significant savings compared to monthly billing. Contact support or access the Stripe Customer Portal through the Manage Payment Methods button to switch your billing period. The change takes effect at your next renewal date.
-  </Accordion>
+<Accordion title="Can I switch from monthly to annual billing to save money?">
+  Yes, annual billing typically offers significant savings compared to monthly billing. Contact
+  support or access the Stripe Customer Portal through the Manage Payment Methods button to switch
+  your billing period. The change takes effect at your next renewal date.
+</Accordion>
 
-  <Accordion title="What happens to my add-ons if I upgrade to Enterprise plan?">
-    Enterprise plans include all add-ons at no extra cost. When you upgrade to Enterprise, your existing add-on subscriptions are automatically cancelled, and you receive pro-rated credits for any unused time. The add-ons remain active and are now included in your plan.
-  </Accordion>
+<Accordion title="What happens to my add-ons if I upgrade to Enterprise plan?">
+  Enterprise plans include all add-ons at no extra cost. When you upgrade to Enterprise, your
+  existing add-on subscriptions are automatically cancelled, and you receive pro-rated credits for
+  any unused time. The add-ons remain active and are now included in your plan.
+</Accordion>
 
-  <Accordion title="How do I cancel my subscription while keeping my data?">
-    Open the Stripe Customer Portal via the Manage Payment Methods button and select "Cancel subscription". Your access continues until the end of your current billing period, after which your entitlements are removed. Your data is preserved for 30 days, allowing you to reactivate anytime.
-  </Accordion>
+<Accordion title="How do I cancel my subscription while keeping my data?">
+  Open the Stripe Customer Portal via the Manage Payment Methods button and select "Cancel
+  subscription". Your access continues until the end of your current billing period, after which
+  your entitlements are removed. Your data is preserved for 30 days, allowing you to reactivate
+  anytime.
+</Accordion>
 
-  <Accordion title="Will I receive an invoice for my subscription payment?">
-    Yes, Valiyou automatically generates invoices for all subscription payments, add-on changes, and one-time purchases. You can view and download PDF invoices from Platform → Billing → Invoices tab immediately after payment processing.
-  </Accordion>
+<Accordion title="Will I receive an invoice for my subscription payment?">
+  Yes, Valiyou automatically generates invoices for all subscription payments, add-on changes, and
+  one-time purchases. You can view and download PDF invoices from Platform → Billing → Invoices tab
+  immediately after payment processing.
+</Accordion>
 
-  <Accordion title="What is the difference between trialing and active subscription status?">
-    "Trialing" status indicates you're in a free trial period that will automatically convert to a paid subscription when the trial ends. "Active" status means your subscription is fully active with automatic renewals enabled on your specified renewal date.
-  </Accordion>
+<Accordion title="What is the difference between trialing and active subscription status?">
+  "Trialing" status indicates you're in a free trial period that will automatically convert to a
+  paid subscription when the trial ends. "Active" status means your subscription is fully active
+  with automatic renewals enabled on your specified renewal date.
+</Accordion>
 
   <Accordion title="How do I view my next subscription renewal date?">
     Your next renewal date is displayed in the Subscription Renewal card on the Billing page. It shows the exact date when your next automatic payment will be processed and your new billing period begins.

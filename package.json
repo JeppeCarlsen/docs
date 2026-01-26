@@ -22,5 +22,8 @@
     "*.json": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "glob": "^13.0.0"
   }
 }

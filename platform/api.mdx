@@ -2,28 +2,28 @@
 title: 'API'
 description: 'Create and manage API keys for secure REST API access. Generate tokens, monitor usage, integrate with Power BI and Excel, and explore endpoint docs.'
 lastUpdated: '2025-01-19'
-seo:
-  title: 'API Keys & REST API Documentation | Valiyou'
+'og:title': 'API Keys & REST API Documentation | Valiyou'
 ---
 
 # API Keys & REST API
 
 <Frame>
-  <img src="/images/platform/api-management/overview.png" alt="Valiyou API management dashboard showing API keys creation, usage analytics, and REST API documentation for programmatic data access" />
+  <img
+    src="/images/platform/api-management/overview.png"
+    alt="Valiyou API management dashboard showing API keys creation, usage analytics, and REST API documentation for programmatic data access"
+  />
 </Frame>
 
 **Integrate Valiyou data into your workflows with secure REST API access and Bearer token authentication.** Create API keys, monitor usage in real-time, and explore comprehensive endpoint documentation for seamless integration with Power BI, Excel, and custom applications.
 
-<Note>
-**Last Updated**: January 19, 2025 | [View Changelog](#changelog)
-</Note>
+<Note>**Last Updated**: January 19, 2025 | [View Changelog](#changelog)</Note>
 
 ## Accessing API Management
 
 Navigate to **Platform** → **API** from the sidebar to manage your API keys.
 
 <Note>
-**Permission Required**: API permission or Admin access required to create and manage API keys.
+  **Permission Required**: API permission or Admin access required to create and manage API keys.
 </Note>
 
 ## Page Layout
@@ -31,16 +31,19 @@ Navigate to **Platform** → **API** from the sidebar to manage your API keys.
 The API Management page has 3 tabs:
 
 ### API Keys Tab
+
 - **View**: All API keys with details (name, scopes, operations, status)
 - **Create**: Generate new API keys with custom permissions
 - **Revoke**: Delete API keys to remove access
 
 ### Usage Tab
+
 - **Charts**: Visual analytics of API usage over time (30 days)
 - **Metrics**: Total requests, success rate, response time
 - **Endpoints**: Breakdown of requests per endpoint
 
 ### Documentation Tab
+
 - **Integration Guides**: Power BI, Excel integration steps
 - **Authentication**: How to use API keys in requests
 - **Operations**: HTTP methods (GET, POST, PUT, DELETE)
@@ -53,6 +56,7 @@ The API Management page has 3 tabs:
 Comprehensive table showing all active and inactive API keys.
 
 **Columns:**
+
 - **Name**: API key name (descriptive identifier)
 - **Scopes**: Resources the key can access (valuations, player-sales, clubs)
 - **Operations**: HTTP methods allowed (GET, POST, PUT, DELETE) with color chips
@@ -67,12 +71,14 @@ Comprehensive table showing all active and inactive API keys.
 - **Actions**: Revoke button (red trash icon)
 
 <Tip>
-**Operations Colors**: The table uses color-coded chips to quickly identify which operations each API key can perform.
+  **Operations Colors**: The table uses color-coded chips to quickly identify which operations each
+  API key can perform.
 </Tip>
 
 ### Empty State
 
 When no API keys exist:
+
 - **Icon**: Key icon
 - **Title**: "No API keys yet"
 - **Message**: "Create your first API key to get started"
@@ -85,16 +91,19 @@ Generate a new API key with custom name, description, scopes, and operations.
 ### Opening Create Modal
 
 **Triggers:**
+
 - Click **"Create API Key"** button (page header, top right)
 - Available on all tabs (button always visible)
 
 **Demo Mode:**
+
 - If in demo mode, shows "Upgrade Required" modal instead
 - Must upgrade to paid plan to create API keys
 
 ### Create API Key Modal
 
 **Modal Structure:**
+
 - **Title**: "Create API Key"
 - **Close button**: X (top right)
 - **Form fields**: Name, Description, Scopes, Operations
@@ -103,6 +112,7 @@ Generate a new API key with custom name, description, scopes, and operations.
 #### Form Fields
 
 **1. Name** (Required):
+
 - **Label**: "Key Name"
 - **Placeholder**: "My Integration Key"
 - **Validation**:
@@ -111,12 +121,14 @@ Generate a new API key with custom name, description, scopes, and operations.
   - Max 50 characters
 
 **2. Description** (Optional):
+
 - **Label**: "Description"
 - **Placeholder**: "What this key will be used for..."
 - **Helper**: "Describe the purpose of this API key"
 - **Max**: 200 characters
 
 **3. Scopes** (Required):
+
 - **Label**: "Scopes"
 - **Helper**: "Select which resources this key can access"
 - **Options**: Checkboxes for each scope
@@ -126,6 +138,7 @@ Generate a new API key with custom name, description, scopes, and operations.
 - **Validation**: At least one scope required
 
 **4. Operations** (Required):
+
 - **Label**: "Operations"
 - **Helper**: "Select which HTTP operations this key can perform"
 - **Options**: Checkboxes for each operation
@@ -136,12 +149,14 @@ Generate a new API key with custom name, description, scopes, and operations.
 - **Validation**: At least one operation required
 
 <Warning>
-**Least Privilege Principle**: Only grant the scopes and operations that are actually needed. For read-only integrations (e.g., Power BI, Excel), only enable GET operation.
+  **Least Privilege Principle**: Only grant the scopes and operations that are actually needed. For
+  read-only integrations (e.g., Power BI, Excel), only enable GET operation.
 </Warning>
 
 ### API Key Creation Process
 
 **Step 1: Fill Form**
+
 1. Enter unique key name
 2. Add optional description
 3. Select scopes (resources)
@@ -149,25 +164,29 @@ Generate a new API key with custom name, description, scopes, and operations.
 5. Click **"Create API Key"**
 
 **Step 2: Key Generated**
+
 - API key is generated and displayed in a modal
 - **Format**: `vly_<random_string>` (e.g., `vly_abc123def456...`)
 - **Copy Button**: Click to copy key to clipboard
 - **Important Warning**: "This is the only time you'll see this key. Copy it now and store it securely."
 
 **Step 3: Save Key Securely**
+
 - Store key in password manager or secure storage
 - **Never** commit to version control
 - **Never** share publicly
 - Cannot view key again after closing modal
 
 **Step 4: Key Added to Table**
+
 - New key appears in API Keys table
 - Status: Active (green badge)
 - Last Used: Never (not yet used)
 - All selected scopes and operations visible
 
 <Note>
-**Security Best Practice**: Treat API keys like passwords. If a key is compromised, revoke it immediately and create a new one.
+  **Security Best Practice**: Treat API keys like passwords. If a key is compromised, revoke it
+  immediately and create a new one.
 </Note>
 
 ## Revoking API Keys
@@ -177,11 +196,13 @@ Remove access by deleting an API key.
 ### Revoke Process
 
 **Step 1: Click Revoke**
+
 1. Find API key in table
 2. Click **red trash icon** (Actions column)
 3. Confirmation modal appears
 
 **Step 2: Confirm Deletion**
+
 - **Title**: "Revoke API Key"
 - **Message**: "Are you sure you want to revoke the API key '[Name]'? This action cannot be undone and any applications using this key will immediately lose access."
 - **Buttons**:
@@ -189,12 +210,14 @@ Remove access by deleting an API key.
   - **Cancel** (gray)
 
 **Step 3: Key Revoked**
+
 - API key deleted from database
 - Key removed from table
 - All requests using this key will fail with 401 Unauthorized
 
 <Warning>
-**Immediate Effect**: Revoking a key immediately blocks all applications using it. Make sure to update your integrations before revoking.
+  **Immediate Effect**: Revoking a key immediately blocks all applications using it. Make sure to
+  update your integrations before revoking.
 </Warning>
 
 ## Usage Tab
@@ -206,6 +229,7 @@ Monitor API usage with visual analytics and metrics.
 **Line Chart** showing API requests for the last 30 days.
 
 **Features:**
+
 - **X-axis**: Date (last 30 days)
 - **Y-axis**: Number of requests
 - **Line**: Blue line with dots for each day
@@ -213,6 +237,7 @@ Monitor API usage with visual analytics and metrics.
 - **Grid**: Cartesian grid for easy reading
 
 **Empty State:**
+
 - **Icon**: Chart icon
 - **Title**: "No API usage data yet"
 - **Message**: "Start making API requests to see usage statistics"
@@ -222,22 +247,26 @@ Monitor API usage with visual analytics and metrics.
 Three metric cards showing key statistics:
 
 **1. Total Requests**
+
 - **Value**: Total API requests (last 30 days)
 - **Change**: Percentage increase/decrease from previous period
 - **Trend**: Up (green) or Down (red) indicator
 
 **2. Success Rate**
+
 - **Value**: Percentage of successful requests (200-299 status)
 - **Format**: "98.5%"
 - **No trend indicator**
 
 **3. Avg Response Time**
+
 - **Value**: Average API response time in milliseconds
 - **Format**: "125ms"
 - **No trend indicator**
 
 <Info>
-**Success Rate**: A healthy API should have &gt;95% success rate. Lower rates may indicate authentication issues, invalid requests, or rate limiting.
+  **Success Rate**: A healthy API should have &gt;95% success rate. Lower rates may indicate
+  authentication issues, invalid requests, or rate limiting.
 </Info>
 
 ### Requests by Endpoint
@@ -245,6 +274,7 @@ Three metric cards showing key statistics:
 Breakdown showing which endpoints are most used.
 
 **For Each Endpoint:**
+
 - **Endpoint**: Full endpoint path (e.g., `/api/v1/valuations`)
 - **Request Count**: Number of requests
 - **Success Rate**: Percentage successful (green text)
@@ -266,6 +296,7 @@ Step-by-step guides for popular tools.
 
 **Icon**: Yellow chart icon
 **Steps**:
+
 1. Open Power BI Desktop
 2. Get Data → Web
 3. Enter API URL with your API key
@@ -276,13 +307,15 @@ Step-by-step guides for popular tools.
 
 **Icon**: Green table icon
 **Steps**:
+
 1. Data → Get Data → From Web
 2. Enter API URL
 3. Power Query Editor opens
 4. Load to worksheet
 
 <Tip>
-**Power BI & Excel**: Both tools support automatic data refresh. Set up scheduled refresh to keep your reports up-to-date with latest Valiyou data.
+  **Power BI & Excel**: Both tools support automatic data refresh. Set up scheduled refresh to keep
+  your reports up-to-date with latest Valiyou data.
 </Tip>
 
 ### Authentication
@@ -292,21 +325,26 @@ All API requests require authentication with an API key.
 **Method**: Query Parameter
 
 **Format**:
+
 ```
 ?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID
 ```
 
 **Example**:
+
 ```
 https://valiyou.io/api/v1/valuations?api_key=vly_abc123&club_id=org_xyz789
 ```
 
 **Requirements**:
+
 - `api_key` - Your API key (required)
 - `club_id` - Your organization ID (required)
 
 <Warning>
-**Security Risk with Query Parameters**: When using `?api_key=` in URLs, keys may appear in server logs, browser history, and analytics tools. For production integrations, we strongly recommend using header-based authentication instead (see below).
+  **Security Risk with Query Parameters**: When using `?api_key=` in URLs, keys may appear in server
+  logs, browser history, and analytics tools. For production integrations, we strongly recommend
+  using header-based authentication instead (see below).
 </Warning>
 
 ### Recommended: Header-Based Authentication
@@ -316,17 +354,20 @@ https://valiyou.io/api/v1/valuations?api_key=vly_abc123&club_id=org_xyz789
 **Method**: Authorization Header
 
 **Format**:
+
 ```bash
 Authorization: Bearer YOUR_API_KEY
 ```
 
 **Example Request**:
+
 ```bash
 curl -X GET "https://valiyou.io/api/v1/valuations?club_id=YOUR_CLUB_ID" \
   -H "Authorization: Bearer vly_abc123..."
 ```
 
 **Benefits**:
+
 - ✅ API keys NOT logged in server access logs
 - ✅ NOT visible in browser history
 - ✅ NOT leaked via Referer headers
@@ -336,7 +377,8 @@ curl -X GET "https://valiyou.io/api/v1/valuations?club_id=YOUR_CLUB_ID" \
 **Power BI & Excel**: These tools support custom headers. In Power BI's Web connector, click "Advanced" and add a custom HTTP header: `Authorization: Bearer YOUR_API_KEY`.
 
 <Info>
-**API Key Rotation Best Practice**: Rotate API keys every 90 days or immediately if exposed. Create a new key before revoking the old one to prevent integration downtime.
+  **API Key Rotation Best Practice**: Rotate API keys every 90 days or immediately if exposed.
+  Create a new key before revoking the old one to prevent integration downtime.
 </Info>
 
 ### HTTP Operations
@@ -344,31 +386,36 @@ curl -X GET "https://valiyou.io/api/v1/valuations?club_id=YOUR_CLUB_ID" \
 API keys can be configured with different operation permissions:
 
 #### GET (Read)
+
 - **Method**: GET
 - **Chip Color**: Blue
 - **Purpose**: Retrieve and read data from your organization
 - **Use Case**: Read-only integrations (Power BI, Excel, analytics)
 
 #### POST (Create)
+
 - **Method**: POST
 - **Chip Color**: Green
 - **Purpose**: Create new records in your organization
 - **Use Case**: Automated data entry, imports
 
 #### PUT (Update)
+
 - **Method**: PUT
 - **Chip Color**: Yellow
 - **Purpose**: Update existing records in your organization
 - **Use Case**: Data synchronization, corrections
 
 #### DELETE (Delete)
+
 - **Method**: DELETE
 - **Chip Color**: Red
 - **Purpose**: Delete records from your organization
 - **Use Case**: Cleanup, data management
 
 <Info>
-**Operation Permissions**: Each API key can have different operations enabled. For security, only grant operations that are needed.
+  **Operation Permissions**: Each API key can have different operations enabled. For security, only
+  grant operations that are needed.
 </Info>
 
 ### API Endpoints
@@ -382,20 +429,24 @@ Complete reference for all available endpoints.
 Get club information (name, address, base currency).
 
 **Parameters**:
+
 - `api_key` (string, required) - Your API key
 - `club_id` (string, required) - Your club ID
 
 **Response Fields**:
+
 - `name` (string) - Club name
 - `address` (string) - Full club address (street, postal code, city, country)
 - `base_currency` (string) - Base currency code (e.g., EUR, USD, DKK)
 
 **Example Request**:
+
 ```bash
 curl -X GET "https://valiyou.io/api/v1/clubs?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID"
 ```
 
 **Example Response**:
+
 ```json
 {
   "name": "FC Example",
@@ -411,12 +462,14 @@ curl -X GET "https://valiyou.io/api/v1/clubs?api_key=YOUR_API_KEY&club_id=YOUR_C
 Get all valuations for your organization.
 
 **Parameters**:
+
 - `api_key` (string, required) - Your API key
 - `club_id` (string, required) - Your club ID
 - `from_date` (string, optional) - Filter from date (YYYY-MM-DD)
 - `to_date` (string, optional) - Filter to date (YYYY-MM-DD)
 
 **Response Fields** (array of valuations):
+
 - `id` (string) - Valuation unique ID
 - `club_id` (string) - Club ID
 - `valuation_date` (string) - Date of the valuation (YYYY-MM-DD)
@@ -454,11 +507,13 @@ Get all valuations for your organization.
 - `final_total_value` (number) - Final total attention valuation
 
 **Example Request**:
+
 ```bash
 curl -X GET "https://valiyou.io/api/v1/valuations?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID"
 ```
 
 **Example Request with Date Filter**:
+
 ```bash
 curl -X GET "https://valiyou.io/api/v1/valuations?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID&from_date=2024-01-01&to_date=2024-12-31"
 ```
@@ -470,12 +525,14 @@ curl -X GET "https://valiyou.io/api/v1/valuations?api_key=YOUR_API_KEY&club_id=Y
 Get all player sales with valuation information.
 
 **Parameters**:
+
 - `api_key` (string, required) - Your API key
 - `club_id` (string, required) - Your club ID
 - `from_date` (string, optional) - Filter from date (YYYY-MM-DD)
 - `to_date` (string, optional) - Filter to date (YYYY-MM-DD)
 
 **Response Fields** (array of player sales):
+
 - `id` (string) - Player sale unique ID
 - `valuation_id` (string) - Associated valuation ID
 - `valuation_date` (string) - Date of the valuation (YYYY-MM-DD)
@@ -485,6 +542,7 @@ Get all player sales with valuation information.
 - `updated_at` (string) - Last update timestamp
 
 **Example Request**:
+
 ```bash
 curl -X GET "https://valiyou.io/api/v1/player-sales?api_key=YOUR_API_KEY&club_id=YOUR_CLUB_ID"
 ```
@@ -496,17 +554,20 @@ curl -X GET "https://valiyou.io/api/v1/player-sales?api_key=YOUR_API_KEY&club_id
 API usage is monitored but not currently rate-limited for paid accounts.
 
 **Current Status**:
+
 - ✅ **Unlimited Requests**: No rate limits for Professional/Enterprise plans
 - ⚠️ **Fair Use**: Excessive usage may be flagged for review
 - 📊 **Monitoring**: All requests are logged for usage analytics
 
 **Future Rate Limits** (not yet implemented):
+
 - Potential per-minute or per-hour limits
 - Different tiers based on plan
 - Will be communicated in advance if implemented
 
 <Tip>
-**Best Practice**: Implement exponential backoff and retry logic in your integrations. This ensures your applications remain resilient if rate limits are introduced in the future.
+  **Best Practice**: Implement exponential backoff and retry logic in your integrations. This
+  ensures your applications remain resilient if rate limits are introduced in the future.
 </Tip>
 
 ## Error Handling
@@ -533,6 +594,7 @@ API returns standard HTTP status codes.
 - **503 Service Unavailable** - Temporary service disruption
 
 **Error Response Format**:
+
 ```json
 {
   "error": "Unauthorized",
@@ -541,21 +603,23 @@ API returns standard HTTP status codes.
 ```
 
 <Warning>
-**401 Unauthorized**: This usually means your API key is invalid, revoked, or missing. Verify your key and ensure it hasn't been revoked.
+  **401 Unauthorized**: This usually means your API key is invalid, revoked, or missing. Verify your
+  key and ensure it hasn't been revoked.
 </Warning>
 
 ## Permissions
 
 Access to API Management requires specific permissions:
 
-| Permission | Can View | Can Create Keys | Can Revoke Keys | Can View Usage |
-|------------|---------|----------------|----------------|---------------|
-| **Admin** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
-| **API** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
-| **Other Roles** | ❌ No | ❌ No | ❌ No | ❌ No |
+| Permission      | Can View | Can Create Keys | Can Revoke Keys | Can View Usage |
+| --------------- | -------- | --------------- | --------------- | -------------- |
+| **Admin**       | ✅ Yes   | ✅ Yes          | ✅ Yes          | ✅ Yes         |
+| **API**         | ✅ Yes   | ✅ Yes          | ✅ Yes          | ✅ Yes         |
+| **Other Roles** | ❌ No    | ❌ No           | ❌ No           | ❌ No          |
 
 <Note>
-**API Permission**: Users with API permission have full access to create, view, and revoke keys. This is equivalent to Admin access for the API Management page.
+  **API Permission**: Users with API permission have full access to create, view, and revoke keys.
+  This is equivalent to Admin access for the API Management page.
 </Note>
 
 ## Common Use Cases
@@ -614,38 +678,45 @@ Access to API Management requires specific permissions:
 ### Can't Access API Page
 
 **Reasons**:
+
 - No API permission
 - Not an Admin
 
 **Fix**:
+
 - Request API permission from Admin
 - Ask owner to grant Admin role
 
 ### Can't Create API Key (Demo Mode)
 
 **Reasons**:
+
 - Organization is in demo mode
 - Free trial expired
 
 **Fix**:
+
 - Upgrade to paid plan: [Platform → Billing](/platform/billing/billing)
 - Contact sales for Enterprise plan
 
 ### 401 Unauthorized Errors
 
 **Reasons**:
+
 - API key invalid or typo
 - API key revoked
 - API key not included in request
 - Using wrong club_id
 
 **Check**:
+
 - Verify API key is correct (copy-paste carefully)
 - Check if key is still active in API Keys table
 - Ensure `api_key` parameter is in URL
 - Verify `club_id` matches your organization
 
 **Fix**:
+
 - Create new API key if current one is revoked
 - Double-check URL format and parameters
 - Test with curl to isolate integration issues
@@ -653,32 +724,38 @@ Access to API Management requires specific permissions:
 ### 403 Forbidden Errors
 
 **Reasons**:
+
 - API key doesn't have required scope
 - API key doesn't have required operation
 - Trying to access another organization's data
 
 **Check**:
+
 - Review key's scopes in API Keys table
 - Review key's operations in API Keys table
 - Verify club_id matches your organization
 
 **Fix**:
+
 - Create new API key with required scopes/operations
 - Or revoke old key and create replacement with broader permissions
 
 ### No Data Returned (Empty Array)
 
 **Reasons**:
+
 - No data matches filter criteria
 - Date range filter too restrictive
 - Organization has no valuations yet
 
 **Check**:
+
 - Remove date filters and try again
 - Verify organization has created valuations
 - Check if data exists in Valiyou platform
 
 **Fix**:
+
 - Adjust date range: `from_date` and `to_date` parameters
 - Create valuations if none exist
 - Test with `/api/v1/clubs` endpoint to verify connectivity
@@ -686,11 +763,13 @@ Access to API Management requires specific permissions:
 ### Usage Statistics Not Showing
 
 **Reasons**:
+
 - No API requests made yet
 - Statistics cache not updated (updates every 5 minutes)
 - Network error fetching usage data
 
 **Try**:
+
 - Make some API requests first
 - Wait 5 minutes for cache to refresh
 - Refresh browser page
@@ -699,6 +778,7 @@ Access to API Management requires specific permissions:
 ## Security Best Practices
 
 **API Key Management**:
+
 - ✅ Create separate keys for each integration
 - ✅ Use descriptive names (e.g., "Power BI Production", "Excel Finance")
 - ✅ Grant minimum required scopes and operations
@@ -709,6 +789,7 @@ Access to API Management requires specific permissions:
 - ❌ Never log keys in application logs
 
 **Integration Security**:
+
 - ✅ Always use HTTPS for API requests
 - ✅ Implement error handling for failed requests
 - ✅ Use retry logic with exponential backoff
@@ -718,13 +799,15 @@ Access to API Management requires specific permissions:
 - ❌ Don't reuse keys across environments (dev/staging/prod)
 
 **Auditing**:
+
 - Review API keys quarterly
 - Remove keys for terminated integrations
 - Check "Last Used" column for inactive keys
 - Monitor "Usage" tab for unusual activity
 
 <Tip>
-**Security Audit**: Set a calendar reminder to review your API keys every 3 months. Revoke any keys that are no longer needed or haven't been used recently.
+  **Security Audit**: Set a calendar reminder to review your API keys every 3 months. Revoke any
+  keys that are no longer needed or haven't been used recently.
 </Tip>
 
 ## Frequently Asked Questions
@@ -734,37 +817,62 @@ Access to API Management requires specific permissions:
     An API key is a unique authentication token that allows secure programmatic access to your Valiyou data. You need an API key to integrate Valiyou with external tools like Power BI, Excel, custom applications, or automated workflows. API keys act as Bearer tokens to verify your identity and permissions when making REST API requests.
   </Accordion>
 
-  <Accordion title="How do I create my first API key?">
-    Navigate to Platform → API, click "Create API Key" in the top right, enter a descriptive name, select the data scopes you need (valuations, player sales, clubs), choose the operations (GET for read-only is recommended for most integrations), and click "Create API Key". Copy the generated key immediately and store it securely—you won't be able to see it again.
-  </Accordion>
+<Accordion title="How do I create my first API key?">
+  Navigate to Platform → API, click "Create API Key" in the top right, enter a descriptive name,
+  select the data scopes you need (valuations, player sales, clubs), choose the operations (GET for
+  read-only is recommended for most integrations), and click "Create API Key". Copy the generated
+  key immediately and store it securely—you won't be able to see it again.
+</Accordion>
 
-  <Accordion title="Can I use the same API key for multiple integrations?">
-    While technically possible, it's not recommended. Best practice is to create separate API keys for each integration (e.g., one for Power BI, one for Excel, one for custom scripts). This allows you to track usage per integration, revoke access to specific tools without affecting others, and follow the principle of least privilege by granting only the necessary permissions.
-  </Accordion>
+<Accordion title="Can I use the same API key for multiple integrations?">
+  While technically possible, it's not recommended. Best practice is to create separate API keys for
+  each integration (e.g., one for Power BI, one for Excel, one for custom scripts). This allows you
+  to track usage per integration, revoke access to specific tools without affecting others, and
+  follow the principle of least privilege by granting only the necessary permissions.
+</Accordion>
 
-  <Accordion title="What should I do if my API key is compromised or leaked?">
-    Immediately revoke the compromised API key by going to Platform → API, finding the key in the table, and clicking the red trash icon. Create a new API key with a different name, update your integrations with the new key, and review your API usage logs for any suspicious activity. Never commit API keys to version control or share them in public channels.
-  </Accordion>
+<Accordion title="What should I do if my API key is compromised or leaked?">
+  Immediately revoke the compromised API key by going to Platform → API, finding the key in the
+  table, and clicking the red trash icon. Create a new API key with a different name, update your
+  integrations with the new key, and review your API usage logs for any suspicious activity. Never
+  commit API keys to version control or share them in public channels.
+</Accordion>
 
-  <Accordion title="How do I integrate Valiyou API with Power BI?">
-    Create an API key with GET operation and required scopes, open Power BI Desktop, select Get Data → Web, enter your API endpoint URL with the api_key and club_id parameters (e.g., https://valiyou.io/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID), transform the data in Power Query Editor, and create your visualizations. You can set up scheduled refresh to keep your reports automatically updated.
-  </Accordion>
+<Accordion title="How do I integrate Valiyou API with Power BI?">
+  Create an API key with GET operation and required scopes, open Power BI Desktop, select Get Data →
+  Web, enter your API endpoint URL with the api_key and club_id parameters (e.g.,
+  https://valiyou.io/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID), transform the data in
+  Power Query Editor, and create your visualizations. You can set up scheduled refresh to keep your
+  reports automatically updated.
+</Accordion>
 
-  <Accordion title="What's the difference between scopes and operations in API keys?">
-    Scopes define which data resources the API key can access (valuations, player sales, clubs), while operations define what actions the key can perform (GET for reading, POST for creating, PUT for updating, DELETE for deleting). For example, a key with "Valuations" scope and "GET" operation can read valuation data but cannot modify it.
-  </Accordion>
+<Accordion title="What's the difference between scopes and operations in API keys?">
+  Scopes define which data resources the API key can access (valuations, player sales, clubs), while
+  operations define what actions the key can perform (GET for reading, POST for creating, PUT for
+  updating, DELETE for deleting). For example, a key with "Valuations" scope and "GET" operation can
+  read valuation data but cannot modify it.
+</Accordion>
 
-  <Accordion title="How can I monitor my API usage and performance?">
-    Navigate to Platform → API → Usage tab to see visual analytics of your API requests over the last 30 days, including total requests, success rate, average response time, and breakdown by endpoint. This helps you identify issues, optimize performance, and understand which integrations are most active.
-  </Accordion>
+<Accordion title="How can I monitor my API usage and performance?">
+  Navigate to Platform → API → Usage tab to see visual analytics of your API requests over the last
+  30 days, including total requests, success rate, average response time, and breakdown by endpoint.
+  This helps you identify issues, optimize performance, and understand which integrations are most
+  active.
+</Accordion>
 
-  <Accordion title="What does a 401 Unauthorized error mean and how do I fix it?">
-    A 401 Unauthorized error means your API key is invalid, revoked, or missing from the request. Verify that you're including the api_key parameter in your URL, check that the key hasn't been revoked in the API Keys table, ensure you're copying the entire key without typos, and verify that you're using the correct club_id for your organization.
-  </Accordion>
+<Accordion title="What does a 401 Unauthorized error mean and how do I fix it?">
+  A 401 Unauthorized error means your API key is invalid, revoked, or missing from the request.
+  Verify that you're including the api_key parameter in your URL, check that the key hasn't been
+  revoked in the API Keys table, ensure you're copying the entire key without typos, and verify that
+  you're using the correct club_id for your organization.
+</Accordion>
 
-  <Accordion title="Are there rate limits on API requests?">
-    Currently, there are no rate limits for Professional and Enterprise plans—you can make unlimited API requests. However, excessive usage may be flagged for review under fair use policies. We recommend implementing exponential backoff and retry logic in your integrations to ensure resilience if rate limits are introduced in the future.
-  </Accordion>
+<Accordion title="Are there rate limits on API requests?">
+  Currently, there are no rate limits for Professional and Enterprise plans—you can make unlimited
+  API requests. However, excessive usage may be flagged for review under fair use policies. We
+  recommend implementing exponential backoff and retry logic in your integrations to ensure
+  resilience if rate limits are introduced in the future.
+</Accordion>
 
   <Accordion title="Can I use API keys to integrate with Excel and automate data refresh?">
     Yes, you can integrate Valiyou API with Excel by creating an API key with GET operation, opening Excel, selecting Data → Get Data → From Web, entering your API endpoint URL with authentication parameters, and loading the data. Excel supports scheduled refresh, allowing you to automatically update your spreadsheets with the latest Valiyou data at regular intervals.
@@ -774,6 +882,7 @@ Access to API Management requires specific permissions:
 ## Changelog {#changelog}
 
 ### January 19, 2025
+
 - **Added**: Header-based authentication recommendation for production integrations
 - **Added**: Security warnings about query parameter API key exposure
 - **Added**: Power BI header configuration guidance
@@ -782,6 +891,7 @@ Access to API Management requires specific permissions:
 - **Improved**: Security best practices section with specific implementation guidance
 
 ### Initial Release
+
 - API key creation and management
 - REST API endpoint documentation
 - Usage analytics and monitoring
@@ -798,29 +908,17 @@ Access to API Management requires specific permissions:
     Start by creating a read-only key for Power BI or Excel
   </Card>
 
-  <Card
-    title="Test Endpoints"
-    icon="terminal"
-    href="/platform/api#api-endpoints"
-  >
-    Use curl to test API responses before building integrations
-  </Card>
+<Card title="Test Endpoints" icon="terminal" href="/platform/api#api-endpoints">
+  Use curl to test API responses before building integrations
+</Card>
 
-  <Card
-    title="Monitor Usage"
-    icon="chart-line"
-    href="/platform/api#usage-tab"
-  >
-    Check Usage tab regularly to understand API usage patterns
-  </Card>
+<Card title="Monitor Usage" icon="chart-line" href="/platform/api#usage-tab">
+  Check Usage tab regularly to understand API usage patterns
+</Card>
 
-  <Card
-    title="Explore Documentation"
-    icon="book"
-    href="/platform/api#documentation-tab"
-  >
-    Read complete API reference and integration guides
-  </Card>
+<Card title="Explore Documentation" icon="book" href="/platform/api#documentation-tab">
+  Read complete API reference and integration guides
+</Card>
 
   <Card
     title="Build Integrations"
@@ -832,7 +930,8 @@ Access to API Management requires specific permissions:
 </CardGroup>
 
 <Note>
-**Support**: Need help with API integration? Contact support at support@valiyou.com with your use case and we'll help you get started.
+  **Support**: Need help with API integration? Contact support at support@valiyou.com with your use
+  case and we'll help you get started.
 </Note>
 
 <script type="application/ld+json">

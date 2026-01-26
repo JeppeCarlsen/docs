@@ -1,14 +1,16 @@
 ---
 title: 'Inventory'
 description: 'Manage sponsorship inventory with automatic quantity tracking, transaction history, and drag-and-drop reordering. Prevent overselling and track VIP tickets.'
-seo:
-  title: 'Sponsorship Inventory Management | Valiyou'
+'og:title': 'Sponsorship Inventory Management | Valiyou'
 ---
 
 # Sponsorship Inventory Management
 
 <Frame>
-  <img src="/images/valiyou.com_platform_plugins(iPad Pro) (4).png" alt="Sponsorship inventory management system dashboard showing drag-and-drop reordering, quantity tracking, category management, and transaction history for sports marketing assets and VIP hospitality packages" />
+  <img
+    src="/images/valiyou.com_platform_plugins(iPad Pro) (4).png"
+    alt="Sponsorship inventory management system dashboard showing drag-and-drop reordering, quantity tracking, category management, and transaction history for sports marketing assets and VIP hospitality packages"
+  />
 </Frame>
 
 **Manage your complete sponsorship inventory** with automatic quantity tracking, real-time availability updates, and comprehensive transaction history. Track VIP tickets, hospitality packages, branding assets, and all sponsorship items with precision.
@@ -22,55 +24,65 @@ Comprehensive table displaying all sponsorship items with inline editing and dra
 ### Table Columns
 
 **Drag Handle** (leftmost):
+
 - Six-dot icon for drag-and-drop
 - Click and drag to reorder items
 - New order saves automatically
 
 **Item Name**:
+
 - Primary identifier
 - Bold text
 - Click row to edit
 
 **Category**:
+
 - Inline dropdown
 - Select from configured categories
 - Quick-change without opening modal
 
 **Event**:
+
 - Inline dropdown
 - "All events" or specific event
 - Quick-change assignment
 
 **Required** (Tier):
+
 - Inline dropdown
 - "All Tiers" or specific tier requirement
 - Restricts item availability per tier
 
 **Max Quantity**:
+
 - Inline number input
 - Maximum quantity available
 - Empty = unlimited
 - Changes save automatically
 
 **Available**:
+
 - Auto-calculated available quantity
 - Shows: Max - Reserved - Committed
 - Updates in real-time
 - Cannot be edited manually
 
 **Unit Cost**:
+
 - Currency formatted (e.g., "€5,000")
 - Right-aligned
 - Hidden in Negotiator Mode
 
 **Actions**:
+
 - **History button** (clock icon) - View complete transaction history
 - **Adjust button** (+/-) - Manually adjust inventory (add/remove stock)
 - **Edit button** - Opens edit modal
 - **Delete button** - Opens delete confirmation
 
 <Tip>
-**Drag to Reorder**: The display order in this table determines the order items appear in Package Builder. Organize strategically!
+  **Drag to Reorder**: The display order in this table determines the order items appear in Package
+  Builder. Organize strategically!
 </Tip>
 
 ## Inventory Management System
@@ -84,6 +96,7 @@ The inventory system automatically tracks available quantities using a **transac
 **Available = Max Quantity - Reserved - Committed**
 
 **Transaction Types:**
+
 - **RESERVED** - Items in draft/pending packages (not yet approved)
 - **COMMITTED** - Items in approved packages (locked)
 - **RETURNED** - Items returned to inventory (package rejected/archived)
@@ -91,7 +104,8 @@ The inventory system automatically tracks available quantities using a **transac
 - **ADJUSTMENT** - Manual corrections (fixing errors)
 
 <Info>
-**Real-Time Updates**: The Available column updates automatically whenever packages change status, items are added/removed, or manual adjustments are made.
+  **Real-Time Updates**: The Available column updates automatically whenever packages change status,
+  items are added/removed, or manual adjustments are made.
 </Info>
 
 ### View Transaction History
@@ -99,10 +113,14 @@ The inventory system automatically tracks available quantities using a **transac
 Click the **clock icon** in the Actions column to view complete transaction history for an item.
 
 <Frame>
-  <img src="/images/sponsorships/inventory/history-modal.png" alt="Sponsorship inventory transaction history modal showing chronological audit trail with reserved, committed, returned, and inbound transactions for VIP tickets and hospitality packages" />
+  <img
+    src="/images/sponsorships/inventory/history-modal.png"
+    alt="Sponsorship inventory transaction history modal showing chronological audit trail with reserved, committed, returned, and inbound transactions for VIP tickets and hospitality packages"
+  />
 </Frame>
 
 **History Modal Shows:**
+
 - **Date & Time** - When the transaction occurred
 - **Type** - Transaction type (RESERVED, COMMITTED, RETURNED, etc.)
 - **Quantity** - Amount changed (+ or -)
@@ -110,6 +128,7 @@ Click the **clock icon** in the Actions column to view complete transaction hist
 - **Notes** - Description of what happened
 
 **Example Transactions:**
+
 ```
 Dec 4, 2025 10:30 AM | RESERVED     | -5 | Gold Package      | Package item added: VIP Tickets
 Dec 3, 2025 02:15 PM | COMMITTED    | -5 | Gold Package      | Package status changed to approved
@@ -118,7 +137,8 @@ Dec 1, 2025 09:45 AM | ADJUSTMENT   | +2 | -                 | Correction: Found
 ```
 
 <Tip>
-**Audit Trail**: Every inventory change is logged with timestamp, user, and reason. Perfect for audits and troubleshooting!
+  **Audit Trail**: Every inventory change is logged with timestamp, user, and reason. Perfect for
+  audits and troubleshooting!
 </Tip>
 
 ### Manual Inventory Adjustments
@@ -126,23 +146,29 @@ Dec 1, 2025 09:45 AM | ADJUSTMENT   | +2 | -                 | Correction: Found
 Click the **+/- icon** in the Actions column to manually adjust inventory.
 
 <Frame>
-  <img src="/images/sponsorships/inventory/adjust-modal.png" alt="Adjust inventory modal for adding stock with INBOUND and ADJUSTMENT transaction types, quantity input, and notes field for sponsorship asset management" />
+  <img
+    src="/images/sponsorships/inventory/adjust-modal.png"
+    alt="Adjust inventory modal for adding stock with INBOUND and ADJUSTMENT transaction types, quantity input, and notes field for sponsorship asset management"
+  />
 </Frame>
 
 **Adjust Inventory Modal:**
+
 - **Current Available** - Shows current available quantity
 - **Type** - Select INBOUND (adding stock) or ADJUSTMENT (correcting errors)
 - **Quantity** - Amount to add (positive number)
 - **Notes** - Required description of why you're adjusting
 
 **Use Cases:**
+
 - **INBOUND** - Receiving new stock, adding items to inventory
   - Example: "Received 50 VIP tickets from supplier"
 - **ADJUSTMENT** - Fixing errors, correcting counts
   - Example: "Found 2 extra tickets in storage, updating count"
 
 <Warning>
-**Manual Adjustments Only Add**: The adjust function only adds to inventory (positive numbers). To remove items, create a draft package and mark it as rejected/archived.
+  **Manual Adjustments Only Add**: The adjust function only adds to inventory (positive numbers). To
+  remove items, create a draft package and mark it as rejected/archived.
 </Warning>
 
 ### Automatic Package Tracking
@@ -150,22 +176,26 @@ Click the **+/- icon** in the Actions column to manually adjust inventory.
 The system automatically creates transactions when packages change:
 
 **When Creating Package:**
+
 - Adds RESERVED transactions for all items
 - Reduces available quantity immediately
 - Shows package name in transaction notes
 
 **When Approving Package:**
+
 - Converts RESERVED to COMMITTED
 - Items remain unavailable (locked to approved package)
 - Cannot be returned unless package is rejected
 
 **When Rejecting/Archiving Package:**
+
 - Creates RETURNED transactions
 - Returns items to available inventory
 - Shows original package name in notes
 
 <Info>
-**Draft vs Approved**: Draft packages reserve items (can be returned), approved packages commit items (locked until rejected).
+  **Draft vs Approved**: Draft packages reserve items (can be returned), approved packages commit
+  items (locked until rejected).
 </Info>
 
 ### Oversell Prevention
@@ -173,22 +203,28 @@ The system automatically creates transactions when packages change:
 The Package Builder enforces max quantity limits:
 
 **When Adding Items:**
+
 - Cannot exceed available quantity
 - Number input shows warning if at maximum
 - Red border indicates you've reached the limit
 
 **Inline Quantity Input:**
+
 - Type exact number between +/- buttons
 - Auto-validates against available quantity
 - Pressing Enter saves immediately
 - Auto-selects text when clicking field (easy replacement)
 
 <Frame>
-  <img src="/images/sponsorships/packages/quantity-input.png" alt="Inline quantity input field with validation showing maximum quantity limits, auto-save functionality, and oversell prevention for sponsorship package builder" />
+  <img
+    src="/images/sponsorships/packages/quantity-input.png"
+    alt="Inline quantity input field with validation showing maximum quantity limits, auto-save functionality, and oversell prevention for sponsorship package builder"
+  />
 </Frame>
 
 <Tip>
-**Quick Entry**: Click the quantity field and type the exact number you want. No need to click +/- 50 times for large quantities!
+  **Quick Entry**: Click the quantity field and type the exact number you want. No need to click +/-
+  50 times for large quantities!
 </Tip>
 
 ### Inline Editing
@@ -196,19 +232,21 @@ The Package Builder enforces max quantity limits:
 Most fields can be edited directly in the table without opening the modal:
 
 **Editable Inline:**
+
 - Category dropdown
 - Event dropdown
 - Required tier dropdown
 - Max quantity input
 
 **Not Editable Inline:**
+
 - Item name (use Edit button)
 - Description (use Edit button)
 - Unit cost (use Edit button)
 - Boolean toggle (use Edit button)
 
 <Info>
-**Auto-Save**: Inline edits save automatically when you change the value. No need to click "Save"!
+  **Auto-Save**: Inline edits save automatically when you change the value. No need to click "Save"!
 </Info>
 
 ### Add Item Button
@@ -223,71 +261,86 @@ Most fields can be edited directly in the table without opening the modal:
 Comprehensive modal for creating or editing inventory items.
 
 <Frame>
-  <img src="/images/sponsorships/library/add-edit-modal.png" alt="Add and edit sponsorship inventory item modal with fields for item name, description, category, event assignment, tier requirements, unit cost, max quantity, and boolean toggle options" />
+  <img
+    src="/images/sponsorships/library/add-edit-modal.png"
+    alt="Add and edit sponsorship inventory item modal with fields for item name, description, category, event assignment, tier requirements, unit cost, max quantity, and boolean toggle options"
+  />
 </Frame>
 
 ### Modal Fields
 
 **Item Name** (required):
+
 - Clear, descriptive name
 - Appears in packages and proposals
 - Example: "Stadium Naming Rights", "VIP Season Tickets"
 
 **Description** (optional):
+
 - Detailed explanation of the item
 - Visible to sponsors in proposals
 - Supports multi-line text
 
 **Category** (required):
+
 - Select from dropdown
 - **Built-in Categories**: Designation, Hospitality
 - **Custom Categories**: Add your own in Settings tab
 - **Quick Add**: Click "+ Add category" to create new one instantly
 
 <Info>
-**System Categories**: "Designation" and "Hospitality" are built-in and cannot be deleted. Custom categories can be managed in Settings.
+  **System Categories**: "Designation" and "Hospitality" are built-in and cannot be deleted. Custom
+  categories can be managed in Settings.
 </Info>
 
 **Event Assignment**:
+
 - **"All events"** (default) - Item applies to all events
 - **Specific Event** - Item only for one event
 - **Quick Add**: Click "+ Add event" to create new event
 - **Event Details**: Click pencil icon to view/edit event info
 
 <Tip>
-**Event-Specific Items**: Use this for special offerings like "Championship Game VIP Tickets" or "Opening Ceremony Banner Placement".
+  **Event-Specific Items**: Use this for special offerings like "Championship Game VIP Tickets" or
+  "Opening Ceremony Banner Placement".
 </Tip>
 
 **Required Tier**:
+
 - **"All Tiers"** (default) - Available to all sponsors regardless of tier
 - **Specific Tier** - Only available to sponsors at this tier level
 - **Quick Add**: Click "+ Add tier" to create new tier level
 - **Tier Management**: Click pencil icon to edit tiers
 
 <Info>
-**Tier Restrictions**: Use this to create exclusive items for premium sponsors (e.g., "Platinum Lounge Access" only for Gold tier).
+  **Tier Restrictions**: Use this to create exclusive items for premium sponsors (e.g., "Platinum
+  Lounge Access" only for Gold tier).
 </Info>
 
 **Unit Cost** (required):
+
 - Cost per unit in base currency
 - Example: €5,000 for one VIP ticket
 - Used in package pricing calculations
 - Hidden in Negotiator Mode (proposal-based pricing)
 
 **Max Quantity** (optional):
+
 - Maximum available quantity
 - Empty = unlimited
 - Example: 100 VIP seats, 1 stadium naming right
 - Enforced in Package Builder
 
 **Boolean Toggle**:
+
 - **OFF** (default) - Quantity-based item
 - **ON** - Yes/No checkbox item
 - Boolean items ignore Max Quantity field
 - Example: "Logo on Website" (either included or not)
 
 <Warning>
-**Boolean Items**: When enabled, this item becomes a simple checkbox in Package Builder (no quantity field). Use for all-or-nothing offerings.
+  **Boolean Items**: When enabled, this item becomes a simple checkbox in Package Builder (no
+  quantity field). Use for all-or-nothing offerings.
 </Warning>
 
 ### Quick Add Features
@@ -299,6 +352,7 @@ The modal includes quick-add buttons to create categories, tiers, and events wit
 **Button**: "+ Add category" (in Category dropdown)
 
 **Action**: Opens mini-modal with:
+
 - Category name input
 - Color picker (optional)
 - Save button
@@ -310,6 +364,7 @@ The modal includes quick-add buttons to create categories, tiers, and events wit
 **Button**: "+ Add tier" (in Required Tier dropdown)
 
 **Action**: Opens Tier Management modal with:
+
 - List of existing tiers
 - Add new tier button
 - Edit/delete existing tiers
@@ -322,6 +377,7 @@ The modal includes quick-add buttons to create categories, tiers, and events wit
 **Button**: "+ Add event" (in Event dropdown)
 
 **Action**: Opens Add Event modal with:
+
 - Event name (required)
 - Location details (name, address, city, postal code, country)
 - Period (start date, end date)
@@ -331,18 +387,21 @@ The modal includes quick-add buttons to create categories, tiers, and events wit
 **Result**: New event immediately available in dropdown
 
 <Tip>
-**Streamlined Workflow**: Quick-add features let you build your entire inventory structure without closing the Add Item modal. Create categories, tiers, and events on-the-fly!
+  **Streamlined Workflow**: Quick-add features let you build your entire inventory structure without
+  closing the Add Item modal. Create categories, tiers, and events on-the-fly!
 </Tip>
 
 ### Edit vs View Mode
 
 **Edit Icons**:
+
 - **Category**: No edit icon (managed in Settings)
 - **Tier**: Pencil icon - opens Tier Management modal
 - **Event**: Pencil icon - opens event details with location/period info
 
 **Viewing Event Details**:
 When clicking event pencil icon, you see:
+
 - Event name
 - Location (if provided)
 - Period dates (if provided)
@@ -352,10 +411,12 @@ When clicking event pencil icon, you see:
 ### Modal Actions
 
 **When Adding:**
+
 - **Cancel** - Close without saving
 - **Add Item** - Create item (blue button)
 
 **When Editing:**
+
 - **Cancel** - Close without saving
 - **Delete Item** - Delete item (red button)
 - **Save Changes** - Update item (blue button)
@@ -365,10 +426,12 @@ When clicking event pencil icon, you see:
 ### Delete Confirmation Modal
 
 **Triggered by**:
+
 - Clicking trash icon in table
 - Clicking "Delete Item" button in edit modal
 
 **Modal Content:**
+
 - Title: "Delete Item"
 - Message: "Are you sure you want to delete '[Item Name]'?"
 - **Affected Packages List**: Shows which packages use this item
@@ -376,7 +439,8 @@ When clicking event pencil icon, you see:
 - Cancel: "Cancel" (gray button)
 
 <Warning>
-**Cascading Impact**: Deleting an item removes it from all packages that use it. The packages remain, but the item is removed from their item lists.
+  **Cascading Impact**: Deleting an item removes it from all packages that use it. The packages
+  remain, but the item is removed from their item lists.
 </Warning>
 
 ### Affected Packages
@@ -386,19 +450,19 @@ If the item is used in packages, the modal displays:
 **Section**: "Packages using this item"
 **List**: All package names containing this item
 **Example**:
+
 - Gold Partner Package
 - Platinum Sponsor Bundle
 - VIP Experience Package
 
-<Info>
-If the item isn't used in any packages, this section is hidden and deletion is safe.
-</Info>
+<Info>If the item isn't used in any packages, this section is hidden and deletion is safe.</Info>
 
 ## Reordering Items
 
 ### Drag-and-Drop Functionality
 
 **How to Reorder:**
+
 1. Hover over item row
 2. Click and hold the six-dot drag handle (leftmost column)
 3. Drag item up or down
@@ -406,12 +470,14 @@ If the item isn't used in any packages, this section is hidden and deletion is s
 5. Order saves automatically
 
 **Why Order Matters:**
+
 - Items appear in Package Builder in this order
 - Organize by importance, category, or alphabetically
 - Strategic ordering improves package building UX
 
 <Tip>
-**Best Practice**: Group similar items together (e.g., all VIP hospitality items, then all signage items, then all digital items).
+  **Best Practice**: Group similar items together (e.g., all VIP hospitality items, then all signage
+  items, then all digital items).
 </Tip>
 
 ## Boolean vs Quantity Items
@@ -421,11 +487,13 @@ Two types of items serve different purposes:
 ### Quantity-Based Items (Default)
 
 **Characteristics:**
+
 - Has Max Quantity field
 - Shown with quantity selector in Package Builder
 - Example: "VIP Tickets" (max 100)
 
 **Use Cases:**
+
 - Physical items with limited availability
 - Tickets, seats, parking spaces
 - Merchandise quantities
@@ -434,19 +502,22 @@ Two types of items serve different purposes:
 ### Boolean Items (Checkbox)
 
 **Characteristics:**
+
 - Boolean toggle ON
 - No quantity field (always 1 or 0)
 - Shown as checkbox in Package Builder
 - Example: "Logo on Website" (yes/no)
 
 **Use Cases:**
+
 - All-or-nothing offerings
 - Digital placements (logo on website, social media mention)
 - Rights and naming (stadium naming, jersey sponsor)
 - Exclusive benefits (backstage access, meet-and-greet)
 
 <Info>
-**When to Use Boolean**: If the item can't have a quantity (it's either included or not), use boolean mode. If sponsors can have multiple (1, 2, 5 units), use quantity mode.
+  **When to Use Boolean**: If the item can't have a quantity (it's either included or not), use
+  boolean mode. If sponsors can have multiple (1, 2, 5 units), use quantity mode.
 </Info>
 
 ## Item Categories
@@ -454,11 +525,13 @@ Two types of items serve different purposes:
 ### Built-in Categories
 
 **Designation**:
+
 - Brand placement and recognition items
 - Examples: Logo on jersey, stadium naming rights, banner placement
 - Cannot be deleted (system category)
 
 **Hospitality**:
+
 - Guest experiences and VIP access
 - Examples: VIP tickets, lounge access, meet-and-greet, parking
 - Cannot be deleted (system category)
@@ -468,6 +541,7 @@ Two types of items serve different purposes:
 Create unlimited custom categories for your specific needs:
 
 **Common Custom Categories:**
+
 - **Digital** - Social media, website, email campaigns
 - **Print** - Programs, posters, flyers
 - **Events** - Special event access, activation opportunities
@@ -476,7 +550,8 @@ Create unlimited custom categories for your specific needs:
 - **Experiences** - Behind-the-scenes tours, player appearances
 
 <Tip>
-**Strategic Categorization**: Well-organized categories help sponsors quickly find relevant items and create themed packages.
+  **Strategic Categorization**: Well-organized categories help sponsors quickly find relevant items
+  and create themed packages.
 </Tip>
 
 ## Tier Requirements
@@ -496,6 +571,7 @@ Restrict item availability by sponsorship tier level.
 **Use Cases**: Exclusive premium offerings
 
 **Example Tier Structure:**
+
 - **Platinum Tier**: All items (including Platinum-exclusive)
 - **Gold Tier**: Gold + Silver + Bronze items (no Platinum-exclusive)
 - **Silver Tier**: Silver + Bronze items (no Gold/Platinum-exclusive)
@@ -522,12 +598,14 @@ Control which events items apply to.
 **Use Cases**: Special event exclusives, limited-time offers
 
 **Example Event Items:**
+
 - "Championship Game VIP Box" - only for championship event
 - "Season Opener Banner" - only for opening game
 - "Annual Gala Table" - only for yearly gala event
 
 <Tip>
-**Seasonal Strategy**: Create "2024/2025 Season" event for season-long items, plus individual events for special games/occasions.
+  **Seasonal Strategy**: Create "2024/2025 Season" event for season-long items, plus individual
+  events for special games/occasions.
 </Tip>
 
 ## Common Use Cases
@@ -572,6 +650,7 @@ Control which events items apply to.
 ### Inline Edit Not Saving
 
 **Try:**
+
 - Check network connection
 - Refresh page and try again
 - Use Edit button modal as alternative
@@ -580,6 +659,7 @@ Control which events items apply to.
 ### Drag-and-Drop Not Working
 
 **Try:**
+
 - Use mouse (not touch) on desktop
 - Check if table is scrollable (scroll into view first)
 - Refresh page
@@ -588,6 +668,7 @@ Control which events items apply to.
 ### Item Not Appearing in Package Builder
 
 **Check:**
+
 - Item has correct tier requirement for sponsor
 - Item has correct event assignment
 - Item isn't archived/deleted
@@ -600,29 +681,48 @@ Control which events items apply to.
     The Valiyou inventory system uses a transaction-based approach that automatically tracks available quantities. The formula is: Available = Max Quantity - Reserved - Committed. When you add items to draft packages, they're RESERVED. When packages are approved, items become COMMITTED. If packages are rejected or archived, items are RETURNED to inventory. Every transaction is logged with timestamp and details.
   </Accordion>
 
-  <Accordion title="Can I prevent overselling sponsorship items?">
-    Yes! The Package Builder enforces max quantity limits automatically. You cannot add more items to a package than are available in inventory. The system shows warnings when you reach maximum quantity and uses red borders to indicate limits. This prevents double-booking VIP tickets, hospitality packages, or limited sponsorship assets.
-  </Accordion>
+<Accordion title="Can I prevent overselling sponsorship items?">
+  Yes! The Package Builder enforces max quantity limits automatically. You cannot add more items to
+  a package than are available in inventory. The system shows warnings when you reach maximum
+  quantity and uses red borders to indicate limits. This prevents double-booking VIP tickets,
+  hospitality packages, or limited sponsorship assets.
+</Accordion>
 
-  <Accordion title="What's the difference between RESERVED and COMMITTED inventory?">
-    RESERVED items are in draft or pending packages that haven't been approved yet. These items reduce available inventory but can be returned if the package is rejected. COMMITTED items are in approved packages and are locked until the package status changes. This two-stage system allows you to reserve items during negotiation while maintaining flexibility.
-  </Accordion>
+<Accordion title="What's the difference between RESERVED and COMMITTED inventory?">
+  RESERVED items are in draft or pending packages that haven't been approved yet. These items reduce
+  available inventory but can be returned if the package is rejected. COMMITTED items are in
+  approved packages and are locked until the package status changes. This two-stage system allows
+  you to reserve items during negotiation while maintaining flexibility.
+</Accordion>
 
-  <Accordion title="How do I view transaction history for inventory items?">
-    Click the clock icon in the Actions column of any inventory item to view its complete transaction history. The history modal shows chronological records of all quantity changes including date, time, transaction type (RESERVED, COMMITTED, RETURNED, INBOUND, ADJUSTMENT), quantity changed, related package, and notes. This provides a complete audit trail for compliance and troubleshooting.
-  </Accordion>
+<Accordion title="How do I view transaction history for inventory items?">
+  Click the clock icon in the Actions column of any inventory item to view its complete transaction
+  history. The history modal shows chronological records of all quantity changes including date,
+  time, transaction type (RESERVED, COMMITTED, RETURNED, INBOUND, ADJUSTMENT), quantity changed,
+  related package, and notes. This provides a complete audit trail for compliance and
+  troubleshooting.
+</Accordion>
 
-  <Accordion title="Can I manually adjust inventory quantities?">
-    Yes! Click the +/- icon in the Actions column to manually adjust inventory. You can add stock using INBOUND transactions (for receiving new inventory) or ADJUSTMENT transactions (for correcting errors). Both require notes explaining the change. All manual adjustments are logged in the transaction history with your user ID and timestamp.
-  </Accordion>
+<Accordion title="Can I manually adjust inventory quantities?">
+  Yes! Click the +/- icon in the Actions column to manually adjust inventory. You can add stock
+  using INBOUND transactions (for receiving new inventory) or ADJUSTMENT transactions (for
+  correcting errors). Both require notes explaining the change. All manual adjustments are logged in
+  the transaction history with your user ID and timestamp.
+</Accordion>
 
-  <Accordion title="What are Boolean items and when should I use them?">
-    Boolean items are yes/no checkbox items (either included or not) rather than quantity-based items. Use boolean mode for all-or-nothing offerings like "Logo on Website", "Stadium Naming Rights", or "Social Media Mention". Use quantity mode for items sponsors can have multiple of, like VIP tickets or parking passes.
-  </Accordion>
+<Accordion title="What are Boolean items and when should I use them?">
+  Boolean items are yes/no checkbox items (either included or not) rather than quantity-based items.
+  Use boolean mode for all-or-nothing offerings like "Logo on Website", "Stadium Naming Rights", or
+  "Social Media Mention". Use quantity mode for items sponsors can have multiple of, like VIP
+  tickets or parking passes.
+</Accordion>
 
-  <Accordion title="How do tier requirements work?">
-    Tier requirements restrict which sponsors can access specific inventory items. Setting an item to "Gold Tier" means only Gold sponsors (and higher tiers if you have them) can add it to packages. Set items to "All Tiers" to make them available to everyone. This is perfect for creating exclusive premium offerings for high-value sponsors.
-  </Accordion>
+<Accordion title="How do tier requirements work?">
+  Tier requirements restrict which sponsors can access specific inventory items. Setting an item to
+  "Gold Tier" means only Gold sponsors (and higher tiers if you have them) can add it to packages.
+  Set items to "All Tiers" to make them available to everyone. This is perfect for creating
+  exclusive premium offerings for high-value sponsors.
+</Accordion>
 
   <Accordion title="Can I organize inventory items by drag-and-drop?">
     Yes! The six-dot drag handle in the leftmost column lets you reorder items. Simply click and drag items up or down. The new order saves automatically and determines how items appear in the Package Builder. We recommend grouping similar items together (e.g., all VIP hospitality, then signage, then digital) for easier package building.

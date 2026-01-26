@@ -1,14 +1,16 @@
 ---
 title: 'Packages'
 description: 'Create custom sponsorship packages with the Package Builder. Add inventory items, calculate pricing, preview proposals, and send offers to sponsors.'
-seo:
-  title: 'Sponsorship Package Builder | Valiyou'
+'og:title': 'Sponsorship Package Builder | Valiyou'
 ---
 
 # Sponsorship Package Builder
 
 <Frame>
-  <img src="/images/valiyou.com_products_sponsorships_packages(iPad Pro).png" alt="Sponsorship package builder interface showing custom package creation, inventory item selection, quantity configuration, pricing calculator, and proposal generation for sports marketing packages" />
+  <img
+    src="/images/valiyou.com_products_sponsorships_packages(iPad Pro).png"
+    alt="Sponsorship package builder interface showing custom package creation, inventory item selection, quantity configuration, pricing calculator, and proposal generation for sports marketing packages"
+  />
 </Frame>
 
 **Build professional sponsorship packages** with the Valiyou Package Builder. Create custom packages by selecting inventory items, setting quantities, calculating tiered pricing, and generating branded proposals for your sponsors.
@@ -20,8 +22,8 @@ From VIP hospitality bundles to comprehensive branding packages — streamline y
 Navigate to **Sponsorships** → **Packages** from the sidebar to access package management.
 
 <Note>
-**Plan Required**: Professional or Enterprise plan
-**Permission Required**: Packages permission or Admin access
+  **Plan Required**: Professional or Enterprise plan **Permission Required**: Packages permission or
+  Admin access
 </Note>
 
 ## Package Workflow
@@ -46,12 +48,14 @@ If you don't have any packages yet, you'll see:
 ### Package Grid
 
 **Layout**: Card grid (1-3 columns based on screen size)
+
 - **Desktop (&gt;1024px)**: 3 columns
 - **Tablet (640-1024px)**: 2 columns
 - **Mobile (&lt;640px)**: 1 column
 
 <Info>
-**Draft Packages Only**: The packages list shows only draft packages. Approved packages appear in Proposals page.
+  **Draft Packages Only**: The packages list shows only draft packages. Approved packages appear in
+  Proposals page.
 </Info>
 
 ### Package Card
@@ -59,34 +63,41 @@ If you don't have any packages yet, you'll see:
 Each card displays:
 
 **Sponsor Logo** (top):
-- 128×128px circular image
+
+- 128\*128px circular image
 - Falls back to cube icon if no logo
 - Pulled from sponsor profile
 
 **Package Name**:
+
 - Bold, medium text
 - Primary identifier
 
 **Sponsor Name**:
+
 - Below package name
 - Gray text
 
 **Sales Price**:
+
 - Large, prominent currency value
 - Example: "500,000 kr"
 - Hidden in Negotiator Mode
 
 **Tier Badge**:
+
 - Gray rounded badge
 - Shows tier level (e.g., "Gold")
 - Neutral color scheme
 
 **Action Buttons** (bottom):
+
 - **Package** - Edit package details
 - **Inclusions** - Open Package Builder
 
 <Tip>
-**Quick Access**: Click "Inclusions" to jump straight to building the package with inventory items.
+  **Quick Access**: Click "Inclusions" to jump straight to building the package with inventory
+  items.
 </Tip>
 
 ### New Package Button
@@ -103,33 +114,39 @@ Modal for creating or editing package metadata.
 ### Modal Fields
 
 **Package Name** (required):
+
 - Clear, descriptive name
 - Example: "Gold Partner Package", "VIP Experience Bundle"
 - Appears on proposals and in lists
 
 **Sponsor** (required):
+
 - Dropdown of all sponsors
 - Filtered by status (Active and Inactive only, no Archived)
 - Shows sponsor name
 - **Quick Add**: Link to create new sponsor
 
 <Warning>
-**Sponsor Required**: You must have at least one sponsor before creating a package. If no sponsors exist, you'll see a prompt to create one first.
+  **Sponsor Required**: You must have at least one sponsor before creating a package. If no sponsors
+  exist, you'll see a prompt to create one first.
 </Warning>
 
 **Package Tier** (required):
+
 - Dropdown of configured tiers
 - Example: Platinum, Gold, Silver, Bronze
 - Determines which inventory items are available
 - Affects item tier restrictions
 
 **Sales Price** (required):
+
 - Package selling price in base currency
 - Used for coverage percentage calculation
 - Example: 500,000 for €500,000
 - Hidden in Negotiator Mode (proposal-based pricing)
 
 **Events** (optional):
+
 - Multi-select dropdown
 - Choose one or more events this package applies to
 - Empty = package not event-specific
@@ -137,10 +154,12 @@ Modal for creating or editing package metadata.
 - **Edit Event**: Pencil icon to view/edit event details
 
 <Info>
-**Event Filtering**: Items with event assignments will only appear in Package Builder if their event is selected here or they apply to "All events".
+  **Event Filtering**: Items with event assignments will only appear in Package Builder if their
+  event is selected here or they apply to "All events".
 </Info>
 
 **Notes** (optional):
+
 - Internal notes about the package
 - Not visible to sponsors
 - Helps track context and special arrangements
@@ -148,6 +167,7 @@ Modal for creating or editing package metadata.
 ### Event Management
 
 **Add Event Button**: Opens Add Event modal with:
+
 - Event name (required)
 - Location (name, address, city, postal code, country)
 - Period (start date, end date)
@@ -155,11 +175,13 @@ Modal for creating or editing package metadata.
 - Save button
 
 **Edit Event Icon** (pencil): Opens event details modal with:
+
 - All event information
 - Edit capability
 - Delete button (with affected items warning)
 
 **Event Dropdown Features**:
+
 - Multi-select (select multiple events)
 - Checkmark indicators for selected events
 - Scrollable list
@@ -168,16 +190,19 @@ Modal for creating or editing package metadata.
 ### Modal Actions
 
 **When Creating:**
+
 - **Cancel** - Close without saving
 - **Create Package** - Create package (blue button)
 
 **When Editing:**
+
 - **Cancel** - Close without saving
 - **Delete Package** - Delete package (red button)
 - **Save Changes** - Update package (blue button)
 
 <Warning>
-**Delete Package**: Deleting a package also deletes all items in that package. This action cannot be undone.
+  **Delete Package**: Deleting a package also deletes all items in that package. This action cannot
+  be undone.
 </Warning>
 
 ## Package Builder (Inclusions Page)
@@ -192,17 +217,17 @@ Comprehensive interface for adding inventory items to packages.
 ### Page Header
 
 **Left Side**:
+
 - Package name as title
 - Back button (returns to Packages list)
 
 **Right Side (Action Buttons)**:
+
 - **Edit Package** - Pencil icon, opens package metadata modal
 - **Preview PDF** - Document icon, opens PDF preview
 - **Send Proposal** - Envelope icon, opens send proposal modal
 
-<Info>
-**Save Status**: Changes save automatically as you work. No manual save button needed.
-</Info>
+<Info>**Save Status**: Changes save automatically as you work. No manual save button needed.</Info>
 
 ### Summary Stats (Top Cards)
 
@@ -211,7 +236,7 @@ Four summary cards showing package metrics:
 #### Total Cost
 
 **Label**: "Total Cost"
-**Value**: Sum of all included items × quantities
+**Value**: Sum of all included items \* quantities
 **Format**: Currency (e.g., "€450,000")
 **Hidden**: In Negotiator Mode
 
@@ -225,9 +250,10 @@ Four summary cards showing package metrics:
 #### Coverage Percentage
 
 **Label**: "Coverage"
-**Value**: (Total Cost ÷ Sales Price) × 100
+**Value**: (Total Cost / Sales Price) \* 100
 **Format**: Percentage (e.g., "90%")
 **Color**:
+
 - Green: 75-100%+
 - Yellow: 50-75%
 - Orange: 25-50%
@@ -236,7 +262,8 @@ Four summary cards showing package metrics:
 **Negotiator Mode**: Shows label instead of percentage (e.g., "High Coverage")
 
 <Tip>
-**Healthy Coverage**: Aim for 75-100% coverage. This means item costs closely match sales price, making the package realistic and balanced.
+  **Healthy Coverage**: Aim for 75-100% coverage. This means item costs closely match sales price,
+  making the package realistic and balanced.
 </Tip>
 
 #### Contribution Margin
@@ -253,11 +280,13 @@ Four summary cards showing package metrics:
 **Dropdown**: "All Events" or specific event selection
 **Purpose**: Filter inventory items by event assignment
 **Behavior**:
+
 - "All Events" - Show all items
 - Specific Event - Show only items for that event + "All events" items
 
 <Info>
-**Smart Filtering**: Items assigned to different events than selected are automatically hidden to prevent confusion.
+  **Smart Filtering**: Items assigned to different events than selected are automatically hidden to
+  prevent confusion.
 </Info>
 
 ### Inclusions Table
@@ -267,28 +296,33 @@ Sortable table with all available inventory items.
 #### Table Columns
 
 **Drag Handle** (leftmost):
+
 - Six-dot icon
 - Click and drag to reorder included items
 - Only works for included items (checked)
 - Changes sort_order in database
 
 **Checkbox**:
+
 - Toggle item inclusion
 - Checked = included in package
 - Unchecked = not included
 - Disabled for tier-restricted items
 
 **Item Name**:
+
 - Bold, prominent
 - Shows description below (if exists)
 - Gray text for description
 
 **Required Tier**:
+
 - Gray badge showing tier requirement
 - Only shown for tier-restricted items
 - Empty if "All Tiers"
 
 **Quantity**:
+
 - **Boolean Items**: Shows "YES" badge when included
 - **Quantity Items**: Plus/minus buttons with number
   - Minus button: Decrease quantity
@@ -298,54 +332,63 @@ Sortable table with all available inventory items.
 - **Max Quantity**: Enforced automatically (can't exceed limit)
 
 **Unit Cost**:
+
 - Currency formatted
 - Right-aligned
 - Grayed out for disabled items
 - Hidden in Negotiator Mode
 
 **Total**:
-- Quantity × Unit Cost
+
+- Quantity \* Unit Cost
 - Currency formatted
 - Right-aligned
 - Bold for emphasis
 - Hidden in Negotiator Mode
 
 <Warning>
-**Tier Restrictions**: Items with tier requirements higher than package tier are disabled and grayed out. Upgrade package tier to access them.
+  **Tier Restrictions**: Items with tier requirements higher than package tier are disabled and
+  grayed out. Upgrade package tier to access them.
 </Warning>
 
 ### Sorting and Reordering
 
 **Library Order**: Items appear in same order as Library page by default
 **Drag to Reorder**:
+
 - Only included items can be reordered
 - Drag handle on left side
 - New order saves automatically
 - Affects proposal PDF display order
 
 <Tip>
-**Strategic Ordering**: Reorder items to group similar offerings or prioritize high-value items in proposals.
+  **Strategic Ordering**: Reorder items to group similar offerings or prioritize high-value items in
+  proposals.
 </Tip>
 
 ### Item States
 
 **Normal (Available)**:
+
 - White/gray background
 - All controls enabled
 - Can check/uncheck, adjust quantity
 
 **Included**:
+
 - Light blue/indigo background
 - Checkmark visible
 - Can adjust quantity or uncheck
 
 **Tier-Restricted (Disabled)**:
+
 - Grayed out appearance
 - Checkbox disabled
 - Shows tier requirement badge
 - Hover shows reason: "Requires [Tier Name]"
 
 **Event-Restricted (Hidden)**:
+
 - Not shown in table
 - Filtered out by event selection
 - Only appears when correct event selected
@@ -353,18 +396,21 @@ Sortable table with all available inventory items.
 ### Boolean vs Quantity Items
 
 **Boolean Items**:
+
 - Show "YES" badge when included (no quantity input)
 - Always count as 1 unit for cost calculation
 - Example: "Logo on Website" (either included or not)
 
 **Quantity Items**:
+
 - Show plus/minus controls when included
 - Start at quantity 1 when first checked
 - Can increase/decrease as needed
 - Max quantity enforced from library settings
 
 <Info>
-**Auto-Quantity**: Checking an item automatically sets quantity to 1 for quantity-based items. Unchecking resets to 0.
+  **Auto-Quantity**: Checking an item automatically sets quantity to 1 for quantity-based items.
+  Unchecking resets to 0.
 </Info>
 
 ## PDF Design Templates
@@ -376,22 +422,28 @@ Customize the visual design of your proposal PDFs with three professional templa
 **Location**: Package Builder > "Design" tab (next to Inclusions)
 
 **Available Templates:**
+
 - **Classic** (default) - Traditional professional design with blue headers
 - **Modern** - Contemporary design with purple gradient headers
 - **Minimal** - Clean minimalist design with subtle styling
 
 <Frame>
-  <img src="/images/sponsorships/packages/pdf-design-templates.png" alt="Sponsorship proposal PDF design templates showing classic, modern, and executive layouts with customizable branding, colors, and cover pages for professional sponsor presentations" />
+  <img
+    src="/images/sponsorships/packages/pdf-design-templates.png"
+    alt="Sponsorship proposal PDF design templates showing classic, modern, and executive layouts with customizable branding, colors, and cover pages for professional sponsor presentations"
+  />
 </Frame>
 
 **Template Selector**:
+
 - Dropdown menu with three options
 - Preview thumbnails (if available)
 - Selection saves automatically
 - Applied to all PDFs generated for this package
 
 <Tip>
-**Brand Consistency**: Choose a template that matches your organization's brand identity. Modern templates work well for tech/sports brands, while Classic suits traditional organizations.
+  **Brand Consistency**: Choose a template that matches your organization's brand identity. Modern
+  templates work well for tech/sports brands, while Classic suits traditional organizations.
 </Tip>
 
 ### Template Styles
@@ -399,12 +451,14 @@ Customize the visual design of your proposal PDFs with three professional templa
 #### Classic Template
 
 **Characteristics:**
+
 - Blue header backgrounds (rgb(37, 99, 235))
 - Traditional typography
 - Professional and trustworthy appearance
 - Subtle borders and spacing
 
 **Best For:**
+
 - Corporate sponsors
 - Traditional organizations
 - Conservative industries
@@ -413,12 +467,14 @@ Customize the visual design of your proposal PDFs with three professional templa
 #### Modern Template
 
 **Characteristics:**
+
 - Purple gradient headers (indigo to violet)
 - Contemporary design elements
 - Bold, eye-catching appearance
 - Dynamic color scheme
 
 **Best For:**
+
 - Tech companies
 - Sports organizations
 - Creative industries
@@ -427,19 +483,22 @@ Customize the visual design of your proposal PDFs with three professional templa
 #### Minimal Template
 
 **Characteristics:**
+
 - Light gray headers (rgb(249, 250, 251))
 - Clean, simple design
 - Lots of white space
 - Minimalist aesthetic
 
 **Best For:**
+
 - Luxury brands
 - High-end sponsors
 - Design-conscious partners
 - Premium packages
 
 <Info>
-**Template Preview**: Generate a test PDF with each template to see how your specific content looks before sending to sponsors.
+  **Template Preview**: Generate a test PDF with each template to see how your specific content
+  looks before sending to sponsors.
 </Info>
 
 ### Custom Cover Images
@@ -449,6 +508,7 @@ Add organization-specific branding with custom PDF cover pages.
 **Setup**: Platform > Settings > PDF Contract Covers
 
 **How to Upload:**
+
 1. Go to Platform > Settings
 2. Scroll to "PDF Contract Covers" section
 3. Click "Upload Cover" button
@@ -456,16 +516,21 @@ Add organization-specific branding with custom PDF cover pages.
 5. Cover applies to all future PDFs
 
 <Frame>
-  <img src="/images/platform/settings/pdf-cover-upload.png" alt="Upload custom PDF cover page with drag-and-drop interface for branded sponsorship proposals, supporting JPG, PNG, and PDF formats up to 5MB" />
+  <img
+    src="/images/platform/settings/pdf-cover-upload.png"
+    alt="Upload custom PDF cover page with drag-and-drop interface for branded sponsorship proposals, supporting JPG, PNG, and PDF formats up to 5MB"
+  />
 </Frame>
 
 **Cover Requirements:**
+
 - **Format**: PNG or JPG only
 - **Size**: Maximum 5 MB
 - **Dimensions**: Recommended 1200x1600px (portrait, 3:4 aspect ratio)
 - **Content**: Organization logo, branding, imagery
 
 **PDF Structure with Cover:**
+
 1. **Custom Cover Page** (your branded image) ← NEW
 2. Pre-Contract Terms of Service
 3. Package Details & Sponsor Info
@@ -475,7 +540,8 @@ Add organization-specific branding with custom PDF cover pages.
 7. Signature Page
 
 <Warning>
-**Professional Design**: Use high-quality, professional images for cover pages. Low-resolution or poorly designed covers create a negative first impression.
+  **Professional Design**: Use high-quality, professional images for cover pages. Low-resolution or
+  poorly designed covers create a negative first impression.
 </Warning>
 
 ### Terms of Service Integration
@@ -485,10 +551,12 @@ Include custom terms and conditions in your PDFs automatically.
 **Setup**: Platform > Settings > Terms of Service
 
 **Two Types:**
+
 - **Pre-Contract Terms** - Displayed BEFORE package details (introductory text, eligibility)
 - **Post-Contract Terms** - Displayed AFTER package details (legal terms, payment terms)
 
 **Configuration:**
+
 1. Go to Platform > Settings > Terms of Service
 2. Enter "Pre-Contract Terms" (optional intro text)
 3. Enter "Post-Contract Terms" (legal terms and conditions)
@@ -496,10 +564,12 @@ Include custom terms and conditions in your PDFs automatically.
 5. Terms automatically included in all PDFs
 
 <Info>
-**Legal Review**: Always have your Terms of Service reviewed by legal counsel. These terms become part of binding contracts with sponsors.
+  **Legal Review**: Always have your Terms of Service reviewed by legal counsel. These terms become
+  part of binding contracts with sponsors.
 </Info>
 
 **Example Pre-Contract Terms:**
+
 ```
 Thank you for your interest in partnering with [Organization].
 
@@ -511,6 +581,7 @@ comply with our brand guidelines.
 ```
 
 **Example Post-Contract Terms:**
+
 ```
 TERMS AND CONDITIONS
 
@@ -524,6 +595,7 @@ By signing, Sponsor agrees to all terms in this agreement.
 ### Complete PDF Customization
 
 **Full PDF Structure:**
+
 1. **Custom Cover** (if uploaded)
 2. **Pre-Contract Terms** (if configured)
 3. **Package Header** with your logo
@@ -535,7 +607,8 @@ By signing, Sponsor agrees to all terms in this agreement.
 9. **Signature Page** with date fields
 
 <Tip>
-**Professional Package**: Combine all three features (custom template + cover image + terms of service) for a complete, professional, legally-sound sponsorship proposal.
+  **Professional Package**: Combine all three features (custom template + cover image + terms of
+  service) for a complete, professional, legally-sound sponsorship proposal.
 </Tip>
 
 ## Preview PDF
@@ -550,40 +623,47 @@ Modal showing proposal PDF preview before sending.
 ### PDF Content
 
 **Header Section**:
+
 - Your organization logo (if uploaded)
 - Organization name
 - "Sponsorship Proposal" title
 - Package name as subtitle
 
 **Sponsor Section**:
+
 - "Prepared for: [Sponsor Name]"
 - Sponsor logo (if exists)
 - Date prepared
 
 **Package Overview**:
+
 - Package tier badge
 - Sales price (if not Negotiator Mode)
 - Event assignments (if any)
 - Notes (if any)
 
 **Inclusions Section**:
+
 - Table of all included items
 - Columns: Item Name, Quantity, Unit Cost, Total
 - Subtotal per category
 - Grand total at bottom
 
 **Signature Section** (if enabled):
+
 - Signature line
 - Date line
 - Terms and conditions
 
 <Tip>
-**Review Before Sending**: Always preview the PDF to ensure all items, quantities, and pricing are correct before sending to sponsors.
+  **Review Before Sending**: Always preview the PDF to ensure all items, quantities, and pricing are
+  correct before sending to sponsors.
 </Tip>
 
 ### Preview Modal Actions
 
 **Buttons**:
+
 - **Close** - Exit preview without action
 - **Download PDF** - Download to computer
 - **Send Proposal** - Opens send proposal modal
@@ -608,31 +688,37 @@ Modal for sending proposals to sponsor contacts via email.
 #### Recipient Selection
 
 **Primary Contact** (auto-selected):
+
 - Pre-checked if sponsor has primary contact
 - Shows name, email, position
 
 **Additional Contacts**:
+
 - List of all other sponsor contacts
 - Checkboxes to select recipients
 - Shows name, email, position
 
 <Info>
-**No Contacts Warning**: If sponsor has no contacts, you'll see a prompt to add contacts before sending.
+  **No Contacts Warning**: If sponsor has no contacts, you'll see a prompt to add contacts before
+  sending.
 </Info>
 
 #### Email Template
 
 **Subject Line**:
+
 - Editable text field
 - Default: "Sponsorship Proposal - [Package Name]"
 
 **Message Body**:
+
 - Multi-line textarea
 - Supports line breaks
 - Default template provided
 - Personalize as needed
 
 **Attachment**:
+
 - PDF proposal automatically attached
 - Shows file icon and name
 - Generated on-the-fly when sending
@@ -640,11 +726,13 @@ Modal for sending proposals to sponsor contacts via email.
 #### Send Options
 
 **Test Email** (optional):
+
 - Checkbox: "Send test email to yourself"
 - Useful for previewing before sending to sponsor
 - Sends to your account email
 
 **Track Opens** (optional):
+
 - Checkbox: "Track when proposal is opened"
 - Adds tracking pixel to email
 - Shows open timestamps in proposal history
@@ -652,11 +740,13 @@ Modal for sending proposals to sponsor contacts via email.
 ### Modal Actions
 
 **Buttons**:
+
 - **Cancel** - Close without sending
 - **Send Proposal** - Send email(s) (blue button)
 
 <Warning>
-**Status Change**: Sending a proposal changes package status from "draft" to "pending_approval". It moves from Packages page to Proposals page.
+  **Status Change**: Sending a proposal changes package status from "draft" to "pending_approval".
+  It moves from Packages page to Proposals page.
 </Warning>
 
 ### After Sending
@@ -678,18 +768,21 @@ Special view mode that hides unit costs and emphasizes coverage percentages.
 ### Changes in Negotiator Mode
 
 **Summary Cards**:
+
 - ❌ Total Cost - Hidden
 - ❌ Sales Price - Hidden
 - ✅ Coverage - Shows label instead of percentage
 - ❌ Contribution Margin - Hidden
 
 **Inclusions Table**:
+
 - ❌ Unit Cost column - Hidden
 - ❌ Total column - Hidden
 - ✅ Quantity column - Still visible
 - ✅ All other columns - Unchanged
 
 **Coverage Labels** (configured in Library → Negotiator tab):
+
 - 0-25%: "Very Low Coverage"
 - 25-50%: "Low Coverage"
 - 50-75%: "Medium Coverage"
@@ -697,21 +790,23 @@ Special view mode that hides unit costs and emphasizes coverage percentages.
 - 100%+: "Full Coverage"
 
 <Info>
-**Use Case**: Negotiator Mode is useful for proposal-based pricing strategies where you want to focus on value delivery rather than explicit costs.
+  **Use Case**: Negotiator Mode is useful for proposal-based pricing strategies where you want to
+  focus on value delivery rather than explicit costs.
 </Info>
 
 ## Permissions
 
 Different permissions show different content:
 
-| Permission | Can View | Can Create | Can Edit | Can Delete | Can Send Proposals |
-|------------|----------|-----------|----------|-----------|-------------------|
-| **Packages Role** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
-| **Admin** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
-| **Other Roles** | ❌ No | ❌ No | ❌ No | ❌ No | ❌ No |
+| Permission        | Can View | Can Create | Can Edit | Can Delete | Can Send Proposals |
+| ----------------- | -------- | ---------- | -------- | ---------- | ------------------ |
+| **Packages Role** | ✅ Yes   | ✅ Yes     | ✅ Yes   | ✅ Yes     | ✅ Yes             |
+| **Admin**         | ✅ Yes   | ✅ Yes     | ✅ Yes   | ✅ Yes     | ✅ Yes             |
+| **Other Roles**   | ❌ No    | ❌ No      | ❌ No    | ❌ No      | ❌ No              |
 
 <Info>
-**Professional/Enterprise Only**: Packages feature requires Professional or Enterprise plan. Starter plans cannot access this module.
+  **Professional/Enterprise Only**: Packages feature requires Professional or Enterprise plan.
+  Starter plans cannot access this module.
 </Info>
 
 ## Common Use Cases
@@ -767,6 +862,7 @@ Different permissions show different content:
 ### Item Not Appearing in Builder
 
 **Check**:
+
 - Item event assignment matches package events
 - Item tier requirement ≤ package tier
 - Item is active (not deleted)
@@ -780,6 +876,7 @@ Different permissions show different content:
 ### PDF Preview Shows Wrong Data
 
 **Try**:
+
 - Refresh browser
 - Clear cache
 - Save Builder changes
@@ -788,6 +885,7 @@ Different permissions show different content:
 ### Send Proposal Button Disabled
 
 **Reasons**:
+
 - No sponsor contacts (add contacts first)
 - No items included (check at least one item)
 - Package already approved
@@ -796,14 +894,15 @@ Different permissions show different content:
 ### Coverage Percentage Wrong
 
 **Check**:
-- Total Cost = sum of all included items × quantities
+
+- Total Cost = sum of all included items \* quantities
 - Sales Price set correctly in package metadata
-- Formula: (Total Cost ÷ Sales Price) × 100%
+- Formula: (Total Cost / Sales Price) \* 100%
 - Verify all item unit costs in Library
 
 ## Next Steps
 
-<CardGroup cols={2}>
+<CardGroup cols="2">
   <Card
     title="Send Proposals"
     icon="paper-plane"
@@ -812,29 +911,17 @@ Different permissions show different content:
     Use Send Proposal feature to email sponsors
   </Card>
 
-  <Card
-    title="View Proposals"
-    icon="file-invoice"
-    href="/sponsorships/proposals"
-  >
-    Track sent offers and proposal status
-  </Card>
+<Card title="View Proposals" icon="file-invoice" href="/sponsorships/proposals">
+  Track sent offers and proposal status
+</Card>
 
-  <Card
-    title="Analyze Performance"
-    icon="chart-line"
-    href="/sponsorships/analytics"
-  >
-    Review package metrics and insights
-  </Card>
+<Card title="Analyze Performance" icon="chart-line" href="/sponsorships/analytics">
+  Review package metrics and insights
+</Card>
 
-  <Card
-    title="Update Library"
-    icon="photo-film"
-    href="/sponsorships/library/item-library"
-  >
-    Add more items for future packages
-  </Card>
+<Card title="Update Library" icon="photo-film" href="/sponsorships/library/item-library">
+  Add more items for future packages
+</Card>
 
   <Card
     title="Manage Sponsors"
@@ -846,7 +933,8 @@ Different permissions show different content:
 </CardGroup>
 
 <Tip>
-**Template Strategy**: Create "template" packages with common item configurations, duplicate them, and customize for new sponsors. Saves time!
+  **Template Strategy**: Create "template" packages with common item configurations, duplicate them,
+  and customize for new sponsors. Saves time!
 </Tip>
 
 ## Frequently Asked Questions
@@ -856,37 +944,58 @@ Different permissions show different content:
     Click "New Package" button, fill in package name, select the sponsor, choose tier level, and configure pricing mode (Cost-Plus or Negotiator). Then click "Inclusions" to add inventory items using the Package Builder. Finally, preview and send the proposal to your sponsor contacts.
   </Accordion>
 
-  <Accordion title="What's the difference between Cost-Plus and Negotiator pricing modes?">
-    Cost-Plus mode calculates sales price automatically based on unit costs plus a margin percentage (e.g., items cost €100k + 50% margin = €150k sales price). Negotiator mode hides unit costs and lets you set a custom sales price without showing cost breakdown. Use Cost-Plus for transparent pricing and Negotiator for flexible deal-making.
-  </Accordion>
+<Accordion title="What's the difference between Cost-Plus and Negotiator pricing modes?">
+  Cost-Plus mode calculates sales price automatically based on unit costs plus a margin percentage
+  (e.g., items cost €100k + 50% margin = €150k sales price). Negotiator mode hides unit costs and
+  lets you set a custom sales price without showing cost breakdown. Use Cost-Plus for transparent
+  pricing and Negotiator for flexible deal-making.
+</Accordion>
 
-  <Accordion title="Can I preview the proposal before sending to sponsors?">
-    Yes! The Package Builder includes a "Preview PDF" button that generates a full proposal preview with your organization branding, selected design template, inventory items, and pricing. You can customize PDF templates, upload custom cover pages, and see exactly what sponsors will receive before sending.
-  </Accordion>
+<Accordion title="Can I preview the proposal before sending to sponsors?">
+  Yes! The Package Builder includes a "Preview PDF" button that generates a full proposal preview
+  with your organization branding, selected design template, inventory items, and pricing. You can
+  customize PDF templates, upload custom cover pages, and see exactly what sponsors will receive
+  before sending.
+</Accordion>
 
-  <Accordion title="How does the Package Builder prevent overselling?">
-    The Package Builder integrates with the inventory system and enforces max quantity limits. If an item has 50 VIP tickets available, you cannot add more than 50 to the package. The quantity input shows warnings and red borders when limits are reached, preventing accidental double-booking.
-  </Accordion>
+<Accordion title="How does the Package Builder prevent overselling?">
+  The Package Builder integrates with the inventory system and enforces max quantity limits. If an
+  item has 50 VIP tickets available, you cannot add more than 50 to the package. The quantity input
+  shows warnings and red borders when limits are reached, preventing accidental double-booking.
+</Accordion>
 
-  <Accordion title="Can I create tiered packages for different sponsor levels?">
-    Yes! When creating a package, select a tier (Gold, Platinum, Silver, etc.) to restrict which inventory items appear in the Package Builder. Items marked as tier-exclusive will only be available for packages at that tier level or higher. This lets you create premium packages with exclusive benefits for high-value sponsors.
-  </Accordion>
+<Accordion title="Can I create tiered packages for different sponsor levels?">
+  Yes! When creating a package, select a tier (Gold, Platinum, Silver, etc.) to restrict which
+  inventory items appear in the Package Builder. Items marked as tier-exclusive will only be
+  available for packages at that tier level or higher. This lets you create premium packages with
+  exclusive benefits for high-value sponsors.
+</Accordion>
 
-  <Accordion title="What PDF design templates are available?">
-    Valiyou includes three professional PDF templates: Classic (traditional blue design), Modern (contemporary purple gradient), and Minimal (clean minimalist). Each template is fully customizable with your organization logo, brand colors, and optional custom cover page. Templates are managed in Platform → Settings → Documents.
-  </Accordion>
+<Accordion title="What PDF design templates are available?">
+  Valiyou includes three professional PDF templates: Classic (traditional blue design), Modern
+  (contemporary purple gradient), and Minimal (clean minimalist). Each template is fully
+  customizable with your organization logo, brand colors, and optional custom cover page. Templates
+  are managed in Platform → Settings → Documents.
+</Accordion>
 
-  <Accordion title="Can I include event-specific items in packages?">
-    Yes! When building packages, you can include items assigned to specific events (e.g., "Championship Game VIP Box"). The Package Builder shows which event each item belongs to, allowing you to create special event packages alongside year-round offerings.
-  </Accordion>
+<Accordion title="Can I include event-specific items in packages?">
+  Yes! When building packages, you can include items assigned to specific events (e.g.,
+  "Championship Game VIP Box"). The Package Builder shows which event each item belongs to, allowing
+  you to create special event packages alongside year-round offerings.
+</Accordion>
 
-  <Accordion title="How do I send a package proposal to sponsors?">
-    After building your package, click the "Send Proposal" button. This generates a branded PDF proposal and opens an email composer with sponsor contacts pre-filled. You can customize the email message and send directly to sponsors. All sent proposals are tracked in the Proposals page.
-  </Accordion>
+<Accordion title="How do I send a package proposal to sponsors?">
+  After building your package, click the "Send Proposal" button. This generates a branded PDF
+  proposal and opens an email composer with sponsor contacts pre-filled. You can customize the email
+  message and send directly to sponsors. All sent proposals are tracked in the Proposals page.
+</Accordion>
 
-  <Accordion title="What happens to inventory when I create a package?">
-    When you add items to a draft package, they're automatically RESERVED in the inventory system, reducing available quantities. If the package is approved, items become COMMITTED (locked). If rejected or deleted, items are RETURNED to available inventory. This prevents overselling across multiple packages.
-  </Accordion>
+<Accordion title="What happens to inventory when I create a package?">
+  When you add items to a draft package, they're automatically RESERVED in the inventory system,
+  reducing available quantities. If the package is approved, items become COMMITTED (locked). If
+  rejected or deleted, items are RETURNED to available inventory. This prevents overselling across
+  multiple packages.
+</Accordion>
 
   <Accordion title="Can I duplicate packages to save time?">
     Yes! Use the duplicate feature to copy existing packages with all items and quantities. This is perfect for creating "template" packages with standard configurations that you can customize for different sponsors. Simply duplicate, change sponsor name, adjust items if needed, and send.

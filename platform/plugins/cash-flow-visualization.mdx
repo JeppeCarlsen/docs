@@ -1,14 +1,16 @@
 ---
 title: 'Cash Flow'
 description: 'Interactive cash flow visualization with Sankey diagrams. Track revenue streams, payment schedules, and financial forecasting for sponsorship valuations.'
-seo:
-  title: 'Cash Flow Visualization & Sankey Charts | Valiyou'
+'og:title': 'Cash Flow Visualization & Sankey Charts | Valiyou'
 ---
 
 # Cash Flow Visualization
 
 <Frame>
-  <img src="/images/platform/plugins/cash-flow-sankey.png" alt="Cash flow visualization Sankey chart showing revenue streams and payment schedules for sponsorship valuations" />
+  <img
+    src="/images/platform/plugins/cash-flow-sankey.png"
+    alt="Cash flow visualization Sankey chart showing revenue streams and payment schedules for sponsorship valuations"
+  />
 </Frame>
 
 **The Cash Flow Visualization plugin adds interactive Sankey (alluvial flow) charts to valuation details, showing revenue flow visualization from sources to total valuation.** Transform complex financial data into visual insights with interactive flow diagrams that make revenue tracking, payment schedules, and financial forecasting intuitive. Perfect for financial analytics and professional presentations.
@@ -16,8 +18,8 @@ seo:
 ## Overview
 
 <Note>
-**Plan Required**: Professional or Enterprise plan
-**Permission Required**: Automatically available with plan
+  **Plan Required**: Professional or Enterprise plan **Permission Required**: Automatically
+  available with plan
 </Note>
 
 **What it does**: Adds interactive Sankey (flow) charts to valuation details showing revenue flow visualization.
@@ -31,16 +33,21 @@ seo:
 ### Sankey (Alluvial Flow) - Recommended
 
 <Frame>
-  <img src="/images/platform/plugins/sankey-example.png" alt="Sankey chart example displaying revenue flow visualization from multiple sources to total valuation amount" />
+  <img
+    src="/images/platform/plugins/sankey-example.png"
+    alt="Sankey chart example displaying revenue flow visualization from multiple sources to total valuation amount"
+  />
 </Frame>
 
 **What it shows**:
+
 - Flow of revenue from sources to categories to total
 - Visual representation of how different revenue streams contribute
 - Width of flows proportional to amounts
 - Interactive hover tooltips with exact values
 
 **Best for**:
+
 - Visualizing revenue composition
 - Identifying major revenue sources
 - Understanding value distribution
@@ -49,15 +56,20 @@ seo:
 ### Waterfall
 
 <Frame>
-  <img src="/images/platform/plugins/waterfall-example.png" alt="Waterfall chart visualization showing sequential revenue breakdown and payment schedules for cash flow tracking" />
+  <img
+    src="/images/platform/plugins/waterfall-example.png"
+    alt="Waterfall chart visualization showing sequential revenue breakdown and payment schedules for cash flow tracking"
+  />
 </Frame>
 
 **What it shows**:
+
 - Sequential breakdown of revenue components
 - Cumulative effect of each category
 - Step-by-step buildup to total valuation
 
 **Best for**:
+
 - Sequential analysis
 - Traditional financial reporting
 - Showing incremental contributions
@@ -81,22 +93,28 @@ Configure your own visualization style with custom settings.
 2. Configuration modal opens
 
 <Frame>
-  <img src="/images/platform/plugins/sankey-config-modal.png" alt="Cash flow visualization configuration modal for customizing Sankey chart financial analytics settings" />
+  <img
+    src="/images/platform/plugins/sankey-config-modal.png"
+    alt="Cash flow visualization configuration modal for customizing Sankey chart financial analytics settings"
+  />
 </Frame>
 
 **Configuration Options**:
 
 #### Chart Type
+
 - **Sankey (Alluvial Flow)** - Recommended
 - **Waterfall** - Traditional waterfall chart
 - **Custom** - Custom visualization
 
 #### Chart Height
+
 - Number of pixels (default: 600px)
 - Recommended range: 400-800px
 - Larger height = more vertical space for flows
 
 #### Color Scheme
+
 - **Default (Multi-color)** - Different colors for each category
 - **Blue** - Single color palette (blues)
 - **Green** - Single color palette (greens)
@@ -104,6 +122,7 @@ Configure your own visualization style with custom settings.
 - **Custom** - Define your own colors
 
 #### Chart Position
+
 - **Before Sales Details** - Recommended, appears above sales breakdown
 - **After Sales Details** - Appears below sales breakdown
 - **Top of Page** - Very first element on page
@@ -112,12 +131,14 @@ Configure your own visualization style with custom settings.
 #### Display Options
 
 **Checkboxes** (all checked by default):
+
 - ☑️ **Show Legend** - Display color legend
 - ☑️ **Show Tooltips** - Interactive hover tooltips
 - ☑️ **Show Labels** - Data labels on flows
 - ☑️ **Enable Interactivity** - Click/hover interactions
 
 #### Animation Duration
+
 - Milliseconds (default: 300ms)
 - Recommended range: 100-500ms
 - Higher value = slower, smoother animation
@@ -127,7 +148,8 @@ Configure your own visualization style with custom settings.
 Click **"Save Configuration"** to apply changes.
 
 <Tip>
-**Live Preview**: Changes apply immediately to all valuation pages. Open any valuation to see the updated chart.
+  **Live Preview**: Changes apply immediately to all valuation pages. Open any valuation to see the
+  updated chart.
 </Tip>
 
 ## Using Cash Flow Visualization
@@ -139,7 +161,10 @@ Go to **Valuations** → Click any valuation
 ### Step 2: Locate Sankey Chart
 
 <Frame>
-  <img src="/images/valuation-details/sankey-location.png" alt="Sankey chart location in valuation details page showing revenue flow visualization for financial analytics" />
+  <img
+    src="/images/valuation-details/sankey-location.png"
+    alt="Sankey chart location in valuation details page showing revenue flow visualization for financial analytics"
+  />
 </Frame>
 
 The chart appears at the configured position (default: before Sales Details section).
@@ -147,16 +172,19 @@ The chart appears at the configured position (default: before Sales Details sect
 ### Step 3: Interact with Chart
 
 **Hover over flows**:
+
 - See exact amounts and percentages
 - Highlight specific revenue streams
 - Tooltip shows: Source → Target: Amount (%)
 
 **Click on flows**:
+
 - Focus on specific revenue stream
 - Dim other flows for clarity
 - Click again to reset
 
 **Legend**:
+
 - Shows all categories and colors
 - Click legend items to toggle visibility
 - Useful for focusing on specific categories
@@ -166,17 +194,20 @@ The chart appears at the configured position (default: before Sales Details sect
 ### Revenue Sources
 
 **Sales Revenue**:
+
 - Transfers (Player Sales)
 - Merchandise Sales
 - Ticket Sales
 
 **Media Revenue**:
+
 - Print Media
 - Digital Media
 - Social Media
 - Broadcast Media
 
 **Brand Revenue**:
+
 - Brand Exposure
 - Sponsorship Coverage
 - Marketing Value
@@ -197,6 +228,7 @@ Revenue Sources → Categories → Total Valuation
 **Goal**: Clean, simple chart with minimal distractions
 
 **Settings**:
+
 - Chart Type: Sankey
 - Height: 500px
 - Color Scheme: Blue
@@ -212,6 +244,7 @@ Revenue Sources → Categories → Total Valuation
 **Goal**: Maximum information for deep analysis
 
 **Settings**:
+
 - Chart Type: Sankey
 - Height: 800px
 - Color Scheme: Default (Multi-color)
@@ -227,6 +260,7 @@ Revenue Sources → Categories → Total Valuation
 **Goal**: Professional for client presentations
 
 **Settings**:
+
 - Chart Type: Sankey
 - Height: 700px
 - Color Scheme: Purple (brand colors)
@@ -239,18 +273,18 @@ Revenue Sources → Categories → Total Valuation
 
 ## Benefits
 
-<CardGroup cols={2}>
+<CardGroup cols="2">
   <Card title="Visual Clarity" icon="eye">
     Understand revenue composition at a glance
   </Card>
 
-  <Card title="Professional Presentation" icon="presentation">
-    Impress stakeholders with interactive visualizations
-  </Card>
+<Card title="Professional Presentation" icon="presentation">
+  Impress stakeholders with interactive visualizations
+</Card>
 
-  <Card title="Interactive Exploration" icon="hand-pointer">
-    Drill down into specific revenue streams
-  </Card>
+<Card title="Interactive Exploration" icon="hand-pointer">
+  Drill down into specific revenue streams
+</Card>
 
   <Card title="Customizable Appearance" icon="palette">
     Match your brand colors and style
@@ -262,12 +296,14 @@ Revenue Sources → Categories → Total Valuation
 ### Sankey Chart Not Showing
 
 **Check**:
+
 - ✅ Plugin enabled (green "Enabled" badge)
 - ✅ Professional/Enterprise plan active
 - ✅ Viewing Valuation Details page (not list)
 - ✅ Chart position setting (might be bottom of page)
 
 **Fix**:
+
 1. Enable Cash Flow Visualization plugin
 2. Upgrade plan if needed
 3. Open a single valuation details page
@@ -279,6 +315,7 @@ Revenue Sources → Categories → Total Valuation
 **Problem**: Chart height doesn't fit your needs
 
 **Fix**:
+
 1. Open plugin configuration
 2. Adjust **Chart Height** value:
    - Too small: Increase to 700-800px
@@ -291,6 +328,7 @@ Revenue Sources → Categories → Total Valuation
 **Problem**: Default colors don't match your brand
 
 **Fix**:
+
 1. Open plugin configuration
 2. Select **Color Scheme**:
    - Blue: Corporate blue palette
@@ -304,6 +342,7 @@ Revenue Sources → Categories → Total Valuation
 **Problem**: Hover/click not working
 
 **Fix**:
+
 1. Open plugin configuration
 2. Check **Enable Interactivity** is checked ✅
 3. Save configuration
@@ -315,6 +354,7 @@ Revenue Sources → Categories → Total Valuation
 **Problem**: Chart takes up too much space
 
 **Fix**:
+
 1. Open plugin configuration
 2. Reduce **Chart Height** to 400-500px
 3. Uncheck **Show Legend** if not needed
@@ -326,12 +366,14 @@ Revenue Sources → Categories → Total Valuation
 ### 1. Choose Right Chart Type
 
 **Use Sankey when**:
+
 - ✅ Visualizing revenue flow
 - ✅ Showing relationships between sources
 - ✅ Professional presentations
 - ✅ Interactive exploration needed
 
 **Use Waterfall when**:
+
 - ✅ Sequential breakdown preferred
 - ✅ Traditional financial reporting
 - ✅ Showing incremental contributions
@@ -339,6 +381,7 @@ Revenue Sources → Categories → Total Valuation
 ### 2. Optimize Chart Height
 
 **Guidelines**:
+
 - **400-500px**: Compact view, less scroll
 - **600px**: Default, balanced
 - **700-800px**: Detailed view, more vertical space
@@ -347,11 +390,13 @@ Revenue Sources → Categories → Total Valuation
 ### 3. Balance Interactivity
 
 **Enable all options for**:
+
 - Internal analysis
 - Data exploration
 - Training purposes
 
 **Disable some options for**:
+
 - Client presentations (disable labels)
 - Print/PDF export (disable interactivity)
 - Minimal design (disable legend)
@@ -359,6 +404,7 @@ Revenue Sources → Categories → Total Valuation
 ### 4. Match Your Brand
 
 Use consistent colors across all valuations:
+
 1. Choose color scheme that matches brand
 2. Save configuration
 3. All valuations use same style
@@ -367,19 +413,23 @@ Use consistent colors across all valuations:
 ### 5. Position Strategically
 
 **Before Sales Details** (default):
+
 - ✅ Immediate visual impact
 - ✅ Sets context for detailed breakdown
 - ✅ Most logical flow (overview → details)
 
 **After Sales Details**:
+
 - ✅ Reinforces detailed numbers
 - ✅ Summary visualization
 
 **Top of Page**:
+
 - ✅ Maximum visibility
 - ✅ First thing users see
 
 **Bottom of Page**:
+
 - ✅ Doesn't distract from main content
 - ✅ Optional exploration
 
@@ -393,9 +443,10 @@ Use consistent colors across all valuations:
     3. Future: Per-valuation toggle planned
   </Accordion>
 
-  <Accordion title="Does the chart update when I edit valuation data?">
-    Yes! The chart is generated from live valuation data. When you update sales, media, or brand values, the chart automatically reflects the changes on page refresh.
-  </Accordion>
+<Accordion title="Does the chart update when I edit valuation data?">
+  Yes! The chart is generated from live valuation data. When you update sales, media, or brand
+  values, the chart automatically reflects the changes on page refresh.
+</Accordion>
 
   <Accordion title="Can I export the Sankey chart as an image for reports?">
     Not directly. To export:
@@ -404,14 +455,13 @@ Use consistent colors across all valuations:
     3. Or right-click chart → "Save image as" (if available)
 
     Future: Export button planned
+
   </Accordion>
 
-  <Accordion title="Why is my cash flow chart all one color?">
-    You selected a single-color palette (Blue, Green, or Purple). To get multiple colors:
-    1. Open plugin configuration
-    2. Select **Default (Multi-color)** color scheme
-    3. Save configuration
-  </Accordion>
+<Accordion title="Why is my cash flow chart all one color?">
+  You selected a single-color palette (Blue, Green, or Purple). To get multiple colors: 1. Open
+  plugin configuration 2. Select **Default (Multi-color)** color scheme 3. Save configuration
+</Accordion>
 
   <Accordion title="Can I customize individual revenue stream colors?">
     Not yet. Current color schemes:
@@ -419,31 +469,26 @@ Use consistent colors across all valuations:
     - Blue/Green/Purple: Single palette
 
     Future: Custom color mapping planned
+
   </Accordion>
 
-  <Accordion title="Does the cash flow visualization work on mobile devices?">
-    Yes! The chart is responsive and works on mobile devices. However:
-    - Smaller screen = less detail visible
-    - Touch interactions replace hover
-    - Consider reducing height for mobile (automatic)
-  </Accordion>
+<Accordion title="Does the cash flow visualization work on mobile devices?">
+  Yes! The chart is responsive and works on mobile devices. However: - Smaller screen = less detail
+  visible - Touch interactions replace hover - Consider reducing height for mobile (automatic)
+</Accordion>
 
-  <Accordion title="How does cash flow visualization help with financial forecasting?">
-    Cash flow visualization provides instant insights for financial forecasting by:
-    - Showing revenue stream proportions and trends
-    - Identifying major vs. minor revenue sources
-    - Revealing payment schedule patterns
-    - Helping predict future cash flow based on historical data
-    - Making revenue tracking visual and intuitive
-  </Accordion>
+<Accordion title="How does cash flow visualization help with financial forecasting?">
+  Cash flow visualization provides instant insights for financial forecasting by: - Showing revenue
+  stream proportions and trends - Identifying major vs. minor revenue sources - Revealing payment
+  schedule patterns - Helping predict future cash flow based on historical data - Making revenue
+  tracking visual and intuitive
+</Accordion>
 
-  <Accordion title="Can I track payment schedules with the Sankey chart?">
-    Yes, the Sankey chart visualizes payment schedules by showing:
-    - Revenue flow from different time periods
-    - Payment timing and amounts
-    - Distribution across revenue categories
-    - Cash flow timing and patterns
-  </Accordion>
+<Accordion title="Can I track payment schedules with the Sankey chart?">
+  Yes, the Sankey chart visualizes payment schedules by showing: - Revenue flow from different time
+  periods - Payment timing and amounts - Distribution across revenue categories - Cash flow timing
+  and patterns
+</Accordion>
 
   <Accordion title="What's the difference between Sankey and waterfall charts for financial analytics?">
     **Sankey charts** show flow and relationships between revenue sources, ideal for understanding revenue composition and tracking multiple streams simultaneously.
@@ -451,6 +496,7 @@ Use consistent colors across all valuations:
     **Waterfall charts** show sequential breakdown and cumulative effects, better for traditional financial reporting and showing how components add up to a total.
 
     Choose based on your financial analytics needs and presentation style.
+
   </Accordion>
 
   <Accordion title="Can I use cash flow visualization for budget planning?">

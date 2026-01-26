@@ -71,6 +71,14 @@ files.forEach((file) => {
         if (!frontmatter.includes('description:')) {
           errors.push('Frontmatter missing required field: description')
         }
+
+        // Check for nested seo: block (Mintlify doesn't support this)
+        if (/\nseo:\n  /.test(frontmatter)) {
+          const lineNum = content.substring(0, content.indexOf('seo:')).split('\n').length
+          errors.push(
+            `Line ${lineNum}: Found nested 'seo:' block - Mintlify requires flat frontmatter. Use "og:title" instead of seo:\\n  title:`
+          )
+        }
       }
     }
   }

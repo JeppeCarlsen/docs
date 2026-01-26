@@ -1,14 +1,16 @@
 ---
 title: 'Details'
 description: 'View comprehensive valuation details with complete data breakdown, metric analysis, and all sponsorship components. Explore detailed metrics and calculations.'
-seo:
-  title: 'Valuation Details & Metric Breakdown | Valiyou'
+'og:title': 'Valuation Details & Metric Breakdown | Valiyou'
 ---
 
 # Valuation Details & Data Breakdown
 
 <Frame>
-  <img src="/images/valuations/valuation-details/overview.png" alt="Valuation details page showing complete data breakdown, metric analysis, comprehensive component view, and detailed calculations" />
+  <img
+    src="/images/valuations/valuation-details/overview.png"
+    alt="Valuation details page showing complete data breakdown, metric analysis, comprehensive component view, and detailed calculations"
+  />
 </Frame>
 
 **Access complete valuation breakdowns with detailed metric analysis** across all sponsorship components. View comprehensive data for sales, media, and brand metrics with transparent calculations, visual bars, and CPM breakdowns that provide a comprehensive view of your organization's attention value.
@@ -20,7 +22,8 @@ View the complete breakdown of any valuation with detailed metrics, visual bars,
 Click on any valuation from the **Valuations** list to open its detail page.
 
 <Note>
-**Permission Required**: You need at least one valuation permission (View Sales, View Transfer, View Marketing, View Brand, or Admin) to view valuation details.
+  **Permission Required**: You need at least one valuation permission (View Sales, View Transfer,
+  View Marketing, View Brand, or Admin) to view valuation details.
 </Note>
 
 ## Page Header
@@ -28,6 +31,7 @@ Click on any valuation from the **Valuations** list to open its detail page.
 ### Mobile Header (Sticky)
 
 Fixed header at the top of mobile screens with:
+
 - **Back button** - Returns to Valuations list (with loading spinner)
 - **Export dropdown** - PDF and CSV export options
 - **Info button** - Shows approval information
@@ -36,10 +40,12 @@ Fixed header at the top of mobile screens with:
 ### Desktop Header
 
 Breadcrumb navigation:
+
 - **Valuations** - Link back to list
 - **Valuation Details** - Current page
 
 **Actions (top right):**
+
 - **Info icon** - Toggle approval information sidebar
 - **Export dropdown** - PDF and CSV export
 - **Edit button** - Open valuation in edit mode
@@ -50,7 +56,8 @@ Breadcrumb navigation:
 **Status Badge**: Shows Draft (gray) or Approved (green)
 
 <Info>
-The valuation date is the primary identifier - it's the date this valuation represents, not when it was created.
+  The valuation date is the primary identifier - it's the date this valuation represents, not when
+  it was created.
 </Info>
 
 ## Summary Cards
@@ -82,13 +89,15 @@ Brand multiplier applied to sales and media values.
 **Display**: Decimal multiplier (e.g., "1.15x")
 
 <Tip>
-These summary cards give you a quick overview before diving into detailed breakdowns below.
+  These summary cards give you a quick overview before diving into detailed breakdowns below.
 </Tip>
 
 ## Cash Flow Visualization
 
 <Note>
-**Plugin Required**: This chart requires the Cash Flow Visualization (Sankey) plugin (Professional/Enterprise plans). See [Cash Flow Visualization](/platform/plugins/cash-flow-visualization) for setup details.
+  **Plugin Required**: This chart requires the Cash Flow Visualization (Sankey) plugin
+  (Professional/Enterprise plans). See [Cash Flow
+  Visualization](/platform/plugins/cash-flow-visualization) for setup details.
 </Note>
 
 **Displays when**: Cash Flow Visualization plugin is enabled in Platform → Plugins
@@ -112,6 +121,7 @@ Detailed breakdown of all sales revenue components.
 ### Merchandise Revenue
 
 **Fields:**
+
 - Label: "Merchandise Revenue"
 - Value: Currency amount
 - Bar chart: Visual representation relative to total valuation
@@ -120,6 +130,7 @@ Detailed breakdown of all sales revenue components.
 ### Matchday Revenue
 
 **Fields:**
+
 - Label: "Matchday Revenue"
 - Value: Currency amount
 - Bar chart: Visual representation
@@ -127,14 +138,12 @@ Detailed breakdown of all sales revenue components.
 
 **Color**: Blue (#3B82F6) for all sales components
 
-<Info>
-Sales values are entered directly - no CPM calculation involved.
-</Info>
+<Info>Sales values are entered directly - no CPM calculation involved.</Info>
 
 ## Player Sales Section (Professional/Enterprise)
 
 <Note>
-**Feature Availability**: Player sales tracking requires Professional or Enterprise plan.
+  **Feature Availability**: Player sales tracking requires Professional or Enterprise plan.
 </Note>
 
 Individual player transfers with detailed breakdown.
@@ -142,6 +151,7 @@ Individual player transfers with detailed breakdown.
 ### Individual Player Sales
 
 For each player sale:
+
 - **Player name** - Name of sold player
 - **Sale value** - Transfer fee
 - **Bar chart** - Visual representation
@@ -150,6 +160,7 @@ For each player sale:
 ### Total Player Sales Value
 
 Sum of all player transfers:
+
 - **Label**: "Total Player Sales Value"
 - **Value**: Sum of all sale values
 - **Bar chart**: Combined visual representation
@@ -163,58 +174,68 @@ Comprehensive breakdown across six media channels.
 ### TV Broadcasting
 
 **Fields:**
+
 - **Duration**: Minutes of TV exposure
 - **Size Category**: S (Small ≤1%), M (Medium ~1-5%), L (Large ~5-15%), XL (Extra Large &gt;15%)
 - **Viewers**: Total TV viewers count
-- **Calculation**: Duration × Size Multiplier × CPM × Viewers ÷ 1000
+- **Calculation**: Duration _ Size Multiplier _ CPM \* Viewers / 1000
 
 **Size Multipliers:**
+
 - S = 0.4x
 - M = 0.7x
 - L = 1.0x
 - XL = 1.0x
 
-**Example calculation**: `30 minutes × 0.7 (M) × €20 CPM × 50,000 viewers = €21,000`
+**Example calculation**: `30 minutes * 0.7 (M) * €20 CPM * 50,000 viewers = €21,000`
 
 <Info>
-**CPM = Cost Per Mille**: Cost per thousand impressions. All media values use CPM-based calculation.
+  **CPM = Cost Per Mille**: Cost per thousand impressions. All media values use CPM-based
+  calculation.
 </Info>
 
 ### Web TV
 
 **Fields:**
-- **Views**: Total web TV views
-- **Calculation**: Views ÷ 1000 × CPM
 
-**Example**: `10,000 views × €10 CPM = €100`
+- **Views**: Total web TV views
+- **Calculation**: Views / 1000 \* CPM
+
+**Example**: `10,000 views * €10 CPM = €100`
 
 ### PR & Press
 
 **Fields:**
+
 - **Reach**: Total audience reached through PR
-- **Calculation**: Reach ÷ 1000 × CPM
+- **Calculation**: Reach / 1000 \* CPM
 
 ### Digital Advertising
 
 **Fields:**
+
 - **Impressions**: Total digital ad impressions
-- **Calculation**: Impressions ÷ 1000 × CPM
+- **Calculation**: Impressions / 1000 \* CPM
 
 ### Social Media
 
 Three separate metrics combined:
 
 **Followers-based:**
-- **Social Followers**: Follower count ÷ 1000 × Followers CPM
+
+- **Social Followers**: Follower count / 1000 \* Followers CPM
 
 **Impressions-based:**
-- **Social Impressions**: Impressions ÷ 1000 × Impressions CPM
+
+- **Social Impressions**: Impressions / 1000 \* Impressions CPM
 
 **Engagement-based:**
-- **Social Engagements**: Engagements ÷ 1000 × Engagements CPM
+
+- **Social Engagements**: Engagements / 1000 \* Engagements CPM
 
 <Tip>
-Social media value combines three different metrics - use the one(s) most relevant to your sponsorship value proposition.
+  Social media value combines three different metrics - use the one(s) most relevant to your
+  sponsorship value proposition.
 </Tip>
 
 ### Match & Hospitality
@@ -222,26 +243,27 @@ Social media value combines three different metrics - use the one(s) most releva
 Two components:
 
 **Attendance:**
+
 - **Field**: Total match attendance
-- **Calculation**: Attendance ÷ 1000 × Attendance CPM
+- **Calculation**: Attendance / 1000 \* Attendance CPM
 
 **Hospitality:**
+
 - **Field**: Number of hospitality guests
-- **Calculation**: Guests × Value per Guest
+- **Calculation**: Guests \* Value per Guest
 
 **Color**: Green (#10B981) for all media components
 
 ### Media Value Features
 
 Every media item displays:
+
 - **Label**: Component name (e.g., "TV Viewers")
 - **Value**: Calculated currency amount
 - **Bar chart**: Visual representation relative to total
-- **Formula**: Shows exact calculation (e.g., "10,000 × €5.00 CPM")
+- **Formula**: Shows exact calculation (e.g., "10,000 \* €5.00 CPM")
 
-<Info>
-The formula display helps verify calculations and understand how values were derived.
-</Info>
+<Info>The formula display helps verify calculations and understand how values were derived.</Info>
 
 ## Brand Value Indicators Section
 
@@ -271,7 +293,8 @@ Four brand indicators on a 1-10 scale.
 **Color**: Purple (#A855F7) for all brand indicators
 
 <Info>
-Brand indicators multiply the combined sales and media value. Higher scores (7-10) increase total value, lower scores (1-4) decrease it.
+  Brand indicators multiply the combined sales and media value. Higher scores (7-10) increase total
+  value, lower scores (1-4) decrease it.
 </Info>
 
 ## Mini Bar Charts
@@ -292,7 +315,7 @@ Every value component includes a visual bar chart:
 - **Empty bar** = Zero value
 
 <Tip>
-Mini bars help you quickly identify which components drive the most value in your valuation.
+  Mini bars help you quickly identify which components drive the most value in your valuation.
 </Tip>
 
 ## Approval Information
@@ -302,26 +325,29 @@ Mini bars help you quickly identify which components drive the most value in you
 ### Desktop Layout
 
 Sticky sidebar on the right side showing:
+
 - **Status badge**: Draft or Approved
 - **Status history timeline**: All status changes with dates and users
 
 ### Mobile Layout
 
 Slide-in panel from the right showing same information:
+
 - Close with X button or swipe
 - Scrollable content
 
 ### Status History Timeline
 
 Shows chronological record of:
+
 - **Status changes**: Draft → Approved transitions
 - **Who**: User who made the change
 - **When**: Date and time of change
 - **Visual timeline**: Vertical line connecting events
 
 <Note>
-**Draft Valuations**: Show only creation event
-**Approved Valuations**: Show creation + approval event(s)
+  **Draft Valuations**: Show only creation event **Approved Valuations**: Show creation + approval
+  event(s)
 </Note>
 
 ## Export Options
@@ -334,6 +360,7 @@ Dropdown menu with two export formats:
 **Output**: PDF file with print-optimized layout
 
 **What's included:**
+
 - Organization logo (if uploaded)
 - Valuation date as title
 - All summary metrics
@@ -341,18 +368,21 @@ Dropdown menu with two export formats:
 - Mini bar charts (rendered as colored bars)
 
 **What's excluded:**
+
 - Navigation elements
 - Buttons and interactive elements
 - Approval sidebar (use Info button before printing if needed)
 
 **Print Settings:**
+
 - **Page size**: A4
 - **Margins**: 0.8cm
 - **Orientation**: Portrait
 - **Colors**: Preserved (charts, bars, indicators)
 
 <Tip>
-**Print-friendly**: The page automatically adjusts for printing - just click Export PDF and save or print!
+  **Print-friendly**: The page automatically adjusts for printing - just click Export PDF and save
+  or print!
 </Tip>
 
 ### Export CSV
@@ -361,20 +391,20 @@ Dropdown menu with two export formats:
 **Filename**: `valuation-YYYY-MM-DD.csv`
 
 **What's included:**
+
 - All valuation fields (excluding player_sales)
 - Player sales in separate section (if any)
 - Header row with field names
 - Data row with values
 
 **Use cases:**
+
 - Import into Excel/Google Sheets
 - Bulk data analysis
 - Integration with other systems
 - Archival records
 
-<Info>
-CSV export includes **raw values** from the database, not formatted currency amounts.
-</Info>
+<Info>CSV export includes **raw values** from the database, not formatted currency amounts.</Info>
 
 ## Edit Mode
 
@@ -382,12 +412,14 @@ CSV export includes **raw values** from the database, not formatted currency amo
 **Access**: Requires edit permissions (Edit Sales/Transfer/Marketing/Brand or Admin)
 
 **Action**: Navigates to edit page with:
+
 - All current values pre-filled
 - Same form structure as "Create Valuation"
 - Save as Draft or Approve options
 
 <Warning>
-**Approved Valuations**: You can edit approved valuations, but changes will reset them to "Draft" status. Re-approve when ready.
+  **Approved Valuations**: You can edit approved valuations, but changes will reset them to "Draft"
+  status. Re-approve when ready.
 </Warning>
 
 ## Common Use Cases
@@ -427,17 +459,18 @@ CSV export includes **raw values** from the database, not formatted currency amo
 
 Different permissions show different sections:
 
-| Permission | Can View | Can Export | Can Edit |
-|------------|----------|------------|----------|
-| **View Sales** | ✅ Sales section only | ✅ Yes | ❌ No |
-| **View Transfer** | ✅ Player sales only (Pro/Enterprise) | ✅ Yes | ❌ No |
-| **View Marketing** | ✅ Media section only | ✅ Yes | ❌ No |
-| **View Brand** | ✅ Brand section only | ✅ Yes | ❌ No |
-| **Edit Sales/Transfer/Marketing/Brand** | ✅ Respective sections | ✅ Yes | ✅ Yes (specific fields) |
-| **Admin** | ✅ All sections | ✅ Yes | ✅ Yes (all fields) |
+| Permission                              | Can View                              | Can Export | Can Edit                 |
+| --------------------------------------- | ------------------------------------- | ---------- | ------------------------ |
+| **View Sales**                          | ✅ Sales section only                 | ✅ Yes     | ❌ No                    |
+| **View Transfer**                       | ✅ Player sales only (Pro/Enterprise) | ✅ Yes     | ❌ No                    |
+| **View Marketing**                      | ✅ Media section only                 | ✅ Yes     | ❌ No                    |
+| **View Brand**                          | ✅ Brand section only                 | ✅ Yes     | ❌ No                    |
+| **Edit Sales/Transfer/Marketing/Brand** | ✅ Respective sections                | ✅ Yes     | ✅ Yes (specific fields) |
+| **Admin**                               | ✅ All sections                       | ✅ Yes     | ✅ Yes (all fields)      |
 
 <Note>
-**Granular Permissions**: Enterprise plans unlock field-level permissions, allowing precise control over who can view/edit specific value components.
+  **Granular Permissions**: Enterprise plans unlock field-level permissions, allowing precise
+  control over who can view/edit specific value components.
 </Note>
 
 ## Troubleshooting
@@ -445,6 +478,7 @@ Different permissions show different sections:
 ### Values Look Wrong
 
 **Check:**
+
 1. Verify CPM values in formula displays
 2. Common mistake: Entering CPM as cost per impression instead of cost per thousand
 3. Check TV size multiplier (S/M/L/XL)
@@ -455,6 +489,7 @@ Different permissions show different sections:
 ### Export PDF Not Working
 
 **Try:**
+
 1. Ensure popup blocker isn't blocking print dialog
 2. Check browser print permissions
 3. Use Chrome/Safari for best print results
@@ -463,6 +498,7 @@ Different permissions show different sections:
 ### Export CSV Empty or Corrupted
 
 **Check:**
+
 1. Valuation has saved data (not just loaded)
 2. Browser allows file downloads
 3. Try opening CSV with different program (Excel, Google Sheets, Notepad)
@@ -471,6 +507,7 @@ Different permissions show different sections:
 ### Can't Edit Valuation
 
 **Reasons:**
+
 - You don't have edit permissions (only View permissions)
 - Contact admin to request Edit Sales/Transfer/Marketing/Brand permissions
 - Or request Admin role for full access
@@ -478,6 +515,7 @@ Different permissions show different sections:
 ### Approval Info Not Showing
 
 **Check:**
+
 - Click Info icon (top right) to toggle visibility
 - On mobile: Slide-in panel should appear
 - On desktop: Sidebar appears on right side
@@ -495,7 +533,7 @@ The comprehensive view includes all valuation components: sales value (merchandi
 
 ### How do I view detailed calculations for each metric?
 
-Each media component displays its calculation formula. For example, TV shows "Duration × Size × CPM × Viewers ÷ 1000" with actual values. This transparent data breakdown helps you verify accuracy and understand how each component contributes to total valuation.
+Each media component displays its calculation formula. For example, TV shows "Duration _ Size _ CPM \* Viewers / 1000" with actual values. This transparent data breakdown helps you verify accuracy and understand how each component contributes to total valuation.
 
 ### Can I export valuation details for analysis?
 
@@ -507,7 +545,7 @@ Mini bar charts provide visual data breakdown showing each component's contribut
 
 ### How do I understand CPM calculations in details?
 
-Each media component shows its CPM calculation formula. CPM (Cost Per Mille) means cost per 1,000 impressions. The formula "Impressions ÷ 1000 × CPM" calculates the advertising value. Detailed formulas appear next to each metric for transparent analysis.
+Each media component shows its CPM calculation formula. CPM (Cost Per Mille) means cost per 1,000 impressions. The formula "Impressions / 1000 \* CPM" calculates the advertising value. Detailed formulas appear next to each metric for transparent analysis.
 
 ### Can I edit valuation details after approval?
 
@@ -527,7 +565,7 @@ Yes, click "Export PDF" to open the print dialog. The page automatically formats
 
 ## Next Steps
 
-<CardGroup cols={2}>
+<CardGroup cols="2">
   <Card
     title="Edit Valuation"
     icon="pen-to-square"
@@ -536,21 +574,13 @@ Yes, click "Export PDF" to open the print dialog. The page automatically formats
     Modify values and update your valuation
   </Card>
 
-  <Card
-    title="Export Data"
-    icon="file-export"
-    href="/valuations/reports#export-options"
-  >
-    Use PDF for presentations, CSV for analysis
-  </Card>
+<Card title="Export Data" icon="file-export" href="/valuations/reports#export-options">
+  Use PDF for presentations, CSV for analysis
+</Card>
 
-  <Card
-    title="Create New Valuation"
-    icon="plus"
-    href="/valuations/create-valuation"
-  >
-    Return to list and track progress over time
-  </Card>
+<Card title="Create New Valuation" icon="plus" href="/valuations/create-valuation">
+  Return to list and track progress over time
+</Card>
 
   <Card
     title="Compare Valuations"
