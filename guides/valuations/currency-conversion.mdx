@@ -1,0 +1,442 @@
+---
+title: 'Currency Conversion in Valuations'
+description: 'Understand how Valiyou automatically converts CPM benchmarks, sponsorship values, and financial data between currencies using live exchange rates.'
+'og:title': 'Currency Conversion Guide | Valiyou'
+---
+
+# Currency Conversion in Valuations
+
+**Work seamlessly across multiple currencies with automatic conversion.** Valiyou converts all financial data to your organization's base currency using live exchange rates, ensuring accurate comparisons and reporting regardless of source currency.
+
+<Note>
+  **Available On**: All plans **Supported Currencies**: EUR (€), USD ($), DKK (kr), GBP (£), SEK
+  (kr), NOK (kr) **Exchange Rates**: Updated daily from ExchangeRate-API.com
+</Note>
+
+## Why Currency Conversion Matters
+
+### Benefits
+
+- ✅ **Global Consistency**: Compare values from different countries/sources
+- ✅ **Automatic Updates**: Live exchange rates (updated daily)
+- ✅ **No Manual Math**: System handles all conversions
+- ✅ **Audit Trail**: See both converted and original values
+- ✅ **Multi-Market Support**: Work with international sponsors and partners
+
+---
+
+## Supported Currencies
+
+| Currency Code | Symbol | Name            | Common Use                         |
+| ------------- | ------ | --------------- | ---------------------------------- |
+| EUR           | €      | Euro            | European Union, default base       |
+| USD           | $      | US Dollar       | United States, international trade |
+| DKK           | kr     | Danish Krone    | Denmark                            |
+| GBP           | £      | British Pound   | United Kingdom                     |
+| SEK           | kr     | Swedish Krona   | Sweden                             |
+| NOK           | kr     | Norwegian Krone | Norway                             |
+
+<Info>
+  Need a currency that's not listed? Contact support at support@valiyou.io with your requirements.
+</Info>
+
+---
+
+## How It Works
+
+### 1. Set Your Base Currency
+
+Your **base currency** determines how all values are displayed throughout the platform.
+
+**To set:**
+
+1. Navigate to **Settings → Organization**
+2. Find **Base Currency** field
+3. Select your preferred currency (e.g., EUR, USD, DKK)
+4. Click **Save Changes**
+
+<Tip>
+  Set this once during initial setup. All valuations, reports, and benchmarks will use this
+  currency.
+</Tip>
+
+### 2. Automatic Conversion
+
+When you encounter values in different currencies, the system **automatically converts**:
+
+#### Example 1: CPM Benchmarks
+
+**Stored Data:**
+
+- Platform: Instagram
+- Country: United States
+- CPM: $75.00 USD (original currency)
+
+**Your Organization:**
+
+- Base Currency: EUR
+
+**Result:**
+
+- Displayed CPM: €70.09 EUR
+- Exchange Rate: 1 USD = 0.934 EUR
+- Calculation: $75.00 \* 0.934 = €70.09
+
+<Info>
+  Original values are preserved in the database. Conversion happens on-the-fly when displaying data.
+</Info>
+
+#### Example 2: Sponsorship Deal
+
+**Sponsor:**
+
+- Based in: United States
+- Contract Value: $50,000 USD
+
+**Your Organization:**
+
+- Base Currency: DKK
+
+**Result:**
+
+- Displayed Value: 345,750 DKK
+- Exchange Rate: 1 USD = 6.915 DKK
+- Calculation: $50,000 \* 6.915 = 345,750 DKK
+
+---
+
+## Exchange Rate Updates
+
+### How Often?
+
+- **Frequency**: Daily updates from ExchangeRate-API.com
+- **Cache Duration**: 1 hour (rates don't change minute-to-minute)
+- **Base Currency**: EUR (all rates relative to Euro)
+
+### Viewing Current Rates
+
+Exchange rates are used automatically, but you can see them in:
+
+1. **CPM Benchmark Tooltips**: Hover over suggested values
+2. **Valuation Forms**: Helper text shows conversion details
+3. **Developer Console**: API responses include rate metadata
+
+---
+
+## Currency Display Formats
+
+### Number Formatting
+
+Values are formatted according to your organization's **number format** setting:
+
+**EU Format** (default):
+
+- Thousand separator: `.` (period)
+- Decimal separator: `,` (comma)
+- Example: €1.234.567,89
+
+**US Format**:
+
+- Thousand separator: `,` (comma)
+- Decimal separator: `.` (period)
+- Example: $1,234,567.89
+
+<Tip>Change number format in **Settings → Organization → Number Format**</Tip>
+
+### Currency Symbol Placement
+
+- **EUR (€)**: €1,234.56 (symbol before amount)
+- **USD ($)**: $1,234.56 (symbol before amount)
+- **DKK (kr)**: 1,234.56 kr (symbol after amount)
+- **GBP (£)**: £1,234.56 (symbol before amount)
+- **SEK (kr)**: 1,234.56 kr (symbol after amount)
+- **NOK (kr)**: 1,234.56 kr (symbol after amount)
+
+---
+
+## Where Conversion Happens
+
+### 1. CPM Benchmarks
+
+**Stored in database:**
+
+- Original currency (USD, EUR, or DKK)
+- Original value
+
+**Displayed to you:**
+
+- Your base currency
+- Converted value
+- Note: "Based on Denmark market data (converted from $75.00 USD)"
+
+**Example:**
+
+```
+Instagram Followers CPM
+💡 Smart suggestion: €70.09 (Denmark market)
+Source value: $75.00 USD
+Exchange rate: 1 USD = 0.934 EUR
+```
+
+### 2. Valuations
+
+When creating/viewing valuations:
+
+- **Social Media CPM**: Converted from benchmark source currency
+- **Sponsorship Values**: Entered in any supported currency
+- **Total Value**: Sum calculated in your base currency
+
+### 3. Reports & Analytics
+
+- **Charts**: All values in your base currency for consistency
+- **Comparisons**: Accurate across different periods/currencies
+- **Exports (PDF)**: Include converted values with original currency noted
+
+### 4. Sponsorships Module
+
+- **Deal Values**: Enter in any currency, displayed in your base currency
+- **Package Pricing**: Consistent currency across all items
+- **Invoice Generation**: Can specify currency per invoice
+
+---
+
+## Best Practices
+
+### ✅ Do This
+
+**Set Base Currency Once**
+
+- Choose during initial setup
+- Match your primary market
+- Stick with it for consistency
+
+**Document Original Currencies**
+
+- Note source currency in comments
+- Preserve original contract values
+- Include exchange rate context in reports
+
+**Review Historical Valuations**
+
+- Exchange rates fluctuate over time
+- Old conversions may differ from current rates
+- Consider this when comparing year-over-year
+
+**Use Consistent Date Context**
+
+- Exchange rates are date-specific
+- Historical valuations use rates from that period
+- Current valuations use today's rates
+
+### ❌ Avoid This
+
+**Changing Base Currency Frequently**
+
+- Causes confusion in reports
+- Historical data looks inconsistent
+- Affects trend analysis
+
+**Manual Currency Conversion**
+
+- Prone to errors
+- Uses outdated rates
+- Creates data inconsistencies
+
+**Mixing Currencies in Forms**
+
+- System expects values in your base currency
+- If entering foreign currency, use conversion field (where available)
+
+---
+
+## Advanced Features
+
+### Multi-Currency Sponsorship Deals
+
+For organizations with international sponsors:
+
+1. **Record Original Currency**: Note sponsor's native currency in deal notes
+2. **Track Exchange Rate**: Document rate at contract signing
+3. **Monitor Fluctuations**: Review quarterly if long-term contracts
+
+**Example Scenario:**
+
+```
+Sponsor: Nike (US-based)
+Contract: $100,000 USD per year (3-year deal)
+Signed: January 2025
+Exchange Rate: 1 USD = 6.90 DKK
+
+Year 1 (2025): 690,000 DKK (at 6.90 rate)
+Year 2 (2026): 705,000 DKK (if rate changes to 7.05)
+Year 3 (2027): 695,000 DKK (if rate changes to 6.95)
+```
+
+<Warning>
+  **Currency Risk**: Long-term contracts in foreign currency expose you to exchange rate
+  fluctuations. Consider fixed-rate clauses or local currency contracts for major deals.
+</Warning>
+
+### Historical Rate Context
+
+When viewing old valuations, the system shows:
+
+- **Created Date**: When valuation was made
+- **Exchange Rate**: Rate used at that time
+- **Current Value**: What it would be worth today
+- **Delta**: Difference due to rate changes
+
+**Example:**
+
+```
+Valuation from June 2024
+Original CPM: $75.00 USD
+Converted (June 2024): €68.50 (rate: 1.095)
+Current Value (Feb 2025): €70.09 (rate: 1.070)
+Change: +€1.59 (+2.3%) due to EUR strengthening
+```
+
+---
+
+## Troubleshooting
+
+### "Currency conversion unavailable"
+
+**Cause**: Exchange rate API temporarily unavailable
+
+**Solution**:
+
+1. Wait a few minutes and refresh
+2. System uses cached rates (up to 1 hour old)
+3. If persistent, contact support
+
+### Values don't match expected conversion
+
+**Check**:
+
+1. ✅ Your organization's base currency setting
+2. ✅ Today's exchange rate (fluctuates daily)
+3. ✅ Whether value is historical (uses old rate)
+4. ✅ Rounding differences (values rounded to 2 decimals)
+
+### Different currency than expected
+
+**Likely Causes**:
+
+1. Organization base currency changed
+2. Viewing someone else's organization
+3. Browser cached old settings
+
+**Fix**: Log out and log back in, or hard refresh (Ctrl+F5)
+
+---
+
+## Exchange Rate API
+
+### Technical Details
+
+**Provider**: ExchangeRate-API.com (free tier)
+
+- **Base Currency**: EUR
+- **Update Frequency**: Daily
+- **API Limits**: 1,500 requests/month (sufficient for normal use)
+- **Coverage**: 160+ currencies (we use 6 major ones)
+
+**Calculation Method**:
+
+```
+amount_in_target_currency = amount_in_source_currency * (target_rate / source_rate)
+
+Example:
+$100 USD to DKK
+= $100 * (7.45 DKK/EUR / 1.07 USD/EUR)
+= $100 * 6.96
+= 696 DKK
+```
+
+<Info>
+  **Why EUR base?** Most exchange rate APIs use USD or EUR as base. We chose EUR as our default base
+  currency since many European clubs and organizations use Valiyou.
+</Info>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Can I enter values in multiple currencies?">
+    Currently, all input fields expect values in your **base currency**. However:
+
+    - CPM benchmarks auto-convert from their source currency
+    - You can note original currency in comments
+    - Manual conversion tools coming in future update
+
+  </Accordion>
+
+  <Accordion title="What happens if exchange rates change dramatically?">
+    - **New valuations** use current rates automatically
+    - **Old valuations** preserve the rate from when they were created
+    - **Reports** show both historical and current values
+    - **Long-term contracts** should include rate protection clauses
+
+  </Accordion>
+
+  <Accordion title="Are exchange rates accurate?">
+    Yes, rates come from ExchangeRate-API.com which aggregates data from:
+
+    - Central banks (ECB, Fed, etc.)
+    - Major financial institutions
+    - Commercial exchange rate providers
+
+    Rates are updated daily and reflect mid-market rates (not retail buy/sell rates).
+
+  </Accordion>
+
+  <Accordion title="Can I see conversion history?">
+    Historical valuations show:
+
+    - Date created
+    - Exchange rate used at that time
+    - Original and converted values
+
+    This allows you to track how currency fluctuations affected sponsorship values over time.
+
+  </Accordion>
+
+  <Accordion title="What if I need a currency not listed?">
+    Contact support@valiyou.io with:
+
+    - Currency needed (code, e.g., CHF, JPY)
+    - Your use case
+    - How many valuations would use it
+
+    We'll evaluate adding it based on demand.
+
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related Guides
+
+<CardGroup cols="2">
+  <Card title="CPM Benchmarks" icon="chart-bar" href="/guides/valuations/cpm-benchmarks">
+    Learn how CPM benchmarks use currency conversion
+  </Card>
+  <Card title="Organization Settings" icon="gear" href="/getting-started/organization-setup">
+    Configure your base currency and number format
+  </Card>
+</CardGroup>
+
+---
+
+## Need Help?
+
+<CardGroup cols="2">
+  <Card title="Contact Support" icon="envelope" href="mailto:support@valiyou.io">
+    Questions about currency conversion? We're here to help.
+  </Card>
+  <Card title="Schedule Call" icon="phone" href="https://valiyou.io/demo">
+    Complex multi-currency scenario? Let's discuss.
+  </Card>
+</CardGroup>

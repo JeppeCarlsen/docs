@@ -1,0 +1,274 @@
+---
+title: 'Understanding CPM Benchmarks'
+description: 'Learn how CPM (Cost Per Mille) benchmarks provide smart, data-driven suggestions for social media valuations based on platform, country, and metric type.'
+'og:title': 'CPM Benchmarks Guide | Valiyou'
+---
+
+# Understanding CPM Benchmarks
+
+**Get smart, data-driven CPM suggestions for your social media valuations.** CPM benchmarks help you price social media value accurately with market-based recommendations tailored to your platform, country, and metric type.
+
+<Note>
+  **Available On**: All plans **Location**: Settings → CPM Benchmarks **Auto-Applied**: Valuation
+  forms automatically suggest CPM values
+</Note>
+
+## What are CPM Benchmarks?
+
+CPM (Cost Per Mille) represents the cost per 1,000 impressions, followers, or engagements on social media platforms. Our benchmark database contains **81 data points** across:
+
+- 📱 **8 Platforms**: Facebook, Instagram, YouTube, TikTok, LinkedIn, Twitter, Snapchat, Pinterest
+- 🌍 **12 Markets**: Denmark (DK), United States (US), United Kingdom (UK), Germany (DE), France (FR), Norway (NO), Sweden (SE), Finland (FI), Canada (CA), Australia (AU), Austria (AT), and Global
+- 📊 **3 Metric Types**:
+  - **Followers CPM**: Value per 1,000 followers
+  - **Impressions CPM**: Value per 1,000 impressions/views
+  - **Engagements CPM**: Value per 1,000 likes, comments, shares
+
+---
+
+## Why Use CPM Benchmarks?
+
+### Benefits
+
+- ✅ **Market-Based Pricing**: Data from industry sources (SuperAds.ai, Lebesgue, etc.)
+- ✅ **Country-Specific**: Adjusted for local market conditions
+- ✅ **Confidence Levels**: High/medium/low ratings indicate data quality
+- ✅ **Automatic Suggestions**: Pre-filled in valuation forms when fields are empty
+- ✅ **Currency Conversion**: Automatically converts to your organization's base currency
+- ✅ **Source Transparency**: See where each benchmark comes from
+
+---
+
+## How It Works
+
+### 1. Organization Country Detection
+
+The system automatically detects your country from:
+
+**Priority Order:**
+
+1. **Organization Country** (Settings → Organization → Country) - **Highest Priority**
+2. **Language** (Danish → Denmark)
+3. **Timezone** (Europe/Copenhagen → Denmark)
+4. **Fallback** to Global benchmarks
+
+<Tip>
+  Set your country in **Settings → Organization → Country** for the most accurate suggestions.
+</Tip>
+
+### 2. Smart Suggestions in Valuations
+
+When creating a valuation with social media data:
+
+1. Navigate to **Valuations → Create Valuation → Social Media**
+2. Select a platform (e.g., Instagram)
+3. Enter follower count, impressions, or engagements
+4. **CPM fields show smart suggestions**:
+
+```
+Followers CPM: [empty]
+💡 Smart suggestion: 71.84 kr (Denmark market)
+```
+
+The suggestion is:
+
+- ✅ Based on your organization's country
+- ✅ Converted to your base currency
+- ✅ From verified industry sources
+- ✅ Updated with latest market data
+
+### 3. Manual Override
+
+You can always override the suggestion:
+
+- **Accept Suggestion**: Leave field empty, suggestion is used automatically
+- **Custom Value**: Enter your own CPM value
+- **Mix and Match**: Use suggestions for some metrics, custom values for others
+
+---
+
+## Viewing All Benchmarks
+
+**Navigate to Settings → CPM Benchmarks** to see all available data.
+
+### Table Features
+
+- **Sortable Columns**: Click headers to sort by platform, country, CPM value, etc.
+- **Filter by Platform**: Show only Facebook, Instagram, etc.
+- **Filter by Country**: Pre-filtered to your organization's country
+- **Filter by Metric**: Show only followers, impressions, or engagements
+- **Mobile Responsive**: Optimized for all devices
+
+### Understanding the Table
+
+| Column      | Description                                                                 |
+| ----------- | --------------------------------------------------------------------------- |
+| Platform    | Social media platform (Facebook, Instagram, etc.)                           |
+| Metric      | Type of metric (Impressions, Followers, Engagements)                        |
+| Country     | Market where this CPM applies                                               |
+| CPM Value   | Cost per 1,000 units in original currency (with min/max range if available) |
+| Confidence  | High/Medium/Low - indicates data quality and recency                        |
+| Source      | Where the data comes from (clickable link if available)                     |
+| Data Period | Time period covered (e.g., "Dec 2024 - Dec 2025")                           |
+
+<Info>
+  **Confidence Levels Explained:**
+
+- **High**: Recent data from multiple verified sources
+- **Medium**: Single source or slightly older data
+- **Low**: Limited data or regional estimates
+  </Info>
+
+---
+
+## Currency Conversion
+
+CPM benchmarks are stored in their **original currency** (USD, EUR, or DKK) and **automatically converted** to your organization's base currency.
+
+### Example
+
+**Original Benchmark:**
+
+- Platform: Instagram
+- Metric: Followers
+- Country: Denmark
+- Value: $75.00 USD
+- Source: SuperAds.ai
+
+**Your Organization:**
+
+- Base Currency: EUR
+- Exchange Rate: 1 USD = 0.93 EUR
+
+**Result in Valuation:**
+
+- Displayed Value: €70.09 EUR
+- Tooltip: "Based on Denmark market data from SuperAds.ai"
+
+<Tip>
+  Change your base currency in **Settings → Organization → Base Currency** to see all values in your
+  preferred currency.
+</Tip>
+
+---
+
+## Best Practices
+
+### ✅ Do This
+
+- **Set Organization Country**: Ensures suggestions match your market
+- **Review Confidence Levels**: Prioritize high-confidence benchmarks
+- **Check Data Period**: Verify benchmarks are current
+- **Use as Starting Point**: Adjust based on your specific situation
+- **Document Custom Values**: Note why you override suggestions
+
+### ❌ Avoid This
+
+- **Blindly Accepting**: Consider your unique context
+- **Ignoring Source**: Some sources are more reliable than others
+- **Using Wrong Country**: Ensure your organization country is correct
+- **Mixing Currencies Manually**: Let the system convert automatically
+
+---
+
+## Industry Adjustments
+
+Some industries command higher or lower CPM rates:
+
+| Industry      | Multiplier | Example (Base: $50)   |
+| ------------- | ---------- | --------------------- |
+| Finance       | 1.5x       | $75.00 (50% premium)  |
+| E-commerce    | 1.2x       | $60.00 (20% premium)  |
+| Sports        | 1.0x       | $50.00 (baseline)     |
+| Entertainment | 0.9x       | $45.00 (10% discount) |
+| Non-profit    | 0.7x       | $35.00 (30% discount) |
+
+<Note>
+  Industry multipliers are applied automatically based on your organization type (coming soon).
+</Note>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Why don't I see my country in the list?">
+    If your country isn't listed, the system uses **Global** benchmarks as a fallback. These are
+    averaged across major markets and provide reasonable estimates for most regions.
+  </Accordion>
+
+<Accordion title="Can I add my own CPM data?">
+  Currently, only super admins can add benchmarks through the admin API. This ensures data quality
+  and prevents incorrect values. Contact support if you have verified data to contribute.
+</Accordion>
+
+<Accordion title="How often are benchmarks updated?">
+  Benchmarks are updated quarterly based on new industry reports. Each benchmark shows its data
+  period (e.g., "Dec 2024 - Dec 2025") so you know how current it is.
+</Accordion>
+
+  <Accordion title="What if the suggestion seems too high/low?">
+    Suggestions are market averages. Consider:
+
+    - Your **audience quality** (engaged vs. passive followers)
+    - Your **niche** (specialized audiences command premium rates)
+    - Your **track record** (proven ROI justifies higher rates)
+    - **Seasonal factors** (some times of year have higher ad spending)
+
+    Feel free to adjust based on your specific situation.
+
+  </Accordion>
+
+  <Accordion title="Can I see benchmarks for historical valuations?">
+    Yes! The system detects if a valuation is older than 6 months and shows a note:
+
+    "This valuation is from 2024. Current CPM rates may differ. Consider updating to 2025
+    benchmarks for accuracy."
+
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Data Sources
+
+Our CPM benchmarks come from verified industry sources:
+
+- **SuperAds.ai**: AI-powered ad analytics across major platforms
+- **Lebesgue**: E-commerce and social media marketing benchmarks
+- **Industry Reports**: IAB, Statista, eMarketer, and other authoritative sources
+- **Platform Data**: Official advertising rate cards (where available)
+
+<Info>
+  All sources are attributed in the CPM Benchmarks table. Click source links to view original data.
+</Info>
+
+---
+
+## Related Guides
+
+<CardGroup cols="2">
+  <Card
+    title="Currency Conversion"
+    icon="dollar-sign"
+    href="/guides/valuations/currency-conversion"
+  >
+    Learn how currency conversion works across valuations and benchmarks
+  </Card>
+  <Card title="Creating Valuations" icon="chart-line" href="/getting-started/create-valuation">
+    Step-by-step guide to creating your first valuation
+  </Card>
+</CardGroup>
+
+---
+
+## Need Help?
+
+<CardGroup cols="2">
+  <Card title="Contact Support" icon="envelope" href="mailto:support@valiyou.io">
+    Questions about CPM benchmarks? We're here to help.
+  </Card>
+  <Card title="Book a Demo" icon="calendar" href="https://valiyou.io/demo">
+    See CPM benchmarks in action with a guided walkthrough
+  </Card>
+</CardGroup>
