@@ -124,6 +124,10 @@
       "pages": [
         "platform/team-management",
         "platform/company",
+        "platform/settings/general",
+        "sponsorships/inventory/settings",
+        "guides/valuations/cpm-benchmarks",
+        "guides/valuations/currency-conversion",
         "platform/settings/base-currency",
         "platform/settings/brand-values",
         "platform/settings/negotiator",
@@ -161,14 +165,9 @@
       "group": "Guides",
       "icon": "map",
       "pages": [
-        "guides/test",
         "guides/sponsor-deal-workflow",
         "guides/quarterly-reporting",
-        "guides/api-powerbi-integration",
-        {
-          "group": "Valuation Guides",
-          "pages": ["guides/valuations/cpm-benchmarks", "guides/valuations/currency-conversion"]
-        }
+        "guides/api-powerbi-integration"
       ]
     },
     {
