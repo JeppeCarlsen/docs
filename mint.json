@@ -161,6 +161,7 @@
       "group": "Guides",
       "icon": "map",
       "pages": [
+        "guides/test",
         "guides/sponsor-deal-workflow",
         "guides/quarterly-reporting",
         "guides/api-powerbi-integration",
