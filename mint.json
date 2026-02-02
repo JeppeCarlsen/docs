@@ -125,7 +125,6 @@
         "platform/team-management",
         "platform/company",
         "platform/settings/general",
-        "sponsorships/inventory/settings",
         "guides/valuations/cpm-benchmarks",
         "guides/valuations/currency-conversion",
         "platform/settings/base-currency",
