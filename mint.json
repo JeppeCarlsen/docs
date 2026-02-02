@@ -155,9 +155,7 @@
     {
       "group": "Trust & Security",
       "icon": "shield-check",
-      "pages": [
-        "trust-security/trust-center"
-      ]
+      "pages": ["trust-security/trust-center"]
     },
     {
       "group": "Guides",
@@ -165,15 +163,17 @@
       "pages": [
         "guides/sponsor-deal-workflow",
         "guides/quarterly-reporting",
-        "guides/api-powerbi-integration"
+        "guides/api-powerbi-integration",
+        {
+          "group": "Valuation Guides",
+          "pages": ["guides/valuations/cpm-benchmarks", "guides/valuations/currency-conversion"]
+        }
       ]
     },
     {
       "group": "Resources",
       "icon": "book",
-      "pages": [
-        "resources/glossary"
-      ]
+      "pages": ["resources/glossary"]
     }
   ],
   "footerSocials": {
@@ -204,4 +204,3 @@
   },
   "footerText": "© 2026 Valiyou. All rights reserved."
 }
-
