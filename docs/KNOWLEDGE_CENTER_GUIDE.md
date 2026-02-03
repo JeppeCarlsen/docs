@@ -478,6 +478,98 @@ If deployment fails:
 
 ---
 
+## SEO Optimization
+
+### Google & Bing SEO Guidelines
+
+All documentation pages should follow search engine optimization best practices for maximum visibility.
+
+**Meta Title Requirements:**
+
+- **Optimal length**: 50-60 characters
+- **Maximum length**: 70 characters (Google cutoff)
+- **Format**: `[Page Topic] | Valiyou` or `Settings - [Category] | Valiyou`
+- **Example**: `Settings - General | Valiyou` (31 chars) ✓
+
+**Meta Description Requirements:**
+
+- **Optimal length**: 150-160 characters (CRITICAL)
+- **Maximum length**: 160 characters (Google/Bing cutoff)
+- **Content**: Descriptive, actionable, include target keywords
+- **Warning**: Descriptions longer than 160 chars will be truncated in search results with "..."
+
+**✅ CORRECT - Description within 160 chars:**
+
+```yaml
+---
+title: 'Settings - CPM Benchmarks'
+description: 'Access 81+ CPM benchmarks for Instagram, TikTok, YouTube, Facebook, LinkedIn. Market-based social media pricing for sponsorship valuations across 12 countries.'
+---
+```
+
+**❌ INCORRECT - Description too long (267 chars):**
+
+```yaml
+---
+description: 'Access 81+ CPM (Cost Per Mille) benchmarks for Instagram, TikTok, YouTube, Facebook, LinkedIn, and more. Get market-based social media pricing suggestions for sponsorship valuations across 12 countries with confidence ratings and live currency conversion.'
+---
+```
+
+**Open Graph Tags:**
+
+- Use for social media sharing (Facebook, LinkedIn, Twitter)
+- Can be longer than meta description (up to 200 chars)
+- Include brand name in og:title
+- Example:
+  ```yaml
+  'og:title': 'CPM Benchmarks for Social Media Sponsorship Pricing | Valiyou Settings'
+  'og:description': 'Data-driven CPM benchmarks for accurate social media valuation. 81 benchmarks across Instagram, TikTok, YouTube, and more platforms.'
+  ```
+
+**Keywords Field:**
+
+- Comma-separated list of target search terms
+- 10-15 keywords recommended
+- Include variations, synonyms, and long-tail keywords
+- Example: `'CPM benchmarks, social media pricing, sponsorship valuation, Instagram CPM, TikTok CPM'`
+
+### SEO Checklist
+
+Before deploying new pages, verify:
+
+1. **Title**: 50-60 chars ✓
+2. **Description**: 150-160 chars ✓ (MOST IMPORTANT)
+3. **OG Title**: Present and descriptive ✓
+4. **OG Description**: Present (can be 150-200 chars) ✓
+5. **Keywords**: 10-15 relevant terms ✓
+6. **Heading hierarchy**: H1 → H2 → H3 (no skipping levels) ✓
+7. **Internal links**: Link to related pages ✓
+8. **External links**: Use descriptive anchor text ✓
+
+### Common SEO Mistakes
+
+**❌ Description Too Long:**
+
+```yaml
+# This will be truncated at ~160 chars in search results
+description: 'Automatic currency conversion for EUR, USD, GBP, DKK, SEK, NOK with daily updated exchange rates. Convert sponsorship values, CPM benchmarks, and financial reports seamlessly. Multi-currency support for international sponsors and valuations.'
+```
+
+**✅ Optimal Description:**
+
+```yaml
+# Full description visible in search results
+description: 'Automatic currency conversion for EUR, USD, GBP, DKK, SEK, NOK. Daily updated exchange rates for sponsorship values, CPM benchmarks, and international deals.'
+```
+
+**Tools for Validation:**
+
+- **Character counter**: Count exact chars before publishing
+- **SERP preview**: Google "SERP preview tool" to see how it will appear
+- **Google Search Console**: Monitor click-through rates after deployment
+
+---
+
 ## Quick Reference
 
 ### DO's ✅
@@ -490,6 +582,9 @@ If deployment fails:
 - Group related pages together in navigation
 - Validate MDX before committing
 - Wait 1-2 minutes for deployment to propagate
+- Keep meta descriptions to 150-160 characters (CRITICAL for SEO)
+- Include keywords, og:title, and og:description in frontmatter
+- Test title/description length before publishing
 
 ### DON'Ts ❌
 
@@ -501,6 +596,9 @@ If deployment fails:
 - Don't use complex markdown inside MDX components
 - Don't skip MDX validation before deployment
 - Don't panic if deployment takes a few minutes
+- Don't write meta descriptions longer than 160 characters
+- Don't forget keywords field in frontmatter
+- Don't skip SEO optimization on new pages
 
 ---
 
@@ -564,4 +662,4 @@ Master data for your organization...
 
 ## Version History
 
-- **2025-02-03:** Initial guide created documenting naming conventions, MDX requirements, and deployment process
+- **2025-02-03:** Initial guide created documenting naming conventions, MDX requirements, deployment process, and SEO optimization guidelines
