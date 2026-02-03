@@ -4,8 +4,13 @@
 User-agent: *
 Allow: /
 
-# Block crawling of Mintlify asset files (CSS, JS, fonts, etc.)
+# Block crawling of Mintlify asset files (CSS, JS, fonts, favicons, etc.)
 Disallow: /mintlify-assets/
+Disallow: /_mintlify/
+
+# Block specific asset patterns
+Disallow: */_generated/
+Disallow: */favicons/
 
 # Sitemap location
 Sitemap: https://docs.valiyou.com/sitemap.xml
