@@ -6,13 +6,12 @@ description: 'Manage sponsorship inventory with automatic quantity tracking, tra
 
 # Sponsorship Inventory Management
 
-<iframe
-  className="w-full aspect-video rounded-xl"
-  src="https://player.mux.com/MVQygtGOOkvPJHHO8v6VFEd7LvYd01VG4h002brNud1LE"
-  title="Valiyou Inventory Items walkthrough"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+<Frame caption="Valiyou Inventory Items walkthrough">
+  <iframe
+    className="w-full aspect-video"
+    src="https://player.mux.com/MVQygtGOOkvPJHHO8v6VFEd7LvYd01VG4h002brNud1LE"
+  ></iframe>
+</Frame>
 
 **Manage your complete sponsorship inventory** with automatic quantity tracking, real-time availability updates, and comprehensive transaction history. Track VIP tickets, hospitality packages, branding assets, and all sponsorship items with precision.
 
@@ -729,117 +728,3 @@ Control which events items apply to.
     Yes! The six-dot drag handle in the leftmost column lets you reorder items. Simply click and drag items up or down. The new order saves automatically and determines how items appear in the Package Builder. We recommend grouping similar items together (e.g., all VIP hospitality, then signage, then digital) for easier package building.
   </Accordion>
 </AccordionGroup>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Manage Sponsorship Inventory in Valiyou",
-  "description": "Complete guide to managing sponsorship inventory with automatic tracking, transaction history, and oversell prevention",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Add Inventory Items",
-      "text": "Click Add Item button, enter item name, description, category, set unit cost and max quantity, then save to create new sponsorship inventory items."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Configure Categories and Tiers",
-      "text": "Use the Settings tab to create custom categories (Digital, Hospitality, Events) and tier levels (Platinum, Gold, Silver) for organizing inventory items."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Track Inventory Automatically",
-      "text": "The system automatically creates RESERVED transactions when items are added to draft packages, COMMITTED transactions when packages are approved, and RETURNED transactions when packages are rejected."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "View Transaction History",
-      "text": "Click the clock icon to view complete transaction history showing all quantity changes with timestamps, transaction types, and related packages for audit trails."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Manually Adjust Inventory",
-      "text": "Click the +/- icon to add stock using INBOUND transactions for receiving new inventory or ADJUSTMENT transactions for correcting errors, with required notes for each change."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Organize with Drag-and-Drop",
-      "text": "Click and drag the six-dot handle to reorder items. The display order determines how items appear in Package Builder for efficient package creation."
-    }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How does automatic inventory tracking work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Valiyou inventory system uses a transaction-based approach that automatically tracks available quantities. The formula is: Available = Max Quantity - Reserved - Committed. When you add items to draft packages, they're RESERVED. When packages are approved, items become COMMITTED. If packages are rejected or archived, items are RETURNED to inventory. Every transaction is logged with timestamp and details."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I prevent overselling sponsorship items?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! The Package Builder enforces max quantity limits automatically. You cannot add more items to a package than are available in inventory. The system shows warnings when you reach maximum quantity and uses red borders to indicate limits. This prevents double-booking VIP tickets, hospitality packages, or limited sponsorship assets."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the difference between RESERVED and COMMITTED inventory?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "RESERVED items are in draft or pending packages that haven't been approved yet. These items reduce available inventory but can be returned if the package is rejected. COMMITTED items are in approved packages and are locked until the package status changes. This two-stage system allows you to reserve items during negotiation while maintaining flexibility."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I view transaction history for inventory items?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Click the clock icon in the Actions column of any inventory item to view its complete transaction history. The history modal shows chronological records of all quantity changes including date, time, transaction type (RESERVED, COMMITTED, RETURNED, INBOUND, ADJUSTMENT), quantity changed, related package, and notes. This provides a complete audit trail for compliance and troubleshooting."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I manually adjust inventory quantities?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! Click the +/- icon in the Actions column to manually adjust inventory. You can add stock using INBOUND transactions (for receiving new inventory) or ADJUSTMENT transactions (for correcting errors). Both require notes explaining the change. All manual adjustments are logged in the transaction history with your user ID and timestamp."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are Boolean items and when should I use them?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Boolean items are yes/no checkbox items (either included or not) rather than quantity-based items. Use boolean mode for all-or-nothing offerings like Logo on Website, Stadium Naming Rights, or Social Media Mention. Use quantity mode for items sponsors can have multiple of, like VIP tickets or parking passes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do tier requirements work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tier requirements restrict which sponsors can access specific inventory items. Setting an item to Gold Tier means only Gold sponsors (and higher tiers if you have them) can add it to packages. Set items to All Tiers to make them available to everyone. This is perfect for creating exclusive premium offerings for high-value sponsors."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I organize inventory items by drag-and-drop?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! The six-dot drag handle in the leftmost column lets you reorder items. Simply click and drag items up or down. The new order saves automatically and determines how items appear in the Package Builder. We recommend grouping similar items together (e.g., all VIP hospitality, then signage, then digital) for easier package building."
-      }
-    }
-  ]
-}
-</script>

@@ -6,13 +6,12 @@ description: 'Manage sponsor relationships, contacts, and values. Track status, 
 
 # Sponsor Relationship Management (CRM)
 
-<iframe
-  className="w-full aspect-video rounded-xl"
-  src="https://player.mux.com/szgSEaJTAUp4JJvW1AZfEssNDCZ1QP02nrUyeTWIzt900"
-  title="Valiyou Sponsors walkthrough"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+<Frame caption="Valiyou Sponsors walkthrough">
+  <iframe
+    className="w-full aspect-video"
+    src="https://player.mux.com/szgSEaJTAUp4JJvW1AZfEssNDCZ1QP02nrUyeTWIzt900"
+  ></iframe>
+</Frame>
 
 **Manage all your sponsor relationships** in one centralized sponsor CRM. Organize sponsor companies, track contact information, monitor sponsorship values, and view pending proposals across your entire sponsor portfolio.
 
@@ -656,133 +655,3 @@ Different permissions show different content:
     Yes! When creating packages in the Package Builder, you select which sponsor the package is for. All packages automatically link to their sponsor, and pending proposals display as counts on sponsor cards for easy pipeline tracking.
   </Accordion>
 </AccordionGroup>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Manage Sponsors in Valiyou",
-  "description": "Complete guide to managing sponsor relationships, contacts, and values in the Valiyou sponsor CRM",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Add New Sponsor",
-      "text": "Click Add Sponsor button, enter company name, upload logo, set sponsorship value, choose status (Active/Inactive/Archived), and add website URL."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Add Sponsor Contacts",
-      "text": "In the sponsor profile, add contacts with names, job titles, email addresses, and phone numbers. Mark one contact as Primary for main communications."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Set Sponsor Status",
-      "text": "Choose Active for current partners, Inactive for prospects in negotiation, or Archived for past relationships. Status determines sorting order in the masonry grid."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Track Sponsorship Value",
-      "text": "Enter the monetary value of the sponsor relationship (annual contract value, lifetime value, or package value) for deal size tracking and sorting."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Monitor Pending Proposals",
-      "text": "View pending proposal counts on sponsor cards to track deal pipeline. Click the count to see all draft packages and pending offers."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Manage Contacts Directory",
-      "text": "Use the Contacts tab to view all sponsor contacts grouped by company, with quick edit and delete actions across your portfolio."
-    }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I add a new sponsor to the system?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Click the Add Sponsor button, enter company name, upload logo (optional), set sponsorship value, choose status (Active/Inactive/Archived), add website URL, and save. Then add contacts with names, emails, phone numbers, and designate a primary contact for communications."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the difference between Active, Inactive, and Archived sponsors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Active sponsors are current partners with active sponsorship agreements. Inactive sponsors are prospects or sponsors in negotiation without signed contracts. Archived sponsors are past partners no longer working with you. The masonry grid sorts by status (Active first) and sponsorship value within each status category."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I track multiple contacts per sponsor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! Each sponsor can have unlimited contacts. Add names, job titles, email addresses, and phone numbers. Mark one contact as Primary to designate the main point of contact for proposals and communications. All contacts appear in both the sponsor card and the dedicated Contacts tab."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I upload sponsor logos?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "When adding or editing a sponsor, click the logo upload area and select an image file (JPG, PNG, GIF, WebP). Logos appear as 48*48px squares in the sponsor cards and as larger circular images on package proposals. If no logo is uploaded, a building icon placeholder is used."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What does the sponsorship value field represent?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The sponsorship value field tracks the total monetary value of the sponsor relationship. This can be annual contract value, lifetime value, or current package value depending on your tracking preference. Values are displayed prominently on sponsor cards and used for sorting sponsors by deal size."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I see pending proposals for a sponsor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sponsor cards automatically display a Pending Proposals count if you have Packages feature enabled. Click the count to view all draft packages and proposals for that sponsor. This helps track deal pipeline and follow up on pending offers."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I organize sponsors by categories or tags?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Currently, sponsors are organized by status (Active, Inactive, Archived) and automatically sorted by sponsorship value within each status. You can use the search function to quickly find specific sponsors by company name, contact name, or other details."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What happens when I delete a sponsor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "When deleting a sponsor, the system warns you if the sponsor has linked packages or proposals. Deleting a sponsor removes all associated contacts, but package history is preserved for record-keeping. Archived status is recommended over deletion to maintain historical data."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I manage sponsor contacts across multiple sponsors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Contacts tab provides a directory-style view of all contacts grouped by sponsor company. You can quickly scan, search, edit, or delete contacts across your entire sponsor portfolio without navigating individual sponsor profiles."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I link packages to sponsors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! When creating packages in the Package Builder, you select which sponsor the package is for. All packages automatically link to their sponsor, and pending proposals display as counts on sponsor cards for easy pipeline tracking."
-      }
-    }
-  ]
-}
-</script>
