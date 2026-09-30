@@ -1,7 +1,7 @@
 ---
 title: 'API'
 description: 'Create and manage API keys for secure REST API access. Generate tokens, monitor usage, integrate with Power BI and Excel, and explore endpoint documentation.'
-lastUpdated: '2025-01-19'
+lastUpdated: '2026-09-30'
 'og:title': 'API Keys & REST API Documentation | Valiyou'
 ---
 
@@ -16,11 +16,16 @@ lastUpdated: '2025-01-19'
 
 **Integrate Valiyou data into your workflows with secure REST API access and Bearer token authentication.** Create API keys, monitor usage in real-time, and explore comprehensive endpoint documentation for seamless integration with Power BI, Excel, and custom applications.
 
-<Note>**Last Updated**: January 19, 2025 | [View Changelog](#changelog)</Note>
+<Note>**Last Updated**: September 30, 2026 | [View Changelog](#changelog)</Note>
 
 ## Accessing API Management
 
-Navigate to **Platform** → **API** from the sidebar to manage your API keys.
+Navigate to **Platform** → **API / MCP** from the sidebar to manage your API keys.
+
+<Tip>
+  **Connecting an AI assistant instead?** The same page has an **MCP** tab for connecting Claude,
+  ChatGPT, and other AI assistants — no API key needed. See [AI Assistants (MCP)](/platform/mcp).
+</Tip>
 
 <Note>
   **Permission Required**: API permission or Admin access required to create and manage API keys.
@@ -28,7 +33,7 @@ Navigate to **Platform** → **API** from the sidebar to manage your API keys.
 
 ## Page Layout
 
-The API Management page has 3 tabs:
+The API / MCP page has 4 tabs:
 
 ### API Keys Tab
 
@@ -48,6 +53,14 @@ The API Management page has 3 tabs:
 - **Authentication**: How to use API keys in requests
 - **Operations**: HTTP methods (GET, POST, PUT, DELETE)
 - **Endpoints**: Complete API reference with examples
+
+### MCP Tab
+
+- **AI assistant connection**: Connect Claude, ChatGPT, and other AI assistants via OAuth (no API key)
+- **AI instructions**: Ready-made instructions to copy into your assistant
+- **Deletion toggle**: Admin setting controlling whether AI assistants may delete records
+
+See the full guide: [AI Assistants (MCP)](/platform/mcp)
 
 ## API Keys Tab
 
@@ -879,7 +892,12 @@ Access to API Management requires specific permissions:
   </Accordion>
 </AccordionGroup>
 
-## Changelog {#changelog}
+## Changelog
+
+### September 30, 2026
+
+- **Added**: MCP tab for connecting AI assistants (Claude, ChatGPT, and more) — see [AI Assistants (MCP)](/platform/mcp)
+- **Updated**: Page renamed from "API" to "API / MCP" in the platform sidebar
 
 ### January 19, 2025
 
@@ -933,93 +951,3 @@ Access to API Management requires specific permissions:
   **Support**: Need help with API integration? Contact support at support@valiyou.com with your use
   case and we'll help you get started.
 </Note>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Create and Use Valiyou API Keys",
-  "description": "Step-by-step guide to creating API keys for secure REST API access to Valiyou data",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Navigate to API Management",
-      "text": "Go to Platform → API from the sidebar to access API key management",
-      "position": 1
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Create API Key",
-      "text": "Click 'Create API Key' button in the top right corner of the page",
-      "position": 2
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Configure Key Settings",
-      "text": "Enter a descriptive name, select data scopes (valuations, player sales, clubs), and choose operations (GET, POST, PUT, DELETE)",
-      "position": 3
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Generate and Save Key",
-      "text": "Click 'Create API Key' to generate your key, copy it immediately, and store it securely in a password manager",
-      "position": 4
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Use API Key in Requests",
-      "text": "Include the API key in your requests using the api_key parameter: https://valiyou.io/api/v1/valuations?api_key=YOUR_KEY&club_id=YOUR_ID",
-      "position": 5
-    }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is an API key and why do I need one?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "An API key is a unique authentication token that allows secure programmatic access to your Valiyou data. You need an API key to integrate Valiyou with external tools like Power BI, Excel, custom applications, or automated workflows."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I create my first API key?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Navigate to Platform → API, click 'Create API Key', enter a descriptive name, select data scopes (valuations, player sales, clubs), choose operations (GET for read-only), and click 'Create API Key'. Copy the generated key immediately and store it securely."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What should I do if my API key is compromised?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Immediately revoke the compromised API key, create a new one, update your integrations, and review API usage logs for suspicious activity. Never commit API keys to version control or share them publicly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I integrate Valiyou API with Power BI?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Create an API key with GET operation, open Power BI Desktop, select Get Data → Web, enter your API endpoint URL with authentication parameters, transform data in Power Query, and create visualizations. Set up scheduled refresh for automatic updates."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are there rate limits on API requests?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Currently, there are no rate limits for Professional and Enterprise plans. You can make unlimited API requests, though excessive usage may be flagged. Implement exponential backoff for future resilience."
-      }
-    }
-  ]
-}
-</script>

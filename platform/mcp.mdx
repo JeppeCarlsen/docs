@@ -1,0 +1,296 @@
+---
+title: 'AI Assistants (MCP)'
+description: 'Connect Claude, ChatGPT, and other AI assistants to Valiyou with the MCP integration. Import reports, register sponsorship contracts, and review valuations using natural language.'
+lastUpdated: '2026-09-30'
+'og:title': 'AI Assistants & MCP Integration | Valiyou'
+---
+
+# AI Assistants (MCP)
+
+**Let your AI assistant work directly in Valiyou — import reports into Valuations, register sponsorship contracts, and review drafts using natural language.** Valiyou's MCP (Model Context Protocol) integration connects Claude, ChatGPT, and other AI assistants securely to your organization with your own login and permissions.
+
+<Note>**Last Updated**: September 30, 2026 | [View Changelog](#changelog)</Note>
+
+## What is MCP?
+
+MCP (Model Context Protocol) is an open standard that lets AI assistants securely connect to tools like Valiyou. Once connected, your assistant can read and manage your Valiyou data on your behalf — always limited by your own permissions.
+
+**What your AI assistant can do:**
+
+- 📄 **Import reports**: Give it a report or spreadsheet and it extracts the metrics and creates a draft valuation
+- 🤝 **Register sponsorship contracts**: It reads a contract, creates the sponsor, and sets up the package with price and period
+- ✅ **Review drafts**: It lists draft valuations, summarizes them, and approves after your confirmation
+- 📊 **Inventory overview**: It summarizes your sponsorship items, categories, tiers, and events
+
+<Note>
+  **Your permissions apply**: The AI assistant acts with YOUR login. It can only see and change what
+  you can see and change in Valiyou. Demo-mode organizations are read-only for AI assistants.
+</Note>
+
+## Accessing the MCP Integration
+
+Navigate to **Platform** → **API / MCP** from the sidebar, then open the **MCP** tab.
+
+<Note>
+  **Permission Required**: API permission or Admin access is required to view the MCP page. The
+  delete toggle requires Admin access.
+</Note>
+
+## Connecting Your AI Assistant
+
+Sign-in happens securely in your browser via OAuth — no API key is needed. Your assistant opens the Valiyou login page, you approve access, and the connection is ready.
+
+**MCP Endpoint:**
+
+```
+https://valiyou.io/api/mcp
+```
+
+### Claude.ai / Claude Desktop
+
+1. Open **Settings** → **Connectors**
+2. Click **Add custom connector**
+3. Paste the endpoint URL: `https://valiyou.io/api/mcp`
+4. Approve the login in your browser
+
+### ChatGPT (web & desktop app)
+
+1. Open **Settings** → **Connectors** → **Advanced**
+2. Enable **Developer mode**
+3. Back in **Connectors**, choose **Create**
+4. Paste the endpoint URL: `https://valiyou.io/api/mcp`
+5. Approve the login in your browser
+
+<Note>
+  **ChatGPT plan required**: Custom connectors require a ChatGPT Plus, Pro, Team, or Enterprise
+  plan.
+</Note>
+
+### Claude Code (terminal)
+
+```bash
+claude mcp add --transport http valiyou https://valiyou.io/api/mcp
+```
+
+Then run `/mcp` inside Claude Code and complete the browser login.
+
+### Other AI assistants
+
+Any assistant supporting remote MCP servers works — add a remote (Streamable HTTP) MCP server pointing at `https://valiyou.io/api/mcp` and approve the login.
+
+## AI Instructions (Copy & Paste)
+
+The MCP tab includes a ready-made **AI instructions** card — a short guide you can copy into your assistant so it understands how Valiyou works.
+
+**Where to paste it:**
+
+- **ChatGPT**: Settings → Personalization → Custom instructions (or into a ChatGPT Project)
+- **Claude**: Into a Claude Project's instructions
+
+<Tip>
+  **Claude gets guidance automatically**: Claude receives Valiyou's built-in instructions when it
+  connects, so pasting is optional. For ChatGPT, pasting the instructions is recommended — it
+  significantly improves how well the assistant understands Valiyou.
+</Tip>
+
+## What the AI Can Do
+
+### Valuations
+
+- **List and view valuations**: Browse valuations with status and date filters, see full details including player sales and status history
+- **Create draft valuations**: Extract metrics from reports and create drafts — never approved automatically
+- **Update and approve**: Edit draft fields, and approve drafts (only with approver permission, and only after you confirm)
+
+### Partnerships & Sponsorships
+
+- **Sponsors**: List sponsors, view details with contacts and packages, create and update sponsors
+- **Packages**: List sponsorship packages, create and update them, approve or reject (admin/approver only)
+- **Inventory**: Get a full overview of items, availability, categories, tiers, and events
+
+### Built-in safeguards
+
+- ✅ New valuations are always created as **drafts** — approval requires your explicit confirmation
+- ✅ The assistant uses **your organization's terminology** (label aliases) and locale settings
+- ✅ Demo-mode organizations are **read-only**
+- ✅ Deleting records is **off by default** (see below)
+
+## Allowing Deletion (Admin Setting)
+
+By default, AI assistants **cannot delete anything** in Valiyou — delete attempts are blocked with a clear message.
+
+An Admin can enable deletion per organization:
+
+1. Navigate to **Platform** → **API / MCP** → **MCP** tab
+2. Find the **Allow deletion via MCP** toggle (red card)
+3. Switch it on
+
+<Warning>
+  **Deletion is permanent**: When enabled, the AI assistant can permanently delete valuations,
+  sponsors, and packages (deleting a sponsor also deletes its packages). Assistants are instructed
+  to always confirm with you first, but we recommend keeping this off unless you actively need it.
+</Warning>
+
+## Permissions
+
+The AI assistant is always limited by the connected user's permissions:
+
+| Action                       | Requirement                                    |
+| ---------------------------- | ---------------------------------------------- |
+| **View valuations**          | Valuations view permission                     |
+| **Create/update valuations** | Valuations edit permission                     |
+| **Approve valuations**       | Approver permission                            |
+| **View sponsors/packages**   | Sponsorships view permission                   |
+| **Manage sponsors/packages** | Sponsorships edit permission                   |
+| **Approve/reject packages**  | Admin or approver                              |
+| **Delete records**           | Edit permission + "Allow deletion" toggle (on) |
+| **Any write action**         | Blocked in demo mode                           |
+
+## Common Use Cases
+
+### Import a Report into Valuations
+
+1. Connect your assistant (see above)
+2. Give it a report or spreadsheet: _"Import this report into Valiyou as a valuation"_
+3. The assistant extracts the financial and media metrics and shows them to you
+4. It creates a **draft** valuation
+5. Review the draft in Valiyou — or ask the assistant to approve it once you're satisfied
+
+### Register a Sponsorship Contract
+
+1. Give the assistant the contract: _"Register this sponsorship contract in Valiyou"_
+2. It extracts the sponsor's company details and checks for duplicates
+3. It creates the sponsor and the package with the price and period from the contract
+
+### Review Draft Valuations
+
+1. Ask: _"Show me my draft valuations in Valiyou"_
+2. The assistant lists and summarizes each draft
+3. Say which ones to approve — it approves only after your confirmation
+
+## Troubleshooting
+
+### The connection fails or asks me to log in repeatedly
+
+**Reasons**:
+
+- Browser blocked the login popup
+- You declined the consent screen
+
+**Fix**:
+
+- Allow popups for your assistant's site and retry
+- Remove the connector and add it again, approving all requested access
+
+### The assistant says it doesn't have permission
+
+**Reasons**:
+
+- Your Valiyou user lacks the required permission (e.g., approver)
+- Your organization is in demo mode (read-only)
+
+**Fix**:
+
+- Ask an Admin to grant the permission under **Platform** → **Users**
+- Upgrade from demo mode to enable write access
+
+### The assistant can't delete anything
+
+**Reason**: Deletion via MCP is off by default.
+
+**Fix**: An Admin can enable the **Allow deletion via MCP** toggle on the MCP tab — see [Allowing Deletion](#allowing-deletion-admin-setting).
+
+### ChatGPT doesn't show the connector option
+
+**Reasons**:
+
+- Free ChatGPT plan (connectors require Plus, Pro, Team, or Enterprise)
+- Developer mode not enabled
+
+**Fix**:
+
+- Upgrade your ChatGPT plan
+- Enable **Developer mode** under Settings → Connectors → Advanced
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Is it safe to connect an AI assistant to Valiyou?">
+    Yes. The connection uses OAuth — the industry-standard login flow — so the assistant never sees
+    your password. It acts with your own permissions, so it can never do more than you can. New
+    valuations are always created as drafts, deletion is off by default, and demo-mode organizations
+    are read-only.
+  </Accordion>
+
+<Accordion title="Which AI assistants are supported?">
+  Claude (Claude.ai, Claude Desktop, Claude Code), ChatGPT (Plus, Pro, Team, and Enterprise plans),
+  and any other assistant that supports remote MCP servers. All connect to the same endpoint:
+  https://valiyou.io/api/mcp.
+</Accordion>
+
+<Accordion title="Can the AI assistant approve valuations on its own?">
+  No. The assistant is instructed to only approve valuations after your explicit confirmation, and
+  approval additionally requires that your Valiyou user has the approver permission. Everything it
+  creates starts as a draft.
+</Accordion>
+
+<Accordion title="Can the AI assistant delete my data?">
+  Not by default. Deletion via MCP is blocked until an Admin enables the "Allow deletion via MCP"
+  toggle on the MCP tab. Even then, the assistant needs the same edit permissions as in the app and
+  is instructed to confirm with you before deleting anything.
+</Accordion>
+
+<Accordion title="What are the AI instructions and do I need them?">
+  The AI instructions card on the MCP tab contains a short guide explaining Valiyou to your
+  assistant. Claude receives equivalent guidance automatically when it connects. For ChatGPT,
+  copying the instructions into Custom instructions or a Project is recommended for the best
+  results.
+</Accordion>
+
+<Accordion title="Does the assistant use my organization's custom terminology?">
+  Yes. The assistant reads your organization's label aliases and locale settings, so it uses your
+  industry's terminology and formats numbers and dates the way your organization does.
+</Accordion>
+
+  <Accordion title="How do I disconnect an AI assistant?">
+    Remove the connector in your assistant's settings (e.g., ChatGPT Settings → Connectors, or
+    Claude Settings → Connectors). The assistant immediately loses access.
+  </Accordion>
+</AccordionGroup>
+
+## Changelog
+
+### September 30, 2026
+
+- **Initial release**: MCP integration for AI assistants
+- Connection guides for Claude, ChatGPT, Claude Code, and other MCP clients
+- AI instructions card for copy & paste
+- Admin toggle for allowing deletion via MCP
+
+## Next Steps
+
+<CardGroup cols="2">
+  <Card title="Connect Your Assistant" icon="plug" href="/platform/mcp#connecting-your-ai-assistant">
+    Add the Valiyou connector to Claude or ChatGPT in a few minutes
+  </Card>
+
+<Card
+  title="Copy AI Instructions"
+  icon="clipboard"
+  href="/platform/mcp#ai-instructions-copy--paste"
+>
+  Paste the ready-made instructions into your assistant for best results
+</Card>
+
+<Card title="REST API & API Keys" icon="key" href="/platform/api">
+  Need programmatic access for Power BI or Excel instead? Use the REST API
+</Card>
+
+  <Card title="Team Permissions" icon="users" href="/platform/team-management">
+    Review who on your team has which permissions
+  </Card>
+</CardGroup>
+
+<Note>
+  **Support**: Need help connecting your AI assistant? Contact support at support@valiyou.com and
+  we'll help you get started.
+</Note>

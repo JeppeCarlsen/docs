@@ -27,7 +27,8 @@ When you generate AI Insights, the following valuation data is sent to your chos
 - **Opt-out**: Disable the AI Insights plugin at any time to prevent data transmission to external AI providers
 - **Provider policies**: [Groq Privacy](https://groq.com/privacy-policy/), [OpenAI API Data](https://openai.com/enterprise-privacy), [Google Gemini](https://ai.google.dev/gemini-api/terms), [Anthropic Privacy](https://www.anthropic.com/privacy)
 - **Compliance**: All providers are SOC 2 Type II certified and do not train models on API data
-  </Warning>
+
+</Warning>
 
 <Note>**Last Updated**: January 19, 2025 | [View Changelog](#changelog)</Note>
 
@@ -606,7 +607,7 @@ Track your API usage to avoid surprises:
   </Accordion>
 </AccordionGroup>
 
-## Changelog {#changelog}
+## Changelog
 
 ### January 19, 2025
 
@@ -629,79 +630,3 @@ Track your API usage to avoid surprises:
 - [Reports](/valuations/reports) - Multi-valuation comparison reports
 - [Valuation Details](/valuations/valuation-details) - Single valuation analysis
 - [Team Management](/platform/team-management) - Manage user permissions
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Set Up AI Insights for Sponsorship Valuation Analysis",
-  "description": "Step-by-step guide to configure AI-powered automated analysis for sponsorship valuations using Groq, OpenAI, or Google Gemini",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Enable AI Insights Plugin",
-      "text": "Navigate to Platform > Plugins, find AI Insights for Reports, and click Enable button",
-      "position": 1
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Get API Key from AI Provider",
-      "text": "Sign up for Groq, OpenAI, or Google Gemini and generate an API key from their dashboard",
-      "position": 2
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Configure AI Provider",
-      "text": "Click the gear icon in the plugin card, select your LLM provider, choose a model, and paste your API key",
-      "position": 3
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Generate AI Insights",
-      "text": "Navigate to Reports, select 2 or more valuations, and view automated AI-generated insights with recommendations",
-      "position": 4
-    }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Which AI provider should I choose for sponsorship insights?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For beginners, start with Groq (free, fast, good quality). For best results, use Google Gemini 1.5 Pro (free, excellent quality). For production reports, use OpenAI GPT-4o or Claude 3.5 Sonnet (paid, highest quality)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does AI Insights cost for sponsorship analysis?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Free options include Groq, Google Gemini, and OpenRouter. Paid options cost approximately $0.01-0.05 per analysis with OpenAI GPT-4o, or $0.01-0.03 with Anthropic Claude. Valiyou does not charge extra for AI Insights (Professional/Enterprise plan required)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are my sponsorship valuation data shared with the AI provider?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, valuation data is sent to the LLM provider's API for analysis. All major providers have strict data privacy policies and do not train models on API data. Data is encrypted in transit and not retained beyond analysis."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I switch between different AI providers later?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, you can change AI providers at any time by opening plugin configuration, selecting a new provider, entering a new API key, and saving. Previous insights remain unchanged, but new analyses will use the new provider."
-      }
-    }
-  ]
-}
-</script>

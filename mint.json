@@ -140,6 +140,7 @@
         "platform/plugins/cash-flow-visualization",
         "platform/plugins/social-deep-dive",
         "platform/api",
+        "platform/mcp",
         "platform/user-profile"
       ]
     },
