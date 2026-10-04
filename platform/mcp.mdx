@@ -1,7 +1,7 @@
 ---
 title: 'AI Assistants (MCP)'
 description: 'Connect Claude, ChatGPT, and other AI assistants to Valiyou with the MCP integration. Import reports, register sponsorship contracts, and review valuations using natural language.'
-lastUpdated: '2026-09-30'
+lastUpdated: '2026-10-04'
 'og:title': 'AI Assistants & MCP Integration | Valiyou'
 ---
 
@@ -9,7 +9,7 @@ lastUpdated: '2026-09-30'
 
 **Let your AI assistant work directly in Valiyou — import reports into Valuations, register sponsorship contracts, and review drafts using natural language.** Valiyou's MCP (Model Context Protocol) integration connects Claude, ChatGPT, and other AI assistants securely to your organization with your own login and permissions.
 
-<Note>**Last Updated**: September 30, 2026 | [View Changelog](#changelog)</Note>
+<Note>**Last Updated**: October 4, 2026 | [View Changelog](#changelog)</Note>
 
 ## What is MCP?
 
@@ -21,10 +21,13 @@ MCP (Model Context Protocol) is an open standard that lets AI assistants securel
 - 🤝 **Register sponsorship contracts**: It reads a contract, creates the sponsor, and sets up the package with price and period
 - ✅ **Review drafts**: It lists draft valuations, summarizes them, and approves after your confirmation
 - 📊 **Inventory overview**: It summarizes your sponsorship items, categories, tiers, and events
+- 📁 **Organize documents**: It lists your documents and folders, fetches download links, and organizes documents into folders
+- ✉️ **Send proposals**: It emails a sponsorship proposal to the sponsor's contacts (admin toggle required)
+- 📈 **Analytics**: It summarizes your sponsorship revenue trend, package pipeline, and top sponsors (Enterprise plan)
 
 <Note>
   **Your permissions apply**: The AI assistant acts with YOUR login. It can only see and change what
-  you can see and change in Valiyou. Demo-mode organizations are read-only for AI assistants.
+  you can see and change in Valiyou. Demo organizations are not accessible to AI assistants.
 </Note>
 
 ## Accessing the MCP Integration
@@ -33,7 +36,7 @@ Navigate to **Platform** → **API / MCP** from the sidebar, then open the **MCP
 
 <Note>
   **Permission Required**: API permission or Admin access is required to view the MCP page. The
-  delete toggle requires Admin access.
+  delete and send-proposal toggles require Admin access.
 </Note>
 
 ## Connecting Your AI Assistant
@@ -106,13 +109,52 @@ The MCP tab includes a ready-made **AI instructions** card — a short guide you
 - **Sponsors**: List sponsors, view details with contacts and packages, create and update sponsors
 - **Packages**: List sponsorship packages, create and update them, approve or reject (admin/approver only)
 - **Inventory**: Get a full overview of items, availability, categories, tiers, and events
+- **Proposals**: Email a package proposal (with its PDF link) to the sponsor's contacts — only when the send-proposal toggle is enabled (see below)
+- **Analytics**: Revenue trend, package pipeline, top sponsors, and a revenue summary (Enterprise plan)
+
+### Documents
+
+- **Browse**: List documents and the full folder structure, filter by folder or document type
+- **Download links**: Get a secure, time-limited download link for uploaded files
+- **Organize**: Create folders, rename documents, and move documents between folders (uploading files happens in the Valiyou app, not via MCP)
+
+### Organization Context (Read-Only)
+
+The assistant automatically reads your organization's context when it connects, so its answers match how your organization works:
+
+- **Master data**: Registered address and company/CVR (VAT) number — only visible if your user can view the Organisation page in Valiyou
+- **Terminology**: Your label aliases, so the assistant uses your industry's terms
+- **Locale**: Language, date format, number format, and timezone — numbers and dates are formatted your way
+- **Base currency**: All monetary amounts are presented in your organization's base currency
+- **Brand defaults**: The 0–10 default brand scores pre-filled on new valuations
+
+<Note>
+  **Read-only**: AI assistants can read these settings but never change them. Changing settings, API
+  keys, or billing always happens in the Valiyou app.
+</Note>
+
+### Ready-made prompts (Claude)
+
+Valiyou ships four ready-made prompts that appear in Claude's prompt picker (and as slash commands in Claude Code) once connected:
+
+- **Import report to valuations** — extract metrics from a report and create a draft valuation
+- **Register sponsorship contract** — create the sponsor and package from a contract
+- **Review draft valuations** — summarize drafts and approve after your confirmation
+- **Inventory overview** — see items, availability, categories, tiers, and events
+
+<Note>
+  ChatGPT connectors do not support MCP prompts — use the copy-paste AI instructions above instead.
+</Note>
 
 ### Built-in safeguards
 
 - ✅ New valuations are always created as **drafts** — approval requires your explicit confirmation
 - ✅ The assistant uses **your organization's terminology** (label aliases) and locale settings
-- ✅ Demo-mode organizations are **read-only**
+- ✅ Demo organizations are **not accessible** via MCP
 - ✅ Deleting records is **off by default** (see below)
+- ✅ Sending proposals to sponsors is **off by default** (see below)
+- ✅ Every change the assistant makes is recorded in your **audit log**, marked as made via MCP — so you can always see whether a change came from a person in the app or an AI assistant
+- ✅ Organization settings are **read-only** — the assistant can read them but never change them
 
 ## Allowing Deletion (Admin Setting)
 
@@ -126,24 +168,46 @@ An Admin can enable deletion per organization:
 
 <Warning>
   **Deletion is permanent**: When enabled, the AI assistant can permanently delete valuations,
-  sponsors, and packages (deleting a sponsor also deletes its packages). Assistants are instructed
-  to always confirm with you first, but we recommend keeping this off unless you actively need it.
+  sponsors, packages, documents, and folders (deleting a sponsor also deletes its packages).
+  Assistants are instructed to always confirm with you first, but we recommend keeping this off
+  unless you actively need it.
+</Warning>
+
+## Allowing Proposal Sending (Admin Setting)
+
+By default, AI assistants **cannot send sponsorship proposals** — proposal emails go to real sponsor contacts, so sending is blocked until an Admin enables it.
+
+An Admin can enable proposal sending per organization:
+
+1. Navigate to **Platform** → **API / MCP** → **MCP** tab
+2. Find the **Send proposals via MCP** toggle (purple card)
+3. Switch it on
+
+<Warning>
+  **Emails go to your sponsors**: When enabled, the AI assistant can email a package proposal (with
+  its PDF link) directly to the sponsor's contacts and set the package to pending approval.
+  Assistants are instructed to always confirm with you first before sending.
 </Warning>
 
 ## Permissions
 
 The AI assistant is always limited by the connected user's permissions:
 
-| Action                       | Requirement                                    |
-| ---------------------------- | ---------------------------------------------- |
-| **View valuations**          | Valuations view permission                     |
-| **Create/update valuations** | Valuations edit permission                     |
-| **Approve valuations**       | Approver permission                            |
-| **View sponsors/packages**   | Sponsorships view permission                   |
-| **Manage sponsors/packages** | Sponsorships edit permission                   |
-| **Approve/reject packages**  | Admin or approver                              |
-| **Delete records**           | Edit permission + "Allow deletion" toggle (on) |
-| **Any write action**         | Blocked in demo mode                           |
+| Action                                  | Requirement                                    |
+| --------------------------------------- | ---------------------------------------------- |
+| **View valuations**                     | Valuations view permission                     |
+| **Create/update valuations**            | Valuations edit permission                     |
+| **Approve valuations**                  | Approver permission                            |
+| **View sponsors/packages**              | Sponsorships view permission                   |
+| **Manage sponsors/packages**            | Sponsorships edit permission                   |
+| **Approve/reject packages**             | Admin or approver                              |
+| **View documents**                      | Documents view permission                      |
+| **Organize documents**                  | Documents edit permission                      |
+| **View analytics**                      | Analytics view permission + Enterprise plan    |
+| **View master data (address, CVR/VAT)** | Organisation view permission                   |
+| **Send proposals**                      | Edit permission + "Send proposals" toggle (on) |
+| **Delete records**                      | Edit permission + "Allow deletion" toggle (on) |
+| **Any action**                          | Blocked for demo organizations                 |
 
 ## Common Use Cases
 
@@ -167,6 +231,18 @@ The AI assistant is always limited by the connected user's permissions:
 2. The assistant lists and summarizes each draft
 3. Say which ones to approve — it approves only after your confirmation
 
+### Send a Sponsorship Proposal
+
+1. Make sure an Admin has enabled the **Send proposals via MCP** toggle
+2. Ask: _"Send the proposal for the Main Sponsor package to the sponsor"_
+3. The assistant confirms the package and recipients with you, then emails the proposal with its PDF link
+4. The package moves to pending approval — the sponsor approves or rejects via the link
+
+### Get a Sponsorship Overview
+
+1. Ask: _"How is our sponsorship revenue developing this year?"_
+2. The assistant fetches the revenue trend, package pipeline, and top sponsors and summarizes them (requires the Enterprise plan)
+
 ## Troubleshooting
 
 ### The connection fails or asks me to log in repeatedly
@@ -186,18 +262,24 @@ The AI assistant is always limited by the connected user's permissions:
 **Reasons**:
 
 - Your Valiyou user lacks the required permission (e.g., approver)
-- Your organization is in demo mode (read-only)
+- Your organization is a demo organization (not accessible via MCP)
 
 **Fix**:
 
 - Ask an Admin to grant the permission under **Platform** → **Users**
-- Upgrade from demo mode to enable write access
+- Upgrade from demo mode to a paid plan to enable MCP access
 
 ### The assistant can't delete anything
 
 **Reason**: Deletion via MCP is off by default.
 
 **Fix**: An Admin can enable the **Allow deletion via MCP** toggle on the MCP tab — see [Allowing Deletion](#allowing-deletion-admin-setting).
+
+### The assistant can't send proposals
+
+**Reason**: Proposal sending via MCP is off by default.
+
+**Fix**: An Admin can enable the **Send proposals via MCP** toggle on the MCP tab — see [Allowing Proposal Sending](#allowing-proposal-sending-admin-setting).
 
 ### ChatGPT doesn't show the connector option
 
@@ -217,8 +299,8 @@ The AI assistant is always limited by the connected user's permissions:
   <Accordion title="Is it safe to connect an AI assistant to Valiyou?">
     Yes. The connection uses OAuth — the industry-standard login flow — so the assistant never sees
     your password. It acts with your own permissions, so it can never do more than you can. New
-    valuations are always created as drafts, deletion is off by default, and demo-mode organizations
-    are read-only.
+    valuations are always created as drafts, deletion is off by default, and demo organizations are
+    not accessible at all.
   </Accordion>
 
 <Accordion title="Which AI assistants are supported?">
@@ -239,11 +321,37 @@ The AI assistant is always limited by the connected user's permissions:
   is instructed to confirm with you before deleting anything.
 </Accordion>
 
+<Accordion title="Can the AI assistant email my sponsors?">
+  Not by default. Sending proposals via MCP is blocked until an Admin enables the "Send proposals
+  via MCP" toggle on the MCP tab. When enabled, the assistant can email a package proposal to the
+  sponsor's contacts — it is instructed to confirm the package and recipients with you first.
+</Accordion>
+
+<Accordion title="Can the AI assistant upload files to Documents?">
+  No. Uploading files is not possible via MCP — uploads happen in the Valiyou app. The assistant can
+  list documents and folders, fetch download links for uploaded files, and organize documents
+  (create folders, rename, move).
+</Accordion>
+
 <Accordion title="What are the AI instructions and do I need them?">
   The AI instructions card on the MCP tab contains a short guide explaining Valiyou to your
   assistant. Claude receives equivalent guidance automatically when it connects. For ChatGPT,
   copying the instructions into Custom instructions or a Project is recommended for the best
   results.
+</Accordion>
+
+<Accordion title="Are AI actions tracked in the audit log?">
+  Yes. Every change an AI assistant makes goes through the same audit trail as changes made in the
+  app — who, what, which fields changed, and when. Audit entries are marked as made via MCP, so on
+  the Audit page you can always distinguish changes made by a person in the app from changes made by
+  an AI assistant on someone's behalf.
+</Accordion>
+
+<Accordion title="Can the AI assistant change my organization's settings?">
+  No. Organization settings (terminology, locale, currency, brand defaults) and master data
+  (address, CVR/VAT number) are read-only for AI assistants. Reading master data additionally
+  requires that your user can view the Organisation page. Changing settings, API keys, or billing
+  always happens in the Valiyou app.
 </Accordion>
 
 <Accordion title="Does the assistant use my organization's custom terminology?">
@@ -258,6 +366,17 @@ The AI assistant is always limited by the connected user's permissions:
 </AccordionGroup>
 
 ## Changelog
+
+### October 4, 2026 (v1.2)
+
+- **Organization context**: The assistant now reads your organization's master data (address, CVR/VAT number — requires Organisation view permission), terminology, locale, base currency, and brand defaults — all read-only
+- **Audit trail**: All changes made by AI assistants are recorded in the audit log and marked as made via MCP
+
+### September 30, 2026 (v1.1)
+
+- **Documents**: List documents and folders, get download links, and organize documents
+- **Proposals**: Send a package proposal to sponsor contacts (new admin toggle)
+- **Analytics**: Sponsorship revenue trend, package pipeline, top sponsors, and revenue summary (Enterprise plan)
 
 ### September 30, 2026
 
