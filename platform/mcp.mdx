@@ -7,7 +7,34 @@ lastUpdated: '2026-10-04'
 
 # AI Assistants (MCP)
 
+<div style={{ display: 'flex', justifyContent: 'center', margin: '1.5rem 0' }}>
+  <div
+    style={{
+      backgroundColor: '#2563eb',
+      borderRadius: '1rem',
+      padding: '1.25rem',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}
+  >
+    <img
+      src="/images/platform/mcp/mcp-logo.png"
+      alt="Model Context Protocol (MCP) logo"
+      style={{ width: '72px', height: '72px', margin: 0 }}
+      noZoom
+    />
+  </div>
+</div>
+
 **Let your AI assistant work directly in Valiyou — import reports into Valuations, register sponsorship contracts, and review drafts using natural language.** Valiyou's MCP (Model Context Protocol) integration connects Claude, ChatGPT, and other AI assistants securely to your organization with your own login and permissions.
+
+<Frame>
+  <img
+    src="/images/platform/mcp/mcp-connection.png"
+    alt="Valiyou MCP Connection page showing the MCP endpoint, Claude Code command, and connection guides for Claude, ChatGPT, and other AI assistants"
+  />
+</Frame>
 
 <Note>**Last Updated**: October 4, 2026 | [View Changelog](#changelog)</Note>
 
@@ -157,6 +184,13 @@ Valiyou ships four ready-made prompts that appear in Claude's prompt picker (and
 - ✅ Organization settings are **read-only** — the assistant can read them but never change them
 
 ## Allowing Deletion (Admin Setting)
+
+<Frame>
+  <img
+    src="/images/platform/mcp/mcp-capabilities.png"
+    alt="Valiyou MCP Capabilities overview showing read, create, and update enabled while the delete and send proposals toggles are disabled by default"
+  />
+</Frame>
 
 By default, AI assistants **cannot delete anything** in Valiyou — delete attempts are blocked with a clear message.
 
