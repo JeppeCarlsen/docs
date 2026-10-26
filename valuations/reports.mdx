@@ -153,28 +153,11 @@ A multi-line area chart showing valuation trends over time.
 
 ## AI Insights
 
-<Note>
-  **Plugin Required**: AI Insights require the AI Insights for Reports plugin
-  (Professional/Enterprise plans). See [AI Insights for Reports](/platform/plugins/ai-insights) for
-  setup details.
-</Note>
+AI Key Insights are available on all Professional and Enterprise plans. No plugin or API key is required — Valiyou's built-in AI analyzes your selected valuations automatically. If your organization has configured the [Private AI Connection](/platform/plugins/ai-insights) plugin, that provider is used instead.
 
-### Enabling AI Insights
+### Get AI Key Insights Button
 
-**To enable:**
-
-1. Go to **Platform** → **Plugins**
-2. Find "AI Insights for Reports" plugin
-3. Click "Enable"
-4. Configure AI provider (Groq, Google Gemini, OpenAI, Anthropic, or OpenRouter)
-5. Enter API key
-6. Optionally customize prompt
-
-See [AI Insights Configuration Guide](/platform/plugins/ai-insights#configuration) for detailed setup instructions.
-
-### Generate Insights Button
-
-**Button**: "Generate AI Insights" (blue primary button with sparkles icon)
+**Button**: "Get AI Key Insights" (blue primary button with sparkles icon)
 
 **Action**:
 
@@ -182,11 +165,11 @@ See [AI Insights Configuration Guide](/platform/plugins/ai-insights#configuratio
 - Generates insights about trends, patterns, and recommendations
 - Shows loading spinner while processing
 
-**Displays when**: AI Insights plugin is enabled and valuations are selected
+**Displays when**: 2 or more valuations are selected and you have Reports permission
 
 ### Insights Display
 
-**Card Title**: "AI Insights" with provider badge (e.g., "Powered by Groq")
+**Card Title**: "AI Insights" with provider badge (e.g., "Valiyou AI" or your configured provider name)
 
 **Insight Items**:
 
@@ -199,23 +182,12 @@ See [AI Insights Configuration Guide](/platform/plugins/ai-insights#configuratio
 
 - Icon: Sparkles
 - Message: "No insights generated yet"
-- Subtitle: "Click 'Generate AI Insights' to analyze your valuations"
+- Subtitle: "Click 'Get AI Key Insights' to analyze your valuations"
 
 <Tip>
   **Saved Insights**: Insights are cached in browser storage for your current selection. They'll
   reload automatically if you return to the same selection.
 </Tip>
-
-### AI Provider Options
-
-**Supported Providers:**
-
-- **Groq** - Fast and cost-effective
-- **Google Gemini** - High quality insights
-- **OpenAI** - GPT-powered analysis
-- **Anthropic** - Claude-powered analysis
-
-**Provider Badge**: Shows which AI generated the insights (e.g., "Powered by Google Gemini")
 
 ### Custom Prompts
 
@@ -228,14 +200,6 @@ You can customize the AI prompt in plugin settings to:
 
 ### Common Errors
 
-**"AI Insights plugin is not enabled"**
-
-- Go to Plugins and enable AI Insights
-
-**"AI Insights is not configured"**
-
-- Add your API key in plugin settings
-
 **"Response was truncated due to length"**
 
 - Try selecting fewer valuations
@@ -243,12 +207,17 @@ You can customize the AI prompt in plugin settings to:
 
 **"AI quota exceeded"**
 
-- Check your API provider plan limits
+- If using Private AI Connection: check your API provider plan limits and add credits
 - Upgrade plan or wait for quota reset
 
 **"AI service is temporarily overloaded"**
 
 - Wait a moment and try again
+
+**"Private AI Connection is not configured"**
+
+- Open Platform → Plugins → Private AI Connection
+- Enter your provider credentials and save
 
 ## Valuation Comparison Table
 
@@ -470,7 +439,7 @@ Two export formats available:
 
 1. Select last 4 quarters' valuations
 2. Review Historical Comparison chart for trends
-3. Generate AI Insights for recommendations
+3. Get AI Key Insights for recommendations
 4. Export PDF for board meeting
 5. Use insights to set next quarter goals
 
@@ -480,7 +449,7 @@ Two export formats available:
 2. Show growth in Executive Summary
 3. Highlight positive trends in media channels
 4. Export PDF for sponsor presentation
-5. Use AI Insights for narrative
+5. Use AI Key Insights for narrative
 
 ### Budget Planning
 
@@ -495,18 +464,18 @@ Two export formats available:
 1. Select valuations at regular intervals
 2. Compare Sales vs Media value trends
 3. Check brand indicator consistency
-4. Generate AI Insights for patterns
+4. Get AI Key Insights for patterns
 5. Share report with management team
 
 ## Permissions
 
 Different permissions show different content:
 
-| Permission       | Can Access       | Can Generate Insights      | Can Export |
-| ---------------- | ---------------- | -------------------------- | ---------- |
-| **Reports Role** | ✅ Yes           | ✅ Yes (if plugin enabled) | ✅ Yes     |
-| **Admin**        | ✅ Yes           | ✅ Yes (if plugin enabled) | ✅ Yes     |
-| **Other Roles**  | ❌ Access Denied | ❌ No                      | ❌ No      |
+| Permission       | Can Access       | Can Generate Insights | Can Export |
+| ---------------- | ---------------- | --------------------- | ---------- |
+| **Reports Role** | ✅ Yes           | ✅ Yes                | ✅ Yes     |
+| **Admin**        | ✅ Yes           | ✅ Yes                | ✅ Yes     |
+| **Other Roles**  | ❌ Access Denied | ❌ No                 | ❌ No      |
 
 <Note>
   **Reports-Only Access**: You can grant team members the Reports role without other valuation
@@ -523,14 +492,14 @@ Different permissions show different content:
 - You have Reports or Admin permission
 - Try refreshing the page
 
-### Can't Generate AI Insights
+### Can't Generate AI Key Insights
 
 **Check:**
 
-1. AI Insights plugin is enabled (Settings → Plugins)
-2. API key is configured in plugin settings
-3. You have selected at least 2 valuations
-4. Check error message for specific issue
+1. You have selected at least 2 valuations
+2. You have Reports or Admin permission
+3. If using Private AI Connection: plugin status shows "Connected" (Platform → Plugins)
+4. Check the error message for a specific issue
 
 ### Export PDF Is Blank
 
@@ -584,7 +553,7 @@ Yes, PDF exports automatically include your organization logo (uploaded in Setti
 
 ### How do AI-powered insights improve reports?
 
-AI Insights analyze your selected valuations to identify trends, patterns, and recommendations automatically. The insights are generated by providers like Groq, Google Gemini, OpenAI, or Anthropic, adding professional analysis to your stakeholder presentations without manual work.
+AI Key Insights analyze your selected valuations to identify trends, patterns, and recommendations automatically. Insights are generated by Valiyou's built-in AI by default, or by your own configured provider if you have set up Private AI Connection, adding professional analysis to your stakeholder presentations without manual work.
 
 ### What's the best way to compare valuations over time?
 
@@ -621,8 +590,8 @@ Currently, reports are generated on-demand by selecting valuations and clicking 
     Add or remove valuations to adjust comparison
   </Card>
 
-<Card title="Generate AI Insights" icon="brain" href="/platform/plugins/ai-insights">
-  Enable AI Insights plugin for automated analysis
+<Card title="Private AI Connection" icon="brain" href="/platform/plugins/ai-insights">
+  Connect your own AI provider for data sovereignty
 </Card>
 
 <Card title="Export Report" icon="file-export" href="/valuations/reports#export-options">

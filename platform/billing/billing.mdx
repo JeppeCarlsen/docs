@@ -1,6 +1,6 @@
 ---
 title: 'Billing'
-description: 'Manage subscription plans, add-ons, and billing renewal. Upgrade plans, enable AI Insights, manage Cash Flow Visualization, and view subscription details.'
+description: 'Manage subscription plans, add-ons, and billing renewal. Upgrade plans, enable Private AI Connection, manage Cash Flow Visualization, and view subscription details.'
 'og:title': 'Billing & Subscription Management | Valiyou'
 ---
 
@@ -45,10 +45,10 @@ description: 'Manage subscription plans, add-ons, and billing renewal. Upgrade p
 
 **Available Add-ons:**
 
-- **AI Insights for Reports** - AI-powered insights using LLMs (Groq, Gemini, OpenAI, Anthropic)
+- **Private AI Connection** - Connect your own AI provider (Anthropic, OpenAI, Gemini, Mistral, Azure, Bedrock, Vertex AI) to route AI features under your own DPA
   - Requires Professional or Enterprise plan
-  - Price: Varies by currency (e.g., 99 DKK/month)
-  - See [AI Insights for Reports](/platform/plugins/ai-insights) for configuration
+  - Price: 300 kr/month (Professional add-on; included in Enterprise)
+  - See [Private AI Connection](/platform/plugins/ai-insights) for configuration
 - **Cash Flow Visualization (Sankey)** - Interactive flow charts for valuations
   - Available on all plans (Professional/Enterprise)
   - Price: Varies by currency (e.g., 49 DKK/month)
@@ -109,18 +109,18 @@ Shows next renewal/payment date.
 
 ## Common Use Cases
 
-### Enabling AI Insights Plugin
+### Enabling Private AI Connection
 
 1. Navigate to **Platform** → **Billing** → **Subscription** tab
 2. Find **Manage Add-ons** card
-3. Click **AI Insights for Reports** card to select
+3. Click **Private AI Connection** card to select
 4. Review cost info (monthly charge + pro-rated amount)
 5. Click **"Update Add-ons"** button
 6. Success modal confirms add-on enabled
-7. Go to **Platform** → **Plugins** to configure AI provider
-8. Use AI Insights in **Valuations** → **Reports**
+7. Go to **Platform** → **Plugins** to configure your AI provider and enter your API key
+8. AI features in chat and **Valuations** → **Reports** now route through your provider
 
-See [AI Insights for Reports](/platform/plugins/ai-insights) for AI Insights configuration.
+See [Private AI Connection](/platform/plugins/ai-insights) for configuration details.
 
 ### Upgrading Plan Tier
 
@@ -219,7 +219,7 @@ See [AI Insights for Reports](/platform/plugins/ai-insights) for AI Insights con
 
 **Reasons:**
 
-- On Starter plan (AI Insights requires Professional/Enterprise)
+- On Starter plan (Private AI Connection requires Professional/Enterprise)
 - Add-on already included in plan (Enterprise)
 - Demo mode active
 
@@ -243,7 +243,7 @@ See [AI Insights for Reports](/platform/plugins/ai-insights) for AI Insights con
 </Accordion>
 
 <Accordion title="Are add-ons charged separately from my plan subscription?">
-  Yes, add-ons like AI Insights for Reports and Cash Flow Visualization are billed separately from
+  Yes, add-ons like Private AI Connection and Cash Flow Visualization are billed separately from
   your base plan. When you enable an add-on, you'll be charged immediately on a pro-rated basis, and
   the full monthly amount will be included in your next billing cycle.
 </Accordion>

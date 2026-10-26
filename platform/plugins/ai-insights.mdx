@@ -1,286 +1,268 @@
 ---
-title: 'AI Insights'
-description: 'Generate AI-powered insights from sponsorship valuations using Groq, OpenAI, Gemini, and Claude. Get natural language analysis, trend detection, and reports.'
-lastUpdated: '2025-01-19'
-'og:title': 'AI Insights - Automated Analysis | Valiyou'
+title: 'Private AI Connection'
+description: 'Connect your own AI provider to Valiyou for chat and Reports insights. Keep data under your own DPA with Anthropic, OpenAI, Gemini, Mistral, Azure, Bedrock, or Vertex AI.'
+'og:title': 'Private AI Connection - Bring Your Own AI Provider | Valiyou'
 ---
 
-## AI Insights - Automated Analysis
+## Private AI Connection
 
 <Frame>
   <img
     src="/images/platform/plugins/ai-insights.png"
-    alt="AI Insights configuration interface showing automated analysis settings for sponsorship valuations with Groq and OpenAI integration"
+    alt="Private AI Connection configuration interface showing AI provider selection for connecting your own Anthropic, OpenAI, Gemini, or Mistral account to Valiyou"
   />
 </Frame>
 
-**AI Insights adds automated AI-generated analysis and recommendations to multi-valuation comparison reports using Large Language Models (LLMs).** Transform complex sponsorship data into actionable insights with natural language explanations powered by leading AI providers including Groq, OpenAI, Google Gemini, and Anthropic Claude. Get instant trend detection, pattern analysis, and business recommendations without manual data analysis.
-
-<Warning>
-**Data Sent to AI Providers**
-
-When you generate AI Insights, the following valuation data is sent to your chosen LLM provider for analysis:
-
-- **Fields sent**: Valuation dates, financial metrics (revenue, sales values), media metrics (impressions, views, CPM rates), brand scores
-- **Anonymization**: Organization names and personal user identities are NOT included in API requests—only numerical data and dates
-- **Data retention**: Providers do NOT store your data; it is processed in real-time for analysis and immediately discarded per their API policies
-- **Opt-out**: Disable the AI Insights plugin at any time to prevent data transmission to external AI providers
-- **Provider policies**: [Groq Privacy](https://groq.com/privacy-policy/), [OpenAI API Data](https://openai.com/enterprise-privacy), [Google Gemini](https://ai.google.dev/gemini-api/terms), [Anthropic Privacy](https://www.anthropic.com/privacy)
-- **Compliance**: All providers are SOC 2 Type II certified and do not train models on API data
-
-</Warning>
-
-<Note>**Last Updated**: January 19, 2025 | [View Changelog](#changelog)</Note>
-
-## Overview
+**Private AI Connection lets your organization connect its own AI provider to Valiyou.** By default, Valiyou's built-in AI powers both the AI assistant and the AI Key Insights in Reports. Private AI Connection replaces that with your own provider account — so data is processed under your organization's existing data processing agreement (DPA), optionally with EU-hosted providers.
 
 <Note>
-  **Plan Required**: Professional or Enterprise plan **Permission Required**: Reports permission +
-  Plugins permission
+  **Plan Required**: Professional (add-on, 300 kr/month) or Enterprise (included) **Permission
+  Required**: Reports permission + Plugins permission
 </Note>
 
-**What it does**: Adds AI-generated insights and analysis to multi-valuation comparison reports using Large Language Models (LLMs).
+**What it does**: Routes all AI features — chat assistant and Reports insights — through your chosen provider and API key instead of Valiyou's default AI.
 
-**Where it appears**: Reports page → Compare multiple valuations → AI Insights section (after enabling plugin)
+**Where it appears**: Platform → Plugins → Private AI Connection
 
 **Author**: Valiyou
 
-## Supported LLM Providers
+## Why Use Private AI Connection?
 
-### Free Providers
+Most organizations are well-served by Valiyou's built-in AI. Private AI Connection is for organizations that need:
 
-<CardGroup cols="3">
-  <Card title="Groq" icon="bolt">
-    **Best for**: Speed
+- **Data sovereignty**: All AI processing happens under your own DPA with the provider
+- **EU hosting**: Choose a provider and region that keeps data within the EU
+- **Existing agreements**: Leverage enterprise agreements you already have with OpenAI, Anthropic, Azure, or Google
+- **Compliance requirements**: Regulated industries where the AI processor must be named in your DPA
 
-    **Models**:
-    - llama-3.3-70b-versatile (Recommended)
-    - mixtral-8x7b-32768
-    - gemma2-9b-it (Fast)
+## Supported Providers
 
-    **Free Tier**: Yes ✅
+### Simple Providers
+
+Simple providers only require a provider selection and API key.
+
+<CardGroup cols="2">
+  <Card title="Anthropic" icon="message-bot">
+    **Models**: Claude 3.5 Sonnet, Claude 3.5 Haiku, Claude 3 Opus
+
+    **API key prefix**: `sk-ant-...`
+
+    Get your key at [console.anthropic.com](https://console.anthropic.com)
+
+  </Card>
+
+  <Card title="OpenAI" icon="brain">
+    **Models**: GPT-4o, GPT-4o mini, GPT-4 Turbo
+
+    **API key prefix**: `sk-...`
+
+    Get your key at [platform.openai.com](https://platform.openai.com)
 
   </Card>
 
   <Card title="Google Gemini" icon="sparkles">
-    **Best for**: Balance
+    **Models**: Gemini 2.0 Flash, Gemini 1.5 Pro, Gemini 1.5 Flash
 
-    **Models**:
-    - gemini-2.0-flash-exp (Latest)
-    - gemini-1.5-pro (Recommended)
-    - gemini-1.5-flash (Fast)
+    **API key prefix**: `AIza...`
 
-    **Free Tier**: Yes ✅
+    Get your key at [aistudio.google.com](https://aistudio.google.com)
 
   </Card>
 
-  <Card title="OpenRouter" icon="route">
-    **Best for**: Multi-model access
+  <Card title="Mistral" icon="wind">
+    **Models**: Mistral Large, Mistral Small, Mistral Nemo
 
-    **Models**:
-    - Multiple models with free tier
+    **API key prefix**: varies
 
-    **Free Tier**: Yes ✅
+    Get your key at [console.mistral.ai](https://console.mistral.ai)
 
   </Card>
 </CardGroup>
 
-### Paid Providers
+### Enterprise Providers
 
-<CardGroup cols="2">
-  <Card title="OpenAI" icon="brain">
-    **Models**:
-    - gpt-4o (Recommended)
-    - gpt-4o-mini (Fast)
-    - gpt-4-turbo
+Enterprise providers require additional configuration beyond an API key (resource name, region, project ID, etc.).
 
-    **Pricing**: Pay per token
+<CardGroup cols="3">
+  <Card title="Azure OpenAI" icon="microsoft">
+    **Requires**: Azure resource name, deployment name, API version, API key
+
+    Managed through [Azure Portal](https://portal.azure.com)
 
   </Card>
 
-  <Card title="Anthropic (Claude)" icon="message-bot">
-    **Models**:
-    - claude-3-5-sonnet-20241022 (Recommended)
-    - claude-3-5-haiku-20241022 (Fast)
-    - claude-3-opus-20240229 (Powerful)
+  <Card title="Amazon Bedrock" icon="aws">
+    **Requires**: AWS region, access key ID, secret access key
 
-    **Pricing**: Pay per token
+    Managed through [AWS Console](https://console.aws.amazon.com)
+
+  </Card>
+
+  <Card title="Google Vertex AI" icon="google">
+    **Requires**: GCP project ID, region, service account credentials
+
+    Managed through [Google Cloud Console](https://console.cloud.google.com)
 
   </Card>
 </CardGroup>
-
-<Tip>
-  **Start Free**: All AI Insights providers offer free tiers or trials. Try Groq or Google Gemini
-  first to test AI Insights without cost.
-</Tip>
 
 ## Configuration
 
-### Step 1: Enable Plugin
+### Step 1: Navigate to Plugins
 
-1. Navigate to **Platform** → **Plugins**
-2. Find "AI Insights for Reports" card
-3. Click **"Enable"** button
-4. Wait for status to change to "Enabled"
+1. Go to **Platform** → **Plugins**
+2. Find the **Private AI Connection** card
+3. Click **"Enable"** if not already enabled
+4. Click the **gear icon** (⚙️) in the card header to open configuration
 
-### Step 2: Get API Key
+### Step 2: Select Your Provider
 
-Before configuring, you need an API key from your chosen LLM provider.
-
-**How to get an API Key**:
-
-1. **Log in** to the LLM provider:
-   - **OpenAI**: https://platform.openai.com/
-   - **Anthropic**: https://console.anthropic.com/
-   - **Groq**: https://console.groq.com/keys
-   - **Google Gemini**: https://aistudio.google.com/
-   - **OpenRouter**: https://openrouter.ai/
-
-2. **Navigate** to "API Keys" in the menu
-
-3. **Click** "Create Key" or "Create API Key"
-
-4. **Copy** the key (it's only shown once!)
-
-<Warning>
-  **Save Your Key**: API keys are only shown once. Copy and save it immediately. If you lose it,
-  you'll need to create a new one.
-</Warning>
-
-### Step 3: Configure Provider
-
-1. Click **gear icon** (⚙️) in plugin card header
-2. Configuration modal opens
+Choose your AI provider from the dropdown. Simple providers show only a provider field and API key field. Enterprise providers show additional credential fields specific to that provider.
 
 <Frame>
   <img
     src="/images/platform/plugins/ai-insights-config-modal.png"
-    alt="AI Insights configuration modal showing LLM provider selection, model options, and API key input for automated sponsorship analysis"
+    alt="Private AI Connection configuration modal showing provider selection dropdown and API key input"
   />
 </Frame>
 
-**Configuration Modal Fields**:
+### Step 3: Enter Credentials
 
-1. **LLM Provider** (dropdown with icons):
-   - Groq (purple bolt icon, "Free" badge)
-   - Google Gemini (blue sparkle icon, "Free" badge)
-   - OpenAI (gray chip icon)
-   - Anthropic/Claude (orange beaker icon)
-   - OpenRouter (green chip icon, "Free" badge)
+**Simple providers** (Anthropic, OpenAI, Gemini, Mistral):
 
-2. **Model** (provider-specific models with badges):
-   - Badges: Free, Recommended, Latest, Fast, Powerful
-   - Each provider has 3-5 models to choose from
+1. Select provider from dropdown
+2. Enter your API key in the **API Key** field
+3. Click **"Save Configuration"**
 
-3. **API Key** (SecretInput with view/hide/copy):
-   - Paste your API key from Step 2
-   - Changes placeholder based on provider
-   - Examples: `sk-...`, `sk-ant-...`, `gsk_...`, `AIza...`, `sk-or-...`
+**Enterprise providers** (Azure OpenAI, Bedrock, Vertex AI):
 
-4. Click **"Save Configuration"**
+1. Select provider from dropdown
+2. Fill in all required credential fields (resource name, region, project ID, etc.)
+3. Click **"Save Configuration"**
 
 <Warning>
-  **API Key Required**: You must enter a valid API key before saving. Warning shown if missing:
-  "Please enter a valid [Provider] API key before saving."
+  **API Key Required**: You must enter a valid API key before saving. If the key is missing, a
+  warning will appear: "Please enter a valid [Provider] API key before saving."
 </Warning>
 
-**Example Configuration**:
+### Step 4: Verify Connection
 
-```
-LLM Provider: Groq (Free badge)
-Model: Llama 3.3 70B Versatile (Recommended badge)
-Groq API Key: gsk_••••••••••••••••••••••••
-```
+After saving, the plugin card shows one of three status badges:
 
-### Detailed API Key Instructions
+- **Connected** (green) — credentials verified, AI features are routing through your provider
+- **Setup Required** (yellow) — plugin enabled but credentials are missing or incomplete
+- **Disabled** (gray) — plugin is not enabled
 
-Need more detailed instructions? Expand your provider below for step-by-step guidance:
+<Tip>
+  **Save Your Key**: API keys are typically only shown once when you create them. Copy and save your
+  key before pasting it into Valiyou.
+</Tip>
+
+## Getting API Keys
 
 <AccordionGroup>
-  <Accordion title="Groq (Free)">
-    1. Visit [Groq Console](https://console.groq.com)
+  <Accordion title="Anthropic">
+    1. Visit [console.anthropic.com](https://console.anthropic.com)
     2. Sign up or log in
     3. Navigate to **API Keys**
-    4. Click **"Create API Key"**
-    5. Copy key (starts with `gsk_...`)
+    4. Click **"Create Key"**
+    5. Copy the key (starts with `sk-ant-...`)
     6. Paste into Valiyou configuration
+
+    **Note**: Requires payment method on file
+
   </Accordion>
 
-<Accordion title="Google Gemini (Free)">
-  1. Visit [Google AI Studio](https://aistudio.google.com) 2. Sign in with Google account 3. Click
-  **"Get API Key"** 4. Create new project or select existing 5. Copy key (starts with `AIza...`) 6.
-  Paste into Valiyou configuration
-</Accordion>
-
-  <Accordion title="OpenAI (Paid)">
-    1. Visit [OpenAI Platform](https://platform.openai.com)
+  <Accordion title="OpenAI">
+    1. Visit [platform.openai.com](https://platform.openai.com)
     2. Sign up or log in
     3. Navigate to **API Keys**
     4. Click **"Create new secret key"**
-    5. Copy key (starts with `sk-...`)
+    5. Copy the key (starts with `sk-...`)
     6. Paste into Valiyou configuration
 
     **Note**: Requires payment method on file
 
   </Accordion>
 
-  <Accordion title="Anthropic/Claude (Paid)">
-    1. Visit [Anthropic Console](https://console.anthropic.com)
-    2. Sign up or log in
-    3. Navigate to **API Keys**
-    4. Click **"Create Key"**
-    5. Copy key (starts with `sk-ant-...`)
-    6. Paste into Valiyou configuration
+<Accordion title="Google Gemini">
+  1. Visit [aistudio.google.com](https://aistudio.google.com) 2. Sign in with your Google account 3.
+  Click **"Get API Key"** 4. Create a new project or select an existing one 5. Copy the key (starts
+  with `AIza...`) 6. Paste into Valiyou configuration
+</Accordion>
 
-    **Note**: Requires payment method on file
+<Accordion title="Mistral">
+  1. Visit [console.mistral.ai](https://console.mistral.ai) 2. Sign up or log in 3. Navigate to
+  **API Keys** 4. Click **"Create new key"** 5. Copy the key 6. Paste into Valiyou configuration
+</Accordion>
 
-  </Accordion>
+<Accordion title="Azure OpenAI">
+  1. Open [Azure Portal](https://portal.azure.com) 2. Navigate to your **Azure OpenAI** resource 3.
+  Collect: Resource name, deployment name, API version 4. Under **Keys and Endpoint**, copy your API
+  key 5. Enter all fields in Valiyou configuration
+</Accordion>
 
-  <Accordion title="OpenRouter (Free Tier)">
-    1. Visit [OpenRouter](https://openrouter.ai)
-    2. Sign up or log in
-    3. Navigate to **Keys**
-    4. Click **"Create Key"**
-    5. Copy key (starts with `sk-or-...`)
-    6. Paste into Valiyou configuration
+<Accordion title="Amazon Bedrock">
+  1. Open [AWS Console](https://console.aws.amazon.com) 2. Navigate to **IAM** → create a user with
+  Bedrock access 3. Generate an access key and secret 4. Note your AWS region 5. Enter all fields in
+  Valiyou configuration
+</Accordion>
+
+  <Accordion title="Google Vertex AI">
+    1. Open [Google Cloud Console](https://console.cloud.google.com)
+    2. Enable the **Vertex AI API** in your project
+    3. Create a service account with Vertex AI permissions
+    4. Download the service account JSON credentials
+    5. Note your GCP project ID and region
+    6. Enter all fields in Valiyou configuration
   </Accordion>
 </AccordionGroup>
 
-## Using AI Insights
+## What Data Is Sent to Your Provider
 
-### Step 1: Navigate to Reports
+When AI features are used, the following valuation data is sent to your chosen provider:
 
-Go to **Valuations** → **Reports**
+### What Is Sent
 
-### Step 2: Select Multiple Valuations
+- Valuation dates
+- Financial metrics (revenue, sales values)
+- Media metrics (impressions, views, CPM rates)
+- Brand scores
 
-<Frame>
-  <img
-    src="/images/valuations/reports/select-valuations.png"
-    alt="Multi-select dropdown interface for choosing multiple sponsorship valuations to generate AI-powered comparison analysis, trend insights, and automated recommendations using LLM integration"
-  />
-</Frame>
+### What Is NOT Sent
 
-- Select **2 or more valuations** from the dropdown
-- AI Insights requires at least 2 valuations for comparison
+- Organization name or identifier
+- Personal user identities
+- Any data outside of the valuation fields listed above
 
-### Step 3: View AI Insights
+<Info>
+  **Your DPA applies**: Because you configure your own provider account, all data processing is
+  governed by your organization's agreement with that provider. Valiyou does not intermediate the
+  data relationship.
+</Info>
 
-<Frame>
-  <img
-    src="/images/valuations/reports/ai-insights-section.png"
-    alt="AI Insights section showing automated analysis, recommendations, and pattern detection for sponsorship valuations"
-  />
-</Frame>
+All major providers are SOC 2 Type II certified and do not train their models on API data.
 
-The AI Insights section appears below the comparison charts with:
+### Provider Privacy Policies
 
-- **Key Insights** - Main observations and trends
-- **Recommendations** - Actionable suggestions
-- **Pattern Analysis** - Data patterns and correlations
-- **Natural Language Explanations** - Easy-to-understand summaries
+- [Anthropic Privacy](https://www.anthropic.com/privacy)
+- [OpenAI API Data](https://openai.com/enterprise-privacy)
+- [Google Gemini](https://ai.google.dev/gemini-api/terms)
+- [Mistral Privacy](https://mistral.ai/privacy/)
+- [Microsoft Azure](https://azure.microsoft.com/en-us/support/legal/)
+- [AWS Privacy](https://aws.amazon.com/privacy/)
+- [Google Cloud Privacy](https://cloud.google.com/terms/cloud-privacy-notice)
 
-## What AI Insights Analyzes
+## What AI Features Use This Connection
+
+When Private AI Connection is configured and connected, it applies to:
+
+1. **AI Key Insights in Reports** — analysis of your multi-valuation comparison reports
+2. **AI Chat Assistant** — the in-app AI assistant conversations
+
+Both features fall back to Valiyou's built-in AI when Private AI Connection is disabled or not configured.
+
+## What AI Key Insights Analyzes
 
 The AI receives comprehensive data from all selected valuations:
 
@@ -312,95 +294,39 @@ The AI receives comprehensive data from all selected valuations:
 - Trend identification
 - Anomaly detection
 
-## Benefits
+## Best Practices
 
-<CardGroup cols="2">
-  <Card title="Automated Analysis" icon="robot">
-    Get instant insights without manual data analysis
-  </Card>
+### Compare 3-5 Valuations
 
-<Card title="Trend Detection" icon="chart-line">
-  Identify patterns and trends across valuations
-</Card>
+Optimal number for meaningful insights:
 
-<Card title="Recommendations" icon="lightbulb">
-  Receive actionable suggestions for improvement
-</Card>
+- 2 valuations: Basic comparison
+- 3-5 valuations: Trend analysis (recommended)
+- 6+ valuations: May slow analysis
 
-  <Card title="Natural Language" icon="comment">
-    Understand complex data through clear explanations
-  </Card>
-</CardGroup>
+### Use Consistent Date Ranges
 
-## Model Selection Guide
+For best trend analysis:
 
-### Groq (Free - Recommended for Speed)
+- Select valuations from similar time periods
+- Compare the same season or quarter when possible
+- Avoid mixing different valuation types
 
-**Best for**: Fast analysis with good quality
+### Review and Interpret
 
-| Model                   | Speed              | Quality       | Cost    |
-| ----------------------- | ------------------ | ------------- | ------- |
-| llama-3.3-70b-versatile | ⚡⚡⚡ Fast        | ⭐⭐⭐⭐ High | 🆓 Free |
-| mixtral-8x7b-32768      | ⚡⚡ Medium        | ⭐⭐⭐ Good   | 🆓 Free |
-| gemma2-9b-it            | ⚡⚡⚡⚡ Very Fast | ⭐⭐ Fair     | 🆓 Free |
+AI insights are analytical starting points, not directives:
 
-**Recommendation**: Use `llama-3.3-70b-versatile` for best balance
-
-### Google Gemini (Free - Recommended for Balance)
-
-**Best for**: Balanced speed and quality
-
-| Model                | Speed              | Quality              | Cost    |
-| -------------------- | ------------------ | -------------------- | ------- |
-| gemini-2.0-flash-exp | ⚡⚡⚡ Fast        | ⭐⭐⭐⭐⭐ Excellent | 🆓 Free |
-| gemini-1.5-pro       | ⚡⚡ Medium        | ⭐⭐⭐⭐ High        | 🆓 Free |
-| gemini-1.5-flash     | ⚡⚡⚡⚡ Very Fast | ⭐⭐⭐ Good          | 🆓 Free |
-
-**Recommendation**: Use `gemini-1.5-pro` for best results
-
-### OpenAI (Paid - Highest Quality)
-
-**Best for**: Maximum quality and reliability
-
-| Model       | Speed       | Quality              | Cost    |
-| ----------- | ----------- | -------------------- | ------- |
-| gpt-4o      | ⚡⚡ Medium | ⭐⭐⭐⭐⭐ Excellent | 💰 $$$  |
-| gpt-4o-mini | ⚡⚡⚡ Fast | ⭐⭐⭐⭐ High        | 💰 $    |
-| gpt-4-turbo | ⚡⚡ Medium | ⭐⭐⭐⭐⭐ Excellent | 💰 $$$$ |
-
-**Recommendation**: Use `gpt-4o` for production reports
-
-### Anthropic/Claude (Paid - Best Reasoning)
-
-**Best for**: Complex analysis and reasoning
-
-| Model             | Speed              | Quality              | Cost    |
-| ----------------- | ------------------ | -------------------- | ------- |
-| claude-3-5-sonnet | ⚡⚡ Medium        | ⭐⭐⭐⭐⭐ Excellent | 💰 $$$  |
-| claude-3-5-haiku  | ⚡⚡⚡⚡ Very Fast | ⭐⭐⭐ Good          | 💰 $    |
-| claude-3-opus     | ⚡ Slow            | ⭐⭐⭐⭐⭐ Excellent | 💰 $$$$ |
-
-**Recommendation**: Use `claude-3-5-sonnet` for detailed analysis
+- Use as a starting point for analysis
+- Verify insights against actual data
+- Apply domain knowledge and context
 
 ## Troubleshooting
 
-### AI Insights Not Appearing
+### Plugin Shows "Setup Required"
 
-**Check**:
+**Cause**: Plugin is enabled but credentials are missing or incomplete.
 
-- ✅ Plugin enabled (green "Enabled" badge)
-- ✅ Reports permission granted
-- ✅ Professional/Enterprise plan active
-- ✅ Multiple valuations selected (2+ required)
-- ✅ API key configured correctly
-
-**Fix**:
-
-1. Enable AI Insights plugin
-2. Request Reports permission from admin
-3. Upgrade plan if needed
-4. Select at least 2 valuations
-5. Reconfigure API key
+**Fix**: Open the configuration modal (gear icon), enter your API key, and save.
 
 ### "Invalid API Key" Error
 
@@ -408,20 +334,17 @@ The AI receives comprehensive data from all selected valuations:
 
 - API key expired or revoked
 - Wrong provider selected
-- Copy/paste error (extra spaces)
-- API key from wrong provider
+- Extra spaces from copy/paste
 
 **Fix**:
 
-1. Verify provider selection matches your API key
+1. Verify the provider selection matches your API key
 2. Check for extra spaces when pasting
-3. Generate new API key from provider
-4. Ensure API key starts with correct prefix:
-   - Groq: `gsk_...`
-   - Gemini: `AIza...`
-   - OpenAI: `sk-...`
+3. Generate a new API key from your provider
+4. Ensure the key starts with the correct prefix:
    - Anthropic: `sk-ant-...`
-   - OpenRouter: `sk-or-...`
+   - OpenAI: `sk-...`
+   - Gemini: `AIza...`
 
 ### Plugin Shows "Unhealthy"
 
@@ -430,203 +353,72 @@ The AI receives comprehensive data from all selected valuations:
 - API key invalid or expired
 - Rate limit exceeded
 - Provider service unavailable
-- Insufficient credits (paid providers)
+- Insufficient credits
 
 **Fix**:
 
-1. Check API key validity in provider dashboard
+1. Check API key validity in your provider dashboard
 2. Wait for rate limit reset (usually hourly)
 3. Check provider status page
-4. Add credits to account (paid providers)
-5. Try different provider temporarily
+4. Add credits to your account
+5. Try disabling and re-enabling the plugin
 
-### Slow Analysis
+### AI Features Still Use Valiyou AI
 
-**Causes**:
+**Check**:
 
-- Large number of valuations selected
-- Slow model selected (e.g., claude-3-opus)
-- Provider experiencing high load
-
-**Fix**:
-
-1. Select fewer valuations (2-5 optimal)
-2. Switch to faster model:
-   - Groq: gemma2-9b-it
-   - Gemini: gemini-1.5-flash
-   - OpenAI: gpt-4o-mini
-   - Claude: claude-3-5-haiku
-3. Try again during off-peak hours
-
-## Best Practices
-
-### 1. Start with Free Providers
-
-Test AI Insights with Groq or Google Gemini before committing to paid providers:
-
-- Zero cost to experiment
-- Good quality results
-- Fast response times
-- Easy to switch later
-
-### 2. Compare 3-5 Valuations
-
-Optimal number for meaningful insights:
-
-- 2 valuations: Basic comparison
-- 3-5 valuations: Trend analysis (recommended)
-- 6+ valuations: May slow analysis
-
-### 3. Use Consistent Date Ranges
-
-For best trend analysis:
-
-- Select valuations from similar time periods
-- Compare same season/quarter when possible
-- Avoid mixing different valuation types
-
-### 4. Review and Interpret
-
-AI insights are suggestions, not directives:
-
-- ✅ Use as starting point for analysis
-- ✅ Verify insights against actual data
-- ✅ Apply domain knowledge and context
-- ❌ Don't blindly follow all recommendations
-
-### 5. Monitor API Usage
-
-Track your API usage to avoid surprises:
-
-- Check provider dashboard regularly
-- Set up usage alerts if available
-- Consider upgrading to paid tier for high usage
-- Switch to free provider if budget constrained
+- Plugin status shows "Connected" (green), not "Setup Required" (yellow)
+- Credentials were saved successfully
+- Provider badge in Reports shows your provider name, not "Valiyou AI"
 
 ## Frequently Asked Questions
 
 <AccordionGroup>
-  <Accordion title="Which AI provider should I choose for sponsorship insights?">
-    **For beginners**: Start with **Groq** (free, fast, good quality)
+  <Accordion title="Do I need Private AI Connection to use AI Insights in Reports?">
+    No. AI Key Insights in Reports are available on all Professional and Enterprise plans using
+    Valiyou's built-in AI — no plugin or configuration needed. Private AI Connection is only needed
+    if you want to route AI processing through your own provider account under your own DPA.
+  </Accordion>
 
-    **For best results**: Use **Google Gemini 1.5 Pro** (free, excellent quality)
+  <Accordion title="Which provider should I choose?">
+    If you already have an enterprise agreement with a provider, use that one. Otherwise:
 
-    **For production**: Use **OpenAI GPT-4o** or **Claude 3.5 Sonnet** (paid, highest quality)
+    - **Anthropic Claude 3.5 Sonnet**: Excellent reasoning and analysis quality
+    - **OpenAI GPT-4o**: Strong general performance
+    - **Google Gemini 1.5 Pro**: Good balance of speed and quality
+    - **Azure OpenAI / Vertex AI / Bedrock**: Use these when you need managed cloud infrastructure
+      with regional hosting guarantees
 
   </Accordion>
 
-  <Accordion title="Are my sponsorship valuation data shared with the AI provider?">
-    Yes, valuation data is sent to the LLM provider's API for analysis. All major providers (Groq, OpenAI, Anthropic, Google) have strict data privacy policies and do not train models on API data.
-
-    **Security measures**:
-    - Data encrypted in transit (HTTPS)
-    - Providers do not store or train on API data
-    - No data retention beyond analysis
-    - SOC 2 Type II certified providers
-
-  </Accordion>
-
-  <Accordion title="Can I switch between different AI providers later?">
-    Yes! You can change providers at any time:
-    1. Open plugin configuration
-    2. Select new provider
-    3. Enter new API key
-    4. Save configuration
-
-    Previous insights remain unchanged, but new analyses will use the new provider.
-
-  </Accordion>
-
-  <Accordion title="How much does AI Insights cost for sponsorship analysis?">
-    **Free Options**:
-    - Groq: Free tier available
-    - Google Gemini: Free tier available
-    - OpenRouter: Free tier available
-
-    **Paid Options**:
-    - OpenAI: ~$0.01-0.05 per analysis (GPT-4o)
-    - Anthropic: ~$0.01-0.03 per analysis (Claude)
-
-    Valiyou does not charge extra for AI Insights (Professional/Enterprise plan required).
-
-  </Accordion>
-
-  <Accordion title="Can I use multiple AI providers for different reports?">
-    You can configure one provider at a time. To use different providers:
-    1. Reconfigure plugin with new provider
-    2. Generate insights
-    3. Switch back to original provider if desired
-
-    Tip: Use free providers for testing, paid providers for important reports.
-
-  </Accordion>
-
-  <Accordion title="What happens if I exceed my AI API limits?">
-    **Free providers**:
-    - Rate limits apply (e.g., 30 requests/minute)
-    - Wait for limit reset or upgrade to paid tier
-
-    **Paid providers**:
-    - Soft limits can be increased
-    - Hard limits require credit top-up
-
-    **Solution**: Use multiple providers or wait for limit reset.
-
-  </Accordion>
-
-<Accordion title="How accurate are the AI-generated sponsorship insights?">
-  AI insights are highly accurate for pattern detection and trend analysis, but should be verified:
-  - ✅ Excellent at identifying trends and anomalies - ✅ Reliable for comparative analysis - ✅
-  Good at generating actionable recommendations - ⚠️ Always verify insights against source data - ⚠️
-  Apply domain expertise to recommendations
+<Accordion title="Is my valuation data shared with the AI provider?">
+  Yes, valuation data (dates, financial metrics, media metrics, brand scores) is sent to your chosen
+  provider's API for analysis. Organization names and personal user identities are NOT included.
+  Because you configure your own provider account, data processing is governed by your DPA with that
+  provider.
 </Accordion>
 
-<Accordion title="Can AI Insights analyze historical sponsorship trends?">
-  Yes! AI Insights excels at historical trend analysis: - Compare valuations across multiple years -
-  Identify seasonal patterns - Detect growth trajectories - Forecast future performance - Benchmark
-  against historical data
+<Accordion title="Can I switch providers later?">
+  Yes. Open the plugin configuration at any time, select a new provider, enter the new credentials,
+  and save. The change takes effect immediately. Previous insights already displayed in Reports are
+  not affected.
 </Accordion>
 
-<Accordion title="Does AI Insights work with all valuation types?">
-  Yes, AI Insights analyzes all valuation types including: - Sponsorship valuations - Brand exposure
-  calculations - Media value assessments - Multi-platform campaigns - Mixed revenue streams
+<Accordion title="What happens if I disable Private AI Connection?">
+  All AI features fall back to Valiyou's built-in AI. Your saved credentials are preserved — if you
+  re-enable the plugin, you don't need to re-enter them.
 </Accordion>
 
-<Accordion title="How long does it take to generate AI insights?">
-  Generation time varies by provider and model: - **Groq**: 2-5 seconds (fastest) - **Gemini
-  Flash**: 3-7 seconds - **GPT-4o-mini**: 5-10 seconds - **GPT-4o/Claude**: 10-20 seconds - **Claude
-  Opus**: 15-30 seconds (most detailed)
-</Accordion>
-
-  <Accordion title="Can I customize what the AI analyzes in my valuations?">
-    Currently, AI Insights analyzes all available valuation data automatically. Custom analysis parameters are planned for future releases. The AI focuses on:
-    - Financial metrics and revenue
-    - Media performance and impressions
-    - Brand exposure and value
-    - Growth trends and patterns
+  <Accordion title="What happens if my API key expires or runs out of credits?">
+    The plugin will show an "Unhealthy" status. AI features will not work until you update your
+    credentials or add credits in your provider dashboard. Valiyou's built-in AI is NOT used as a
+    fallback when the plugin is enabled but unhealthy — fix the credentials to restore functionality.
   </Accordion>
 </AccordionGroup>
-
-## Changelog
-
-### January 19, 2025
-
-- **Added**: Data privacy section explaining what data is sent to AI providers
-- **Added**: Detailed information about anonymization, retention, and opt-out options
-- **Added**: Links to all provider privacy policies (Groq, OpenAI, Google, Anthropic)
-- **Added**: SOC 2 Type II compliance note for all providers
-- **Improved**: Security transparency for enterprise customers
-
-### Initial Release
-
-- Multi-provider LLM support (Groq, OpenAI, Google Gemini, Anthropic Claude)
-- AI-powered insights for multi-valuation comparison reports
-- Natural language trend detection and recommendations
-- Free tier provider options
 
 ## Related Documentation
 
 - [Plugins Overview](/platform/plugins) - All available plugins
-- [Reports](/valuations/reports) - Multi-valuation comparison reports
-- [Valuation Details](/valuations/valuation-details) - Single valuation analysis
+- [Reports](/valuations/reports) - Multi-valuation comparison reports with AI Key Insights
+- [Billing](/platform/billing/billing) - Private AI Connection pricing and add-on management
 - [Team Management](/platform/team-management) - Manage user permissions

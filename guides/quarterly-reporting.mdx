@@ -11,8 +11,7 @@ description: 'Step-by-step guide to creating professional quarterly reports for 
 
 <Note>
   **Time Required**: 45-60 minutes per quarter **Plan Required**: Professional or Enterprise plan
-  (AI Insights requires Professional+) **Permissions Required**: Valuations (Create/Edit), Reports
-  (View), AI Insights plugin
+  **Permissions Required**: Valuations (Create/Edit), Reports (View)
 </Note>
 
 ## Why Quarterly Reports Matter
@@ -123,15 +122,10 @@ graph TD
 
 ## Step 3: Generate AI-Powered Insights
 
-<Warning>
-  **Plugin Required**: AI Insights plugin must be enabled and configured. [Setup
-  Guide](/platform/plugins/ai-insights)
-</Warning>
-
 Once the comparison report loads:
 
-1. Scroll to **AI Insights** section (appears automatically if plugin enabled)
-2. Wait 5-10 seconds for AI analysis to generate
+1. Scroll to the **AI Insights** section
+2. Click **"Get AI Key Insights"** and wait 5-10 seconds for analysis to generate
 
 ### AI Insights Will Show:
 
@@ -151,8 +145,9 @@ Once the comparison report loads:
 - "Attendance decline in Q1 suggests opportunity for early-season ticket promotions"
 
 <Tip>
-  **AI Provider**: Use GPT-4o or Claude 3.5 Sonnet for quarterly reports. Free options (Groq,
-  Gemini) work well too. [Provider Comparison](/platform/plugins/ai-insights#model-selection-guide)
+  **Custom AI Provider**: AI Key Insights use Valiyou's built-in AI by default. If your organization
+  has specific provider requirements (data sovereignty, EU hosting), configure [Private AI
+  Connection](/platform/plugins/ai-insights) to use your own provider.
 </Tip>
 
 ---
@@ -348,8 +343,8 @@ Once the comparison report loads:
   Use positive Q2-Q3 trends to propose tier upgrades
 </Card>
 
-  <Card title="Configure AI Insights" icon="brain" href="/platform/plugins/ai-insights">
-    Enable AI-powered trend detection for richer reports
+  <Card title="Private AI Connection" icon="brain" href="/platform/plugins/ai-insights">
+    Connect your own AI provider for data sovereignty
   </Card>
 </CardGroup>
 
