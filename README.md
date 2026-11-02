@@ -31,7 +31,7 @@ Open [http://localhost:3000](http://localhost:3000) to see your docs.
 
 ```
 valiyou-knowledge-center/
-├── mint.json                  # Configuration (navigation, branding, etc.)
+├── docs.json                  # Configuration (navigation, branding, etc.)
 ├── introduction.mdx           # Homepage
 ├── getting-started/
 │   ├── quick-start.mdx
@@ -53,29 +53,33 @@ valiyou-knowledge-center/
 
 **Understanding Valiyou's domain architecture:**
 
-| Domain | Purpose | Use For |
-|--------|---------|---------|
-| **valiyou.com** | Marketing website | Marketing content, landing pages, company info |
-| **valiyou.io** | Application (SaaS platform) | App URLs, authentication, user features |
-| **docs.valiyou.com** | Documentation (this site) | Help articles, guides, API reference |
-| **valiyou.io/trust-center** | Trust & Security page | Compliance, security, certifications |
+| Domain                      | Purpose                     | Use For                                        |
+| --------------------------- | --------------------------- | ---------------------------------------------- |
+| **valiyou.com**             | Marketing website           | Marketing content, landing pages, company info |
+| **valiyou.io**              | Application (SaaS platform) | App URLs, authentication, user features        |
+| **docs.valiyou.com**        | Documentation (this site)   | Help articles, guides, API reference           |
+| **valiyou.io/trust-center** | Trust & Security page       | Compliance, security, certifications           |
 
 ### Domain Usage Guidelines
 
 **Authentication & User Actions:**
+
 - Sign In: `https://valiyou.io/auth/login`
 - Sign Up: `https://valiyou.io/auth/signup`
 - App features: `https://valiyou.io/*`
 
 **Marketing & Info:**
+
 - Homepage: `https://valiyou.com`
 - About, Pricing, Features: `https://valiyou.com/*`
 
 **Documentation:**
+
 - All help articles: `https://docs.valiyou.com/*`
 - Link to app from docs: Use `valiyou.io`
 
 **Trust & Compliance:**
+
 - Trust Center: `https://valiyou.io/trust-center`
 - Privacy Policy: `https://valiyou.io/trust-center#privacy`
 
@@ -83,16 +87,19 @@ valiyou-knowledge-center/
 
 ```markdown
 ✅ Correct:
+
 - [Sign in to your account](https://valiyou.io/auth/login)
 - [View our Trust Center](https://valiyou.io/trust-center)
 - [Visit our website](https://valiyou.com)
 
 ❌ Incorrect:
+
 - [Sign in](https://valiyou.com/auth/login) ← Wrong domain
 - [Trust Center](https://valiyou.com/trust-center) ← Should be .io
 ```
 
 **Email addresses:**
+
 - Support: `support@valiyou.com`
 - Security: `security@valiyou.com`
 - No-reply: `no-reply@valiyou.com`
@@ -102,11 +109,13 @@ valiyou-knowledge-center/
 ### Create a New Article
 
 1. Create a new `.mdx` file in the appropriate folder:
+
 ```bash
 touch guides/valuations/new-article.mdx
 ```
 
 2. Add frontmatter and content:
+
 ```markdown
 ---
 title: 'Your Article Title'
@@ -118,14 +127,12 @@ description: 'Brief description for SEO'
 Your content here...
 ```
 
-3. Add to navigation in `mint.json`:
+3. Add to navigation in `docs.json`:
+
 ```json
 {
   "group": "Valuations",
-  "pages": [
-    "guides/valuations/overview",
-    "guides/valuations/new-article"
-  ]
+  "pages": ["guides/valuations/overview", "guides/valuations/new-article"]
 }
 ```
 
@@ -133,18 +140,14 @@ Your content here...
 
 Mintlify provides beautiful components:
 
-```mdx
+````mdx
 <Card title="Title" icon="rocket" href="/link">
   Description
 </Card>
 
-<Tip>
-  Helpful tip for users
-</Tip>
+<Tip>Helpful tip for users</Tip>
 
-<Warning>
-  Important warning
-</Warning>
+<Warning>Important warning</Warning>
 
 See [Mintlify Components](https://mintlify.com/docs/content/components/accordions) for full reference.
 
@@ -160,6 +163,7 @@ mintlify deploy
 # Subsequent deployments
 mintlify deploy
 ```
+````
 
 ### Custom Domain Setup (docs.valiyou.com)
 
@@ -169,6 +173,7 @@ mintlify deploy
 4. Configure DNS:
 
 **CloudFlare (or your DNS provider):**
+
 ```
 Type: CNAME
 Name: docs
@@ -189,7 +194,7 @@ Now every git push will auto-deploy! 🎉
 
 ## 🎨 Branding
 
-Brand colors and logos are configured in `mint.json`:
+Brand colors and logos are configured in `docs.json`:
 
 ```json
 {
@@ -207,7 +212,7 @@ Brand colors and logos are configured in `mint.json`:
 
 ## 📊 Analytics
 
-Posthog analytics is configured in `mint.json`:
+Posthog analytics is configured in `docs.json`:
 
 ```json
 {

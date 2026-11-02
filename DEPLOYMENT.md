@@ -58,6 +58,7 @@ TTL: Auto
 **Option B: Other DNS Provider**
 
 Add CNAME record:
+
 ```
 docs.valiyou.com → cname.mintlify.com
 ```
@@ -69,6 +70,7 @@ docs.valiyou.com → cname.mintlify.com
 3. Visit https://docs.valiyou.com
 
 **Troubleshooting:**
+
 ```bash
 # Check DNS propagation
 nslookup docs.valiyou.com
@@ -115,10 +117,10 @@ mintlify deploy
 
 ## 🏗️ Deployment Environments
 
-| Environment | URL | Branch | Deploy Method |
-|-------------|-----|--------|---------------|
-| **Production** | docs.valiyou.com | `main` | Auto-deploy or `mintlify deploy` |
-| **Preview** | (Mintlify preview) | feature branches | `mintlify dev` locally |
+| Environment    | URL                | Branch           | Deploy Method                    |
+| -------------- | ------------------ | ---------------- | -------------------------------- |
+| **Production** | docs.valiyou.com   | `main`           | Auto-deploy or `mintlify deploy` |
+| **Preview**    | (Mintlify preview) | feature branches | `mintlify dev` locally           |
 
 ---
 
@@ -170,7 +172,7 @@ mintlify deploy
 1. **Test locally**: Always run `mintlify dev` first
 2. **Check for errors**: Fix any warnings in terminal
 3. **Review changes**: Use `git diff` to see what changed
-4. **Update navigation**: Ensure `mint.json` is correct
+4. **Update navigation**: Ensure `docs.json` is correct
 5. **Check images**: Verify all images load in `/images/` folder
 
 ### During Deployment
@@ -193,6 +195,7 @@ mintlify deploy
 ### Deployment Fails
 
 **Error: "Build failed"**
+
 ```bash
 # Check syntax errors in MDX files
 mintlify dev
@@ -201,6 +204,7 @@ mintlify dev
 ```
 
 **Error: "Custom domain not verified"**
+
 - Wait longer (DNS can take up to 24 hours)
 - Check CNAME record is correct
 - Ensure CloudFlare proxy is OFF (gray cloud)
@@ -208,17 +212,20 @@ mintlify dev
 ### Site Not Loading
 
 **Check 1: DNS**
+
 ```bash
 nslookup docs.valiyou.com
 # Should point to cname.mintlify.com
 ```
 
 **Check 2: SSL Certificate**
+
 - Mintlify auto-provisions SSL
 - Can take 5-10 minutes
 - Check in Mintlify dashboard: Settings → Custom Domain
 
 **Check 3: Deployment Status**
+
 - Go to Mintlify dashboard
 - Check latest deployment succeeded
 - Look for error logs
@@ -244,11 +251,13 @@ nslookup docs.valiyou.com
 ## 📞 Support
 
 **Mintlify Support:**
+
 - Docs: https://mintlify.com/docs
 - Discord: https://discord.gg/mintlify
 - Email: hi@mintlify.com
 
 **Valiyou Internal:**
+
 - Jeppe (Developer): jeppe@valiyou.com
 - GitHub Issues: Create issue in `valiyou-knowledge-center` repo
 
@@ -269,10 +278,12 @@ mintlify status
 ### Analytics Dashboard
 
 View docs analytics in:
+
 1. Mintlify Dashboard → Analytics
 2. Posthog (if configured)
 
 Track:
+
 - Page views
 - Search queries
 - Popular articles

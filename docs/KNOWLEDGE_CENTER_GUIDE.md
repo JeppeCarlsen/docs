@@ -225,7 +225,7 @@ _Note: Using backtick code blocks (not markdown) to avoid validation errors in t
 
 ## Navigation Structure
 
-### File Organization in mint.json
+### File Organization in docs.json
 
 **Order matters!** Navigation items appear in the exact order listed:
 
@@ -352,7 +352,7 @@ $50 \* 1.2 = $60
 
 ### 4. Duplicate Menu Items
 
-**Problem:** Same file path appears twice in `mint.json`:
+**Problem:** Same file path appears twice in `docs.json`:
 
 ```json
 "pages": [
@@ -366,7 +366,7 @@ $50 \* 1.2 = $60
 **Solution:** Search for duplicates before committing:
 
 ```bash
-grep -n "platform/settings/general" mint.json
+grep -n "platform/settings/general" docs.json
 ```
 
 ### 5. Bullet Lists Inside MDX Components
@@ -421,7 +421,7 @@ Before pushing changes, verify:
 4. **No duplicate navigation entries:**
 
    ```bash
-   # Check mint.json for duplicates
+   # Check docs.json for duplicates
    ```
 
 5. **Titles follow naming convention:**
@@ -467,7 +467,7 @@ If deployment fails:
 2. **Common errors:**
    - Script tags → Remove them
    - MDX syntax → Check component props
-   - Duplicate paths → Remove duplicates from mint.json
+   - Duplicate paths → Remove duplicates from docs.json
 
 3. **Fix and redeploy:**
    ```bash
@@ -641,7 +641,7 @@ Master data for your organization...
 </CardGroup>
 ```
 
-**Navigation entry in mint.json:**
+**Navigation entry in docs.json:**
 
 ```json
 {
