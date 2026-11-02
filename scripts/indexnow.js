@@ -39,6 +39,24 @@ const URLS = [
 ]
 
 /**
+ * Fetch every URL from the live sitemap so all pages get submitted
+ */
+function fetchSitemapUrls() {
+  return new Promise((resolve, reject) => {
+    https
+      .get(`https://${HOST}/sitemap.xml`, (res) => {
+        let xml = ''
+        res.on('data', (chunk) => (xml += chunk))
+        res.on('end', () => {
+          const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1])
+          resolve(urls)
+        })
+      })
+      .on('error', reject)
+  })
+}
+
+/**
  * Submit URLs to IndexNow API
  */
 function submitToIndexNow() {
@@ -106,4 +124,14 @@ function submitToIndexNow() {
 console.log('🚀 Valiyou Knowledge Center - IndexNow Submission')
 console.log('================================================')
 console.log('')
-submitToIndexNow()
+fetchSitemapUrls()
+  .then((sitemapUrls) => {
+    for (const url of sitemapUrls) {
+      if (!URLS.includes(url)) URLS.push(url)
+    }
+    submitToIndexNow()
+  })
+  .catch((error) => {
+    console.error('⚠️  Could not read sitemap, submitting static list only:', error.message)
+    submitToIndexNow()
+  })

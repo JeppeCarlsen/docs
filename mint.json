@@ -125,6 +125,7 @@
       "pages": [
         "platform/team-management",
         "platform/company",
+        "platform/audit-log",
         "platform/settings/general",
         "platform/settings/brand-values",
         "platform/settings/negotiator",
@@ -132,6 +133,8 @@
         "guides/valuations/currency-conversion",
         "platform/settings/sso",
         "platform/settings/documents",
+        "platform/billing/billing",
+        "platform/billing/usage",
         "platform/billing/payment-methods",
         "platform/billing/invoices",
         "platform/billing/billing-details",
