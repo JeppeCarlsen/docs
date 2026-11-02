@@ -189,6 +189,13 @@
     "suggestEdit": true,
     "raiseIssue": true
   },
+  "seo": {
+    "organization": {
+      "name": "Valiyou",
+      "url": "https://valiyou.com",
+      "sameAs": ["https://www.linkedin.com/company/valiyou", "https://www.facebook.com/valiyou.io"]
+    }
+  },
   "metadata": {
     "description": "Complete documentation for Valiyou - the sponsorship valuation platform. Learn how to value, package, and report on sponsorship deals with data-driven insights.",
     "og:site_name": "Valiyou Knowledge Center",
